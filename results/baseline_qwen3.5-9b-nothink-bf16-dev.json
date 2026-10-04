@@ -1,0 +1,61 @@
+{
+ "config": {
+  "model": "qwen/qwen3.5-9b",
+  "base_url": "https://openrouter.ai/api/v1",
+  "api_key_env": "OPENROUTER_API_KEY",
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "max_tokens": 2048,
+  "budget": 40,
+  "max_no_tool_turns": 2,
+  "seed": 0,
+  "system_prompt": null,
+  "extra_body": {
+   "reasoning": {
+    "enabled": false
+   },
+   "provider": {
+    "order": [
+     "DeepInfra",
+     "Parasail"
+    ],
+    "allow_fallbacks": false
+   }
+  }
+ },
+ "n_requested": 120,
+ "n_excluded_provider_errors": 0,
+ "n": 120,
+ "valid_submit_rate": 0.9666666666666667,
+ "mean_reward": 0.4154733648644602,
+ "official_f1": 0.4562252942506436,
+ "official_f1_strict": 0.44084456485209533,
+ "weighted_recall": 0.4102798180654619,
+ "recall": 0.42505131362889986,
+ "precision_neutral": 0.5137589549093975,
+ "precision_raw": 0.34098734120285845,
+ "acuity_accuracy": 0.8,
+ "mean_predictions": 4.5,
+ "mean_reward_ci95": [
+  0.3442269043105719,
+  0.4832276404872248
+ ],
+ "official_f1_strict_ci95": [
+  0.3692507083395225,
+  0.509308189337745
+ ],
+ "submit_rate": 1.0,
+ "budget_exhausted_rate": 0.058333333333333334,
+ "mean_actions": 16.25,
+ "mean_turns": 14.8,
+ "mean_tool_errors": 0.075,
+ "mean_prompt_tokens": 115210.1,
+ "mean_completion_tokens": 3593.9583333333335,
+ "mean_total_tokens": 118804.05833333333,
+ "mean_peak_context_tokens": 13734.316666666668,
+ "stop_reasons": {
+  "submitted": 120
+ },
+ "name": "qwen3.5-9b-nothink-bf16-dev",
+ "split": "dev"
+}

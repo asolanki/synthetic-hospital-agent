@@ -1,0 +1,91 @@
+{
+ "model": "qwen/qwen3-30b-a3b-instruct-2507",
+ "n": 161,
+ "rows": [
+  {
+   "condition": "order only (no chart)",
+   "concept_f1 (reward)": 0.3267140104562944,
+   "concept_precision": 0.3673767398922678,
+   "concept_recall": 0.3205811441836289,
+   "token_f1": 0.23498864116828344,
+   "concept_f1, orders with prior encounters": 0.32722317998991896,
+   "examples": [
+    {
+     "indication": "acute abdominal pain",
+     "question": "What is the cause of acute abdominal pain, specifically evaluating for appendicitis, cholecystitis, renal colic, bowel obstruction, or intra-abdominal fluid/abscess?",
+     "reference": "Evaluate for uterine rupture in a pregnant patient with prior cesarean section presenting with sudden severe abdominal pain, uterine tenderness, and fetal distress",
+     "reward": 0.13333333333333333
+    },
+    {
+     "indication": "SOB hypoxia",
+     "question": "What is the cause of acute shortness of breath and hypoxia, specifically evaluating for pneumonia, pulmonary edema, pulmonary embolism, pneumothorax, or pleural effusion?",
+     "reference": "Evaluate for acute pulmonary process (pneumonia, edema) vs. metastatic disease causing hypoxia in a postpartum patient with markedly elevated hCG.",
+     "reward": 0.4615384615384615
+    },
+    {
+     "indication": "acute stroke eval",
+     "question": "Is there evidence of acute ischemic or hemorrhagic stroke in the brain, and if so, what is the location, extent, and potential cause?",
+     "reference": "Evaluate for acute intracranial hemorrhage or ischemic stroke causing acute neurologic deficits, while considering metastatic choriocarcinoma given markedly elevated beta-hCG and history of gestational trophoblastic disease.",
+     "reward": 0.5
+    }
+   ]
+  },
+  {
+   "condition": "order + current encounter note",
+   "concept_f1 (reward)": 0.4099593827496855,
+   "concept_precision": 0.41506304254751475,
+   "concept_recall": 0.44582470669427204,
+   "token_f1": 0.29587264640695987,
+   "concept_f1, orders with prior encounters": 0.4103184650303342,
+   "examples": [
+    {
+     "indication": "acute abdominal pain",
+     "question": "Does this patient have uterine rupture, given acute abdominal pain, changing fetal station, and abnormal fetal heart rate tracing in the setting of prior cesarean deliveries?",
+     "reference": "Evaluate for uterine rupture in a pregnant patient with prior cesarean section presenting with sudden severe abdominal pain, uterine tenderness, and fetal distress",
+     "reward": 0.4615384615384615
+    },
+    {
+     "indication": "SOB hypoxia",
+     "question": "What is the cause of bilateral pulmonary infiltrates in a postpartum patient with shortness of breath, hypoxia, and markedly elevated \u03b2-hCG, specifically evaluating for pulmonary metastases from gestational trophoblastic neoplasia?",
+     "reference": "Evaluate for acute pulmonary process (pneumonia, edema) vs. metastatic disease causing hypoxia in a postpartum patient with markedly elevated hCG.",
+     "reward": 0.6153846153846154
+    },
+    {
+     "indication": "acute stroke eval",
+     "question": "Does this patient have an acute ischemic or hemorrhagic stroke, and if hemorrhagic, is the lesion due to a primary intracranial hemorrhage, metastatic choriocarcinoma, or a vascular malformation related to hereditary hemorrhagic telangiectasia or neuropsychiatric lupus?",
+     "reference": "Evaluate for acute intracranial hemorrhage or ischemic stroke causing acute neurologic deficits, while considering metastatic choriocarcinoma given markedly elevated beta-hCG and history of gestational trophoblastic disease.",
+     "reward": 0.7058823529411765
+    }
+   ]
+  },
+  {
+   "condition": "order + full chart up to the order",
+   "concept_f1 (reward)": 0.4088136216118254,
+   "concept_precision": 0.42365373584317695,
+   "concept_recall": 0.4437191345576439,
+   "token_f1": 0.29432495083466353,
+   "concept_f1, orders with prior encounters": 0.4068594169027372,
+   "examples": [
+    {
+     "indication": "acute abdominal pain",
+     "question": "What is the cause of acute abdominal pain in this postpartum patient, specifically evaluating for uterine rupture, placental abruption, or intra-abdominal hemorrhage?",
+     "reference": "Evaluate for uterine rupture in a pregnant patient with prior cesarean section presenting with sudden severe abdominal pain, uterine tenderness, and fetal distress",
+     "reward": 0.3076923076923077
+    },
+    {
+     "indication": "SOB hypoxia",
+     "question": "What is the cause of bilateral pulmonary infiltrates in a patient with hereditary hemorrhagic telangiectasia, systemic lupus erythematosus, and recent spontaneous abortion, given the presentation of shortness of breath and hypoxia?",
+     "reference": "Evaluate for acute pulmonary process (pneumonia, edema) vs. metastatic disease causing hypoxia in a postpartum patient with markedly elevated hCG.",
+     "reward": 0.2857142857142857
+    },
+    {
+     "indication": "acute stroke eval",
+     "question": "The clinical question is: Does this patient have a cerebral hemorrhage due to metastatic choriocarcinoma or a thrombotic or hemorrhagic stroke secondary to her underlying systemic lupus erythematosus and hereditary hemorrhagic telangiectasia?",
+     "reference": "Evaluate for acute intracranial hemorrhage or ischemic stroke causing acute neurologic deficits, while considering metastatic choriocarcinoma given markedly elevated beta-hCG and history of gestational trophoblastic disease.",
+     "reward": 0.47058823529411764
+    }
+   ]
+  }
+ ],
+ "n_with_prior_encounters": 134
+}

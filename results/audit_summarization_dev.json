@@ -1,0 +1,30 @@
+{
+ "n": 120,
+ "rows": [
+  {
+   "strategy": "empty",
+   "finding_recall (reward)": 0.0,
+   "mean_words": 0.0
+  },
+  {
+   "strategy": "chief complaints only",
+   "finding_recall (reward)": 0.17807853058820558,
+   "mean_words": 52.166666666666664
+  },
+  {
+   "strategy": "every HPI, concatenated",
+   "finding_recall (reward)": 0.23611908745422674,
+   "mean_words": 224.33333333333334
+  },
+  {
+   "strategy": "HPI + exam + labs + imaging, concatenated",
+   "finding_recall (reward)": 0.6013174303480028,
+   "mean_words": 492.8666666666667
+  },
+  {
+   "strategy": "the entire chart, pasted",
+   "finding_recall (reward)": 0.7015630388917924,
+   "mean_words": 1047.1833333333334
+  }
+ ]
+}

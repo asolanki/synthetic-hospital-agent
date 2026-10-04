@@ -1,0 +1,769 @@
+{
+ "model": "qwen/qwen3-30b-a3b-instruct-2507",
+ "split": "dev",
+ "n": 120,
+ "valid_submit_rate": 1.0,
+ "mean_reward": 0.5323285696755559,
+ "official_f1": 0.5473883079367377,
+ "official_f1_strict": 0.5473883079367377,
+ "weighted_recall": 0.487159929531253,
+ "recall": 0.5124801587301587,
+ "precision_neutral": 0.6246098439375751,
+ "precision_raw": 0.610138888888889,
+ "acuity_accuracy": 0.3497536945812808,
+ "mean_predictions": 2.841666666666667,
+ "mean_reward_ci95": [
+  0.46879440278511286,
+  0.5957355330398383
+ ],
+ "official_f1_strict_ci95": [
+  0.48490925112945465,
+  0.6087648659559893
+ ],
+ "visit_split": {
+  "recall_earlier_visits": 0.6080691642651297,
+  "recall_final_visit": 0.05714285714285714,
+  "n_earlier": 347,
+  "n_final": 70
+ },
+ "names_coded": 345,
+ "names_with_reference_code": 345,
+ "category_agreement_with_reference": 0.5739130434782609,
+ "disagreements": [
+  {
+   "name": "Lupus nephritis flare",
+   "model": "N04.0",
+   "reference": "M32.14"
+  },
+  {
+   "name": "Autoimmune pericarditis",
+   "model": "I51.8",
+   "reference": "M32.12"
+  },
+  {
+   "name": "Senile purpura",
+   "model": "I78.8",
+   "reference": "D69.2"
+  },
+  {
+   "name": "Dehydration",
+   "model": "E64",
+   "reference": "E86.0"
+  },
+  {
+   "name": "Rheumatoid arthritis",
+   "model": "M05.9",
+   "reference": "M06.9"
+  },
+  {
+   "name": "Hypothyroidism",
+   "model": "E06.8",
+   "reference": "E03.9"
+  },
+  {
+   "name": "Hereditary Hemorrhagic Telangiectasia (Osler-Weber-Rendu Syndrome)",
+   "model": "Q87.0",
+   "reference": "I78.0"
+  },
+  {
+   "name": "Rectovaginal fistula",
+   "model": "N73.8",
+   "reference": "N82.3"
+  },
+  {
+   "name": "Choriocarcinoma",
+   "model": "C49.0",
+   "reference": "C58"
+  },
+  {
+   "name": "Breast engorgement (postpartum)",
+   "model": "O91.8",
+   "reference": "O92.20"
+  },
+  {
+   "name": "Herpetic whitlow or viral lymphangitis",
+   "model": "A05.8",
+   "reference": "B00.89"
+  },
+  {
+   "name": "Superficial surgical site infection (cellulitis) following cesarean delivery",
+   "model": "T81.41XA",
+   "reference": "O86.01"
+  },
+  {
+   "name": "Disuse osteoporosis (Immobilization)",
+   "model": "M83.2",
+   "reference": "M81.8"
+  },
+  {
+   "name": "Pulmonary arterial hypertension associated with systemic sclerosis",
+   "model": "I77.0",
+   "reference": "I27.21"
+  },
+  {
+   "name": "Female Athlete Triad",
+   "model": "Z98.89",
+   "reference": "F50.01"
+  },
+  {
+   "name": "Tibial stress fracture",
+   "model": "S82.451A",
+   "reference": "M84.362A"
+  },
+  {
+   "name": "Acute appendicitis",
+   "model": "K85.9",
+   "reference": "K35.80"
+  },
+  {
+   "name": "Acute Promyelocytic Leukemia with Disseminated Intravascular Coagulation",
+   "model": "C94.11",
+   "reference": "C92.4"
+  },
+  {
+   "name": "Chloroquine-sensitive malaria prophylaxis",
+   "model": "Z79.89",
+   "reference": "B50.9"
+  },
+  {
+   "name": "Fetal Atrioventricular Block",
+   "model": "O36.81",
+   "reference": "Q24.6"
+  },
+  {
+   "name": "Cervical insufficiency",
+   "model": "O74.1",
+   "reference": "O34.33"
+  },
+  {
+   "name": "Acute cystitis",
+   "model": "N30.0",
+   "reference": "A06.81"
+  },
+  {
+   "name": "Placental abruption (Abruptio placentae)",
+   "model": "O44.9",
+   "reference": "O45.10"
+  },
+  {
+   "name": "Traumatic hemorrhagic shock with acute coagulopathy",
+   "model": "T79.81",
+   "reference": "T79.4XXA"
+  },
+  {
+   "name": "Major depressive disorder",
+   "model": "F32.9",
+   "reference": "F33.9"
+  },
+  {
+   "name": "Drug-induced tremor due to sertraline (Enhanced physiologic tremor)",
+   "model": "T43.151A",
+   "reference": "G25.1"
+  },
+  {
+   "name": "External anal sphincter injury",
+   "model": "S36.115A",
+   "reference": "O70.2"
+  },
+  {
+   "name": "Active genital herpes simplex virus infection at term",
+   "model": "O22.4",
+   "reference": "O98.43"
+  },
+  {
+   "name": "Selective IgA deficiency",
+   "model": "D84.0",
+   "reference": "D80.2"
+  },
+  {
+   "name": "Acute Promyelocytic Leukemia (ATRA therapy mechanism)",
+   "model": "C94.1",
+   "reference": "C92.40"
+  },
+  {
+   "name": "SSRI-induced sexual dysfunction",
+   "model": "T43.1X5A",
+   "reference": "T43.205A"
+  },
+  {
+   "name": "Hydrochlorothiazide-induced photosensitivity",
+   "model": "T46.0X5A",
+   "reference": "L56.8"
+  },
+  {
+   "name": "Lupus nephritis flare",
+   "model": "N04.0",
+   "reference": "M32.14"
+  },
+  {
+   "name": "Secondary syphilis",
+   "model": "A50.3",
+   "reference": "A51.39"
+  },
+  {
+   "name": "Anesthetic medication reaction",
+   "model": "T88.7XXA",
+   "reference": "T88.6XXA"
+  },
+  {
+   "name": "Influenza",
+   "model": "J10.9",
+   "reference": "J11.1"
+  },
+  {
+   "name": "Community-Acquired Methicillin-Resistant Staphylococcus aureus Pneumonia",
+   "model": "A49.02",
+   "reference": "J15.212"
+  },
+  {
+   "name": "Bartholin's gland cyst",
+   "model": "N86.0",
+   "reference": "N75.0"
+  },
+  {
+   "name": "Peripheral arterial disease",
+   "model": "I70.2",
+   "reference": "I73.9"
+  },
+  {
+   "name": "Stable Angina Pectoris (Medical Management)",
+   "model": "I25.1",
+   "reference": "I20.9"
+  },
+  {
+   "name": "Stage 2 Essential Hypertension (Suspected/White Coat Variation)",
+   "model": "I10",
+   "reference": "R03.0"
+  },
+  {
+   "name": "Primary prevention of cardiovascular disease",
+   "model": "Z56.8",
+   "reference": "Z13.6"
+  },
+  {
+   "name": "Lisinopril adverse effect",
+   "model": "T50.1X5A",
+   "reference": "T46.4X5A"
+  },
+  {
+   "name": "Erectile dysfunction (organic, secondary to diabetes mellitus)",
+   "model": "E11.64",
+   "reference": "N52.1"
+  },
+  {
+   "name": "Stable Angina Pectoris (Medical Management)",
+   "model": "I25.1",
+   "reference": "I20.9"
+  },
+  {
+   "name": "Stable Angina Pectoris",
+   "model": "I25.1",
+   "reference": "I20.2"
+  },
+  {
+   "name": "Normal sinus rhythm",
+   "model": "Z53.0",
+   "reference": "Z00.8"
+  },
+  {
+   "name": "Colorectal neoplasia",
+   "model": "D01.6",
+   "reference": "C18.9"
+  },
+  {
+   "name": "Erectile dysfunction",
+   "model": "N57.3",
+   "reference": "N52.9"
+  },
+  {
+   "name": "Flecainide adverse effect",
+   "model": "T45.1X5A",
+   "reference": "T46.2X5A"
+  },
+  {
+   "name": "Peripheral neuropathy",
+   "model": "G59.9",
+   "reference": "G62.9"
+  },
+  {
+   "name": "Sideroblastic anemia (acquired, alcohol-related)",
+   "model": "D56.0",
+   "reference": "D64.2"
+  },
+  {
+   "name": "Wernicke encephalopathy",
+   "model": "F10.139",
+   "reference": "E51.2"
+  },
+  {
+   "name": "Long-distance running",
+   "model": "Z56.0",
+   "reference": "Z72.3"
+  },
+  {
+   "name": "Acute upper gastrointestinal hemorrhage secondary to peptic ulcer disease",
+   "model": "K25.9",
+   "reference": "K27.0"
+  },
+  {
+   "name": "Ludwig angina",
+   "model": "K11.2",
+   "reference": "K12.2"
+  },
+  {
+   "name": "Cytomegalovirus esophagitis",
+   "model": "A09.8",
+   "reference": "B25.8"
+  },
+  {
+   "name": "Pneumocystis jirovecii pneumonia",
+   "model": "B59",
+   "reference": "B20.6"
+  },
+  {
+   "name": "Immune reconstitution inflammatory syndrome",
+   "model": "B20.8",
+   "reference": "D89.3"
+  },
+  {
+   "name": "Acquired methemoglobinemia",
+   "model": "D57.1",
+   "reference": "D74.8"
+  },
+  {
+   "name": "Cryptococcal meningitis",
+   "model": "G12.0",
+   "reference": "B45.1"
+  },
+  {
+   "name": "Primary central nervous system lymphoma",
+   "model": "C72.9",
+   "reference": "C83.37"
+  },
+  {
+   "name": "Nocardiosis",
+   "model": "A41.8",
+   "reference": "A42.7"
+  },
+  {
+   "name": "Neuroleptic-induced akathisia",
+   "model": "T43.1X5A",
+   "reference": "G21.11"
+  },
+  {
+   "name": "Oculogyric crisis due to antipsychotic medication",
+   "model": "T43.1X5A",
+   "reference": "G24.01"
+  },
+  {
+   "name": "Hepatitis C virus reinfection",
+   "model": "B18.2",
+   "reference": "B17.1"
+  },
+  {
+   "name": "Autosomal Dominant Polycystic Kidney Disease",
+   "model": "Q69.4",
+   "reference": "Q61.2"
+  },
+  {
+   "name": "Cardiac tamponade",
+   "model": "I32.9",
+   "reference": "I31.4"
+  },
+  {
+   "name": "Tabes dorsalis",
+   "model": "A49.81",
+   "reference": "A52.11"
+  },
+  {
+   "name": "Pasteurella multocida infection",
+   "model": "A41.2",
+   "reference": "A28.0"
+  },
+  {
+   "name": "Abdominal aortic aneurysm",
+   "model": "I71.4",
+   "reference": "I77.811"
+  },
+  {
+   "name": "History of rheumatic fever",
+   "model": "I09.9",
+   "reference": "Z86.79"
+  },
+  {
+   "name": "Lung cancer screening candidate (high-risk smoker)",
+   "model": "Z13.51",
+   "reference": "Z12.2"
+  },
+  {
+   "name": "Prostate Cancer (Suspected)",
+   "model": "Z51.0",
+   "reference": "C61"
+  },
+  {
+   "name": "Nephrogenic Diabetes Insipidus",
+   "model": "E86.0",
+   "reference": "N25.1"
+  },
+  {
+   "name": "Tension pneumothorax",
+   "model": "T79.01",
+   "reference": "S27.0XXA"
+  },
+  {
+   "name": "Urinary retention",
+   "model": "N39.4",
+   "reference": "R33.9"
+  },
+  {
+   "name": "Amiodarone-induced pulmonary toxicity",
+   "model": "T46.1X5A",
+   "reference": "J70.4"
+  },
+  {
+   "name": "Parkinson disease dementia",
+   "model": "F02.80",
+   "reference": "G31.83"
+  },
+  {
+   "name": "Flaccid paralysis",
+   "model": "G82.9",
+   "reference": "M62.50"
+  },
+  {
+   "name": "Sigmoid volvulus",
+   "model": "K52.6",
+   "reference": "K56.2"
+  },
+  {
+   "name": "Intestinal obstruction requiring cross-sectional imaging",
+   "model": "K52.81",
+   "reference": "K56.60"
+  },
+  {
+   "name": "Ventricular septal defect",
+   "model": "Q21.0",
+   "reference": "I51.0"
+  },
+  {
+   "name": "Papillary muscle rupture",
+   "model": "I35.8",
+   "reference": "I23.3"
+  },
+  {
+   "name": "Postoperative hemorrhage following inguinal hernia repair",
+   "model": "T81.41XA",
+   "reference": "T81.0XXA"
+  },
+  {
+   "name": "Spinal epidural hematoma",
+   "model": "G93.0",
+   "reference": "G95.19"
+  },
+  {
+   "name": "Calcium channel blocker-induced peripheral edema",
+   "model": "E935.0",
+   "reference": "T46.1X5A"
+  },
+  {
+   "name": "Senile purpura",
+   "model": "L98.1",
+   "reference": "D69.2"
+  },
+  {
+   "name": "Spigelian hernia",
+   "model": "K41.2",
+   "reference": "K43.6"
+  },
+  {
+   "name": "Presbycusis",
+   "model": "H90.3",
+   "reference": "H91.13"
+  },
+  {
+   "name": "Statin-associated muscle symptoms",
+   "model": "Z79.84",
+   "reference": "G72.0"
+  },
+  {
+   "name": "Tobacco use disorder",
+   "model": "Z72.0",
+   "reference": "F17.210"
+  },
+  {
+   "name": "Uncomplicated parapneumonic effusion",
+   "model": "J86.0",
+   "reference": "J90"
+  },
+  {
+   "name": "Lambert-Eaton myasthenic syndrome",
+   "model": "G72.0",
+   "reference": "G73.1"
+  },
+  {
+   "name": "Suspected malignant neoplasm of lung",
+   "model": "Z12.11",
+   "reference": "C34.90"
+  },
+  {
+   "name": "Uncomplicated parapneumonic effusion",
+   "model": "J86",
+   "reference": "J90"
+  },
+  {
+   "name": "DiGeorge syndrome",
+   "model": "Q89.8",
+   "reference": "D82.1"
+  },
+  {
+   "name": "Ventricular septal defect",
+   "model": "Q21.0",
+   "reference": "I51.0"
+  },
+  {
+   "name": "Renal tubular acidosis",
+   "model": "E87.6",
+   "reference": "N25.89"
+  },
+  {
+   "name": "Ventricular septal defect",
+   "model": "Q21.0",
+   "reference": "I51.0"
+  },
+  {
+   "name": "Renal artery thrombosis",
+   "model": "I76.0",
+   "reference": "I74.8"
+  },
+  {
+   "name": "Vitamin K deficiency (Hemorrhagic disease of the newborn)",
+   "model": "P51.0",
+   "reference": "P53"
+  },
+  {
+   "name": "Neonatal chlamydial conjunctivitis",
+   "model": "A54.0",
+   "reference": "P39.1"
+  },
+  {
+   "name": "Functional constipation",
+   "model": "K52.9",
+   "reference": "K59.04"
+  },
+  {
+   "name": "Diabetic ketoacidosis",
+   "model": "E15.0",
+   "reference": "E10.10"
+  },
+  {
+   "name": "Acute iron poisoning",
+   "model": "T29.4X1A",
+   "reference": "T45.4X1A"
+  },
+  {
+   "name": "Simple febrile seizure",
+   "model": "G43.81",
+   "reference": "R56.00"
+  },
+  {
+   "name": "Glucose-6-phosphate dehydrogenase deficiency",
+   "model": "D50.0",
+   "reference": "D55.0"
+  },
+  {
+   "name": "IgA nephropathy",
+   "model": "N00.1",
+   "reference": "N02.8"
+  },
+  {
+   "name": "Primary nocturnal enuresis",
+   "model": "F35.0",
+   "reference": "N39.44"
+  },
+  {
+   "name": "Testicular torsion",
+   "model": "S32.109A",
+   "reference": "N44.00"
+  },
+  {
+   "name": "Craniopharyngioma",
+   "model": "D32.0",
+   "reference": "D44.3"
+  },
+  {
+   "name": "Vitamin D-dependent rickets type II",
+   "model": "E55.9",
+   "reference": "E83.32"
+  },
+  {
+   "name": "Orchitis",
+   "model": "A18.0",
+   "reference": "B26.0"
+  },
+  {
+   "name": "IgA nephropathy",
+   "model": "N04.0",
+   "reference": "N02.8"
+  },
+  {
+   "name": "Candidal esophagitis",
+   "model": "K50.319",
+   "reference": "B37.81"
+  },
+  {
+   "name": "Cryptosporidiosis",
+   "model": "A09",
+   "reference": "A07.2"
+  },
+  {
+   "name": "Cryptococcal meningitis",
+   "model": "G17.3",
+   "reference": "B45.1"
+  },
+  {
+   "name": "Compartment syndrome of hand",
+   "model": "T79.611",
+   "reference": "T79.A12A"
+  },
+  {
+   "name": "Rhabdomyolysis requiring fluid resuscitation",
+   "model": "T79.619",
+   "reference": "M62.82"
+  },
+  {
+   "name": "Primary syphilis",
+   "model": "A50",
+   "reference": "A51.0"
+  },
+  {
+   "name": "Traumatic hemorrhagic shock with acute coagulopathy",
+   "model": "T79.31XA",
+   "reference": "T79.4XXA"
+  },
+  {
+   "name": "Diabetic ketoacidosis",
+   "model": "E15.9",
+   "reference": "E10.10"
+  },
+  {
+   "name": "Phrenic nerve injury",
+   "model": "G58.0",
+   "reference": "G57.8"
+  },
+  {
+   "name": "Septic shock",
+   "model": "A41.9",
+   "reference": "R65.21"
+  },
+  {
+   "name": "Meningococcal meningitis",
+   "model": "A04.9",
+   "reference": "A39.0"
+  },
+  {
+   "name": "Blunt thoracic aortic injury",
+   "model": "S25.81",
+   "reference": "S25.00XA"
+  },
+  {
+   "name": "Primary sclerosing cholangitis",
+   "model": "K76.8",
+   "reference": "K83.01"
+  },
+  {
+   "name": "High-altitude pulmonary edema",
+   "model": "T71.4",
+   "reference": "T70.29XA"
+  },
+  {
+   "name": "Epidural hematoma",
+   "model": "S06.31",
+   "reference": "S06.4X9A"
+  },
+  {
+   "name": "Infected human bite wound of hand (clenched fist injury/fight bite)",
+   "model": "S41.819A",
+   "reference": "S61.451A"
+  },
+  {
+   "name": "Calcium channel blocker-induced peripheral edema",
+   "model": "I83.89",
+   "reference": "T46.1X5A"
+  },
+  {
+   "name": "Vitamin B12 deficiency",
+   "model": "D51.0",
+   "reference": "E53.8"
+  },
+  {
+   "name": "Anastomotic leak (postoperative)",
+   "model": "K62.8",
+   "reference": "T81.83XA"
+  },
+  {
+   "name": "Anastomotic stricture",
+   "model": "K62.3",
+   "reference": "K63.89"
+  },
+  {
+   "name": "Streptococcal infection or syphilis",
+   "model": "A64.9",
+   "reference": "A46"
+  },
+  {
+   "name": "Scleroderma renal crisis",
+   "model": "I77.0",
+   "reference": "M34.0"
+  },
+  {
+   "name": "Somatic symptom disorder",
+   "model": "F54",
+   "reference": "F45.1"
+  },
+  {
+   "name": "Lisinopril adverse effect",
+   "model": "T46.1X5A",
+   "reference": "T46.4X5A"
+  },
+  {
+   "name": "Adverse effect of anticholinergic medication",
+   "model": "T44.5X5A",
+   "reference": "T44.3X5A"
+  },
+  {
+   "name": "Theophylline toxicity",
+   "model": "T44.1X5",
+   "reference": "T48.6X1A"
+  },
+  {
+   "name": "Carcinoid syndrome",
+   "model": "C2A.0",
+   "reference": "E34.09"
+  },
+  {
+   "name": "M\u00fcllerian agenesis",
+   "model": "Q50.0",
+   "reference": "Q51.0"
+  },
+  {
+   "name": "Complete Androgen Insensitivity Syndrome",
+   "model": "Q56.0",
+   "reference": "E34.52"
+  },
+  {
+   "name": "Acute rheumatic fever",
+   "model": "A38.9",
+   "reference": "I01.9"
+  },
+  {
+   "name": "Acoustic neuroma (Vestibular schwannoma)",
+   "model": "D31.0",
+   "reference": "D33.3"
+  },
+  {
+   "name": "Thyroglossal duct cyst",
+   "model": "Q12.0",
+   "reference": "Q89.2"
+  }
+ ]
+}

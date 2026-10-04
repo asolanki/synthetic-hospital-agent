@@ -1,0 +1,78 @@
+{
+ "n": 161,
+ "n_patients": 66,
+ "rows": [
+  {
+   "strategy": "oracle (reference question)",
+   "concept_f1 (reward)": 1.0,
+   "concept_precision": 1.0,
+   "concept_recall": 1.0,
+   "token_f1": 1.0
+  },
+  {
+   "strategy": "empty",
+   "concept_f1 (reward)": 0.0,
+   "concept_precision": 0.0,
+   "concept_recall": 0.0,
+   "token_f1": 0.0
+  },
+  {
+   "strategy": "order's indication, verbatim",
+   "concept_f1 (reward)": 0.18419075748268282,
+   "concept_precision": 0.5289855072463767,
+   "concept_recall": 0.11628776675360519,
+   "token_f1": 0.05475227714287174
+  },
+  {
+   "strategy": "chief complaint of the encounter",
+   "concept_f1 (reward)": 0.17414204153334575,
+   "concept_precision": 0.3048851424627822,
+   "concept_recall": 0.13525516926138043,
+   "token_f1": 0.15124228307553575
+  },
+  {
+   "strategy": "chief complaint + indication",
+   "concept_f1 (reward)": 0.20758488227240024,
+   "concept_precision": 0.3044735285418516,
+   "concept_recall": 0.17677148593297654,
+   "token_f1": 0.3006640223887303
+  },
+  {
+   "strategy": "HPI of the encounter, verbatim",
+   "concept_f1 (reward)": 0.15199101467391954,
+   "concept_precision": 0.1399885901915099,
+   "concept_recall": 0.1978601453756732,
+   "token_f1": 0.16802417438415468
+  },
+  {
+   "strategy": "another patient's reference question",
+   "concept_f1 (reward)": 0.060948149029125105,
+   "concept_precision": 0.06997996827189373,
+   "concept_recall": 0.05962889767237592,
+   "token_f1": 0.24782928698130857
+  },
+  {
+   "strategy": "[labels] encounter's reference diagnosis name",
+   "concept_f1 (reward)": 0.20801506981631196,
+   "concept_precision": 0.5601449275362317,
+   "concept_recall": 0.134844899751732,
+   "token_f1": 0.19585236701727893
+  },
+  {
+   "strategy": "[labels] reference differential names",
+   "concept_f1 (reward)": 0.3698896313471434,
+   "concept_precision": 0.4110082636480151,
+   "concept_recall": 0.36827458256029677,
+   "token_f1": 0.2789989436834495
+  },
+  {
+   "strategy": "[labels] reference question + 5 unrelated diagnoses",
+   "concept_f1 (reward)": 0.6339074687079949,
+   "concept_precision": 0.472718057474706,
+   "concept_recall": 0.9991126885536824,
+   "token_f1": 0.6739647773388198
+  }
+ ],
+ "mean_prior_encounters": 2.6956521739130435,
+ "share_first_encounter": 0.16770186335403728
+}

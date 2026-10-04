@@ -1,0 +1,74 @@
+{
+ "health": {
+  "status": "ok",
+  "redis": true
+ },
+ "icd10cm_terminology_rows": 97584,
+ "oracle": {
+  "n": 1000,
+  "mean_reward": 1.0,
+  "n_below_1": 0,
+  "below_1": []
+ },
+ "malformed": {
+  "empty_object": 0.0,
+  "empty_lists": 0.0,
+  "wrong_keys": 0.0,
+  "string_lists": "ERROR POST /score -> 500: Internal Server Error",
+  "list_of_strings": "ERROR POST /score -> RemoteProtocolError: Server disconnected without sending a response.",
+  "null_codes": 0.0,
+  "not_icd": 0.0,
+  "env_malformed_submit": {
+   "reward": 0.0,
+   "done": true,
+   "malformed": true
+  },
+  "env_list_of_strings_submit": {
+   "reward": 0.0,
+   "server_error": "POST /env/step -> 500: Internal Server Error",
+   "episode_left_open_until_closed": true
+  },
+  "env_closed_without_submit": {
+   "reward": 0.0,
+   "submitted": false
+  }
+ },
+ "budget": {
+  "over_budget_observation": {
+   "error": "Action budget of 3 spent. Only submit_diagnosis is accepted now; submit your best answer."
+  },
+  "over_budget_remaining": 0,
+  "other_submit_tool_observation": {
+   "error": "This task is scored through submit_diagnosis; use that tool to finish the episode."
+  },
+  "forced_submit": {
+   "done": true,
+   "forced": true,
+   "reward": 0.0
+  }
+ },
+ "label_exposure": {
+  "episodes_crawled": 40,
+  "episodes_with_outcome_sections": 0,
+  "episodes_with_reference_code_in_observations": 0,
+  "episodes_with_icd10_field": 0,
+  "direct_hidden_section_reads": 34,
+  "direct_hidden_section_reads_blocked": 0,
+  "examples": []
+ },
+ "name_exposure_train": {
+  "n_reference_diagnoses": 2866,
+  "name_carried_forward_rate": 0.8098394975575716,
+  "name_in_own_encounter_only_rate": 0.02512212142358688,
+  "name_readable_anywhere_rate": 0.8349616189811584,
+  "final_encounter_diagnoses_share": 0.1898115840893231,
+  "final_encounter_diagnoses_named_in_own_note_rate": 0.1323529411764706,
+  "mean_per_patient_carried_forward": 0.7936011904761906
+ },
+ "failures": [
+  "malformed case 'string_lists' did not score 0: ERROR POST /score -> 500: Internal Server Error",
+  "malformed case 'list_of_strings' did not score 0: ERROR POST /score -> RemoteProtocolError: Server disconnected without sending a response.",
+  "malformed case 'env_list_of_strings_submit' crashed the scorer instead of scoring 0",
+  "assessment/plan sections readable by section_id"
+ ]
+}

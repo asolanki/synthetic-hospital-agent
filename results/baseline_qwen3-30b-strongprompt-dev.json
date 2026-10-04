@@ -1,0 +1,50 @@
+{
+ "config": {
+  "model": "qwen/qwen3-30b-a3b-instruct-2507",
+  "base_url": "https://openrouter.ai/api/v1",
+  "api_key_env": "OPENROUTER_API_KEY",
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "max_tokens": 2048,
+  "budget": 40,
+  "max_no_tool_turns": 2,
+  "seed": 0,
+  "system_prompt": "You are a clinical documentation agent. Your job is to reconstruct one patient's complete problem list from their longitudinal medical record and submit it with ICD-10-CM codes.\n\nYou act only by calling tools. You have a budget of 40 tool calls; an efficient review uses far fewer. Never write tool calls as text.\n\nHOW THE RECORD IS ORGANIZED\n- The patient has several encounters. Each encounter established a diagnosis. A follow-up encounter can concern the same diagnosis as an earlier one.\n- The PMH section of each encounter note contains an \"Active Problem List\". Entries written as \"Name (diagnosed YYYY-MM-DD)\" are diagnoses established at EARLIER encounters. The most recent encounter's list is the most complete.\n- The diagnosis of the MOST RECENT encounter is never written in any problem list. You must work it out from that encounter's history, exam, labs, and imaging.\n- Entries in the problem list without a \"(diagnosed ...)\" date are background history from the patient profile.\n\nPROCEDURE\n1. Call view_encounters to get every encounter id and date.\n2. Call view_encounter_detail on the most recent encounter (latest date). Copy every \"(diagnosed ...)\" entry from its Active Problem List, word for word.\n3. From the same note, determine the diagnosis of this most recent encounter from the chief complaint, HPI, exam, labs, and imaging. Commit to the single most specific diagnosis the findings support.\n4. Compare your list against the encounters. Expect about one diagnosis per encounter, fewer when a follow-up repeats an earlier diagnosis. If an earlier encounter has no matching dated entry, open it and determine its diagnosis from the findings.\n5. Submit with submit_diagnosis. Do not keep exploring once every encounter is accounted for.\n\nCODING RULES\n- Give each diagnosis the ICD-10-CM code for that exact condition. Think about which chapter it belongs to before choosing: pregnancy, childbirth, and puerperium conditions are O codes; perinatal conditions are P codes; congenital conditions are Q codes; injuries are S/T codes; symptoms without a diagnosis are R codes.\n- Getting the first three characters right matters most. If unsure of the later characters, use the unspecified form (for example I50.9) rather than guessing a specific one.\n- One entry per condition. Never list the same condition twice, and never list both a condition and a restatement of it.\n\nWHAT TO INCLUDE\n- Every dated problem-list entry, plus the most recent encounter's diagnosis, plus any earlier-encounter diagnosis you had to determine yourself.\n- Do NOT add symptoms, incidental findings, differential diagnoses, risk factors, or conditions you are merely considering. Extra entries are penalized.\n- Put acute or new conditions in active_diagnoses with acuity \"acute\" (or \"acute_on_chronic\"), and long-standing conditions in chronic_conditions with acuity \"chronic\".\n\nSUBMISSION SCHEMA\n{\n  \"active_diagnoses\": [{\"icd10\": \"I21.01\", \"name\": \"STEMI involving LAD\", \"acuity\": \"acute\"}],\n  \"chronic_conditions\": [{\"icd10\": \"I10\", \"name\": \"Essential hypertension\", \"acuity\": \"chronic\"}]\n}",
+  "extra_body": null
+ },
+ "n_requested": 120,
+ "n_excluded_provider_errors": 0,
+ "n": 120,
+ "valid_submit_rate": 1.0,
+ "mean_reward": 0.439220224161944,
+ "official_f1": 0.45645830241658786,
+ "official_f1_strict": 0.45645830241658786,
+ "weighted_recall": 0.4556620987300169,
+ "recall": 0.4755853174603175,
+ "precision_neutral": 0.45725729347551375,
+ "precision_raw": 0.3079616946027091,
+ "acuity_accuracy": 0.7045454545454546,
+ "mean_predictions": 7.25,
+ "mean_reward_ci95": [
+  0.3772761479511171,
+  0.5013756493866337
+ ],
+ "official_f1_strict_ci95": [
+  0.39432976681029314,
+  0.5189642823466163
+ ],
+ "submit_rate": 1.0,
+ "budget_exhausted_rate": 0.0,
+ "mean_actions": 7.675,
+ "mean_turns": 7.708333333333333,
+ "mean_tool_errors": 0.0,
+ "mean_prompt_tokens": 39108.058333333334,
+ "mean_completion_tokens": 581.1333333333333,
+ "mean_total_tokens": 39689.191666666666,
+ "mean_peak_context_tokens": 8084.866666666667,
+ "stop_reasons": {
+  "submitted": 120
+ },
+ "name": "qwen3-30b-strongprompt-dev",
+ "split": "dev"
+}

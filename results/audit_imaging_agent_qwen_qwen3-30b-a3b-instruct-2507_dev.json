@@ -1,0 +1,23 @@
+{
+ "model": "qwen/qwen3-30b-a3b-instruct-2507",
+ "n": 161,
+ "concept_f1 (reward)": 0.3737717332269567,
+ "submit_rate": 1.0,
+ "valid_rate": 1.0,
+ "budget_exhausted_rate": 0.0,
+ "mean_actions": 8.987577639751553,
+ "mean_tokens": 32730.757763975154,
+ "concept_precision": 0.5234398107068914,
+ "concept_recall": 0.32739372428813435,
+ "tool_calls": {
+  "search_chart": 369,
+  "view_encounter_detail": 205,
+  "view_results": 170,
+  "open_chart": 161,
+  "submit_pre_read": 161,
+  "view_encounters": 148,
+  "view_problem_list": 102,
+  "view_section": 75,
+  "view_medications": 56
+ }
+}

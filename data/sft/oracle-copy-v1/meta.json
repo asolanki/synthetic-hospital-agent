@@ -1,0 +1,10 @@
+{
+ "name": "oracle-copy-v1",
+ "split": "train",
+ "n": 680,
+ "mean_reward": 1.0,
+ "min_reward": 1.0,
+ "system_prompt": "paper",
+ "policy": "view_encounters -> view_encounter_detail(latest) -> submit(reference)",
+ "tools_from": "data/sft/oracle-copy-v1/tools_source_trace.jsonl (copy of a Verifiers smoke-test trace)"
+}

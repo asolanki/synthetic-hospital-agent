@@ -1,0 +1,30 @@
+{
+ "n": 120,
+ "rows": [
+  {
+   "strategy": "empty",
+   "precision_5 (reward)": 0.0,
+   "ndcg_10": 0.0
+  },
+  {
+   "strategy": "5 random sections",
+   "precision_5 (reward)": 0.7083333333333324,
+   "ndcg_10": 0.3485655113978931
+  },
+  {
+   "strategy": "first 5 sections of the chart",
+   "precision_5 (reward)": 0.7033333333333326,
+   "ndcg_10": 0.3755467780281315
+  },
+  {
+   "strategy": "all sections, chart order",
+   "precision_5 (reward)": 0.7033333333333326,
+   "ndcg_10": 0.562976126064341
+  },
+  {
+   "strategy": "all sections, sorted by section type (HPI first)",
+   "precision_5 (reward)": 0.9799999999999999,
+   "ndcg_10": 0.8216927583609105
+  }
+ ]
+}

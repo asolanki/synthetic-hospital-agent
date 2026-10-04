@@ -1,0 +1,429 @@
+{
+ "model": "qwen/qwen3-235b-a22b-2507",
+ "split": "dev",
+ "n": 120,
+ "valid_submit_rate": 1.0,
+ "mean_reward": 0.6848513082396853,
+ "official_f1": 0.7023336168431182,
+ "official_f1_strict": 0.7023336168431182,
+ "weighted_recall": 0.6241549634719138,
+ "recall": 0.6434126984126984,
+ "precision_neutral": 0.8029011604641856,
+ "precision_raw": 0.7839880952380952,
+ "acuity_accuracy": 0.39552238805970147,
+ "mean_predictions": 2.8583333333333334,
+ "mean_reward_ci95": [
+  0.6279004501831893,
+  0.7404163687325496
+ ],
+ "official_f1_strict_ci95": [
+  0.6444889589505555,
+  0.7557062631272499
+ ],
+ "visit_split": {
+  "recall_earlier_visits": 0.7896253602305475,
+  "recall_final_visit": 0.07142857142857142,
+  "n_earlier": 347,
+  "n_final": 70
+ },
+ "names_coded": 345,
+ "names_with_reference_code": 345,
+ "category_agreement_with_reference": 0.7710144927536232,
+ "disagreements": [
+  {
+   "name": "Senile purpura",
+   "model": "R21",
+   "reference": "D69.2"
+  },
+  {
+   "name": "Rheumatoid arthritis",
+   "model": "M05.9",
+   "reference": "M06.9"
+  },
+  {
+   "name": "Female Athlete Triad",
+   "model": "N98.8",
+   "reference": "F50.01"
+  },
+  {
+   "name": "Chloroquine-sensitive malaria prophylaxis",
+   "model": "Z20.8",
+   "reference": "B50.9"
+  },
+  {
+   "name": "Fetal Atrioventricular Block",
+   "model": "P29.1",
+   "reference": "Q24.6"
+  },
+  {
+   "name": "Acute cystitis",
+   "model": "N30.00",
+   "reference": "A06.81"
+  },
+  {
+   "name": "Traumatic hemorrhagic shock with acute coagulopathy",
+   "model": "T79.7XXA",
+   "reference": "T79.4XXA"
+  },
+  {
+   "name": "Major depressive disorder",
+   "model": "F32.9",
+   "reference": "F33.9"
+  },
+  {
+   "name": "External anal sphincter injury",
+   "model": "S39.812A",
+   "reference": "O70.2"
+  },
+  {
+   "name": "Active genital herpes simplex virus infection at term",
+   "model": "A60.01",
+   "reference": "O98.43"
+  },
+  {
+   "name": "SSRI-induced sexual dysfunction",
+   "model": "T38.3X5A",
+   "reference": "T43.205A"
+  },
+  {
+   "name": "Secondary syphilis",
+   "model": "A52.32",
+   "reference": "A51.39"
+  },
+  {
+   "name": "Anesthetic medication reaction",
+   "model": "Y44.8X1A",
+   "reference": "T88.6XXA"
+  },
+  {
+   "name": "Respiratory distress syndrome",
+   "model": "J96.00",
+   "reference": "P22.0"
+  },
+  {
+   "name": "Stage 2 Essential Hypertension (Suspected/White Coat Variation)",
+   "model": "I10",
+   "reference": "R03.0"
+  },
+  {
+   "name": "Primary prevention of cardiovascular disease",
+   "model": "Z12.89",
+   "reference": "Z13.6"
+  },
+  {
+   "name": "Diabetic motor neuropathy",
+   "model": "E08.42",
+   "reference": "E11.42"
+  },
+  {
+   "name": "Erectile dysfunction (organic, secondary to diabetes mellitus)",
+   "model": "E08.621",
+   "reference": "N52.1"
+  },
+  {
+   "name": "Normal sinus rhythm",
+   "model": "Z86.79",
+   "reference": "Z00.8"
+  },
+  {
+   "name": "Colorectal neoplasia",
+   "model": "D37.9",
+   "reference": "C18.9"
+  },
+  {
+   "name": "Flecainide adverse effect",
+   "model": "T46.5X5A",
+   "reference": "T46.2X5A"
+  },
+  {
+   "name": "Sideroblastic anemia (acquired, alcohol-related)",
+   "model": "D46.9",
+   "reference": "D64.2"
+  },
+  {
+   "name": "Acute upper gastrointestinal hemorrhage secondary to peptic ulcer disease",
+   "model": "K92.2",
+   "reference": "K27.0"
+  },
+  {
+   "name": "Internal hemorrhoid",
+   "model": "I84.0",
+   "reference": "K64.8"
+  },
+  {
+   "name": "Ludwig angina",
+   "model": "L02.2",
+   "reference": "K12.2"
+  },
+  {
+   "name": "Pneumocystis jirovecii pneumonia",
+   "model": "B59",
+   "reference": "B20.6"
+  },
+  {
+   "name": "Immune reconstitution inflammatory syndrome",
+   "model": "B77.8",
+   "reference": "D89.3"
+  },
+  {
+   "name": "Acquired methemoglobinemia",
+   "model": "D75.0",
+   "reference": "D74.8"
+  },
+  {
+   "name": "Nocardiosis",
+   "model": "A32.9",
+   "reference": "A42.7"
+  },
+  {
+   "name": "Neuroleptic-induced akathisia",
+   "model": "G25.71",
+   "reference": "G21.11"
+  },
+  {
+   "name": "Hepatitis C virus reinfection",
+   "model": "A98.51",
+   "reference": "B17.1"
+  },
+  {
+   "name": "Abdominal aortic aneurysm",
+   "model": "I71.4",
+   "reference": "I77.811"
+  },
+  {
+   "name": "History of rheumatic fever",
+   "model": "I09.81",
+   "reference": "Z86.79"
+  },
+  {
+   "name": "Prostate Cancer (Suspected)",
+   "model": "R93.6",
+   "reference": "C61"
+  },
+  {
+   "name": "Nephrogenic Diabetes Insipidus",
+   "model": "E23.2",
+   "reference": "N25.1"
+  },
+  {
+   "name": "Tension pneumothorax",
+   "model": "J95.811",
+   "reference": "S27.0XXA"
+  },
+  {
+   "name": "Flaccid paralysis",
+   "model": "G83.2",
+   "reference": "M62.50"
+  },
+  {
+   "name": "Ventricular septal defect",
+   "model": "Q21.0",
+   "reference": "I51.0"
+  },
+  {
+   "name": "Papillary muscle rupture",
+   "model": "I28.8",
+   "reference": "I23.3"
+  },
+  {
+   "name": "Postoperative hemorrhage following inguinal hernia repair",
+   "model": "K91.830",
+   "reference": "T81.0XXA"
+  },
+  {
+   "name": "Calcium channel blocker-induced peripheral edema",
+   "model": "I95.2",
+   "reference": "T46.1X5A"
+  },
+  {
+   "name": "Senile purpura",
+   "model": "L81.7",
+   "reference": "D69.2"
+  },
+  {
+   "name": "Statin-associated muscle symptoms",
+   "model": "G58.0",
+   "reference": "G72.0"
+  },
+  {
+   "name": "Lambert-Eaton myasthenic syndrome",
+   "model": "G70.01",
+   "reference": "G73.1"
+  },
+  {
+   "name": "Suspected malignant neoplasm of lung",
+   "model": "R91.1",
+   "reference": "C34.90"
+  },
+  {
+   "name": "Normal pressure hydrocephalus",
+   "model": "G31.8",
+   "reference": "G91.2"
+  },
+  {
+   "name": "DiGeorge syndrome",
+   "model": "Q93.81",
+   "reference": "D82.1"
+  },
+  {
+   "name": "Ventricular septal defect",
+   "model": "Q21.0",
+   "reference": "I51.0"
+  },
+  {
+   "name": "Ventricular septal defect",
+   "model": "Q21.0",
+   "reference": "I51.0"
+  },
+  {
+   "name": "Renal artery thrombosis",
+   "model": "I70.1",
+   "reference": "I74.8"
+  },
+  {
+   "name": "Necrotizing enterocolitis",
+   "model": "K55.0",
+   "reference": "P77.9"
+  },
+  {
+   "name": "Vitamin K deficiency (Hemorrhagic disease of the newborn)",
+   "model": "P52.8",
+   "reference": "P53"
+  },
+  {
+   "name": "Diabetic ketoacidosis",
+   "model": "E08.10",
+   "reference": "E10.10"
+  },
+  {
+   "name": "IgA nephropathy",
+   "model": "N01.8",
+   "reference": "N02.8"
+  },
+  {
+   "name": "Primary nocturnal enuresis",
+   "model": "R32",
+   "reference": "N39.44"
+  },
+  {
+   "name": "Craniopharyngioma",
+   "model": "D35.2",
+   "reference": "D44.3"
+  },
+  {
+   "name": "Vitamin D-dependent rickets type II",
+   "model": "E09.0",
+   "reference": "E83.32"
+  },
+  {
+   "name": "Orchitis",
+   "model": "N45.0",
+   "reference": "B26.0"
+  },
+  {
+   "name": "Focal Segmental Glomerulosclerosis",
+   "model": "N05.9",
+   "reference": "N04.1"
+  },
+  {
+   "name": "Compartment syndrome of hand",
+   "model": "M79.741",
+   "reference": "T79.A12A"
+  },
+  {
+   "name": "Maternal HIV infection",
+   "model": "O98.710",
+   "reference": "Z21"
+  },
+  {
+   "name": "Traumatic hemorrhagic shock with acute coagulopathy",
+   "model": "T79.5XXA",
+   "reference": "T79.4XXA"
+  },
+  {
+   "name": "Phrenic nerve injury",
+   "model": "S24.4XXA",
+   "reference": "G57.8"
+  },
+  {
+   "name": "Septic shock",
+   "model": "A41.9",
+   "reference": "R65.21"
+  },
+  {
+   "name": "Esophageal rupture with pleural effusion",
+   "model": "K91.81",
+   "reference": "K22.3"
+  },
+  {
+   "name": "Blunt thoracic aortic injury",
+   "model": "S16.9XXA",
+   "reference": "S25.00XA"
+  },
+  {
+   "name": "Primary sclerosing cholangitis",
+   "model": "K74.3",
+   "reference": "K83.01"
+  },
+  {
+   "name": "High-altitude pulmonary edema",
+   "model": "T70.2XXA",
+   "reference": "T70.29XA"
+  },
+  {
+   "name": "Cocaine abuse",
+   "model": "F13.10",
+   "reference": "F14.10"
+  },
+  {
+   "name": "Calcium channel blocker-induced peripheral edema",
+   "model": "I95.89",
+   "reference": "T46.1X5A"
+  },
+  {
+   "name": "Anastomotic leak (postoperative)",
+   "model": "T81.2XXA",
+   "reference": "T81.83XA"
+  },
+  {
+   "name": "Anastomotic stricture",
+   "model": "K91.81",
+   "reference": "K63.89"
+  },
+  {
+   "name": "Streptococcal infection or syphilis",
+   "model": "A53.9",
+   "reference": "A46"
+  },
+  {
+   "name": "Extranodal marginal zone B-cell lymphoma of mucosa-associated lymphoid tissue (MALT lymphoma) of the stomach",
+   "model": "C82.15",
+   "reference": "C88.41"
+  },
+  {
+   "name": "Lisinopril adverse effect",
+   "model": "T46.9X5A",
+   "reference": "T46.4X5A"
+  },
+  {
+   "name": "Adverse effect of anticholinergic medication",
+   "model": "T50.8X5A",
+   "reference": "T44.3X5A"
+  },
+  {
+   "name": "Theophylline toxicity",
+   "model": "T38.3X5A",
+   "reference": "T48.6X1A"
+  },
+  {
+   "name": "Acute rheumatic fever",
+   "model": "I00",
+   "reference": "I01.9"
+  },
+  {
+   "name": "Thyroglossal duct cyst",
+   "model": "Q38.0",
+   "reference": "Q89.2"
+  }
+ ]
+}

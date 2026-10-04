@@ -1,0 +1,50 @@
+{
+ "config": {
+  "model": "qwen/qwen3-30b-a3b-instruct-2507",
+  "base_url": "https://openrouter.ai/api/v1",
+  "api_key_env": "OPENROUTER_API_KEY",
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "max_tokens": 2048,
+  "budget": 40,
+  "max_no_tool_turns": 2,
+  "seed": 0,
+  "system_prompt": null,
+  "extra_body": null
+ },
+ "n_requested": 120,
+ "n_excluded_provider_errors": 0,
+ "n": 120,
+ "valid_submit_rate": 0.9833333333333333,
+ "mean_reward": 0.4632244732771615,
+ "official_f1": 0.502693447644606,
+ "official_f1_strict": 0.4942158844644596,
+ "weighted_recall": 0.4674545936257513,
+ "recall": 0.48861985472154956,
+ "precision_neutral": 0.5436783988957902,
+ "precision_raw": 0.33479508956203874,
+ "acuity_accuracy": 0.7298850574712644,
+ "mean_predictions": 6.5,
+ "mean_reward_ci95": [
+  0.40510768102394135,
+  0.5245533719865159
+ ],
+ "official_f1_strict_ci95": [
+  0.43549158695023754,
+  0.5538390695078335
+ ],
+ "submit_rate": 1.0,
+ "budget_exhausted_rate": 0.0,
+ "mean_actions": 11.225,
+ "mean_turns": 11.441666666666666,
+ "mean_tool_errors": 0.0,
+ "mean_prompt_tokens": 58615.791666666664,
+ "mean_completion_tokens": 664.5583333333333,
+ "mean_total_tokens": 59280.35,
+ "mean_peak_context_tokens": 8206.175,
+ "stop_reasons": {
+  "submitted": 120
+ },
+ "name": "qwen_qwen3-30b-a3b-instruct-2507-dev",
+ "split": "dev"
+}
