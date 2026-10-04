@@ -3,7 +3,7 @@
 Date: 2026-10-02. Question: is there an official task in Synthetic Hospital v1.3 where *using the
 chart* is the bottleneck, so that RL on tool use has something to add? All numbers are on the dev
 patients (120 patients of the fixed split) with the official scorer through `/score`.
-Reproduce with `scripts/audit_other_tasks.py`; raw outputs are `results/audit_*_dev.json`.
+Reproduce with `uv run python -m audit.other_tasks <task>`; raw outputs are in `results/raw/other_tasks/`.
 
 ## Answer
 

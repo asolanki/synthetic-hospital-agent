@@ -2,8 +2,8 @@
 
 Date: 2026-09-30. Synthetic Hospital v1.3 at commit `911f34c`, `patient_diagnosis`, `/env` route.
 All numbers are on the 120-patient dev split unless stated. Full tables: [tables.md](tables.md).
-Raw outputs: `verify.json`, `audit_dev.json`, `audit_train.json`, `baseline_*.json`; full
-trajectories are in `runs/` (not committed).
+Raw outputs: `raw/audit/verify.json`, `raw/audit/strategies_{dev,train}.json`, `raw/baselines/*.json`;
+full trajectories are in `runs/` (not committed). Code: `audit/` and `baselines/`.
 
 ## Status against the milestone
 
@@ -112,8 +112,9 @@ submit 6–7 entries against 3.5 in the reference. None of these is better chart
 - **Scorer crash on some malformed submissions.** A submission whose lists contain strings
   (`{"active_diagnoses": ["I10"], ...}`) or are strings raises HTTP 500 instead of scoring 0, and
   through `/env/step` the episode is left open. The README says malformed submissions score 0
-  and never raise. `shrl/agent.py` treats this case as a malformed submission with reward 0; an
-  RL trainer must do the same or it will crash on a model's bad output.
+  and never raise. `baselines/agent.py` treats this case as a malformed submission with reward 0,
+  and the training environment validates arguments before they reach the scorer. Any RL setup
+  must do one of the two, or it will crash on a model's bad output.
 - **Assessment/plan filter hole.** `view_section(section_id)` returns assessment and plan
   sections that every other tool strips; section ids are contiguous, so the hidden ones are
   guessable. In all 34 direct reads tried, none was blocked. Practical value looks low: these
@@ -122,7 +123,7 @@ submit 6–7 entries against 3.5 in the reference. None of these is better chart
   during RL, and worth reporting upstream with the crash.
 - **The reward depends on a boot-time download.** Chart-neutral sets fall back to fuzzy matching
   against ICD-10-CM titles that the container fetches from CMS on first boot. If that download
-  fails, rewards differ. `shrl verify` checks that the table is populated (97,584 rows here).
+  fails, rewards differ. `python -m audit.verify` checks that the table is populated (97,584 rows here).
 - **The official aggregate drops empty submissions** from both means instead of counting them
   as zero, so an agent that fails to submit is not penalized by it. `official_f1_strict` in this
   repo counts them as zero. The paper prompt also has a templating slip ("through You have

@@ -1,4 +1,4 @@
-from shrl import metrics
+from common import metrics
 
 
 def _rec(reward, w_recall, precision, n_pred=2, neutral=0, raw_precision=None, scored=True):

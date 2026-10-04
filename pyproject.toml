@@ -1,5 +1,5 @@
 [project]
-name = "shrl"
+name = "synthetic-hospital-rl"
 version = "0.1.0"
 description = "RL vs. prompting vs. SFT for a small model operating the Synthetic Hospital EHR environment"
 requires-python = ">=3.11"
@@ -9,27 +9,27 @@ dependencies = [
     "numpy>=1.26",
 ]
 
-[project.scripts]
-shrl = "shrl.cli:main"
-
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+# The phase folders are plain packages run with `uv run python -m <folder>.<module>`.
+# training/environment/ is a separate package (synthetic-hospital-dx) because prime-rl
+# and Verifiers load it by name; it is installed through the `verifiers` group below.
 [tool.hatch.build.targets.wheel]
-packages = ["shrl"]
+packages = ["common", "audit", "baselines", "training"]
+exclude = ["training/environment"]
 
 [dependency-groups]
 dev = ["pytest>=8"]
 # Verifiers v1 pinned to the commit the environment was written against (prime-rl tracks main).
+# Its null harness runs `uv sync --script` with ~/.local/bin first on PATH, so the uv
+# installed there must be >= 0.9 (see training/README.md).
 verifiers = [
     "verifiers",
     "synthetic-hospital-dx",
-    # The null harness runs `uv sync --script`, which needs a newer uv than this machine's
-    # global one; `uv run` puts the venv's bin first on PATH, so this copy is the one used.
-    "uv>=0.9",
 ]
 
 [tool.uv.sources]
 verifiers = { git = "https://github.com/PrimeIntellect-ai/verifiers", rev = "4fd5921071da239e75c23798bbe87f463d3cf0fb" }
-synthetic-hospital-dx = { path = "environments/synthetic_hospital_dx", editable = true }
+synthetic-hospital-dx = { path = "training/environment", editable = true }
