@@ -12,7 +12,7 @@ harness, which leaks the labels through the problem list).
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────────────────┐
-│ hospital/  the benchmark server (Docker): patients, answer keys, scorer              │
+│ hospital/  the benchmark server (HTTP): patients, answer keys, scorer                │
 │ http://localhost:58000                                                               │
 └─────────────┬─────────────────────────────┬─────────────────────────────┬────────────┘
               │ HTTP                        │ HTTP                        │ HTTP
@@ -40,16 +40,17 @@ by calling `submit_diagnosis`. The server scores the submission; that number is 
 | [`common/`](common/) | Small shared library: simulator client, benchmark DB reader, fixed split, metrics | — |
 | [`audit/`](audit/README.md) | Phase 1–2 checks: scorer sanity, label leaks, hand-written strategies, other tasks | done |
 | [`baselines/`](baselines/README.md) | First agent harness and the milestone-1 baseline table | done |
-| [`training/`](training/README.md) | The Verifiers environment, SFT data builder, run configs | in progress |
+| [`training/`](training/README.md) | Verifiers environment, self-hosted 4B inference/eval, LoRA SFT, Prime-RL GRPO, paired comparisons and breakdowns | done (pilot) |
 | `data/splits/` | Fixed train/dev split (680 / 120 patients) | committed |
 | `data/sft/` | SFT demonstrations | committed |
 | `results/` | Write-ups (below), `tables.md`, `cases/`, raw JSON in `raw/<phase>/` | committed |
-| `tests/` | Unit tests for the metric aggregation | — |
+| `tests/` | Metrics, model-call error reporting, SFT loss boundaries, rental shutdown, paired comparisons and the coding counterfactual | — |
 | `external/` | Upstream Synthetic Hospital, cloned by `hospital/setup.sh` | gitignored |
 | `runs/` | Full trajectories of every run | gitignored |
 
 Write-ups: [milestone 1](results/milestone1.md) (benchmark audit and baselines),
 [milestone 2](results/milestone2_other_tasks.md) (the other three tasks),
+[milestone 3](results/milestone3_training.md) (SFT vs RL vs continued SFT; where the error is),
 [a worked case](results/cases/patient_2123.md).
 
 ## Setup
@@ -62,13 +63,18 @@ uv sync --group verifiers         # our code + the Verifiers environment
 Put `OPENROUTER_API_KEY=...` in `.env` (gitignored). Every command runs from the repo root as
 `uv run python -m <folder>.<module>`; each folder's README lists its commands.
 
+On a GPU container without nested Docker, use `bash hospital/setup_native.sh`
+and `bash training/setup_inference.sh` instead. This creates host-local secrets
+and serves the exact BF16 checkpoint privately; no OpenRouter key is needed.
+See [`training/README.md`](training/README.md) for evaluation and rental shutdown.
+
 ## Data splits
 
 | Split | Patients | Use |
 |---|--:|---|
 | `train` | 680 | training (RL, SFT demonstrations, prompt optimization) |
 | `dev` | 120 | checkpoint and model selection, audits |
-| `public` | 200 | the paper's reported benchmark; comparison against published numbers |
+| `public` | 200 | the paper's reported benchmark; comparison against published numbers; untouched final test of the SFT/RL/continued-SFT phase |
 | `heldout` | 268 | sealed final evaluation; not reachable from our code |
 
 `train` and `dev` partition the upstream 800-patient `train` split, stratified by dominant

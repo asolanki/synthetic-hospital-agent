@@ -1,0 +1,188 @@
+{
+  "run_dir": "runs/rl/rl-sft-paper-v1",
+  "policy_version": 84,
+  "adapter": "runs/rl/rl-sft-paper-v1/broadcasts/step_84",
+  "episodes": 8,
+  "selection": "first finalized episodes dispatched with this policy, arrival order",
+  "recorded_vs_eval_adapter": {
+    "tokens": 1714,
+    "kl_k1": 0.0002112723673827058,
+    "kl_k3": 0.00040534583070448235,
+    "mean_abs_logprob_delta": 0.003904111438844019,
+    "max_abs_logprob_delta": 0.6680502891540527
+  },
+  "recorded_vs_eval_base": {
+    "tokens": 1714,
+    "kl_k1": 0.011425929848737653,
+    "kl_k3": 0.012419397333634695,
+    "mean_abs_logprob_delta": 0.026880946353091396,
+    "max_abs_logprob_delta": 2.1453988552093506
+  },
+  "per_episode": [
+    {
+      "episode": "249b6b7974144e12a29b4f3c992bd145",
+      "gt_id": 8131,
+      "context_tokens": 2857,
+      "sampled_tokens": 113,
+      "adapter": {
+        "tokens": 113,
+        "kl_k1": -6.077547129583828e-05,
+        "kl_k3": 1.6587332164788896e-07,
+        "mean_abs_logprob_delta": 6.978833250660958e-05,
+        "max_abs_logprob_delta": 0.005967140197753906
+      },
+      "base": {
+        "tokens": 113,
+        "kl_k1": 0.008713064958766583,
+        "kl_k3": 0.0027833148013304498,
+        "mean_abs_logprob_delta": 0.00871423567050407,
+        "max_abs_logprob_delta": 0.9117254167795181
+      }
+    },
+    {
+      "episode": "6b0610347ec345b1a03392f0e5a8007e",
+      "gt_id": 8131,
+      "context_tokens": 2857,
+      "sampled_tokens": 113,
+      "adapter": {
+        "tokens": 113,
+        "kl_k1": 0.00015500665947485508,
+        "kl_k3": 8.755340505909433e-07,
+        "mean_abs_logprob_delta": 0.00015758626146093906,
+        "max_abs_logprob_delta": 0.01375509798526764
+      },
+      "base": {
+        "tokens": 113,
+        "kl_k1": 0.008742217768493073,
+        "kl_k3": 0.0027939121647854257,
+        "mean_abs_logprob_delta": 0.008743375826503213,
+        "max_abs_logprob_delta": 0.9136883467435837
+      }
+    },
+    {
+      "episode": "15aaa49547a147e9b2003212bf49e21b",
+      "gt_id": 8131,
+      "context_tokens": 2857,
+      "sampled_tokens": 113,
+      "adapter": {
+        "tokens": 113,
+        "kl_k1": 0.0001511498897436636,
+        "kl_k3": 1.135581398034953e-06,
+        "mean_abs_logprob_delta": 0.0001531853819016083,
+        "max_abs_logprob_delta": 0.01604054868221283
+      },
+      "base": {
+        "tokens": 113,
+        "kl_k1": 0.008742217768493073,
+        "kl_k3": 0.0027939121647854257,
+        "mean_abs_logprob_delta": 0.008743375826503213,
+        "max_abs_logprob_delta": 0.9136883467435837
+      }
+    },
+    {
+      "episode": "758acc10f8e24c74a3194f2ca35a2c66",
+      "gt_id": 8131,
+      "context_tokens": 2857,
+      "sampled_tokens": 113,
+      "adapter": {
+        "tokens": 113,
+        "kl_k1": -4.2100823123151426e-05,
+        "kl_k3": 2.023437585481042e-07,
+        "mean_abs_logprob_delta": 0.00010426975162189305,
+        "max_abs_logprob_delta": 0.0047872066497802734
+      },
+      "base": {
+        "tokens": 113,
+        "kl_k1": 0.008713064958766583,
+        "kl_k3": 0.0027833148013304498,
+        "mean_abs_logprob_delta": 0.00871423567050407,
+        "max_abs_logprob_delta": 0.9117254167795181
+      }
+    },
+    {
+      "episode": "d9f9a1da0c3943e6ad2ba5b5fe27a82b",
+      "gt_id": 7866,
+      "context_tokens": 3912,
+      "sampled_tokens": 316,
+      "adapter": {
+        "tokens": 316,
+        "kl_k1": 0.001705891559781847,
+        "kl_k3": 0.0002830392754786498,
+        "mean_abs_logprob_delta": 0.003997602516030368,
+        "max_abs_logprob_delta": 0.2667087912559509
+      },
+      "base": {
+        "tokens": 316,
+        "kl_k1": 0.006692529557205284,
+        "kl_k3": 0.024699468410335677,
+        "mean_abs_logprob_delta": 0.038776256153332814,
+        "max_abs_logprob_delta": 1.7450919151306152
+      }
+    },
+    {
+      "episode": "d980ffad4559406bbc70ce981489a1fe",
+      "gt_id": 7866,
+      "context_tokens": 3909,
+      "sampled_tokens": 313,
+      "adapter": {
+        "tokens": 313,
+        "kl_k1": -0.00047596381734600423,
+        "kl_k3": 0.00048632551271605653,
+        "mean_abs_logprob_delta": 0.004977413465307866,
+        "max_abs_logprob_delta": 0.38811206817626953
+      },
+      "base": {
+        "tokens": 313,
+        "kl_k1": 0.006804257066721807,
+        "kl_k3": 0.006533460506612786,
+        "mean_abs_logprob_delta": 0.023924124258246,
+        "max_abs_logprob_delta": 0.8825641870498657
+      }
+    },
+    {
+      "episode": "3b18daf8f57f42358b050b4b75e2c49f",
+      "gt_id": 7866,
+      "context_tokens": 3910,
+      "sampled_tokens": 314,
+      "adapter": {
+        "tokens": 314,
+        "kl_k1": -1.949992836906276e-05,
+        "kl_k3": 0.00021987448439246505,
+        "mean_abs_logprob_delta": 0.003147336295494909,
+        "max_abs_logprob_delta": 0.2903355360031128
+      },
+      "base": {
+        "tokens": 314,
+        "kl_k1": 0.023526426693609537,
+        "kl_k3": 0.007129710656869404,
+        "mean_abs_logprob_delta": 0.027790177732616737,
+        "max_abs_logprob_delta": 1.305425226688385
+      }
+    },
+    {
+      "episode": "32207e650fb646918e1bbd5a46643feb",
+      "gt_id": 7866,
+      "context_tokens": 3915,
+      "sampled_tokens": 319,
+      "adapter": {
+        "tokens": 319,
+        "kl_k1": -0.00014047621207607402,
+        "kl_k3": 0.0012031128671508237,
+        "mean_abs_logprob_delta": 0.008863400753855173,
+        "max_abs_logprob_delta": 0.6680502891540527
+      },
+      "base": {
+        "tokens": 319,
+        "kl_k1": 0.012562006522324335,
+        "kl_k3": 0.0248829449310809,
+        "mean_abs_logprob_delta": 0.04282400691394728,
+        "max_abs_logprob_delta": 2.1453988552093506
+      }
+    }
+  ],
+  "qualifications": [
+    "Recorded log probabilities come from native RL inference (vLLM 0.30) sampling at temperature 1 / top-p 1.",
+    "Served values are prompt log probabilities from the vLLM 0.19.1 evaluation server on identical token IDs.",
+    "kl_k1 and kl_k3 estimate KL(native policy || served model) on the recorded samples."
+  ]
+}

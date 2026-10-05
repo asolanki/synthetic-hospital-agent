@@ -1,0 +1,13 @@
+{
+  "upstream_revision": "911f34c4ac65a508543c4b3b90c373a0cd16534d",
+  "task": "patient_diagnosis",
+  "arm": "structured",
+  "budget": 40,
+  "system_prompt_sha256": "db3bf41522aa17dadb9fe7eefd0b9fe0139db0ec408ae784c0e09082a5d9a5a5",
+  "train_demonstrations_matching_system_and_patient_intro": 680,
+  "live_env_matches_published_paper_prompt": true,
+  "published_prompt_source": "external/synthetic_hospital/eval/agents/prompts.py",
+  "interaction_source": "external/synthetic_hospital/eval/agents/agent_loop.py",
+  "wrapper_source": "training/environment/synthetic_hospital_dx/env.py",
+  "prompt_selection": "paper only; no override or optimization"
+}

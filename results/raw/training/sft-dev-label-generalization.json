@@ -1,0 +1,35 @@
+{
+ "scope": "Exploratory unweighted diagnosis recall on the fixed 120 dev patients; earlier/final visit crossed with official match-key presence in SFT targets. Not an estimate of the training objective or proof of saturation.",
+ "sft_target_match_keys": 837,
+ "sft_data_sha256": "b2032d940fd4ef895fcc2c8d754e38143ae7bd51fb83db1b05d40b06f676ea35",
+ "strata": {
+  "earlier/seen_in_sft_targets": {
+   "targets": 310,
+   "base_hits": 52,
+   "sft_hits": 167,
+   "base_recall": 0.16774193548387098,
+   "sft_recall": 0.5387096774193548
+  },
+  "earlier/unseen_in_sft_targets": {
+   "targets": 37,
+   "base_hits": 1,
+   "sft_hits": 3,
+   "base_recall": 0.02702702702702703,
+   "sft_recall": 0.08108108108108109
+  },
+  "final/seen_in_sft_targets": {
+   "targets": 48,
+   "base_hits": 3,
+   "sft_hits": 8,
+   "base_recall": 0.0625,
+   "sft_recall": 0.16666666666666666
+  },
+  "final/unseen_in_sft_targets": {
+   "targets": 22,
+   "base_hits": 0,
+   "sft_hits": 0,
+   "base_recall": 0.0,
+   "sft_recall": 0.0
+  }
+ }
+}

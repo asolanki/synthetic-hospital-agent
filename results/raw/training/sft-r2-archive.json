@@ -1,0 +1,17 @@
+{
+  "archive": "r2://synthetic-hospital-rl-artifacts/2026-10-04/sft-oracle-copy-v1/chunks-16m/",
+  "manifest_key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/manifest.json",
+  "manifest_sha256": "99ad5aa20edb71a4a5571e84566316fc09d0e93cf36f6405f0940cebd9b108b5",
+  "archive_sha256": "62b383d3e4dc1f2df5c240cbf1bb55d7325cd891ae45a9ce16ab6363364e62df",
+  "archive_bytes": 6904606720,
+  "parts": 412,
+  "verified_at": "2026-10-05T01:23:55.235467+00:00",
+  "verification": "All parts matched remote size and ETag; downloaded manifest matches byte-for-byte; first and last downloaded parts match SHA-256. Local archive restoration reproduced all 41 source model files.",
+  "downloaded_part_keys": [
+    "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaaa",
+    "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aapv"
+  ],
+  "source_model_files": 41,
+  "source_model_bytes": 8621839259,
+  "privacy": "r2.dev disabled; no custom domains"
+}

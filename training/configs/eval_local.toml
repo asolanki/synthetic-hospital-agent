@@ -1,0 +1,31 @@
+# Exact BF16 checkpoint served by training/serve.sh; same task and prompt as OpenRouter eval.
+# set -a; source .env; set +a
+# uv run vf-eval @ training/configs/eval_local.toml -n 3 -c 3 --no-rich --output-dir runs/local-smoke
+model = "Qwen/Qwen3-4B-Instruct-2507"
+num_rollouts = 1
+max_concurrent = 32
+push = false
+
+[client]
+base_url = "http://127.0.0.1:8000/v1"
+api_key_var = "OPENAI_API_KEY"
+
+[sampling]
+temperature = 0.7
+top_p = 0.8
+max_tokens = 2048
+seed = 0
+
+[env.taskset]
+id = "synthetic-hospital-dx"
+split = "dev"
+budget = 40
+
+[env.agent]
+max_turns = 50
+
+[env.agent.harness]
+id = "null"
+
+[env.agent.runtime]
+type = "subprocess"

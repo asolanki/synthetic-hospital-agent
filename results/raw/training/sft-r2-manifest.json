@@ -1,0 +1,2896 @@
+{
+  "format": "ordered chunks of one tar.gz stream",
+  "bucket": "synthetic-hospital-rl-artifacts",
+  "prefix": "2026-10-04/sft-oracle-copy-v1/chunks-16m/",
+  "verified_at": "2026-10-05T01:23:55.235467+00:00",
+  "archive_sha256": "62b383d3e4dc1f2df5c240cbf1bb55d7325cd891ae45a9ce16ab6363364e62df",
+  "archive_bytes": 6904606720,
+  "parts": [
+    {
+      "file": "archive.tar.gz.part-aaaa",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaaa",
+      "bytes": 16777216,
+      "sha256": "6e593432d8d9e6bf1a483178c208f510b8eec4710dcaa0671bd5dd5043a6806a",
+      "md5": "27bf9ba0876d9ee42d1a5936800571f6"
+    },
+    {
+      "file": "archive.tar.gz.part-aaab",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaab",
+      "bytes": 16777216,
+      "sha256": "f3f241b84e8b47c5aff135891c820256279013788d0dbbd6e7965ff553f803f8",
+      "md5": "0e5abc3e29fc1892cc5db29418d97ef1"
+    },
+    {
+      "file": "archive.tar.gz.part-aaac",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaac",
+      "bytes": 16777216,
+      "sha256": "617ac895fa0a0bdc8ba16c113132b65af507a38daa1f78a0c7bbfe203e6de895",
+      "md5": "8a288f3109b5652b76cde0c4a41cb8fc"
+    },
+    {
+      "file": "archive.tar.gz.part-aaad",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaad",
+      "bytes": 16777216,
+      "sha256": "21a5de8f9cade1e44b1d7966d7781654fe3779c2812ff66c36b166b5546624e4",
+      "md5": "4e9018dd0714671363bdda850b214c11"
+    },
+    {
+      "file": "archive.tar.gz.part-aaae",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaae",
+      "bytes": 16777216,
+      "sha256": "1cab5f5e23bbf166c54a15e5941a2532e61668752330c84a49c466a1dd8a52ca",
+      "md5": "9801857134c45e8bb2fad5253bb5c617"
+    },
+    {
+      "file": "archive.tar.gz.part-aaaf",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaaf",
+      "bytes": 16777216,
+      "sha256": "e7543524b1b0ee7a6739142dfa98a2afe681d490fb9e82a029c1c73acda43508",
+      "md5": "77a30302308e7b5bb8c72e3edb771302"
+    },
+    {
+      "file": "archive.tar.gz.part-aaag",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaag",
+      "bytes": 16777216,
+      "sha256": "8434286c1cd07b1df6d8e51f13fd0ce749583e971f1919c2e930a6458d8026d9",
+      "md5": "ceeb92b030f49460223c506799b92013"
+    },
+    {
+      "file": "archive.tar.gz.part-aaah",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaah",
+      "bytes": 16777216,
+      "sha256": "b5fbab8c5b74fbd16ce80d7c722f980237d7a4e8027f659f449f2dccd12a27f0",
+      "md5": "4863757138a6d0dff9ba9dc971cefd36"
+    },
+    {
+      "file": "archive.tar.gz.part-aaai",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaai",
+      "bytes": 16777216,
+      "sha256": "1803d20d9877863c54104df754739b3fb528f58de8ab46ce2893bdd622bb3bfa",
+      "md5": "c16ee4a5e0dcfcb3bff7a6f41c6ceebf"
+    },
+    {
+      "file": "archive.tar.gz.part-aaaj",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaaj",
+      "bytes": 16777216,
+      "sha256": "cbcfe52744d255177595f095dbc50f2842a7fd5e181118ded820367188ca8f3a",
+      "md5": "e8708120a9dec127422b577855b06628"
+    },
+    {
+      "file": "archive.tar.gz.part-aaak",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaak",
+      "bytes": 16777216,
+      "sha256": "650e4bbf990347d867f8c2c68b40ce384bdc94d189ed835fc82364a388302161",
+      "md5": "fea36821ccc3b5976304eb0f87db0e6a"
+    },
+    {
+      "file": "archive.tar.gz.part-aaal",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaal",
+      "bytes": 16777216,
+      "sha256": "6261d291524602cfa5807c0679731a34a1c7ddac2485c8d7f705253b1a4bee3d",
+      "md5": "5c1a3add4bf88563a6fbe7957f8edd43"
+    },
+    {
+      "file": "archive.tar.gz.part-aaam",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaam",
+      "bytes": 16777216,
+      "sha256": "5683f3229a16d8c6f7a1ef1abb0cf47a5c9bef9402960835c4b6e7e447a30962",
+      "md5": "ec72334afb277aff26d97918cfc767f3"
+    },
+    {
+      "file": "archive.tar.gz.part-aaan",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaan",
+      "bytes": 16777216,
+      "sha256": "b460b051e1c7d1f75c0959479c5c69c6723461a9dbfc2caf21413ebeef366986",
+      "md5": "2295b7b99ca4f877525ed7b3642cb8f1"
+    },
+    {
+      "file": "archive.tar.gz.part-aaao",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaao",
+      "bytes": 16777216,
+      "sha256": "4b302d20782c0ea97d878d1820960dcfd140ecc81a90556bdf95865c09d3cb33",
+      "md5": "a8c0411996b6b579904d406c69acd372"
+    },
+    {
+      "file": "archive.tar.gz.part-aaap",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaap",
+      "bytes": 16777216,
+      "sha256": "f25d40a71e2a8608fd2fa2c9c12b9bcd28651bbe15babeb87f623dc1449c2c55",
+      "md5": "01fb7fc17b21aa41b2ffd20577b6d3f9"
+    },
+    {
+      "file": "archive.tar.gz.part-aaaq",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaaq",
+      "bytes": 16777216,
+      "sha256": "0c9c48befac3053e70627d28e057d0f2d06ad7cbd22376943b38d1e8c3552a7a",
+      "md5": "48f23121df32b367f66f26369deb52be"
+    },
+    {
+      "file": "archive.tar.gz.part-aaar",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaar",
+      "bytes": 16777216,
+      "sha256": "3fcc1ca973b100a61dcacb8f1181c34f4f99654ee41a0ccd32e92f4de3cbba7f",
+      "md5": "b8b3b175aeb99942365ca4d30db108c8"
+    },
+    {
+      "file": "archive.tar.gz.part-aaas",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaas",
+      "bytes": 16777216,
+      "sha256": "291eaaf15349130137a9c93dfd40500cd8da9e86b0278668a59a2ed5019fa0f0",
+      "md5": "3221ecbccc8c569bce4955ae1fe5b8df"
+    },
+    {
+      "file": "archive.tar.gz.part-aaat",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaat",
+      "bytes": 16777216,
+      "sha256": "b202876dc55bf4fcc35a13a83850f8fe7e54e22430e04999d9e77e2d1c991af8",
+      "md5": "1f111d97fc52a5a7774a7bca507cb19a"
+    },
+    {
+      "file": "archive.tar.gz.part-aaau",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaau",
+      "bytes": 16777216,
+      "sha256": "76d5b8c2892193ef02b092798839e31ce91e5f29f3357adc863bcdecf352603b",
+      "md5": "786d983ebb7d71c939c53b03fb2bfc5f"
+    },
+    {
+      "file": "archive.tar.gz.part-aaav",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaav",
+      "bytes": 16777216,
+      "sha256": "39ef57dc7ebbed18b5ee42b518d5d17fd52c71315e99a809d49d58ca8a9fdece",
+      "md5": "7f5da39367bda7771ffece014e001f2c"
+    },
+    {
+      "file": "archive.tar.gz.part-aaaw",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaaw",
+      "bytes": 16777216,
+      "sha256": "279c9a8d19b47cd908aaa58975556f26b4e4d0ff9cc4f670b93f22b2998dc2f0",
+      "md5": "f7336fec7a695db3d8041e103d6a7265"
+    },
+    {
+      "file": "archive.tar.gz.part-aaax",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaax",
+      "bytes": 16777216,
+      "sha256": "616e8790cd731e21d4560c46b0b3a7b22a4bb879a55e74f3ccd8740b970b057a",
+      "md5": "e22b81ceffd684deb2f726d64adfefe3"
+    },
+    {
+      "file": "archive.tar.gz.part-aaay",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaay",
+      "bytes": 16777216,
+      "sha256": "55314c4600bf6ea8d8522a0dec03aa06054eac57d26bd778e53525c7d787abbb",
+      "md5": "e192574b22c82edecb7ffc68d03eb905"
+    },
+    {
+      "file": "archive.tar.gz.part-aaaz",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaaz",
+      "bytes": 16777216,
+      "sha256": "b35413cc21c05d51e687b1048586de0a7563554d1e989e5edfdf9d3e0dd55e42",
+      "md5": "9d783a72696d61d42fc4f8693756239d"
+    },
+    {
+      "file": "archive.tar.gz.part-aaba",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaba",
+      "bytes": 16777216,
+      "sha256": "f0df559b5b91585501705c55926d748f3c95d450954d28a02093771a26dd0d33",
+      "md5": "a9700728d101988146f2bdf64ab55726"
+    },
+    {
+      "file": "archive.tar.gz.part-aabb",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aabb",
+      "bytes": 16777216,
+      "sha256": "5282545794cfca2caead22404baa801273008e516f392f14775e41aa6fa57dc7",
+      "md5": "e761fda562f6f64a5f49983bb1ec87b2"
+    },
+    {
+      "file": "archive.tar.gz.part-aabc",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aabc",
+      "bytes": 16777216,
+      "sha256": "9b9cd1bf17097556d73153b636ad765754c8790cc77458cb330187107ce4b9fc",
+      "md5": "f0286d9445707a98ac718f898cf8bba3"
+    },
+    {
+      "file": "archive.tar.gz.part-aabd",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aabd",
+      "bytes": 16777216,
+      "sha256": "12101ccca771ea6716c95aaecd8fc8ac6be0de5962cd2f407dec151eb515a000",
+      "md5": "11e9adbe1915761cbc2d2f2a3a545146"
+    },
+    {
+      "file": "archive.tar.gz.part-aabe",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aabe",
+      "bytes": 16777216,
+      "sha256": "9ff99ac8af54cfdc718fcb9242a6d9e9022d8b8fd489cc9a7d82df2d352b1dd3",
+      "md5": "c30c43a40e43ab978f6ee6202e93a37f"
+    },
+    {
+      "file": "archive.tar.gz.part-aabf",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aabf",
+      "bytes": 16777216,
+      "sha256": "6d6808d990e9be677b7667ecbc54d4247c70ab7e5f419b025b2e58880370e298",
+      "md5": "71be92c77658bb6e9d0c70dc895a0e01"
+    },
+    {
+      "file": "archive.tar.gz.part-aabg",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aabg",
+      "bytes": 16777216,
+      "sha256": "95dfb3cbaa4bba09a7c42209e8b455446ca4224e019d4d02d3b1f93b7065241c",
+      "md5": "6df7af7212060e95411cb8c0b482a1c6"
+    },
+    {
+      "file": "archive.tar.gz.part-aabh",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aabh",
+      "bytes": 16777216,
+      "sha256": "49c4f3ee01a3ed73e034c9b17639eeb1ce1433794eac71209ec58ea7711e9ea6",
+      "md5": "81fc83e4096e06e8f169ae382fd104d6"
+    },
+    {
+      "file": "archive.tar.gz.part-aabi",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aabi",
+      "bytes": 16777216,
+      "sha256": "50a81c8ef44083a3ccf8e263b9ead3b6a64790993f4e78603f1fbba5461a9d00",
+      "md5": "80c0fbb798f347fb7046f856e909b485"
+    },
+    {
+      "file": "archive.tar.gz.part-aabj",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aabj",
+      "bytes": 16777216,
+      "sha256": "017a35602eac081390f5e331a9f8fb494ffef77ade9688dff7dfcad415a5fcc4",
+      "md5": "02950c903a69038e1d4648dfb081ec3a"
+    },
+    {
+      "file": "archive.tar.gz.part-aabk",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aabk",
+      "bytes": 16777216,
+      "sha256": "0bc3f7f7530fde36cde6132bad56cda17c11f66d86052af93839697741963e3e",
+      "md5": "0be9364c24d8cc1012b15d97ca762685"
+    },
+    {
+      "file": "archive.tar.gz.part-aabl",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aabl",
+      "bytes": 16777216,
+      "sha256": "4ecaece344c04be314ee90e3154badfc3ff7a914ddf3bb017f337a796d8fea4f",
+      "md5": "7ee55b8a3071266a87defdb2b11233dd"
+    },
+    {
+      "file": "archive.tar.gz.part-aabm",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aabm",
+      "bytes": 16777216,
+      "sha256": "504f88c26b8632373d26bada7a0bfff88a6aa00f30c26659e773396efeda3179",
+      "md5": "a40cbe69bdfc584a99c02c6617e6b421"
+    },
+    {
+      "file": "archive.tar.gz.part-aabn",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aabn",
+      "bytes": 16777216,
+      "sha256": "e70791f97c38ced4cfad378993cdaf47972a4aa0d7d1fb060a29c0aaef197492",
+      "md5": "a3a1b96a59a542fec4275a2bbee708ae"
+    },
+    {
+      "file": "archive.tar.gz.part-aabo",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aabo",
+      "bytes": 16777216,
+      "sha256": "b28722892932ef5c392287e32cf4aa1e745b982c2850377cf1e0ffb9e8950cd7",
+      "md5": "4052038c1836ba9ede5c0f4f0455c5c2"
+    },
+    {
+      "file": "archive.tar.gz.part-aabp",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aabp",
+      "bytes": 16777216,
+      "sha256": "40c412a2dcb2fbecfde6ae2b8daf64ef8a6550660f0bcb1bb99ff3ea4fb78c35",
+      "md5": "88dd445f46909bca764af326b19e4a84"
+    },
+    {
+      "file": "archive.tar.gz.part-aabq",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aabq",
+      "bytes": 16777216,
+      "sha256": "9ce6592c8edd9e4c37a75cdaf165981319e4be4626a2e00c5d3b0c560b1a1015",
+      "md5": "bd548b08b74f9dd5a664a209ada17d32"
+    },
+    {
+      "file": "archive.tar.gz.part-aabr",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aabr",
+      "bytes": 16777216,
+      "sha256": "6602a1960458b397debfca27d6f2b971da3c32219bcad9f206cf2778598117b8",
+      "md5": "197e854fad6e749916fb56128cfc1e1f"
+    },
+    {
+      "file": "archive.tar.gz.part-aabs",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aabs",
+      "bytes": 16777216,
+      "sha256": "6871a04382804c69ce5000b834468fb4e3ca71abb710bc76db3c5f48919bb219",
+      "md5": "7cfdda39ad243603d4bc9d8534408197"
+    },
+    {
+      "file": "archive.tar.gz.part-aabt",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aabt",
+      "bytes": 16777216,
+      "sha256": "0fcce31bd156249d0f47edda9c6a49c25863d30f9a5ffe33149299c0826b6106",
+      "md5": "e45da585e6d67e33cd5ef3d02b3f7372"
+    },
+    {
+      "file": "archive.tar.gz.part-aabu",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aabu",
+      "bytes": 16777216,
+      "sha256": "df151daf7538055cd8dda163e0efd296b8acc14f7afb2399f685593b2e79addd",
+      "md5": "dfdf3abc66344140ca58a6b3a30a474a"
+    },
+    {
+      "file": "archive.tar.gz.part-aabv",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aabv",
+      "bytes": 16777216,
+      "sha256": "2a62efe9b8b1ca05e9769c19a050696f560bdaf2017bd4f64f8757242fcd4330",
+      "md5": "7705372a01c2a9c1067fb3c3771a6d3b"
+    },
+    {
+      "file": "archive.tar.gz.part-aabw",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aabw",
+      "bytes": 16777216,
+      "sha256": "05d0cd2f02f4bed31db640f91d34e275f99b7d1bca46275526123f4f77bec1b1",
+      "md5": "9fcb578fadfe92400f9ed6551dca2b17"
+    },
+    {
+      "file": "archive.tar.gz.part-aabx",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aabx",
+      "bytes": 16777216,
+      "sha256": "cf40096fe7b0fcb700974afaf52b518da23a9998289f9c2135b57f6391aa769a",
+      "md5": "f7934b16bca40e4c51d28fcf2cb291f1"
+    },
+    {
+      "file": "archive.tar.gz.part-aaby",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaby",
+      "bytes": 16777216,
+      "sha256": "75f6e01b85d32f682842b82bd3d258f2c38b4684db7df0a7f5ba48f03111ab01",
+      "md5": "2db1e5e127dbe3ab026aabb700a7f714"
+    },
+    {
+      "file": "archive.tar.gz.part-aabz",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aabz",
+      "bytes": 16777216,
+      "sha256": "c40b630279b5b667473ce5a5f19544c1ba30709572aae7f4a4c6164d96f4e5bc",
+      "md5": "5ef9f3d87b9b0dcd4c75ddd917f38bf0"
+    },
+    {
+      "file": "archive.tar.gz.part-aaca",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaca",
+      "bytes": 16777216,
+      "sha256": "c598c77a8f301059d5e1c7c63fcf07e809019dbd2e3ddee47c76fa5428f37842",
+      "md5": "4c5b613832bf38f933d032e12ad856a6"
+    },
+    {
+      "file": "archive.tar.gz.part-aacb",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aacb",
+      "bytes": 16777216,
+      "sha256": "fb4b1905d5edc681249c1a69b701c9bb49f2f988023cffaeedc7b5f9a25d03b0",
+      "md5": "ca37085243c6c57a4facbfc54206f535"
+    },
+    {
+      "file": "archive.tar.gz.part-aacc",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aacc",
+      "bytes": 16777216,
+      "sha256": "721b024c817d1794f215c39825b7095b2f6d9aacbd489d742422ea3050b1ab18",
+      "md5": "548c091833a31951d96543d43abc4e3e"
+    },
+    {
+      "file": "archive.tar.gz.part-aacd",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aacd",
+      "bytes": 16777216,
+      "sha256": "bd8f27236e9523b210c5a14ccac229044ac9eafe13ab96afefebc0cb5b65b545",
+      "md5": "a82e8b1ce55ee4c6e26e5826b92490f0"
+    },
+    {
+      "file": "archive.tar.gz.part-aace",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aace",
+      "bytes": 16777216,
+      "sha256": "460ab903b54156e91f9c6ea30a9706b84d58523ad562851b061a3af3095dbd72",
+      "md5": "6c0edc775a3e261d91a627c215db428c"
+    },
+    {
+      "file": "archive.tar.gz.part-aacf",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aacf",
+      "bytes": 16777216,
+      "sha256": "e55ace1fd536c270c5dfa3c2cdd0841faf1cc4331823b60797aaf2c89fe7fd8d",
+      "md5": "869f372c3be43bf049d4c151e725af92"
+    },
+    {
+      "file": "archive.tar.gz.part-aacg",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aacg",
+      "bytes": 16777216,
+      "sha256": "36e5f01f819c68a15bc8c632ae3d5b6e7a5a13bceb624c4180533984ff6bcc1b",
+      "md5": "6f0102342165430a3884028cf5aeb22a"
+    },
+    {
+      "file": "archive.tar.gz.part-aach",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aach",
+      "bytes": 16777216,
+      "sha256": "7aca5e10d2cf1b74be480b1625963ea751338cfc6ab9e6e959f6886197981b34",
+      "md5": "16098d75e98cc7640b8cfec4f4f3bb54"
+    },
+    {
+      "file": "archive.tar.gz.part-aaci",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaci",
+      "bytes": 16777216,
+      "sha256": "71ab07db5c0e365c835824f98a53eda81f4418bc488e91a948ad589358836be1",
+      "md5": "7c607c245d1db5bf1687223ffa388823"
+    },
+    {
+      "file": "archive.tar.gz.part-aacj",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aacj",
+      "bytes": 16777216,
+      "sha256": "b939f2296753fe46c4d81f7325378d4b37ffdfde2b8ab09e7305158c67bb4198",
+      "md5": "401a8fadc80d00019e49d9499cc84da6"
+    },
+    {
+      "file": "archive.tar.gz.part-aack",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aack",
+      "bytes": 16777216,
+      "sha256": "1cb4c2fec19d547133876585d76ad436a2ded0649e5877ab28c2506e47c4572c",
+      "md5": "6ea6f554872209eb17aaf31acaed7e82"
+    },
+    {
+      "file": "archive.tar.gz.part-aacl",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aacl",
+      "bytes": 16777216,
+      "sha256": "acff3b48c34d18ef96c9f245abf9410c7a06faf472987d42b4646034acdd244f",
+      "md5": "b25779745ce318811e127aec5a27a6ab"
+    },
+    {
+      "file": "archive.tar.gz.part-aacm",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aacm",
+      "bytes": 16777216,
+      "sha256": "5b4e66779a2541b25a003f8e56fcc1526934b082dfaba1a563a2ba80791ebdef",
+      "md5": "b98272d87141e01f7af6d0d89acdd90c"
+    },
+    {
+      "file": "archive.tar.gz.part-aacn",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aacn",
+      "bytes": 16777216,
+      "sha256": "cc4e56576af41cc9b24471db800cd6a28d823e7dcb469811ddba0f25fc4d714d",
+      "md5": "156c26f00414fe3ebf8082891b3a1dd8"
+    },
+    {
+      "file": "archive.tar.gz.part-aaco",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaco",
+      "bytes": 16777216,
+      "sha256": "1d6debfc9a0313236d3fddd0ef8b16be73c589da387e61baeff2112daed24a46",
+      "md5": "9602f950011fe8a02980e0ff7d7aa1a3"
+    },
+    {
+      "file": "archive.tar.gz.part-aacp",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aacp",
+      "bytes": 16777216,
+      "sha256": "dc72d6a11742d5487af3322f8e8143c4c51d43a47ffa32d2d18dfedddf310122",
+      "md5": "5c0e8feb53399e660736b906cd4de1b6"
+    },
+    {
+      "file": "archive.tar.gz.part-aacq",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aacq",
+      "bytes": 16777216,
+      "sha256": "a74b4595690943c376641512fc50a714e0e92c466b676d97971eea5c63feccfc",
+      "md5": "5cd51a7e03440859d38028c97410da6d"
+    },
+    {
+      "file": "archive.tar.gz.part-aacr",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aacr",
+      "bytes": 16777216,
+      "sha256": "7498c9d5a9049cdbc180e0dc428cba28456eaf787929cc124562ad7584317087",
+      "md5": "a2a24de089ebd280b5a3328c9cd23102"
+    },
+    {
+      "file": "archive.tar.gz.part-aacs",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aacs",
+      "bytes": 16777216,
+      "sha256": "70bd248da86f9c476f37cddd1ffc7769b1ade28d29b4fbcbfa9b956183822632",
+      "md5": "5ab54a3c22a3d52edea5336a978f4b55"
+    },
+    {
+      "file": "archive.tar.gz.part-aact",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aact",
+      "bytes": 16777216,
+      "sha256": "2f4816e43801a2779bd3313b59a958595529109d7d22798589197567c372fdfc",
+      "md5": "1995ee57730bd43f7974830c2ea73844"
+    },
+    {
+      "file": "archive.tar.gz.part-aacu",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aacu",
+      "bytes": 16777216,
+      "sha256": "d6c39d42a5c636f8cd57fc0784f936c718c2668f84021e85d42cbcd2eebdd674",
+      "md5": "c6bd75d9d0d9cf58abe3fd6f5f31bf5f"
+    },
+    {
+      "file": "archive.tar.gz.part-aacv",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aacv",
+      "bytes": 16777216,
+      "sha256": "26e6287b0dc960542f0d49b506841b0c89eb3b0d670050381fb6d634534df5c8",
+      "md5": "71383a9914cb40c29e3e5fe4dbe6c154"
+    },
+    {
+      "file": "archive.tar.gz.part-aacw",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aacw",
+      "bytes": 16777216,
+      "sha256": "a9d9974118d44fad8c23372487f57cf0ce71233928ffac6465c2172db49a46ae",
+      "md5": "cfa64a2b8d2f7ece46c3d6e4d277da76"
+    },
+    {
+      "file": "archive.tar.gz.part-aacx",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aacx",
+      "bytes": 16777216,
+      "sha256": "bbb720575d2f0c11272ad105aa9b093360f894d4d626ef7415680d7d40be3a42",
+      "md5": "c2d27c3a75836a6af25744e006959ed1"
+    },
+    {
+      "file": "archive.tar.gz.part-aacy",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aacy",
+      "bytes": 16777216,
+      "sha256": "d69657953b5aa34204fb929ebe372c184067a901e410b388c1b5874bd7e598f4",
+      "md5": "e235ad8e30cf329c5c6bb80dcfe2dc91"
+    },
+    {
+      "file": "archive.tar.gz.part-aacz",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aacz",
+      "bytes": 16777216,
+      "sha256": "542b0431175fa03e96596ba2cccfac02eca421499f2346b3bf8c5962bac2ddb6",
+      "md5": "562fda352149e0dad3e92f7b5279a73f"
+    },
+    {
+      "file": "archive.tar.gz.part-aada",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aada",
+      "bytes": 16777216,
+      "sha256": "7347ea8814f093911ee8cf831e47b57f1fd742b174d9a8d4f8a194fdd5c711ec",
+      "md5": "f245ed73ec44c82541b41cc9c3a4081c"
+    },
+    {
+      "file": "archive.tar.gz.part-aadb",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aadb",
+      "bytes": 16777216,
+      "sha256": "bd1999f4e8c31c9e6ab2776bad61f2416ac1bada604949c2dbc8830e2f176d87",
+      "md5": "9a8a6145a2a7b33053578e9b66f424f0"
+    },
+    {
+      "file": "archive.tar.gz.part-aadc",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aadc",
+      "bytes": 16777216,
+      "sha256": "7bf5e0d5f5b0ab649111428f688dc19fa86605f7c59620e10876c1f486a5b91e",
+      "md5": "e348b4c3a83ea76489a0f2f9d6fdd62d"
+    },
+    {
+      "file": "archive.tar.gz.part-aadd",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aadd",
+      "bytes": 16777216,
+      "sha256": "3c37a0ec3664c5efdf571165b61ba60fb3c0f867c5a4d79eae9b9a2a9da6adfe",
+      "md5": "adc489d67f218340348ed0076fc949f8"
+    },
+    {
+      "file": "archive.tar.gz.part-aade",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aade",
+      "bytes": 16777216,
+      "sha256": "10e3c673ab6ad6fd6177542856466792e03443e94c6aff9e4b5d8793f45fc255",
+      "md5": "25eeb89cb0df856cddac519a925e34e3"
+    },
+    {
+      "file": "archive.tar.gz.part-aadf",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aadf",
+      "bytes": 16777216,
+      "sha256": "0c4cb2a0127fbbd5a3399a96c4d3678cee2f440765a6d465953a138be3fb5b48",
+      "md5": "5182b18e63611487797df81d903c8318"
+    },
+    {
+      "file": "archive.tar.gz.part-aadg",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aadg",
+      "bytes": 16777216,
+      "sha256": "fa5f28916d91184593af79d5deac4cef7ac48605ea63e02d607e6d2691569739",
+      "md5": "7df5348e0d8609ec4e8d16526c6790ef"
+    },
+    {
+      "file": "archive.tar.gz.part-aadh",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aadh",
+      "bytes": 16777216,
+      "sha256": "fe5d2cd721e96f8060a588ba9e78895d9383997f8dea24c9d55743b766b6722f",
+      "md5": "c67b26a87925c6f2c1ce1d8bf19f1288"
+    },
+    {
+      "file": "archive.tar.gz.part-aadi",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aadi",
+      "bytes": 16777216,
+      "sha256": "a5a56f1828331a8066c6d514a0bb564e5d5fa9e63148e2539459a925f9bb2d7c",
+      "md5": "55091439306799144673f107245ec524"
+    },
+    {
+      "file": "archive.tar.gz.part-aadj",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aadj",
+      "bytes": 16777216,
+      "sha256": "845e05648a6ccfab36179ec1a0fe8854a6d86e65068588f0e5dfc37ce9aba396",
+      "md5": "e7585081bc7722de3c3c181ffd2810c4"
+    },
+    {
+      "file": "archive.tar.gz.part-aadk",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aadk",
+      "bytes": 16777216,
+      "sha256": "3e4d71f451a670b8bc297224432bc6645c37a9da8995c5005bc6fe178be4fd80",
+      "md5": "07ecf301120f6e864f5e74b49dfdc5fc"
+    },
+    {
+      "file": "archive.tar.gz.part-aadl",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aadl",
+      "bytes": 16777216,
+      "sha256": "3c957a6378760136a9772cd08e8bddb3d1958932afa8b0bcf6bdbcfe87dd6688",
+      "md5": "6bd8a23e8512da189c9a8faea446e207"
+    },
+    {
+      "file": "archive.tar.gz.part-aadm",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aadm",
+      "bytes": 16777216,
+      "sha256": "dd186a59574106c26ba8d0cab54e99f78732e28e9711b382ec5f2a54c6f1e043",
+      "md5": "eb27236ccbfd60c8745989965e046f97"
+    },
+    {
+      "file": "archive.tar.gz.part-aadn",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aadn",
+      "bytes": 16777216,
+      "sha256": "51283a5d3d586d565368bcb52afeb86e13c939306d55d1c185a69a592ea52488",
+      "md5": "91eec9604e66c9ee7268fd3ac34b92ed"
+    },
+    {
+      "file": "archive.tar.gz.part-aado",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aado",
+      "bytes": 16777216,
+      "sha256": "da4205e6744b0be2c678f4bf3ee9fad1468288d33d4807999ea6824621b8ebcc",
+      "md5": "99dd635a366d41d6351419ead432388a"
+    },
+    {
+      "file": "archive.tar.gz.part-aadp",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aadp",
+      "bytes": 16777216,
+      "sha256": "9d58f08eb1e5405161d17735e8f713f47d5fcf96b4ca16acfc7b1d82d9d15d55",
+      "md5": "240d8c1ca0b6d128a0d1aa3ac2b76fbd"
+    },
+    {
+      "file": "archive.tar.gz.part-aadq",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aadq",
+      "bytes": 16777216,
+      "sha256": "0e7162b8da7182b65f695d3fe916892e628301d14cb20dddd022b6e913c6c139",
+      "md5": "06f9e2a6b8c766e59f4f9703e961b928"
+    },
+    {
+      "file": "archive.tar.gz.part-aadr",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aadr",
+      "bytes": 16777216,
+      "sha256": "d02e52e45abeb4d25c6203f2b12ac8d16c755bb080627b63bb319d6e55fd426c",
+      "md5": "f6ce4a96f0ffbcd2eff6a147c871149d"
+    },
+    {
+      "file": "archive.tar.gz.part-aads",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aads",
+      "bytes": 16777216,
+      "sha256": "8485431dea5ec2273d96fb28ebde75c0e32e9421fcba6f85046f267e0f0cb503",
+      "md5": "bacaf76f320cce661b29f54b2ad95ff5"
+    },
+    {
+      "file": "archive.tar.gz.part-aadt",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aadt",
+      "bytes": 16777216,
+      "sha256": "fe095ab2a8f6009a94d71cbb6d98b47e6b9ce3a68ce719aaa1103427b3c3af3f",
+      "md5": "4ab39fbc7fd954d02a680430be6d2ffc"
+    },
+    {
+      "file": "archive.tar.gz.part-aadu",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aadu",
+      "bytes": 16777216,
+      "sha256": "0de3c1ef1da4ad216c495a3d5a1615085de08226ffcf4b117c0c19abca025b75",
+      "md5": "0573d5d0839d4b1a9839a833ba59a989"
+    },
+    {
+      "file": "archive.tar.gz.part-aadv",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aadv",
+      "bytes": 16777216,
+      "sha256": "b52dc868db946b641fb91f7628989a8303d9326adf1553e73b5e89290f112507",
+      "md5": "0c5cdb705f7efd71af01497c5f30dd04"
+    },
+    {
+      "file": "archive.tar.gz.part-aadw",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aadw",
+      "bytes": 16777216,
+      "sha256": "168b1bfed58a0763e01533e93f0d9a86c3370b8005fde67846ce03ae269324ae",
+      "md5": "5f12339d0ca0047072c6dff76a21d65d"
+    },
+    {
+      "file": "archive.tar.gz.part-aadx",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aadx",
+      "bytes": 16777216,
+      "sha256": "f916d32c1ecd4ce70fa3988bca5353d14109ff6643da44d15c05a6fe31c4cf0c",
+      "md5": "90473794fda674be84ae493f47f2ed50"
+    },
+    {
+      "file": "archive.tar.gz.part-aady",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aady",
+      "bytes": 16777216,
+      "sha256": "4956dcecd4b38c03d6667b2e35b148b7a6e24eb10ba4f9c5790157f078b0dcc9",
+      "md5": "a9f06f351a4dc0773a73288a2066902e"
+    },
+    {
+      "file": "archive.tar.gz.part-aadz",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aadz",
+      "bytes": 16777216,
+      "sha256": "2047bf44db5e34de8d1108992560027b8253b9791de117716a2c0956578240a2",
+      "md5": "0128524d2d4d738b9e65f1c3dea81954"
+    },
+    {
+      "file": "archive.tar.gz.part-aaea",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaea",
+      "bytes": 16777216,
+      "sha256": "4bcb55eea6e750284405733b1f466fb5c4b9981c9e83fcd1c17e57460e800088",
+      "md5": "a19c71fb6fdee67304a82e272537d25f"
+    },
+    {
+      "file": "archive.tar.gz.part-aaeb",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaeb",
+      "bytes": 16777216,
+      "sha256": "8ccc255e0122a2570555739f55fbd03d669b7a61e4a1f632ad32cbf7215faf9f",
+      "md5": "d156141442fe65d440bb022fae852ab1"
+    },
+    {
+      "file": "archive.tar.gz.part-aaec",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaec",
+      "bytes": 16777216,
+      "sha256": "a864fe9594b30ce33365d1ccb338d56132423f7a1c5bf3dd6953a03c10efd8f4",
+      "md5": "3bb493fba629709bc86112ea701fdd56"
+    },
+    {
+      "file": "archive.tar.gz.part-aaed",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaed",
+      "bytes": 16777216,
+      "sha256": "227c1764c073ea10d24603c5d4757ec16b146b13b8e2ca47385931dbda53cfe7",
+      "md5": "65777caef5a409dbbcefc0fa0b770dda"
+    },
+    {
+      "file": "archive.tar.gz.part-aaee",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaee",
+      "bytes": 16777216,
+      "sha256": "3298c2aadff1087115f14ff65207dbc857b873e5204f92460cbc47974ed3bc35",
+      "md5": "ce3442f7cd2521cebd1c5c2ace75746d"
+    },
+    {
+      "file": "archive.tar.gz.part-aaef",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaef",
+      "bytes": 16777216,
+      "sha256": "1bd7ea5b3bc92efb8a4618420f8236131887307832782dd98c3f27df3f5e3ee2",
+      "md5": "1e228e95c36073930cbff81c1252866b"
+    },
+    {
+      "file": "archive.tar.gz.part-aaeg",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaeg",
+      "bytes": 16777216,
+      "sha256": "5b90ade4683ec0f0a8d07130af67c11e94401f5213c3b4edeed9db42ccc6b101",
+      "md5": "12f38d3200969bc2b8ec946695ff42ec"
+    },
+    {
+      "file": "archive.tar.gz.part-aaeh",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaeh",
+      "bytes": 16777216,
+      "sha256": "055de77a5b97b370f04ffe8cd635d16e8393062e0cac2c32ce29472d6a05cedc",
+      "md5": "7d809908d080ab93e2cfee8d32cae29d"
+    },
+    {
+      "file": "archive.tar.gz.part-aaei",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaei",
+      "bytes": 16777216,
+      "sha256": "33b74adf68cbda9f1de1d0514f1264bbef062a122fbc2b140741fc949ce98610",
+      "md5": "c0179cc5573e1326e0378fb07c0d73e3"
+    },
+    {
+      "file": "archive.tar.gz.part-aaej",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaej",
+      "bytes": 16777216,
+      "sha256": "c5a5349c3255afa40b4049d8adba801e0249ddc83d59bb61b2a5d1471ab603fb",
+      "md5": "4eb78a7c84f15467b24837c20e87d12b"
+    },
+    {
+      "file": "archive.tar.gz.part-aaek",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaek",
+      "bytes": 16777216,
+      "sha256": "7973277a41dacd3e95559e62361e3e88d8cc576403c3a73dbab10b6a71f6b044",
+      "md5": "723dccb3bdc964cdc3cfda5f8c8c358b"
+    },
+    {
+      "file": "archive.tar.gz.part-aael",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aael",
+      "bytes": 16777216,
+      "sha256": "4c90d953ef0909917c7ad0ce03b543ab7437e85044fd288382c81202b7c784b7",
+      "md5": "66e4bd28c055a6aaa9d3de848b0475f3"
+    },
+    {
+      "file": "archive.tar.gz.part-aaem",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaem",
+      "bytes": 16777216,
+      "sha256": "5b9297868e1e62641e84bb5681e2992409a4e91bf13a30a44bd118a2f8666d7c",
+      "md5": "28e77fba2b98cf511da4f7d936cffbf6"
+    },
+    {
+      "file": "archive.tar.gz.part-aaen",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaen",
+      "bytes": 16777216,
+      "sha256": "c7174351ff223774707feb7bd57843c5ed8d6e0116a21fc308f1a113279309f0",
+      "md5": "8c6a15c4831999b05a293ebd064b45d0"
+    },
+    {
+      "file": "archive.tar.gz.part-aaeo",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaeo",
+      "bytes": 16777216,
+      "sha256": "f9ef335c20b88ef099a1d7732ef7035903b742769fdf780f3083b0a70d2b6172",
+      "md5": "60e21477b3f6a2cbbd559e7b0cf2b471"
+    },
+    {
+      "file": "archive.tar.gz.part-aaep",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaep",
+      "bytes": 16777216,
+      "sha256": "0928172f1d1bc51a23a0a2d6732e6cbab9cfe1e40590d7cc6621b03ed0d4616c",
+      "md5": "94b56095abf825e9f82da2deebe85dc1"
+    },
+    {
+      "file": "archive.tar.gz.part-aaeq",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaeq",
+      "bytes": 16777216,
+      "sha256": "c54a2cadf6adc6c7b6d48f298ca8a6e5c4c8542f0dab8ca27aaccadde340e096",
+      "md5": "9b05f11555ffa482321d069ee3fd1f66"
+    },
+    {
+      "file": "archive.tar.gz.part-aaer",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaer",
+      "bytes": 16777216,
+      "sha256": "ba4a42b2173bf4255f4d93e4348c241bcf03f148246697aadec2aac82fdc7fba",
+      "md5": "81533ee4ed7689da67f0561713d0b8a4"
+    },
+    {
+      "file": "archive.tar.gz.part-aaes",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaes",
+      "bytes": 16777216,
+      "sha256": "d0033637c4263dca895742dbf5e2bfd569c09876871167d7545bee8cec14a7bd",
+      "md5": "4c60f1f8c7788847894e8dd3a3f5732a"
+    },
+    {
+      "file": "archive.tar.gz.part-aaet",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaet",
+      "bytes": 16777216,
+      "sha256": "9b3013261344ade66b2ec724f32435f7f9e282084fafe51a7a66821edb6bc5b4",
+      "md5": "f758fc492d92eacd4b73edd8cec75ac5"
+    },
+    {
+      "file": "archive.tar.gz.part-aaeu",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaeu",
+      "bytes": 16777216,
+      "sha256": "464f5bbb7e07dae31ef7a1368daad7e92cba0df7432a3c95e5dff2fbfa8f3387",
+      "md5": "1ca74abc4a6ba3ba32dd523da062d177"
+    },
+    {
+      "file": "archive.tar.gz.part-aaev",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaev",
+      "bytes": 16777216,
+      "sha256": "cf1b625ff04ee352979198427e12babfcf2047d85d85460e5c613de504b0b278",
+      "md5": "05ed33cdbfcea6c50bae2af30a4f42ed"
+    },
+    {
+      "file": "archive.tar.gz.part-aaew",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaew",
+      "bytes": 16777216,
+      "sha256": "6a0a507c820099c3962c20444d1e152643502edf6d637bdb1ff08a79998b3347",
+      "md5": "57b563c6280c562921bde94d9f27b007"
+    },
+    {
+      "file": "archive.tar.gz.part-aaex",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaex",
+      "bytes": 16777216,
+      "sha256": "3864b99b3f79c5bac694729a40649da4620f3151127d07bbe2fc04f9e704f760",
+      "md5": "13f7db6f24058be80cc47316b5ac5c6b"
+    },
+    {
+      "file": "archive.tar.gz.part-aaey",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaey",
+      "bytes": 16777216,
+      "sha256": "e43245625d7f2dd6731a821a43dc41b82ed736ae4676685a7a6568d6cf817942",
+      "md5": "789d4fe3d7e7e4bd5cb2a772290c99a5"
+    },
+    {
+      "file": "archive.tar.gz.part-aaez",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaez",
+      "bytes": 16777216,
+      "sha256": "0e68b5bc7751d902fb9d50a65550366698822bb3fe36162e965653fcc9e7a141",
+      "md5": "cef6a4f7c5eb46907dce72a971b235e5"
+    },
+    {
+      "file": "archive.tar.gz.part-aafa",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aafa",
+      "bytes": 16777216,
+      "sha256": "849d2b84f292984d38eb96c5d3fb7902bc1f1665bedb37c3c110fb88614b676d",
+      "md5": "1e8aad3b35fc619ea94ae783ebdd42a2"
+    },
+    {
+      "file": "archive.tar.gz.part-aafb",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aafb",
+      "bytes": 16777216,
+      "sha256": "b0d42c676b9e815949cc7d90076141c20c9eb19571cc4c24c037af67ff3ec415",
+      "md5": "ffad098382e9eac2dd90bb0e91956db1"
+    },
+    {
+      "file": "archive.tar.gz.part-aafc",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aafc",
+      "bytes": 16777216,
+      "sha256": "48a3b1866520824a38a8e1a3592a79b4e32e5350158c3ccd72cc57c9c4800ff8",
+      "md5": "4d9271c661907aff7c75fcf4535c5b8b"
+    },
+    {
+      "file": "archive.tar.gz.part-aafd",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aafd",
+      "bytes": 16777216,
+      "sha256": "da77166c18f77e12373cddce284ecb57693c48d36c7a9aea0427b83ad68394ec",
+      "md5": "a9b888636b40903f99700636820bb7dc"
+    },
+    {
+      "file": "archive.tar.gz.part-aafe",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aafe",
+      "bytes": 16777216,
+      "sha256": "7d9fc83ebe98c0384273104f8ca665903cd356fd9c735e9c6b9017075db447b4",
+      "md5": "d437e809747b7360efc37c3137fd7527"
+    },
+    {
+      "file": "archive.tar.gz.part-aaff",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaff",
+      "bytes": 16777216,
+      "sha256": "517e32a0fdfe9a19a0161b757f456c993668411faf96618ab753084ac538d577",
+      "md5": "1eeaae88ddf5288b59983612c5d5afab"
+    },
+    {
+      "file": "archive.tar.gz.part-aafg",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aafg",
+      "bytes": 16777216,
+      "sha256": "a9173e70e7d4687c6489f54f3c44820a796bc62d11355e11bd0804a1dd24224d",
+      "md5": "b2cc3ee2c1201ec6df70732ce836f075"
+    },
+    {
+      "file": "archive.tar.gz.part-aafh",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aafh",
+      "bytes": 16777216,
+      "sha256": "be2f60dd4ccbfbe378a0d29e8cd5bfb0032789943929663ee62c181a436295df",
+      "md5": "1f2f947521cc9103d3ecc1425eebb079"
+    },
+    {
+      "file": "archive.tar.gz.part-aafi",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aafi",
+      "bytes": 16777216,
+      "sha256": "7e8ede2eea478a2ac489764ac0b25226191bf4fdf0e8a95a3cfab74467b0afcf",
+      "md5": "65f0251d2b5c55e212f72e0e6957679f"
+    },
+    {
+      "file": "archive.tar.gz.part-aafj",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aafj",
+      "bytes": 16777216,
+      "sha256": "000ab7bd4ec4b4bd90f8ca41f9bb575acc82e6ef8a899e1fe20d8cb9091dd070",
+      "md5": "0aea06dd2d707df7340bc12acad08c41"
+    },
+    {
+      "file": "archive.tar.gz.part-aafk",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aafk",
+      "bytes": 16777216,
+      "sha256": "aae1db233d8c0f9bd171325834f382fd9a0da727372ec6aed94be2004bc82fa8",
+      "md5": "fa05d20ca1513b6df42baca260b8b17c"
+    },
+    {
+      "file": "archive.tar.gz.part-aafl",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aafl",
+      "bytes": 16777216,
+      "sha256": "1165264d393c549dbc071e5cf3be91a284c3ab6463f88d7b6dfd951afdefce33",
+      "md5": "77c817c0737a86f0db02accd6d35b242"
+    },
+    {
+      "file": "archive.tar.gz.part-aafm",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aafm",
+      "bytes": 16777216,
+      "sha256": "1f5eb5c75592ea17a2618f406039d5ce1e3a5662d0e3245756f631d37d29a995",
+      "md5": "7516bf228d8d16d19ddbeffece2c720b"
+    },
+    {
+      "file": "archive.tar.gz.part-aafn",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aafn",
+      "bytes": 16777216,
+      "sha256": "3abea97bf76f8f6a3fdab905bb8c5f2b97b82af0fb999c886fe2fd2eff45f6f4",
+      "md5": "a47817c60464bb499b3a7e0ad32b0d94"
+    },
+    {
+      "file": "archive.tar.gz.part-aafo",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aafo",
+      "bytes": 16777216,
+      "sha256": "1b7bd0aab175c1673be5882458cabbffecb9f91e57d224e78d3be2e33ab1c403",
+      "md5": "7f8042009d38227ded50a6bd52fb98e0"
+    },
+    {
+      "file": "archive.tar.gz.part-aafp",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aafp",
+      "bytes": 16777216,
+      "sha256": "260d8734a0b7db084316d0944c5400242c3a545d6fecf348ba40fd46552d6a51",
+      "md5": "96c3abcc5966b1a62fbf2b097d6b1127"
+    },
+    {
+      "file": "archive.tar.gz.part-aafq",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aafq",
+      "bytes": 16777216,
+      "sha256": "25bd0230e2ce24ca0c16ad9a103a7204d257ce40a147fa43be3faee0dd1da12f",
+      "md5": "4fab0c947260540c5a3d77b2d6a04f18"
+    },
+    {
+      "file": "archive.tar.gz.part-aafr",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aafr",
+      "bytes": 16777216,
+      "sha256": "c606d2545953f59b5d732ffc209bef0e6e12fcaba9e169668bba7c27724062b6",
+      "md5": "f83b13bcf03c32cab8f046a0082c8b14"
+    },
+    {
+      "file": "archive.tar.gz.part-aafs",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aafs",
+      "bytes": 16777216,
+      "sha256": "d47d079f500c0b88f742c3db4f5b605df64630ede4cd4eb1a000d607cdf10c85",
+      "md5": "d5f606090f2b9418387b1def1618d543"
+    },
+    {
+      "file": "archive.tar.gz.part-aaft",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaft",
+      "bytes": 16777216,
+      "sha256": "c13aed0b9d0b2cbafe11dff094cbec7f94c79a6ae34acc9cc31be6d0246a4234",
+      "md5": "e18a47c5facd3c04fbdb54d32f2a02a0"
+    },
+    {
+      "file": "archive.tar.gz.part-aafu",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aafu",
+      "bytes": 16777216,
+      "sha256": "95306fdd2a990e8477ee52d70547e92355721613eba71a49e6eca937fd9b786f",
+      "md5": "8da4a6867ac4976a43022b3ee9747094"
+    },
+    {
+      "file": "archive.tar.gz.part-aafv",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aafv",
+      "bytes": 16777216,
+      "sha256": "1e929a968f722cf85ad8023c5faf9cca0b42f29a55fb9562a891a70575dcf6a1",
+      "md5": "347f7fe20332013e3c84770077884bf9"
+    },
+    {
+      "file": "archive.tar.gz.part-aafw",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aafw",
+      "bytes": 16777216,
+      "sha256": "7a4939eb62e3af2a389ff6c747ff49b29e0c9c6111db9d0990008101e52263ba",
+      "md5": "fde94ad5ea411c9edb7d84be9188c213"
+    },
+    {
+      "file": "archive.tar.gz.part-aafx",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aafx",
+      "bytes": 16777216,
+      "sha256": "3a37ad76a8f9494a3c8b123ab3e061110ae8d29a17c94adab433488cfecaee90",
+      "md5": "5255d786297abe1944541cb416857ed8"
+    },
+    {
+      "file": "archive.tar.gz.part-aafy",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aafy",
+      "bytes": 16777216,
+      "sha256": "1784885b4c6c55c06cc8565b6fb3511ecf903a036922fbc6edd9a9b89bdf6b1b",
+      "md5": "2d776ec8a398485b49fb501ddfc0ac87"
+    },
+    {
+      "file": "archive.tar.gz.part-aafz",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aafz",
+      "bytes": 16777216,
+      "sha256": "10905b14141075f65d8c8a3a840b55894da4f113a03256c2afcf4e3f31fd406f",
+      "md5": "c3c666b0de93defb811bf1873a428e58"
+    },
+    {
+      "file": "archive.tar.gz.part-aaga",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaga",
+      "bytes": 16777216,
+      "sha256": "5d5500aeaef04c73e43f2fc686e127f1dc27b7a4afc996c9fbd04785de6f842a",
+      "md5": "96522039dd91fec95b16cd2d51212502"
+    },
+    {
+      "file": "archive.tar.gz.part-aagb",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aagb",
+      "bytes": 16777216,
+      "sha256": "065c7caa99b8103ad28f574feb004b6816e5325fe1a357e4f8b22393b24bb1ed",
+      "md5": "f704d9e94391fd7ba43088e43c0d3549"
+    },
+    {
+      "file": "archive.tar.gz.part-aagc",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aagc",
+      "bytes": 16777216,
+      "sha256": "fe55a979e9c10cc42adc8831d60c8bf9b30d88cbe90d8c56fe00acdcf9a3462b",
+      "md5": "ac74853ee30cd68090a453bbcad04947"
+    },
+    {
+      "file": "archive.tar.gz.part-aagd",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aagd",
+      "bytes": 16777216,
+      "sha256": "9aab75da81c0c916fb812c71ffe3af78257aa3284f75b872f96357785ac059b2",
+      "md5": "b1bf6d6641ea33ec02d0fc4a39ceec81"
+    },
+    {
+      "file": "archive.tar.gz.part-aage",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aage",
+      "bytes": 16777216,
+      "sha256": "4c63b4796cc518a349fef0680127d8de17896b7459dc90e742ecf632e960ecf0",
+      "md5": "62fdf698a137ca45364a29ed46b86434"
+    },
+    {
+      "file": "archive.tar.gz.part-aagf",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aagf",
+      "bytes": 16777216,
+      "sha256": "b1a4ae451b30ae57444dedeca3b441d150a94a5d311295ea0296095616f064c6",
+      "md5": "618712cfa25d44c740964faedbb982c2"
+    },
+    {
+      "file": "archive.tar.gz.part-aagg",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aagg",
+      "bytes": 16777216,
+      "sha256": "b37f8b7aba287f49bddcd407490ca0b604ae46f6564a27a91dc74d96c77effe8",
+      "md5": "17862c3dd0c6f9ce30bd5846d878eb73"
+    },
+    {
+      "file": "archive.tar.gz.part-aagh",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aagh",
+      "bytes": 16777216,
+      "sha256": "b136cbec1a6a04e99e3ad4345d1d4a23a9c0638a813b0c9b773fbf6cd9ab0eae",
+      "md5": "5f8c6a0ccc080ad18fb0723c09ca92ae"
+    },
+    {
+      "file": "archive.tar.gz.part-aagi",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aagi",
+      "bytes": 16777216,
+      "sha256": "a5989452b8375df87c81c6dbdff6abf5222d087aae1bc10f36e80cdd15ac1ed7",
+      "md5": "99feae6597ee45229682449950f7b3fe"
+    },
+    {
+      "file": "archive.tar.gz.part-aagj",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aagj",
+      "bytes": 16777216,
+      "sha256": "f5cc9e433d28372842c998cd2cac081fa5ad593a06c572cc4fcb6fe9b9c1e08f",
+      "md5": "98499a2cc6636e4e5edf9f086f259037"
+    },
+    {
+      "file": "archive.tar.gz.part-aagk",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aagk",
+      "bytes": 16777216,
+      "sha256": "5417809e88d38b66f04defbb1a51a559622a5568b3ed99cde20419ddcbc2d4c4",
+      "md5": "c3bdc9c8ffdaa97f3519697711e689e7"
+    },
+    {
+      "file": "archive.tar.gz.part-aagl",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aagl",
+      "bytes": 16777216,
+      "sha256": "890c4c9f413dbfbd47cf1706aa4a3795177f0e212acc6c0fc197d41c8ec1c353",
+      "md5": "97a13217fc19fff1d201b9d42ba9cf42"
+    },
+    {
+      "file": "archive.tar.gz.part-aagm",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aagm",
+      "bytes": 16777216,
+      "sha256": "33ffd906a37e311a67883dc1c40d88c5246771d1e6f28251fc89dbbbaa4ce903",
+      "md5": "26b601c4b0f338b8fa905a0549fd770b"
+    },
+    {
+      "file": "archive.tar.gz.part-aagn",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aagn",
+      "bytes": 16777216,
+      "sha256": "a65855f3fefe1e1cb53d625ca13765e5efcbc46e556fcdb3940157ace45fef62",
+      "md5": "ce3856e5a77581ac01db235de19df372"
+    },
+    {
+      "file": "archive.tar.gz.part-aago",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aago",
+      "bytes": 16777216,
+      "sha256": "b71f2b0c28ff6e5bbc4b527dbc8c2fc6e903d7186d1855a3079ebebc43a8f2fd",
+      "md5": "6f12b5d6e8bc82ef84785077680f7486"
+    },
+    {
+      "file": "archive.tar.gz.part-aagp",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aagp",
+      "bytes": 16777216,
+      "sha256": "b8dbba5df359da06f16defcd54c9bf61d4386e0034d2484e3a662afb9e68e4eb",
+      "md5": "1e614e3decf5ba7da6f287fb6d6207a1"
+    },
+    {
+      "file": "archive.tar.gz.part-aagq",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aagq",
+      "bytes": 16777216,
+      "sha256": "eb29b94ad7b9c7113f2acf7a539e81d28525862ac2d2237b5dd66c6b8d082f5a",
+      "md5": "ec83d29fbbb51ad9e4d473115dfa459c"
+    },
+    {
+      "file": "archive.tar.gz.part-aagr",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aagr",
+      "bytes": 16777216,
+      "sha256": "4c1bf0354f59d5529b4db84e406c7ef9d3336cd36e0cdf23447952af16c08165",
+      "md5": "9e66664cd95e15b13bbec68f41b0f375"
+    },
+    {
+      "file": "archive.tar.gz.part-aags",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aags",
+      "bytes": 16777216,
+      "sha256": "17c0fe2e326cc5b379ad18dbce3a531ea5927fee928d09f3ce23b624a1a633a1",
+      "md5": "7eb2504d649beb3433db8f2d439ca9ed"
+    },
+    {
+      "file": "archive.tar.gz.part-aagt",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aagt",
+      "bytes": 16777216,
+      "sha256": "40419b3f246d40fef75bc92438616fd33448e029bd075513d7ab5465196e498d",
+      "md5": "de8270abd42c9c96bc3e444a6048cd36"
+    },
+    {
+      "file": "archive.tar.gz.part-aagu",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aagu",
+      "bytes": 16777216,
+      "sha256": "5854898899f78483c9f0c9cdec263cba75ffa4eb5878789df10d31b93bc26f45",
+      "md5": "83c8c245ec56db8c3d854bc40563bed3"
+    },
+    {
+      "file": "archive.tar.gz.part-aagv",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aagv",
+      "bytes": 16777216,
+      "sha256": "eee1cc07c16095eeb55d2385a33c1bf9d3f66706bab8da2e2159eced2413c15c",
+      "md5": "4c764b13eaabe172d3866ca1041de533"
+    },
+    {
+      "file": "archive.tar.gz.part-aagw",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aagw",
+      "bytes": 16777216,
+      "sha256": "95bf7163d4f58159ced4695e524a452bd1d16f32b8e899f284176b06de4b3657",
+      "md5": "20394175e3010a3b30359b4bd1d8b771"
+    },
+    {
+      "file": "archive.tar.gz.part-aagx",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aagx",
+      "bytes": 16777216,
+      "sha256": "65b1dd96ed87d2417c808f19715057a895248def5e5f3ef91d8285069d36688a",
+      "md5": "2362fe0be0b9be139bb27dd9ff8f57b8"
+    },
+    {
+      "file": "archive.tar.gz.part-aagy",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aagy",
+      "bytes": 16777216,
+      "sha256": "f4359e41d4c4d6bd0eaba03b7f800483e081d37ceb802295bb721da9dccc28ce",
+      "md5": "997bb6c8e7a95ca9ce952397947de084"
+    },
+    {
+      "file": "archive.tar.gz.part-aagz",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aagz",
+      "bytes": 16777216,
+      "sha256": "0c2db56c394f9a48ab63853e1ab5c31ec9d2f7edd0aa77dc4b6536d2e5cf8011",
+      "md5": "a7afc97e90e39948d8122fafab69de18"
+    },
+    {
+      "file": "archive.tar.gz.part-aaha",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaha",
+      "bytes": 16777216,
+      "sha256": "77a23d196a7381e12aa8c9896ef18d6ffd87d9b1e3fccca6f865c63da3a538e1",
+      "md5": "a6255922c9721dc83b4ea9d2a62efa21"
+    },
+    {
+      "file": "archive.tar.gz.part-aahb",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aahb",
+      "bytes": 16777216,
+      "sha256": "e0ab703f84d5d49f8648e57cd7f5340045e9cfc6a723df413099e7d790aea510",
+      "md5": "ac91d9467bc323b08a43f9929a5ae3dd"
+    },
+    {
+      "file": "archive.tar.gz.part-aahc",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aahc",
+      "bytes": 16777216,
+      "sha256": "50e146aef9c8b3c12644dcccf2568313a45be4200ed87258714d9d61cd42cf73",
+      "md5": "8fd86824b8048756504b77717880e492"
+    },
+    {
+      "file": "archive.tar.gz.part-aahd",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aahd",
+      "bytes": 16777216,
+      "sha256": "2ba81e546a6b88563bf4fafd72a44d102ec28c0261c5dc105f9fb2cc2a773420",
+      "md5": "c3772c2e7f1bf6dd713b1f85852401ad"
+    },
+    {
+      "file": "archive.tar.gz.part-aahe",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aahe",
+      "bytes": 16777216,
+      "sha256": "5ca68ea2720f3c9cc508def7dfd711fb9be6eb4f927313a3c0ab99c756c4bf9b",
+      "md5": "085eb7d537fadd36303321767f98a858"
+    },
+    {
+      "file": "archive.tar.gz.part-aahf",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aahf",
+      "bytes": 16777216,
+      "sha256": "a62e4a9bb770f663b8070bc7b761a37f49c62a4510ff0d33c2aa91726be55bbf",
+      "md5": "e7f2f54512653d237e363342094957fb"
+    },
+    {
+      "file": "archive.tar.gz.part-aahg",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aahg",
+      "bytes": 16777216,
+      "sha256": "0b49a65dc83003d289991e6c1dfe81fcfd9ed853cd562c96d6f2adc1162ad861",
+      "md5": "8431230ca2a79ff5ae0a69227d654bb5"
+    },
+    {
+      "file": "archive.tar.gz.part-aahh",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aahh",
+      "bytes": 16777216,
+      "sha256": "53e278eef11a5418f78d7887051a7ef18226d14a422b9f133e60f9910d241ce7",
+      "md5": "343e191d7f50065370e41d9269b26232"
+    },
+    {
+      "file": "archive.tar.gz.part-aahi",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aahi",
+      "bytes": 16777216,
+      "sha256": "11997d0260d7ca04fcb388e0c7ba8b51974911328c4363c6bf8d79540da04623",
+      "md5": "c946a59e001e1c2141ed47361ef25646"
+    },
+    {
+      "file": "archive.tar.gz.part-aahj",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aahj",
+      "bytes": 16777216,
+      "sha256": "f91e436a35ac486e862015687b298b687d2fc950cbd7be9d6c61629cd65ef2e9",
+      "md5": "32220e5c3043d12f81fb6b79aa691711"
+    },
+    {
+      "file": "archive.tar.gz.part-aahk",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aahk",
+      "bytes": 16777216,
+      "sha256": "f5573c9c8307da3ac2ff344bd0b49e338fe3fc959e910d1398e830cd46b5b458",
+      "md5": "765e847f0844b4df899be1bcfd143d69"
+    },
+    {
+      "file": "archive.tar.gz.part-aahl",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aahl",
+      "bytes": 16777216,
+      "sha256": "390f524a94900b19ac81da7bcc0303913de805da5453db558bd79ccf17dfc860",
+      "md5": "ee32700d9392cfd1f4f4096187082ebc"
+    },
+    {
+      "file": "archive.tar.gz.part-aahm",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aahm",
+      "bytes": 16777216,
+      "sha256": "cdb4ff96ae97eb6514243e2b55639b6c8dc42e345a7077e917d9b189599a99e5",
+      "md5": "18818ec5d92d6ce7473f269b4b03cfe9"
+    },
+    {
+      "file": "archive.tar.gz.part-aahn",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aahn",
+      "bytes": 16777216,
+      "sha256": "103416ddea6dd2b1a3a8cf6aaf011594a6afdef990da7e2e55ff5d69ca336f45",
+      "md5": "5d5277f5defc01bf7d781cf5eb863598"
+    },
+    {
+      "file": "archive.tar.gz.part-aaho",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaho",
+      "bytes": 16777216,
+      "sha256": "fde9668ce70bb2df21235c293472f3c55d1851cc6769506248edb075b3a5327f",
+      "md5": "fe3892f901c752de4ed8a650c8aea6c6"
+    },
+    {
+      "file": "archive.tar.gz.part-aahp",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aahp",
+      "bytes": 16777216,
+      "sha256": "79f9f595188f5198a909ceab53b8d93ad0d1975808d03ea9c9aa7d71a34ab285",
+      "md5": "b30dd35fce4a1ee16ab51668a7ab6983"
+    },
+    {
+      "file": "archive.tar.gz.part-aahq",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aahq",
+      "bytes": 16777216,
+      "sha256": "8c363aad6ed429eacbc5a5dd2d55e12e1ca69f7ff569253bc51fcbe068e8f1e5",
+      "md5": "c6c78964c85b8da5180b2f50f808cf37"
+    },
+    {
+      "file": "archive.tar.gz.part-aahr",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aahr",
+      "bytes": 16777216,
+      "sha256": "e2a99a94d4260041a2fc7eddec32b377948fd40eb3d460660cf503d1a7535d01",
+      "md5": "b53f3e92ae91cb9143bc220fd3574821"
+    },
+    {
+      "file": "archive.tar.gz.part-aahs",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aahs",
+      "bytes": 16777216,
+      "sha256": "06d9f1fa0e9806dc0a47c9bb0d33a72fae97ba3b6cf90ecb71b77b22e8712258",
+      "md5": "9dc5afb746d37c9a00e48be59c78e2db"
+    },
+    {
+      "file": "archive.tar.gz.part-aaht",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaht",
+      "bytes": 16777216,
+      "sha256": "324ecc3913023e1e0b4faa2c04b7eeb57d20d7483b204efaf2fcd6aa51068ec2",
+      "md5": "4eebc14fd9967f41454a47d300874b63"
+    },
+    {
+      "file": "archive.tar.gz.part-aahu",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aahu",
+      "bytes": 16777216,
+      "sha256": "c7f3f09a0cf524e815afc60093bafdf02b407b5733b9110e3ce85aa58617e159",
+      "md5": "8e0be54f5c17b462b31e505aff89895e"
+    },
+    {
+      "file": "archive.tar.gz.part-aahv",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aahv",
+      "bytes": 16777216,
+      "sha256": "880492e612ce654a15604282991d23fbe27e33da41d68960018bbab0f24f7e34",
+      "md5": "1cc0e8834690f4bb1a958417685fd7af"
+    },
+    {
+      "file": "archive.tar.gz.part-aahw",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aahw",
+      "bytes": 16777216,
+      "sha256": "68b04ebd1a6b045b850a21a3955132e80ad601fddbd30d20374bcfabddae1721",
+      "md5": "460ad1c6255f7e0a99563db2ff1e1093"
+    },
+    {
+      "file": "archive.tar.gz.part-aahx",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aahx",
+      "bytes": 16777216,
+      "sha256": "2477e40f9e45159bd2877143a7a5d41e46e026320befab9cef9dd7f7a4fbde7d",
+      "md5": "eebccdb633d28e4c19bc0d385ffa946e"
+    },
+    {
+      "file": "archive.tar.gz.part-aahy",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aahy",
+      "bytes": 16777216,
+      "sha256": "8bee256b885d765750cde2a3e60d2a9693c5deaa61630b609474595ab3215369",
+      "md5": "40a4d9f60925f9132aba07a5e63074ef"
+    },
+    {
+      "file": "archive.tar.gz.part-aahz",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aahz",
+      "bytes": 16777216,
+      "sha256": "6675a3d5b79652a1e8842f691a74f742069f30a3752f37d81e13848c82157d26",
+      "md5": "30d8575d85374858fedfa996f8b4366d"
+    },
+    {
+      "file": "archive.tar.gz.part-aaia",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaia",
+      "bytes": 16777216,
+      "sha256": "726afc80076b9114d5bb8b1875ffc795594a275fc3758af700ae49f2e3671c75",
+      "md5": "780e7f0177deef7d85b5acc2084325d0"
+    },
+    {
+      "file": "archive.tar.gz.part-aaib",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaib",
+      "bytes": 16777216,
+      "sha256": "accfc0dd776e6b1025f9c74f0ed2d47bfea361d9b71e16f01e0549e3fcef408f",
+      "md5": "5502a8f38ae11b6bc71e5a4f6e0f5198"
+    },
+    {
+      "file": "archive.tar.gz.part-aaic",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaic",
+      "bytes": 16777216,
+      "sha256": "5c5c37e953b3418fad8c68366193b28b773621dcaf9e218cc3609bd3c294cbec",
+      "md5": "8c96f8da7ef59516db214a74a035e7ed"
+    },
+    {
+      "file": "archive.tar.gz.part-aaid",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaid",
+      "bytes": 16777216,
+      "sha256": "ddef62c55212487bd59217963272a757607a1bd07323dca4be069a2643630b80",
+      "md5": "939d528dc527c6cc94a15f30bf2be4c3"
+    },
+    {
+      "file": "archive.tar.gz.part-aaie",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaie",
+      "bytes": 16777216,
+      "sha256": "083586d5b7c6aeadddb3024b02a62af7f5f75eb614cce56ebc3677dacb4ce014",
+      "md5": "281c304228dd4a511e48a44a367ab533"
+    },
+    {
+      "file": "archive.tar.gz.part-aaif",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaif",
+      "bytes": 16777216,
+      "sha256": "08cd259b995bfc9dfc3f0ed4d8efef50081168b927d0f80a054e022391b794dc",
+      "md5": "6e74f9079847c251b57f004b3f8e857c"
+    },
+    {
+      "file": "archive.tar.gz.part-aaig",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaig",
+      "bytes": 16777216,
+      "sha256": "54a75cfb2948135cadbb4ad31e87080aa52982f4ef22d64072c6fb36a7857447",
+      "md5": "0c0e6034336064f088e600c3339fb815"
+    },
+    {
+      "file": "archive.tar.gz.part-aaih",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaih",
+      "bytes": 16777216,
+      "sha256": "fdf3deec261e8edd04b6a593308f92141c25b7782feff998f3e150529718b53f",
+      "md5": "6c941bb3aac0a801a56d3247d95ea418"
+    },
+    {
+      "file": "archive.tar.gz.part-aaii",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaii",
+      "bytes": 16777216,
+      "sha256": "ca4d913b02bc62aa9061d9b50dee552e0a4da062a76409263e2b80cfd74eb04f",
+      "md5": "506087b82563b8bee0d79977ee1935a3"
+    },
+    {
+      "file": "archive.tar.gz.part-aaij",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaij",
+      "bytes": 16777216,
+      "sha256": "4b979f3841aed8af23bc9a18fc1923d593b8c1b7d017cb4d16461e4928aa21dc",
+      "md5": "eb23d4e74aa81cc1fa4aaf9284f59fbd"
+    },
+    {
+      "file": "archive.tar.gz.part-aaik",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaik",
+      "bytes": 16777216,
+      "sha256": "f6e60044524f7159663bc91a23f62ae42fdf17af59aee84b07d50182ccf121c8",
+      "md5": "a199b9377a053706740b7320c596034f"
+    },
+    {
+      "file": "archive.tar.gz.part-aail",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aail",
+      "bytes": 16777216,
+      "sha256": "cdcacce022f25cd34353515ca2318d126ed3d8a7276039440d143211de2df489",
+      "md5": "b953d8dc0f08645a31ffbe1dc9727a31"
+    },
+    {
+      "file": "archive.tar.gz.part-aaim",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaim",
+      "bytes": 16777216,
+      "sha256": "4c4e497d9fd6cd62f6916c0b045cf593dcb318eb3e202cc016eee88ce27fab25",
+      "md5": "1289f24d7db7fed083fbf90fd3624877"
+    },
+    {
+      "file": "archive.tar.gz.part-aain",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aain",
+      "bytes": 16777216,
+      "sha256": "39360207f7a769b264542632d157a98b8089c772d4cb521a02f254f38c63a0c7",
+      "md5": "493739d82f916ee2d1138602dee00d68"
+    },
+    {
+      "file": "archive.tar.gz.part-aaio",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaio",
+      "bytes": 16777216,
+      "sha256": "9c75458ea3597dbcd594e724de199bf87b14a9860db5c8145be53bb193307b54",
+      "md5": "924de2dd9049dc26dbb4543e40daf06a"
+    },
+    {
+      "file": "archive.tar.gz.part-aaip",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaip",
+      "bytes": 16777216,
+      "sha256": "d4b0bc8c51253ccd8b77c07c436dc2392555e7216ca1642599b0d307d0371cab",
+      "md5": "b413dd7ab9a402d56999d7fe8eaef781"
+    },
+    {
+      "file": "archive.tar.gz.part-aaiq",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaiq",
+      "bytes": 16777216,
+      "sha256": "0cd5675d23ec28f966c462cd3d42cb45487f0ada52c229ef77396d887a7b4d7b",
+      "md5": "d168ab0fe41a3fc8161afe6c7d7bbf20"
+    },
+    {
+      "file": "archive.tar.gz.part-aair",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aair",
+      "bytes": 16777216,
+      "sha256": "4229eb6e292eb93a6a22a7511d2caa3461117604b949734566e98e17782c1ec1",
+      "md5": "b61289d315f2b471e0a323979525d7e4"
+    },
+    {
+      "file": "archive.tar.gz.part-aais",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aais",
+      "bytes": 16777216,
+      "sha256": "196172451aa50e122063faaca474fc096a60560dd0c1d58c40a809dc3e3f4086",
+      "md5": "22c03caf78bcc89fd0c7865c831ca312"
+    },
+    {
+      "file": "archive.tar.gz.part-aait",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aait",
+      "bytes": 16777216,
+      "sha256": "c4db3150d8f09467c4f954875ed97f2cb850d83a40bd0dee3f9a53cf73e4cc99",
+      "md5": "0eac656321aba9b8ed2f69e0ad9e075e"
+    },
+    {
+      "file": "archive.tar.gz.part-aaiu",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaiu",
+      "bytes": 16777216,
+      "sha256": "b7f906db62b29a026baa1f435475c678681655ab8fd2478fb11cb471ad592556",
+      "md5": "1a82f2a14b5472e1f09ecd570e108ff1"
+    },
+    {
+      "file": "archive.tar.gz.part-aaiv",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaiv",
+      "bytes": 16777216,
+      "sha256": "bd6d3316a1c5e00261faf4b6bf258eede4e6ee7b76f53e93b492378be7dea08a",
+      "md5": "ed1ddd3f3244c380dacfe5f341626369"
+    },
+    {
+      "file": "archive.tar.gz.part-aaiw",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaiw",
+      "bytes": 16777216,
+      "sha256": "97f84050e04308d4780cad9307dcf92038c17c73a40936d0b1ba0437c067e466",
+      "md5": "2ea12fb3173ae9ce8ec6636504c961b7"
+    },
+    {
+      "file": "archive.tar.gz.part-aaix",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaix",
+      "bytes": 16777216,
+      "sha256": "702878428fc4683136f14cd2b981c4f7d40ac891314efe841377da9037130333",
+      "md5": "091957c0cfab837f6dae0891f414bbac"
+    },
+    {
+      "file": "archive.tar.gz.part-aaiy",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaiy",
+      "bytes": 16777216,
+      "sha256": "d9aaaca9990d8be95193ff4dd7945f387c8947e33729183447f0d0b29a24b776",
+      "md5": "f5810dd7f6e8d3040c6ae94fdf2d4e08"
+    },
+    {
+      "file": "archive.tar.gz.part-aaiz",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaiz",
+      "bytes": 16777216,
+      "sha256": "093c60414c9b7b50b1339b7253acf6024d2f3b992c53cede598cdf8f9ab3922f",
+      "md5": "1f6f9f6d3bd030f605eb3f377a748dc5"
+    },
+    {
+      "file": "archive.tar.gz.part-aaja",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaja",
+      "bytes": 16777216,
+      "sha256": "8c2e2ee85fafc2d8ff699a2fb6d42d9ae445a8a69e16c24ea3bff77b8cc7fbaf",
+      "md5": "ba4f8ae9f12f717a6cde51f365fde6df"
+    },
+    {
+      "file": "archive.tar.gz.part-aajb",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aajb",
+      "bytes": 16777216,
+      "sha256": "120ac15dd7bbbc127878814eed5c829a8526e74dfad54d565f8e64f32f029ef8",
+      "md5": "98fc2fc4d36c78b15199c25d9a7ee672"
+    },
+    {
+      "file": "archive.tar.gz.part-aajc",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aajc",
+      "bytes": 16777216,
+      "sha256": "0932996b3267cac4d2ed1650a840029ab9ceb38f9f623a32e4d1db195166220b",
+      "md5": "de6e8716134a8317e46b3090c69c96be"
+    },
+    {
+      "file": "archive.tar.gz.part-aajd",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aajd",
+      "bytes": 16777216,
+      "sha256": "9af670de8f16f153f700bcd2446326fc33f6ed06238f6404b58fa11c18013d5d",
+      "md5": "54560522d4f083f98ee6244389aeb6a0"
+    },
+    {
+      "file": "archive.tar.gz.part-aaje",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaje",
+      "bytes": 16777216,
+      "sha256": "0a3dd38a6c4dea254da48848c1c66b890857747a458edf4199a382311b851e12",
+      "md5": "889e8921d50c4ade1d78081056555fa4"
+    },
+    {
+      "file": "archive.tar.gz.part-aajf",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aajf",
+      "bytes": 16777216,
+      "sha256": "2f2ffa5c4694ddd1e26e73c7f731a86ae4852b9b7caf34fda0ec73a238dc889b",
+      "md5": "bdd4daebec91a436e760cacbe971e9d1"
+    },
+    {
+      "file": "archive.tar.gz.part-aajg",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aajg",
+      "bytes": 16777216,
+      "sha256": "eebf27b42cf522a1d983bb80aa5cb716fa2ee4448f18764b8eac8439add699d1",
+      "md5": "b99b2d4852b044566c64d476c94e4ac6"
+    },
+    {
+      "file": "archive.tar.gz.part-aajh",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aajh",
+      "bytes": 16777216,
+      "sha256": "a88ca34d520a678e8035ef3ea56fd2ac553f91801779a11b90336c749c70359a",
+      "md5": "b7e9d34a7f88c6961ba739e0af6df5ca"
+    },
+    {
+      "file": "archive.tar.gz.part-aaji",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaji",
+      "bytes": 16777216,
+      "sha256": "0852105a79d52db47f9ff9bbedb4b8268547b96af11f9089faf3e0f788c217a2",
+      "md5": "542d26c36711973ea0e4e69f48b8615d"
+    },
+    {
+      "file": "archive.tar.gz.part-aajj",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aajj",
+      "bytes": 16777216,
+      "sha256": "959b7c2296ed58d75140b388eec6ef7b392156be305a7f69ad2ec5a1ba91358f",
+      "md5": "e9ce40d68e6a7488d35cfd7aee0af9c3"
+    },
+    {
+      "file": "archive.tar.gz.part-aajk",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aajk",
+      "bytes": 16777216,
+      "sha256": "59a5770b5b476d9743161728410a3d6378b7ea823fb0706dd105291488cc0444",
+      "md5": "48febb8fa011549da248a30d27514179"
+    },
+    {
+      "file": "archive.tar.gz.part-aajl",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aajl",
+      "bytes": 16777216,
+      "sha256": "74c32916941810b61db2c3beb02163b0a4e318f4be8f738dacf9bf60079a2c62",
+      "md5": "a9b68511f722226bf404f82fa2557311"
+    },
+    {
+      "file": "archive.tar.gz.part-aajm",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aajm",
+      "bytes": 16777216,
+      "sha256": "9818b6405e8bda53298dcaeb6dccde521826c6b38270979c20da901d782924e3",
+      "md5": "331e6847bf630f6bf52e5c0b4cc350d5"
+    },
+    {
+      "file": "archive.tar.gz.part-aajn",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aajn",
+      "bytes": 16777216,
+      "sha256": "449a040023b5bfa88543cae411b5c6bdcda5d9d324ab65eb08290acfeacec3c4",
+      "md5": "92ca3f479686acf526a2323f54050b9d"
+    },
+    {
+      "file": "archive.tar.gz.part-aajo",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aajo",
+      "bytes": 16777216,
+      "sha256": "28739d2e92cae2ab84cdd747a999e79d85f70ac97f6e6386b6e3a9bd9b076cd0",
+      "md5": "0017b5624baccad374d91f47f28cca75"
+    },
+    {
+      "file": "archive.tar.gz.part-aajp",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aajp",
+      "bytes": 16777216,
+      "sha256": "e3ca787c23639a0bc5ea864a7200aa8c1104e3afb5f8e4d9d0c04f336736f326",
+      "md5": "088cb74c6217a3ea17c69246e0237a78"
+    },
+    {
+      "file": "archive.tar.gz.part-aajq",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aajq",
+      "bytes": 16777216,
+      "sha256": "225a6ecd6fe91bcf748f005827d2ed476e1f6a221a020d2352c68910624cb39f",
+      "md5": "8a3b51c106ae25e7c61307c71469266f"
+    },
+    {
+      "file": "archive.tar.gz.part-aajr",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aajr",
+      "bytes": 16777216,
+      "sha256": "6e31253202d52eff045e64c98a732777e6b0cbf03f008b5c5a4441e196416531",
+      "md5": "c084d20c9cb87b947f705170778c2d77"
+    },
+    {
+      "file": "archive.tar.gz.part-aajs",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aajs",
+      "bytes": 16777216,
+      "sha256": "f5384d18853be84e82e1f94c777ea68f81d74b9fb22f209cadfc89e89eb43821",
+      "md5": "6a1372f1e7de5574773afc1ca212e9b8"
+    },
+    {
+      "file": "archive.tar.gz.part-aajt",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aajt",
+      "bytes": 16777216,
+      "sha256": "b4fc2d45bb04dc52b0c15977d13f2e8553723499263a6689a9bad93d97644336",
+      "md5": "1583c8821b6b5465e82184a502ebbcf9"
+    },
+    {
+      "file": "archive.tar.gz.part-aaju",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaju",
+      "bytes": 16777216,
+      "sha256": "9c6a4e3d88ba95fac5dee97494af891e5a32a6268359f52c3482fe5e0e746015",
+      "md5": "0faf53e963d1f3d05d3d824c40f2a2c9"
+    },
+    {
+      "file": "archive.tar.gz.part-aajv",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aajv",
+      "bytes": 16777216,
+      "sha256": "f3f4eb5c816d67599c00e079a65ef35eddf7b73a61db66bbd7ac8eb2cb0e7f3d",
+      "md5": "5c67ab210835d437cc5f96ec5a3b8437"
+    },
+    {
+      "file": "archive.tar.gz.part-aajw",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aajw",
+      "bytes": 16777216,
+      "sha256": "2357fe21e97f2c02d561b5f1c485e9a049565a2d56f2d25fa8b9f5ce3a9e915e",
+      "md5": "9467b8a99d0c0451a82e4aa1f3dcf343"
+    },
+    {
+      "file": "archive.tar.gz.part-aajx",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aajx",
+      "bytes": 16777216,
+      "sha256": "3bb1b7f44e79c6a32c0fc77addb545da0f78645dd043bbc45507e336f9df6dff",
+      "md5": "29a2fcbebd7472124611748ed08dcb4e"
+    },
+    {
+      "file": "archive.tar.gz.part-aajy",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aajy",
+      "bytes": 16777216,
+      "sha256": "190ee1579c3f08d2e09e647948319d791a5854b38fc63bddd5101d310c3a847b",
+      "md5": "3b4dc9f8dd74472cb4abc931605f0a62"
+    },
+    {
+      "file": "archive.tar.gz.part-aajz",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aajz",
+      "bytes": 16777216,
+      "sha256": "e49e14aab16e8c6965e8e821ad59c3a21e561b8aa3f8fbb7bedec49c18c096f1",
+      "md5": "b8050d04d0c8c1d038fff63849bc953c"
+    },
+    {
+      "file": "archive.tar.gz.part-aaka",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaka",
+      "bytes": 16777216,
+      "sha256": "95a54e9a7078dc07ac41f2fc4c1bf935237570e3c5e41d0e4a8d86d9087ccda7",
+      "md5": "3c93c27f08fbeaea2ff1da5cb0e8628b"
+    },
+    {
+      "file": "archive.tar.gz.part-aakb",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aakb",
+      "bytes": 16777216,
+      "sha256": "a44e979dcb8a866ca1a762242a6b823aec22145b2ac45c4639442155a7bf2a0f",
+      "md5": "798f4b4cedd2718983763bcb3f4187ec"
+    },
+    {
+      "file": "archive.tar.gz.part-aakc",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aakc",
+      "bytes": 16777216,
+      "sha256": "7fa898aea7bae0b418a145df1807dc39198b1f5193124b8250e69f0b2c9918e5",
+      "md5": "e2338915105c2a7d7822ffaff5fa0a2b"
+    },
+    {
+      "file": "archive.tar.gz.part-aakd",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aakd",
+      "bytes": 16777216,
+      "sha256": "c8163d8247c9c449bcfcd9a7eb20ce12d76e910b32d2e18057712c78e98b7430",
+      "md5": "f1a8ccf23613d13bf633135e0df8ad0e"
+    },
+    {
+      "file": "archive.tar.gz.part-aake",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aake",
+      "bytes": 16777216,
+      "sha256": "9fcd1992f128dec676d7d4205da20dd8825825dfa00fee836b3584a04e76e493",
+      "md5": "f59fb836e1cc6785636cf35870684984"
+    },
+    {
+      "file": "archive.tar.gz.part-aakf",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aakf",
+      "bytes": 16777216,
+      "sha256": "bff084ad970981f798599a7091837b06f241dd23c233ad273a3033d5a1df5209",
+      "md5": "7dfcc36920247a50d9d5cdb8e5a4e5b3"
+    },
+    {
+      "file": "archive.tar.gz.part-aakg",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aakg",
+      "bytes": 16777216,
+      "sha256": "96b02bd5e2de2eee22a4e36bb609a9d8b934deb09a3e264884266ccfbc0f439d",
+      "md5": "417c16834e64d48d638326a30437007b"
+    },
+    {
+      "file": "archive.tar.gz.part-aakh",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aakh",
+      "bytes": 16777216,
+      "sha256": "24d79b0931cca71eebc608c001620e17b0a2e19c39c95c98688c6334e567b9d3",
+      "md5": "0f57bd08d1ab88648136021d3b17b8fd"
+    },
+    {
+      "file": "archive.tar.gz.part-aaki",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaki",
+      "bytes": 16777216,
+      "sha256": "d389e9cb5c338a4967a7280584952edbf45e9a5ddf4711daeb5d397b5b337ef1",
+      "md5": "023ac6536cc3e874682db6eee51b083c"
+    },
+    {
+      "file": "archive.tar.gz.part-aakj",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aakj",
+      "bytes": 16777216,
+      "sha256": "67c353d01c3297f84c3b43fec8409b57d71d435a38aa078e03e7d3bb608c011d",
+      "md5": "9843a911c5c58e972b9e012989749d9d"
+    },
+    {
+      "file": "archive.tar.gz.part-aakk",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aakk",
+      "bytes": 16777216,
+      "sha256": "f91458a2ce170f1acc6e95443dd7458776b05f76f6b431c7ecadef88d47c6b81",
+      "md5": "c8d4aefe72f6cc4cdbbab0132b946f4f"
+    },
+    {
+      "file": "archive.tar.gz.part-aakl",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aakl",
+      "bytes": 16777216,
+      "sha256": "f04a676182b70e1b6a6c379687447fa95bfcb3ff2e1ca9c55e1036f557faa509",
+      "md5": "e6007af7b00d5d5f1d62824c7a79c542"
+    },
+    {
+      "file": "archive.tar.gz.part-aakm",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aakm",
+      "bytes": 16777216,
+      "sha256": "6451167f0da5c205c204fe2e2dfbb491f8b4b340084df9c2dd3f02dfa9055af3",
+      "md5": "62bcada6992d041ebf726aeb64f5deda"
+    },
+    {
+      "file": "archive.tar.gz.part-aakn",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aakn",
+      "bytes": 16777216,
+      "sha256": "1f248dd9bc86204bd6dfc810f02b65461da1f97e9fdd7c1d287edd76df394887",
+      "md5": "255ed09544880889733b3065f719785d"
+    },
+    {
+      "file": "archive.tar.gz.part-aako",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aako",
+      "bytes": 16777216,
+      "sha256": "eacb11573a91c1af49389a4b7785b6a12a946c7182fb5a987cda2c5750f121ec",
+      "md5": "43de43e5147127927bcca7db36eb1124"
+    },
+    {
+      "file": "archive.tar.gz.part-aakp",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aakp",
+      "bytes": 16777216,
+      "sha256": "4124b70a04e5d835b3b44507eb104aa8b0bbb41f42b016daad83a686f5c7f6f2",
+      "md5": "ed72f0b11350cd5a52c2ddd7b0073487"
+    },
+    {
+      "file": "archive.tar.gz.part-aakq",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aakq",
+      "bytes": 16777216,
+      "sha256": "b7fff2f5898b2fb3407b8cb8c9b1143fd3483c4927b8b592a23d446c7810faac",
+      "md5": "a6c22ff820e0a5a39e803fbad4fe5684"
+    },
+    {
+      "file": "archive.tar.gz.part-aakr",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aakr",
+      "bytes": 16777216,
+      "sha256": "2b632433bda71b5c8e6b04852daf3dc42dda21e933a32715bb4adfc8680469f9",
+      "md5": "cb6d7f8e0836ed407f850b4b594f141b"
+    },
+    {
+      "file": "archive.tar.gz.part-aaks",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaks",
+      "bytes": 16777216,
+      "sha256": "5bbd9e0177565fca21c532d36e07501aa6870325408c126033723486a882f9a5",
+      "md5": "58a35befb96a2b7301908e8fc9996274"
+    },
+    {
+      "file": "archive.tar.gz.part-aakt",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aakt",
+      "bytes": 16777216,
+      "sha256": "103b596ca69c1896eb2ad308ea3a63b615325310463e831b1ab6c98c55fcadf5",
+      "md5": "1b7e3a28db04ab1d54b4b74851e81325"
+    },
+    {
+      "file": "archive.tar.gz.part-aaku",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaku",
+      "bytes": 16777216,
+      "sha256": "a9a678c46a87c79ef82c55ebf636ebbb91e83b1a490c0e8eaf5e5ae5b7786528",
+      "md5": "1b4012fdff5e789fd989be73883a7c23"
+    },
+    {
+      "file": "archive.tar.gz.part-aakv",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aakv",
+      "bytes": 16777216,
+      "sha256": "2e2573f22584c759f2d7df0d8d025e0864cc81fea138c777931f1cdd191329d4",
+      "md5": "c63ebc4f48664f2256860615bc9f1fd7"
+    },
+    {
+      "file": "archive.tar.gz.part-aakw",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aakw",
+      "bytes": 16777216,
+      "sha256": "b871f9c2b72fd46ee2aa01534435159f277f750775baecec621cd1aa1f827c16",
+      "md5": "8fd6658574db760b91f5d12531513342"
+    },
+    {
+      "file": "archive.tar.gz.part-aakx",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aakx",
+      "bytes": 16777216,
+      "sha256": "87d3b3a0d64ee560bc7d15a8f9caf01b6b251debf5f50d6c73507b8314529eca",
+      "md5": "962d220213c20838a9bf724acdc4d6d0"
+    },
+    {
+      "file": "archive.tar.gz.part-aaky",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaky",
+      "bytes": 16777216,
+      "sha256": "251ce6cad5ba4e43fba7aa80c00ff0a280524d6b5fecadc4801bbf3b7839966b",
+      "md5": "2ce333ba3d6c2b5073bc03127e7c70a4"
+    },
+    {
+      "file": "archive.tar.gz.part-aakz",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aakz",
+      "bytes": 16777216,
+      "sha256": "191b3786a32f9d07be6aa7d7343f4d99e835a564ed62413d7cd674d4eaeea6b4",
+      "md5": "88520290514c5cb35b3b3ab8912fc905"
+    },
+    {
+      "file": "archive.tar.gz.part-aala",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aala",
+      "bytes": 16777216,
+      "sha256": "1ebbbffb12db1ecd5c31996dcd637ccaad420e4d9b15aaee51cff9633aed4caf",
+      "md5": "5d108eac11973ab4b9886f8a0e1f5918"
+    },
+    {
+      "file": "archive.tar.gz.part-aalb",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aalb",
+      "bytes": 16777216,
+      "sha256": "ffbba17103efe596bc19eb13fc8b8607bb6415ef0e49a43e85426401cbd54cc2",
+      "md5": "977849d8d5069d469a793f75a9902aa7"
+    },
+    {
+      "file": "archive.tar.gz.part-aalc",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aalc",
+      "bytes": 16777216,
+      "sha256": "36dfce0a7206a80a6f077ca026ec042c576d1bacb334e8673c355002cba3607c",
+      "md5": "21b879273b30d818e5bb847b78c42086"
+    },
+    {
+      "file": "archive.tar.gz.part-aald",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aald",
+      "bytes": 16777216,
+      "sha256": "8b92b9fc4703fa3805032a678a1e439bad5414d4f989a4bb53911b305d165ed1",
+      "md5": "5cd061a2f0d8f96c5d697d4c6bb3a077"
+    },
+    {
+      "file": "archive.tar.gz.part-aale",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aale",
+      "bytes": 16777216,
+      "sha256": "ba313bf79da12e96a76cc98af1e0c13c6f0fdd5ef950d1105856b97bd372cc1c",
+      "md5": "a6b8979d1046992f1d8c1327074c6b14"
+    },
+    {
+      "file": "archive.tar.gz.part-aalf",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aalf",
+      "bytes": 16777216,
+      "sha256": "0ca09e3ee1eca7107518b3b15a1ff9f3d4d7459474b9687057f7b7a581348c51",
+      "md5": "40c910264b0a9bb30680515d23211ee1"
+    },
+    {
+      "file": "archive.tar.gz.part-aalg",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aalg",
+      "bytes": 16777216,
+      "sha256": "45715e1d2eb4d05d0c4c4a9589171fdc355f236936b7d9ecf57462be988fa68c",
+      "md5": "c1e67a471c15c3c5965c12ce5d096d7d"
+    },
+    {
+      "file": "archive.tar.gz.part-aalh",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aalh",
+      "bytes": 16777216,
+      "sha256": "9c3b9e165b34cf015a04e2c5f3e1e378f7c1cb62676e6893309b75df7425a327",
+      "md5": "cb1ec025d696597e34e3384180dc158e"
+    },
+    {
+      "file": "archive.tar.gz.part-aali",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aali",
+      "bytes": 16777216,
+      "sha256": "fe8d057d78f32d0dd7d34d58d738d1a66d528594d55da60d2429bda880f2c581",
+      "md5": "a1bfa55b313ab565a6959e71b8a961ac"
+    },
+    {
+      "file": "archive.tar.gz.part-aalj",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aalj",
+      "bytes": 16777216,
+      "sha256": "04223ca749f6e955f164894cb22592366b0653e7389b78f9765e6d152cdb07cd",
+      "md5": "a10aaf2bc538a1361a09057ba514e293"
+    },
+    {
+      "file": "archive.tar.gz.part-aalk",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aalk",
+      "bytes": 16777216,
+      "sha256": "af34df381116dabec7ab83e162ce6037a07cd43e3eca0b384b0051f0620e59be",
+      "md5": "f35412f1b622ee84a159dfffef675bd5"
+    },
+    {
+      "file": "archive.tar.gz.part-aall",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aall",
+      "bytes": 16777216,
+      "sha256": "0fe4502eca2b8cf8c4ed74a89f9fdd892dcc7ebb524a1e731b12ad78e7d8fdd3",
+      "md5": "4e8bae41a5967492c2ff80bcb40e2d17"
+    },
+    {
+      "file": "archive.tar.gz.part-aalm",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aalm",
+      "bytes": 16777216,
+      "sha256": "72c80a15e9311faa26db47ac72f8d87fca609c5176c4f24974f23065f8e1b24d",
+      "md5": "e0f9a7ce9851b27319aff787de636182"
+    },
+    {
+      "file": "archive.tar.gz.part-aaln",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaln",
+      "bytes": 16777216,
+      "sha256": "4027dcf46c5987583c2ab35443326c1b86bbb0026f620c281d9b3bdbee93bace",
+      "md5": "e357103909c82a298e4a01d30213b974"
+    },
+    {
+      "file": "archive.tar.gz.part-aalo",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aalo",
+      "bytes": 16777216,
+      "sha256": "164436a28d1ce2e31fb9af2373e9f79af7fa19663d8227f4a049d42aa93ffa3e",
+      "md5": "a15321662fbe5a3d983d839aeb661b4e"
+    },
+    {
+      "file": "archive.tar.gz.part-aalp",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aalp",
+      "bytes": 16777216,
+      "sha256": "489f0806edf67e7d65ff49c2c80706cc0e190a7bd619392e62d77434ba2c2b5b",
+      "md5": "0f13a3bb031136aa57616837eb3de044"
+    },
+    {
+      "file": "archive.tar.gz.part-aalq",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aalq",
+      "bytes": 16777216,
+      "sha256": "0d9dd370a88970486589dff10aaca20918dcfa3568cebebfdeeaedcacaf06bc1",
+      "md5": "eb5ab932fd4e258319199f2674d77cee"
+    },
+    {
+      "file": "archive.tar.gz.part-aalr",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aalr",
+      "bytes": 16777216,
+      "sha256": "5c95cce983265d67a09fd424843427eb397e00e487074f408dedf7b39046dd8c",
+      "md5": "9392b606f2e268b28df7ff47572a6d3d"
+    },
+    {
+      "file": "archive.tar.gz.part-aals",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aals",
+      "bytes": 16777216,
+      "sha256": "0a04df1306033504e57485f42847496ee5bf8d068e35c223089013d874e6c337",
+      "md5": "877305fb2420f0d95593f494ef3052ef"
+    },
+    {
+      "file": "archive.tar.gz.part-aalt",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aalt",
+      "bytes": 16777216,
+      "sha256": "bcb52110718f76140939eb81e04303bcab37533a596735bf6155b36985865e7d",
+      "md5": "cbfd4321194a1ec218e8d6a1bc52801f"
+    },
+    {
+      "file": "archive.tar.gz.part-aalu",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aalu",
+      "bytes": 16777216,
+      "sha256": "7a51a16c3261c889ea99650dd7df08881051405d29eadf2cdd2acc6ae47c3c55",
+      "md5": "e8c8e5590a56b7ff5269af0a3d3f2925"
+    },
+    {
+      "file": "archive.tar.gz.part-aalv",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aalv",
+      "bytes": 16777216,
+      "sha256": "825c95fc491a67b43fa758e82350ab84d140cfb1e2095f07f90e5f53ec08237b",
+      "md5": "8be88e799337abf7bef0e2a465581cc6"
+    },
+    {
+      "file": "archive.tar.gz.part-aalw",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aalw",
+      "bytes": 16777216,
+      "sha256": "996896b736c456fbbd89ffdbd35333a46553728669e64ab78437b059214c11e5",
+      "md5": "31e09aaa389dc2644d6ee1bb32257f62"
+    },
+    {
+      "file": "archive.tar.gz.part-aalx",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aalx",
+      "bytes": 16777216,
+      "sha256": "c04277b67bddee86f80b2e0c0a5250ef24f3440e6632e849276467c3e08c446c",
+      "md5": "6a15eb439e9d1198aa4681c7959830e7"
+    },
+    {
+      "file": "archive.tar.gz.part-aaly",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaly",
+      "bytes": 16777216,
+      "sha256": "85267bec830a76190e9756083520c94e11af1f7cbbbed6d68e8462d24ba2cb43",
+      "md5": "1c00729c3aaf85f2168261a624c2244c"
+    },
+    {
+      "file": "archive.tar.gz.part-aalz",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aalz",
+      "bytes": 16777216,
+      "sha256": "b430380b90706128ee5b81bd4b8fd3813af61f8dfe4e1a3af759be4ffee45883",
+      "md5": "097bbe39d0153f21d513d7760b0fe7ca"
+    },
+    {
+      "file": "archive.tar.gz.part-aama",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aama",
+      "bytes": 16777216,
+      "sha256": "74db490729695dd5bb75b7cae937b94ff7471e29712a61f5a47714180daf3cbf",
+      "md5": "e8478a8440dd53cf5813b59b92ad6bce"
+    },
+    {
+      "file": "archive.tar.gz.part-aamb",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aamb",
+      "bytes": 16777216,
+      "sha256": "1c3249880e8feaa0e08b7f382dcb8b5465b085348ca3ef01e31754974f667b1c",
+      "md5": "cede75d69da061d04e6e09d97d27d012"
+    },
+    {
+      "file": "archive.tar.gz.part-aamc",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aamc",
+      "bytes": 16777216,
+      "sha256": "69b38871252b1c8aafed89b5e60f8be8ab9b9ded3d65f75ee2c79edc834b036b",
+      "md5": "53474067db45cf59a8a5d4a781482a5d"
+    },
+    {
+      "file": "archive.tar.gz.part-aamd",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aamd",
+      "bytes": 16777216,
+      "sha256": "a1a28ac4861b39ac9743d0cf254ff506bf4fa18a9b1fe73c89709b747f9dccd3",
+      "md5": "1d5d122a60b95d62208da729e9aea071"
+    },
+    {
+      "file": "archive.tar.gz.part-aame",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aame",
+      "bytes": 16777216,
+      "sha256": "edd7209e2a142876533bfca48bfdd2ffd1f84738bfb959907db061f58a10e663",
+      "md5": "1e8298e3d221d455bba5293c0bbd8b38"
+    },
+    {
+      "file": "archive.tar.gz.part-aamf",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aamf",
+      "bytes": 16777216,
+      "sha256": "853b5db6138c82dd7c20ab4369557668096f7201acb780bf1bd05c6d94e54f27",
+      "md5": "0299739ea73916249d2f8386216c3e62"
+    },
+    {
+      "file": "archive.tar.gz.part-aamg",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aamg",
+      "bytes": 16777216,
+      "sha256": "663a7abf0469a9104930b515e54ca7c4e426c1140e5cc49fa352c4f4cadc0891",
+      "md5": "c5bb3f63e38a3e4f9fe6815ad85c650b"
+    },
+    {
+      "file": "archive.tar.gz.part-aamh",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aamh",
+      "bytes": 16777216,
+      "sha256": "8598c827ee6a2d26acd0528439009864ce822150e88476dd04c53cafcb09442d",
+      "md5": "2982d04b5e416571ca6eef10542488b7"
+    },
+    {
+      "file": "archive.tar.gz.part-aami",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aami",
+      "bytes": 16777216,
+      "sha256": "f113abf57f64d88048f7b3329afc2beb5c9b8a07acf063ccfea2eddc3e58c10f",
+      "md5": "b7a1ac0432841717d057dc8f295d7e64"
+    },
+    {
+      "file": "archive.tar.gz.part-aamj",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aamj",
+      "bytes": 16777216,
+      "sha256": "ce425d0159587e818e2a9863696d046755287213762d9ba8cccdeb9aa3ebf3bd",
+      "md5": "7b66a85a6a202d4a39f396c03bc57ae2"
+    },
+    {
+      "file": "archive.tar.gz.part-aamk",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aamk",
+      "bytes": 16777216,
+      "sha256": "ae84b081239b25b09300aa75440ea917a609e6ab820eedf314b13ce5e518f648",
+      "md5": "867bd45a3b2651dcbe83b229ffb18dd3"
+    },
+    {
+      "file": "archive.tar.gz.part-aaml",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaml",
+      "bytes": 16777216,
+      "sha256": "66d25834d91cf2cde04967aa8cd27a34d3390d89d267989746cd63201761e090",
+      "md5": "18c9323a735e0c3324bacfd8fe702d6c"
+    },
+    {
+      "file": "archive.tar.gz.part-aamm",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aamm",
+      "bytes": 16777216,
+      "sha256": "39564fdfbdaf08a5dfb413a37deaf64a6f02521175660f8851c04b228de4fa34",
+      "md5": "c500a5eceb4890fd137cdea526e0b29f"
+    },
+    {
+      "file": "archive.tar.gz.part-aamn",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aamn",
+      "bytes": 16777216,
+      "sha256": "f53ab11fbf083e9f7aabbae1096c0c59189ae2de87cb792e408f530366763b29",
+      "md5": "baa2b86a4b8b844ecf602235223e77ba"
+    },
+    {
+      "file": "archive.tar.gz.part-aamo",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aamo",
+      "bytes": 16777216,
+      "sha256": "3ce560f624e4c971ace4f8e69869e55ad7b27835de3ac51a102894cd7475b1a1",
+      "md5": "337a1f267a628e4e678481ffadc884cc"
+    },
+    {
+      "file": "archive.tar.gz.part-aamp",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aamp",
+      "bytes": 16777216,
+      "sha256": "43f893de294c57dd72a040c7ebdaaf87e64fc7138f690f3e98bd749b6819d973",
+      "md5": "317ae90392fd0e92bf53bccdb1bfdaec"
+    },
+    {
+      "file": "archive.tar.gz.part-aamq",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aamq",
+      "bytes": 16777216,
+      "sha256": "ce1848403a183a196849ebd632fc009fad887c48dc8557b329811125ddf69267",
+      "md5": "a81e68ce92d15820d2ad653aae4db053"
+    },
+    {
+      "file": "archive.tar.gz.part-aamr",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aamr",
+      "bytes": 16777216,
+      "sha256": "9f2aba1cc7c4ba9d3b832f50da2a0abaface8e86783c74c7e7aaeba0713b758d",
+      "md5": "f07051c23619e1ab57bd4c3641fab324"
+    },
+    {
+      "file": "archive.tar.gz.part-aams",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aams",
+      "bytes": 16777216,
+      "sha256": "c743f4cf2f4c62069ea7ed251d0c4f048f2b6dda3622492f79d27c689bce5b63",
+      "md5": "268a6b697db00296929fb70c6ca47691"
+    },
+    {
+      "file": "archive.tar.gz.part-aamt",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aamt",
+      "bytes": 16777216,
+      "sha256": "7d722c11ff996b4e8ae30f5835ebf1aa46d6013f93e2204a6e98901d3c5a3211",
+      "md5": "7441a66c4896e04f18671d0b18f1dbd3"
+    },
+    {
+      "file": "archive.tar.gz.part-aamu",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aamu",
+      "bytes": 16777216,
+      "sha256": "f25bfbcaefa166191ecb6ed64c27a11c4f67595e612aae5af106b9c5607b901f",
+      "md5": "75fcb65374d34dd6a9d542ec2932c706"
+    },
+    {
+      "file": "archive.tar.gz.part-aamv",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aamv",
+      "bytes": 16777216,
+      "sha256": "516a8ebf2dbbe1e39312b71beac035941f15ac0879ef0147c8f3b3e3566607e7",
+      "md5": "96e1f688dbf5365c1f208a46782c2747"
+    },
+    {
+      "file": "archive.tar.gz.part-aamw",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aamw",
+      "bytes": 16777216,
+      "sha256": "72173e533f2fbd02fbf89266212bc5da20de45fbb45966b72f85437f936be14a",
+      "md5": "e012891f1d6138633052f6ea9f210c98"
+    },
+    {
+      "file": "archive.tar.gz.part-aamx",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aamx",
+      "bytes": 16777216,
+      "sha256": "035c10232f3870dc5cddeb3ce89511fbc0b0c1defcb5022c7ed71e17197866f5",
+      "md5": "fd5721c6823f1890b66efcbaa2fee37e"
+    },
+    {
+      "file": "archive.tar.gz.part-aamy",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aamy",
+      "bytes": 16777216,
+      "sha256": "e20c6356ec8d2cac11196f802b9a393e33802ee2918651853b315ea3fe7b613e",
+      "md5": "12a627682a7cc0b0eabfade12deeb040"
+    },
+    {
+      "file": "archive.tar.gz.part-aamz",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aamz",
+      "bytes": 16777216,
+      "sha256": "91ca64b96ded3da5344553ca0fd7360d7d43a02d2a6ad170e33cda06a9a442a3",
+      "md5": "07e4ac618ef7d5e04d08d29df882d707"
+    },
+    {
+      "file": "archive.tar.gz.part-aana",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aana",
+      "bytes": 16777216,
+      "sha256": "11a778abb120bb72870392d6b8549e7bd156145a8b1c86b1d4afe9145e3caa92",
+      "md5": "efda473625e111d8684bc0a6bdd0ed6d"
+    },
+    {
+      "file": "archive.tar.gz.part-aanb",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aanb",
+      "bytes": 16777216,
+      "sha256": "8456566f3ffc5947f12b3006698118b830856de6696fc3c07703ff4b1cceefda",
+      "md5": "09378e04bfff518e5d31658ba61343ed"
+    },
+    {
+      "file": "archive.tar.gz.part-aanc",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aanc",
+      "bytes": 16777216,
+      "sha256": "7831f7bb175adf47a3926afb60a363f81f87f4df381e23f7b46477c6c3c85bd3",
+      "md5": "00fe8c5b59153ec45edc40aef1165e82"
+    },
+    {
+      "file": "archive.tar.gz.part-aand",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aand",
+      "bytes": 16777216,
+      "sha256": "74657fdc61173fb82d1443058269cc045a64dbd8ff433e10ac0142aab1ae42c2",
+      "md5": "c5ee5f786641a5b33dc21539e8f54676"
+    },
+    {
+      "file": "archive.tar.gz.part-aane",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aane",
+      "bytes": 16777216,
+      "sha256": "1491f785bcbb9516edac49872d8ece45097fe07a949e6854321bda6f9e129aec",
+      "md5": "47f4a2d0aa6be09e0a54d2595d5476f7"
+    },
+    {
+      "file": "archive.tar.gz.part-aanf",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aanf",
+      "bytes": 16777216,
+      "sha256": "78e0faf334ef2923b8b425a62d0162c614ac6fa16c9b8b9f171a239c1c0d2847",
+      "md5": "511cd21c9ad9dff0dab3ef6e6f2e7c12"
+    },
+    {
+      "file": "archive.tar.gz.part-aang",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aang",
+      "bytes": 16777216,
+      "sha256": "657b95d7d1d5748cd6041f4c76f149f5d9a61ea745f8d7edd71149d70bdaffb9",
+      "md5": "29c012dda7d824e2f5723a201bfc7b41"
+    },
+    {
+      "file": "archive.tar.gz.part-aanh",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aanh",
+      "bytes": 16777216,
+      "sha256": "5118ec0e084b9185c35ad255c9effad1c07412e11c19160e426a3410e9782a30",
+      "md5": "fa8104ab62e5b18b9608ffbf372e86b1"
+    },
+    {
+      "file": "archive.tar.gz.part-aani",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aani",
+      "bytes": 16777216,
+      "sha256": "a5dcd6ae784e21aae2ef19fe4402cdc3ec462e5b46b16a369bc72c63308aa1c1",
+      "md5": "8fef2fd53b8d18408eb2d20a3ff8d724"
+    },
+    {
+      "file": "archive.tar.gz.part-aanj",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aanj",
+      "bytes": 16777216,
+      "sha256": "9e2f0c080f0991bf9fe1a22f8bd29af437d17afdf7795479564b868d5fda84a5",
+      "md5": "92efd8fd17eb6292d3e2809558f1fa3d"
+    },
+    {
+      "file": "archive.tar.gz.part-aank",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aank",
+      "bytes": 16777216,
+      "sha256": "5631855492f203d4faf2ecca93408d4e6f5b0ae49e69af2b2c4eea7460b91853",
+      "md5": "565d6d95dcc91454dd978303eddecc52"
+    },
+    {
+      "file": "archive.tar.gz.part-aanl",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aanl",
+      "bytes": 16777216,
+      "sha256": "7b54455f413f2a558e410c984e66ad82ac7d7eff6b0f8b1c233b54599bb670f4",
+      "md5": "51f3260b4cf4129e17e4209398225af9"
+    },
+    {
+      "file": "archive.tar.gz.part-aanm",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aanm",
+      "bytes": 16777216,
+      "sha256": "2ee733f1fff3d60f71b3833672d9970b01c597929ebe331117c55aabd16925bc",
+      "md5": "6932e2462e97b36b16a13052e13a6ff1"
+    },
+    {
+      "file": "archive.tar.gz.part-aann",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aann",
+      "bytes": 16777216,
+      "sha256": "83c9d9233094c45d56446adbfe230b6d42bfcf4eae2971958dcd88fa6250aeff",
+      "md5": "524bf374c0bbcdc1ddfd4b612be3bd7c"
+    },
+    {
+      "file": "archive.tar.gz.part-aano",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aano",
+      "bytes": 16777216,
+      "sha256": "8035591642b62b169eb0bf032450d08ea7f9084f7a7d31ea02ccd3c0b3244f36",
+      "md5": "8ecb068f1e1b88d063fdae384939af6e"
+    },
+    {
+      "file": "archive.tar.gz.part-aanp",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aanp",
+      "bytes": 16777216,
+      "sha256": "63a549f2b5e5c852b9c643626e4e3a76e9ace08620acc8bdb631bde262124933",
+      "md5": "7d1272a8c7cd43af2d2fe8ecfe79ef07"
+    },
+    {
+      "file": "archive.tar.gz.part-aanq",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aanq",
+      "bytes": 16777216,
+      "sha256": "910b74ee1ded2290119736b20b7c732ee6442f1cf32a36b02566349b5a93dca3",
+      "md5": "3867a8084858ad42b16c1a6fe62db7c9"
+    },
+    {
+      "file": "archive.tar.gz.part-aanr",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aanr",
+      "bytes": 16777216,
+      "sha256": "dd568b7cc007be06e3ccb611686855a3a62713e3af7898b1645fac8bfcd62019",
+      "md5": "020072cf12efc0f17b6f2285a74c2d3c"
+    },
+    {
+      "file": "archive.tar.gz.part-aans",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aans",
+      "bytes": 16777216,
+      "sha256": "29311b8d67c8d64e4b2a2ff5d9c53dd8faa4e56b93dec90a144c748f9824b132",
+      "md5": "b90635a4760df9997bb22992590bcf87"
+    },
+    {
+      "file": "archive.tar.gz.part-aant",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aant",
+      "bytes": 16777216,
+      "sha256": "c236c408bec128424b2e90df2e218354d2f27bad76a0b9459afe664e5de5f2f9",
+      "md5": "0d5e1d0a5b5cffbdae741f9b25884e72"
+    },
+    {
+      "file": "archive.tar.gz.part-aanu",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aanu",
+      "bytes": 16777216,
+      "sha256": "12a88123f3af6966e62aa853c8ef33e898a74a6501d4f52610e37c84d08797ce",
+      "md5": "9740bb565ddf9420dd8cfd5e8e08a076"
+    },
+    {
+      "file": "archive.tar.gz.part-aanv",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aanv",
+      "bytes": 16777216,
+      "sha256": "4a9ada49219a1d323c22f41a2cad26ed755599fdf5afc9e42a9e591c1817669d",
+      "md5": "958da79dc9302d3337a628d62288d2f8"
+    },
+    {
+      "file": "archive.tar.gz.part-aanw",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aanw",
+      "bytes": 16777216,
+      "sha256": "ff13995749ed7288eaf9c6104502be8178aacf180348ec68a62ba3521a73d859",
+      "md5": "f0607bbfff78b9f03daca79a8ef45e45"
+    },
+    {
+      "file": "archive.tar.gz.part-aanx",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aanx",
+      "bytes": 16777216,
+      "sha256": "d3af2d37170836bef81e08ff540b389a171fa139f7dce3cec30206b519151de5",
+      "md5": "4e0f4da7710a91ba8fba10cb2d61a2ef"
+    },
+    {
+      "file": "archive.tar.gz.part-aany",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aany",
+      "bytes": 16777216,
+      "sha256": "dc62f41ecc32da98fe1df2aff95a3a74b221bf36fab703f706a56c977558c294",
+      "md5": "802f72b19a0d7e0e2a6963a962ca8950"
+    },
+    {
+      "file": "archive.tar.gz.part-aanz",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aanz",
+      "bytes": 16777216,
+      "sha256": "bb42447076a643c4f69f46cd98bb72e1b3c48401288624d40b13e22433e4d7a2",
+      "md5": "ffc0528a6c96f47b2383863ba6bb401d"
+    },
+    {
+      "file": "archive.tar.gz.part-aaoa",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaoa",
+      "bytes": 16777216,
+      "sha256": "8b652ede9dffc059843f1d84bd9ba4576ce4d3be2e422a8659b67700bc46163e",
+      "md5": "80bfb143307dd2d00c099248afb439b5"
+    },
+    {
+      "file": "archive.tar.gz.part-aaob",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaob",
+      "bytes": 16777216,
+      "sha256": "60ac6a0e58551295acc588a8776c011c6c3c17b124658ffe61b7d21d224d229b",
+      "md5": "2bafd31a59388660b07df481fad0c3eb"
+    },
+    {
+      "file": "archive.tar.gz.part-aaoc",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaoc",
+      "bytes": 16777216,
+      "sha256": "1e135ada3b5e7a23189988e2b94c490360e303a1c7c3f19b304dbf646dfad07a",
+      "md5": "057373b2eef91c6279dfa519c5a43336"
+    },
+    {
+      "file": "archive.tar.gz.part-aaod",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaod",
+      "bytes": 16777216,
+      "sha256": "539d6ddc0799b4584244b8d393ce0c999849077efd2ca4f660b58e5015ab28c0",
+      "md5": "e1b967081dabf068e23d0e89234ffb4a"
+    },
+    {
+      "file": "archive.tar.gz.part-aaoe",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaoe",
+      "bytes": 16777216,
+      "sha256": "d2444462c5ee9685970f0c266b8f6289a3588b00bb09f89f8f76740c10533dde",
+      "md5": "e6e62a215456f3862dc888a27434dc2a"
+    },
+    {
+      "file": "archive.tar.gz.part-aaof",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaof",
+      "bytes": 16777216,
+      "sha256": "7407a9dcf395e6f479a7fd689435f9e229c005cf6804aa5d654ec2999cd2ab67",
+      "md5": "d9d9de2b49c176ec0b43ebabdb610a59"
+    },
+    {
+      "file": "archive.tar.gz.part-aaog",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaog",
+      "bytes": 16777216,
+      "sha256": "b9a8eb0d045636b52c20d52ef68dc9287e8e6124b5a0d4dad71bfadbf0faf32b",
+      "md5": "1f548c3a1607e369490a0d6a83a43db5"
+    },
+    {
+      "file": "archive.tar.gz.part-aaoh",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaoh",
+      "bytes": 16777216,
+      "sha256": "d99c5ab8570db836faa7aa4da0ff831a4f426bd481683f7094f13042e852f327",
+      "md5": "44b5a3cede565bdd9c63ecb9f79f77f2"
+    },
+    {
+      "file": "archive.tar.gz.part-aaoi",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaoi",
+      "bytes": 16777216,
+      "sha256": "6a2e920d2e6478c9d5e05e7f5b63bbd78cbc671ffb4e26b3f1451d89e21401ea",
+      "md5": "983a3f7b62bee8e2b8031ecf8dbc92a7"
+    },
+    {
+      "file": "archive.tar.gz.part-aaoj",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaoj",
+      "bytes": 16777216,
+      "sha256": "f2cc515beb9f2417b5a1946c7bb6ccfadd7b015ce7f3b052cc9f9d412ca5c098",
+      "md5": "2d8b39943b4a0a019ca177b2057225bf"
+    },
+    {
+      "file": "archive.tar.gz.part-aaok",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaok",
+      "bytes": 16777216,
+      "sha256": "376fc63ad0690f07680bbd97de78a6d9dcfbd032b653494fced5667341b4f9fb",
+      "md5": "b8d8ec4199bb52cfd84cfdd51a0802ac"
+    },
+    {
+      "file": "archive.tar.gz.part-aaol",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaol",
+      "bytes": 16777216,
+      "sha256": "7963009fa96838b49c76e53b4413f2456ed9d7c40e796ffb89dd673fc9cbf955",
+      "md5": "b35dbb8b7641eabb6bc68af8e71ebe50"
+    },
+    {
+      "file": "archive.tar.gz.part-aaom",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaom",
+      "bytes": 16777216,
+      "sha256": "2b6f862b367ebd93749f5a01441351e2a2d46a00b7c5ae2e906b7eb77ffe7b0d",
+      "md5": "eb9c33f935b6f00ddd4cd1e763f49596"
+    },
+    {
+      "file": "archive.tar.gz.part-aaon",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaon",
+      "bytes": 16777216,
+      "sha256": "acd5193cc4524f719adffde28c19d693708f59b44e3029d1eae30b7587771ea2",
+      "md5": "76df1bc1c7b859ea7ad2ed2fa6653a54"
+    },
+    {
+      "file": "archive.tar.gz.part-aaoo",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaoo",
+      "bytes": 16777216,
+      "sha256": "b4e84b568323686bd2d0f62f17b7d335586de05ca7d78ebaca694166a64d5efa",
+      "md5": "d59087a5e82caf7749ed3102e6b7d12e"
+    },
+    {
+      "file": "archive.tar.gz.part-aaop",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaop",
+      "bytes": 16777216,
+      "sha256": "5cbd2091899183f4d0d9546f95f9e699a1a6a91cf6b0f27be4e22fbe1b414ccf",
+      "md5": "a78fe6a6d1cb04d55c8bc43cf7752678"
+    },
+    {
+      "file": "archive.tar.gz.part-aaoq",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaoq",
+      "bytes": 16777216,
+      "sha256": "cd9117acb53776da84209b26ba384b84554217842f73b640ec0b1bbf454171d7",
+      "md5": "9674bbc809f4e86627b91f8dbd79678f"
+    },
+    {
+      "file": "archive.tar.gz.part-aaor",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaor",
+      "bytes": 16777216,
+      "sha256": "530b0eb5003be0159aab64c6a9f9ebfe67f009df4f4327661e6f58bb5280eac6",
+      "md5": "6f9d2235f7ceb1bd50ab3b1de1cd78f8"
+    },
+    {
+      "file": "archive.tar.gz.part-aaos",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaos",
+      "bytes": 16777216,
+      "sha256": "843381126622270f5fe80fa293328d1a0f25644b8c57b0f7203b8219ba88fac6",
+      "md5": "17acd94215cd4b4c325712602b7a318c"
+    },
+    {
+      "file": "archive.tar.gz.part-aaot",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaot",
+      "bytes": 16777216,
+      "sha256": "d24e7fb04ebedb01772c99ee14cc09a99dd0f2765661cdf7065991f92f74538f",
+      "md5": "c830ad54b7505dcb0cf185bf8b7d9427"
+    },
+    {
+      "file": "archive.tar.gz.part-aaou",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaou",
+      "bytes": 16777216,
+      "sha256": "37b18465e49a0d4c1fa0e00091b7a659ea31bed4bd726a65ef01a1194664b3e7",
+      "md5": "f3b050e14b021ef8afb6c69b479c338e"
+    },
+    {
+      "file": "archive.tar.gz.part-aaov",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaov",
+      "bytes": 16777216,
+      "sha256": "06f320079a046c2aed1ae718ef9b09622990da8245ea6141f28f752028378f18",
+      "md5": "a1630854e5aa926dac6b099af73075cf"
+    },
+    {
+      "file": "archive.tar.gz.part-aaow",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaow",
+      "bytes": 16777216,
+      "sha256": "3678b8c44958a8b1efceeced0b027710fd3073df598282d1f00c5ce7ef73c462",
+      "md5": "d4676c3b33779ffe6da92ab681750a84"
+    },
+    {
+      "file": "archive.tar.gz.part-aaox",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaox",
+      "bytes": 16777216,
+      "sha256": "317e1a9a31318b5147b657d16345122432b909ffb7d6c2ba87c4dac6ca79fe97",
+      "md5": "f48bf6e785a9317081d52d0abfd22ef0"
+    },
+    {
+      "file": "archive.tar.gz.part-aaoy",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaoy",
+      "bytes": 16777216,
+      "sha256": "dc8f8be617faf345a0390481b152e5c0cd8967be9f272c17515c1509c278de78",
+      "md5": "3aa38fe9f7b32b94c4786a2dd2353f66"
+    },
+    {
+      "file": "archive.tar.gz.part-aaoz",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaoz",
+      "bytes": 16777216,
+      "sha256": "07002d9d44edaf12f5369ca73e028465050caf10780b2a2c9f65b4d666069476",
+      "md5": "5cdabd520c573fbd54d54619f414eab2"
+    },
+    {
+      "file": "archive.tar.gz.part-aapa",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aapa",
+      "bytes": 16777216,
+      "sha256": "6778e0eea4e5db1c75448b1ff7cc756c14a3b2a612728411b7964474e273081d",
+      "md5": "87ce1e757ee0df72150461cd6d1151b6"
+    },
+    {
+      "file": "archive.tar.gz.part-aapb",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aapb",
+      "bytes": 16777216,
+      "sha256": "be444019be5c2b40b3d3e0bf6de9fd4818b8afae25b3a07bb8ecdffce40fa931",
+      "md5": "e0549d13516fbca595726866b7de6393"
+    },
+    {
+      "file": "archive.tar.gz.part-aapc",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aapc",
+      "bytes": 16777216,
+      "sha256": "61cf06d85bd0e9361b880e0be138438aef560e984defedc2db501dfdfb9fdc17",
+      "md5": "3e7a40c9e9b9e3a4bc7e29580f795552"
+    },
+    {
+      "file": "archive.tar.gz.part-aapd",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aapd",
+      "bytes": 16777216,
+      "sha256": "919205d89e6d6b785e6c9c3fa27609511b1f45bf34bf550946dda598b2ccbec5",
+      "md5": "b09e581d72075ab3970d66a8f6e815fe"
+    },
+    {
+      "file": "archive.tar.gz.part-aape",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aape",
+      "bytes": 16777216,
+      "sha256": "4af194fc8efa789921b29d9751e743c562d48e80a0d14f53ef20550a33333e53",
+      "md5": "e885aaa2f2c43f0527324b9ef7b2f1c0"
+    },
+    {
+      "file": "archive.tar.gz.part-aapf",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aapf",
+      "bytes": 16777216,
+      "sha256": "eec3be48501b25c29920e33cac5684ff5d46b0d0d33445b93fb33a752ba5b06e",
+      "md5": "a00ce61c30dba5cf5673c94c4008b903"
+    },
+    {
+      "file": "archive.tar.gz.part-aapg",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aapg",
+      "bytes": 16777216,
+      "sha256": "8b046e366684f188aafe429b578eea23346e30ddd8c9a17a1bc699e28a737587",
+      "md5": "30d46713e79b3df4e640a52e5d76d4b1"
+    },
+    {
+      "file": "archive.tar.gz.part-aaph",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaph",
+      "bytes": 16777216,
+      "sha256": "d80fcabfb960a76bc97ea792e2b58c658665ad7e8cd826d472a101f8baeb9aa8",
+      "md5": "b4640ced1ac851a01a4a7507c1c9f61d"
+    },
+    {
+      "file": "archive.tar.gz.part-aapi",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aapi",
+      "bytes": 16777216,
+      "sha256": "180b6e829587d067e40873d04c829b51a5bb02c4e86e07e1e3dd0ecea23ce41d",
+      "md5": "acaa65c1712abdfd006101b76e78447d"
+    },
+    {
+      "file": "archive.tar.gz.part-aapj",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aapj",
+      "bytes": 16777216,
+      "sha256": "75fcd51d03bad2e8a8f52ddf19f3b2c604076ec39e751817614084178e028b11",
+      "md5": "0cc2094aed5530c95c189b9a09ae4fde"
+    },
+    {
+      "file": "archive.tar.gz.part-aapk",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aapk",
+      "bytes": 16777216,
+      "sha256": "dae444065f8791eac25b15dd977c4ca952356aaf0e4d079bb75df28799a9091b",
+      "md5": "eb566cc7f8d913ea7c5219651a7dc31d"
+    },
+    {
+      "file": "archive.tar.gz.part-aapl",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aapl",
+      "bytes": 16777216,
+      "sha256": "6a0ae6d9fd5d1435583ca9760cf0ba6288927a14dc1096b45782d839f2b806e6",
+      "md5": "2f1848b1b9d5b584360550517402a9c0"
+    },
+    {
+      "file": "archive.tar.gz.part-aapm",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aapm",
+      "bytes": 16777216,
+      "sha256": "3d4c514e4a6a197e87c37c1e395ddfe3a338a7fde0d1bbd9a4bc5b495362ecc4",
+      "md5": "4ec6a5ee5f151eb9ef3f874bc4cdbfd5"
+    },
+    {
+      "file": "archive.tar.gz.part-aapn",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aapn",
+      "bytes": 16777216,
+      "sha256": "54a54659bd15b006593a31e8fb9ec651cc158a73ea1745a0e1bd6cef7dc4ffeb",
+      "md5": "ed581d0029416919faa0195986875c08"
+    },
+    {
+      "file": "archive.tar.gz.part-aapo",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aapo",
+      "bytes": 16777216,
+      "sha256": "3fb4754bfa5b82d38869d7d2c8420a18e0177760033b0a68b8a581d22530be2d",
+      "md5": "a3a50ce693d1c8917c9336e712db7f90"
+    },
+    {
+      "file": "archive.tar.gz.part-aapp",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aapp",
+      "bytes": 16777216,
+      "sha256": "919a74c9d33dcf55dbe2c7524820b33c8342fabd5186f13a6f205788391e58f1",
+      "md5": "83e2c7622edd6cd8ce70621648d32e7b"
+    },
+    {
+      "file": "archive.tar.gz.part-aapq",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aapq",
+      "bytes": 16777216,
+      "sha256": "429de10fed5d02de33c5bcf525fb76402228b7b901c4cb492dafa875388dfa84",
+      "md5": "8bfaf6f36a50e8b20d7f23ce0d38fdeb"
+    },
+    {
+      "file": "archive.tar.gz.part-aapr",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aapr",
+      "bytes": 16777216,
+      "sha256": "44a99526120f2b4102b95c825368b032dc0119d3c1a4c82197141b3bd4ebf878",
+      "md5": "237da8b22bb80f84733d7274bb2316cb"
+    },
+    {
+      "file": "archive.tar.gz.part-aaps",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aaps",
+      "bytes": 16777216,
+      "sha256": "253b9270fcde542f630175cd3e4ee5e3b99204ef4cae4b37dea337b456d77244",
+      "md5": "f4ce36b1737cbc62a613a885b861e5da"
+    },
+    {
+      "file": "archive.tar.gz.part-aapt",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aapt",
+      "bytes": 16777216,
+      "sha256": "ea7a5c9caf29b66b00ebb853d38a3f1b33233659f59042d5fb0e7d26a9f75deb",
+      "md5": "bec7255c7986c00181fc18dcf64ad873"
+    },
+    {
+      "file": "archive.tar.gz.part-aapu",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aapu",
+      "bytes": 16777216,
+      "sha256": "2877e825b698a901ddb38e0caa1cc0b37cebc2f45c8c5ef19a1bc6aa97c95a1c",
+      "md5": "d4a2f24399c6f12685ea6df055ce1ad5"
+    },
+    {
+      "file": "archive.tar.gz.part-aapv",
+      "key": "2026-10-04/sft-oracle-copy-v1/chunks-16m/archive.tar.gz.part-aapv",
+      "bytes": 9170944,
+      "sha256": "9c6957ec6b620b5ff41709bc5d4b5184931ae7d24ddd9af529604f2641f7667c",
+      "md5": "641ab13f61f509c6ee8dea6290e0f3a4"
+    }
+  ],
+  "verification": "Every part's server-reported size and ETag match local bytes and MD5; SHA-256 hashes permit independent restoration checks.",
+  "restore": "Download all listed parts, verify their SHA-256 hashes, concatenate in manifest order, then extract the tar.gz stream."
+}

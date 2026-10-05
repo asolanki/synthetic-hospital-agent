@@ -1,0 +1,38 @@
+{
+  "method": "Paired patient bootstrap, 1000 resamples, seed 0; all 120 fixed dev patients, failures kept at zero",
+  "sft_minus_base": {
+    "paper": {
+      "n": 120,
+      "mean_reward_difference": 0.294442668549948,
+      "ci95": [
+        0.22932709143261096,
+        0.3613573383024169
+      ],
+      "wins": 74,
+      "losses": 6,
+      "ties": 40
+    },
+    "strong_v1": {
+      "n": 120,
+      "mean_reward_difference": 0.28707119742089476,
+      "ci95": [
+        0.2256555290088352,
+        0.35215919107638444
+      ],
+      "wins": 77,
+      "losses": 6,
+      "ties": 37
+    }
+  },
+  "sft_strong_minus_paper": {
+    "n": 120,
+    "mean_reward_difference": -0.0020980191781656593,
+    "ci95": [
+      -0.03749286094272107,
+      0.033497116985659284
+    ],
+    "wins": 16,
+    "losses": 18,
+    "ties": 86
+  }
+}

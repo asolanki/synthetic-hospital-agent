@@ -1,0 +1,18 @@
+{
+ "archive": "r2://synthetic-hospital-rl-artifacts/2026-10-05/rl-sft-paper-v1/essentials-16m/",
+ "manifest_key": "2026-10-05/rl-sft-paper-v1/essentials-16m/manifest.json",
+ "manifest_sha256": "c192344ad4b4daac808557fbe88517c47206c5e47ad765a2655b7932461f42ab",
+ "archive_sha256": "162d70cad075f00d04620310cd604b1cb6dead3f2d6e7b02aa386f9f3bde23ac",
+ "archive_bytes": 330751169,
+ "parts": 20,
+ "verified_at": "2026-10-05T04:57:47.101234+00:00",
+ "verification": "Every source file hashed on the rental; every tar member of the local parts matched those bytes and SHA-256; every part matched remote size and ETag; the downloaded manifest matches byte-for-byte; first and last downloaded parts match SHA-256.",
+ "downloaded_part_keys": [
+  "2026-10-05/rl-sft-paper-v1/essentials-16m/archive.tar.gz.part-aaaa",
+  "2026-10-05/rl-sft-paper-v1/essentials-16m/archive.tar.gz.part-aaat"
+ ],
+ "source_files": 67,
+ "source_bytes": 552710888,
+ "source_manifest": "results/raw/training/rl-sft-paper-v1-essentials-files.json",
+ "privacy": "r2.dev disabled; no custom domains"
+}

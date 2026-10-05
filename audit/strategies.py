@@ -1,6 +1,7 @@
 """Phase 2 task/reward audit: hand-written strategies scored with the official scorer.
 
     uv run python -m audit.strategies --split dev    # -> results/raw/audit/strategies_dev.json
+    uv run python -m audit.strategies --split public # the paper's reported split; heldout stays sealed
 
 Each strategy maps an instance to a submission. Strategies fall in three groups:
 
@@ -286,11 +287,13 @@ def main() -> None:
     import argparse
 
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("--split", choices=["dev", "train"], default="dev")
+    ap.add_argument("--split", choices=["dev", "train", "public"], default="dev")
     args = ap.parse_args()
     split = splits.load()
     by_id = {i.gt_id: i for i in benchmark.load_instances(("train",))}
-    result = asyncio.run(run([by_id[g] for g in split[args.split]], [by_id[g] for g in split["train"]]))
+    evaluated = (benchmark.load_instances(("public",)) if args.split == "public"
+                 else [by_id[g] for g in split[args.split]])
+    result = asyncio.run(run(evaluated, [by_id[g] for g in split["train"]]))
     result["split"] = args.split
     config.write_result(f"audit/strategies_{args.split}", result)
     print(audit_table(result))

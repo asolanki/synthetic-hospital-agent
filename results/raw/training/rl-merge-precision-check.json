@@ -1,0 +1,47 @@
+{
+  "checkpoint": "rl-setup-check-2/step_2",
+  "modules_checked": [
+    {
+      "weight": "model.layers.0.mlp.down_proj.weight",
+      "base_dtype": "torch.bfloat16",
+      "unchanged_weight_fraction_after_bf16_merge": 0.9920416474342346,
+      "relative_delta_l2_error": 0.9934630990028381
+    },
+    {
+      "weight": "model.layers.0.mlp.gate_proj.weight",
+      "base_dtype": "torch.bfloat16",
+      "unchanged_weight_fraction_after_bf16_merge": 0.9848213791847229,
+      "relative_delta_l2_error": 0.9874376058578491
+    },
+    {
+      "weight": "model.layers.0.mlp.up_proj.weight",
+      "base_dtype": "torch.bfloat16",
+      "unchanged_weight_fraction_after_bf16_merge": 0.9837329983711243,
+      "relative_delta_l2_error": 0.9864824414253235
+    },
+    {
+      "weight": "model.layers.0.self_attn.k_proj.weight",
+      "base_dtype": "torch.bfloat16",
+      "unchanged_weight_fraction_after_bf16_merge": 0.9846519231796265,
+      "relative_delta_l2_error": 0.9871495962142944
+    },
+    {
+      "weight": "model.layers.0.self_attn.o_proj.weight",
+      "base_dtype": "torch.bfloat16",
+      "unchanged_weight_fraction_after_bf16_merge": 0.9862316846847534,
+      "relative_delta_l2_error": 0.9886617064476013
+    },
+    {
+      "weight": "model.layers.0.self_attn.q_proj.weight",
+      "base_dtype": "torch.bfloat16",
+      "unchanged_weight_fraction_after_bf16_merge": 0.9840843081474304,
+      "relative_delta_l2_error": 0.9868466258049011
+    },
+    {
+      "weight": "model.layers.0.self_attn.v_proj.weight",
+      "base_dtype": "torch.bfloat16",
+      "unchanged_weight_fraction_after_bf16_merge": 0.9845069646835327,
+      "relative_delta_l2_error": 0.9871993064880371
+    }
+  ]
+}

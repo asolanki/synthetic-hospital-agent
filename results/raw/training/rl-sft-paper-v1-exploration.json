@@ -1,0 +1,295 @@
+{
+ "scope": "For each finalized four-rollout RL group on a training patient and each reference diagnosis, how many of the four rollouts submitted its match key (temperature 1, top-p 1). 0/4 gives no group-relative signal toward the right code; 1-3/4 is the only learnable case; 4/4 is solved. Exposure counts other training patients with the same key. Windows are generating-policy versions and contain different shuffled patients.",
+ "source": "runs/rl/rl-sft-paper-v1 native trace stream",
+ "script": "runs/services/rl_exploration.py (rental, one-off)",
+ "rows": [
+  {
+   "policy_window": "all",
+   "visit": "earlier",
+   "training_exposure": "0 others",
+   "diagnosis_groups": 539,
+   "0/4": 0.7179962894248608,
+   "1-3/4": 0.20593692022263452,
+   "4/4": 0.07606679035250463
+  },
+  {
+   "policy_window": "all",
+   "visit": "earlier",
+   "training_exposure": "1-4 others",
+   "diagnosis_groups": 1892,
+   "0/4": 0.4090909090909091,
+   "1-3/4": 0.3858350951374207,
+   "4/4": 0.20507399577167018
+  },
+  {
+   "policy_window": "all",
+   "visit": "earlier",
+   "training_exposure": "5+ others",
+   "diagnosis_groups": 1434,
+   "0/4": 0.10251046025104603,
+   "1-3/4": 0.2670850767085077,
+   "4/4": 0.6304044630404463
+  },
+  {
+   "policy_window": "all",
+   "visit": "earlier",
+   "training_exposure": "all",
+   "diagnosis_groups": 3865,
+   "0/4": 0.3384217335058215,
+   "1-3/4": 0.3166882276843467,
+   "4/4": 0.3448900388098318
+  },
+  {
+   "policy_window": "all",
+   "visit": "final",
+   "training_exposure": "0 others",
+   "diagnosis_groups": 162,
+   "0/4": 0.9259259259259259,
+   "1-3/4": 0.06172839506172839,
+   "4/4": 0.012345679012345678
+  },
+  {
+   "policy_window": "all",
+   "visit": "final",
+   "training_exposure": "1-4 others",
+   "diagnosis_groups": 463,
+   "0/4": 0.6328293736501079,
+   "1-3/4": 0.2958963282937365,
+   "4/4": 0.07127429805615551
+  },
+  {
+   "policy_window": "all",
+   "visit": "final",
+   "training_exposure": "5+ others",
+   "diagnosis_groups": 309,
+   "0/4": 0.2686084142394822,
+   "1-3/4": 0.47249190938511326,
+   "4/4": 0.2588996763754045
+  },
+  {
+   "policy_window": "all",
+   "visit": "final",
+   "training_exposure": "all",
+   "diagnosis_groups": 934,
+   "0/4": 0.563169164882227,
+   "1-3/4": 0.31370449678800855,
+   "4/4": 0.12312633832976445
+  },
+  {
+   "policy_window": "early (0-29)",
+   "visit": "earlier",
+   "training_exposure": "0 others",
+   "diagnosis_groups": 177,
+   "0/4": 0.711864406779661,
+   "1-3/4": 0.23163841807909605,
+   "4/4": 0.05649717514124294
+  },
+  {
+   "policy_window": "early (0-29)",
+   "visit": "earlier",
+   "training_exposure": "1-4 others",
+   "diagnosis_groups": 649,
+   "0/4": 0.39599383667180277,
+   "1-3/4": 0.43605546995377503,
+   "4/4": 0.1679506933744222
+  },
+  {
+   "policy_window": "early (0-29)",
+   "visit": "earlier",
+   "training_exposure": "5+ others",
+   "diagnosis_groups": 458,
+   "0/4": 0.09170305676855896,
+   "1-3/4": 0.34279475982532753,
+   "4/4": 0.5655021834061136
+  },
+  {
+   "policy_window": "early (0-29)",
+   "visit": "earlier",
+   "training_exposure": "all",
+   "diagnosis_groups": 1284,
+   "0/4": 0.3309968847352025,
+   "1-3/4": 0.37461059190031154,
+   "4/4": 0.29439252336448596
+  },
+  {
+   "policy_window": "early (0-29)",
+   "visit": "final",
+   "training_exposure": "0 others",
+   "diagnosis_groups": 52,
+   "0/4": 0.9615384615384616,
+   "1-3/4": 0.038461538461538464,
+   "4/4": 0.0
+  },
+  {
+   "policy_window": "early (0-29)",
+   "visit": "final",
+   "training_exposure": "1-4 others",
+   "diagnosis_groups": 158,
+   "0/4": 0.6329113924050633,
+   "1-3/4": 0.31645569620253167,
+   "4/4": 0.05063291139240506
+  },
+  {
+   "policy_window": "early (0-29)",
+   "visit": "final",
+   "training_exposure": "5+ others",
+   "diagnosis_groups": 104,
+   "0/4": 0.3173076923076923,
+   "1-3/4": 0.5,
+   "4/4": 0.18269230769230768
+  },
+  {
+   "policy_window": "early (0-29)",
+   "visit": "final",
+   "training_exposure": "all",
+   "diagnosis_groups": 314,
+   "0/4": 0.5828025477707006,
+   "1-3/4": 0.33121019108280253,
+   "4/4": 0.08598726114649681
+  },
+  {
+   "policy_window": "late (55-84)",
+   "visit": "earlier",
+   "training_exposure": "0 others",
+   "diagnosis_groups": 205,
+   "0/4": 0.751219512195122,
+   "1-3/4": 0.16097560975609757,
+   "4/4": 0.08780487804878048
+  },
+  {
+   "policy_window": "late (55-84)",
+   "visit": "earlier",
+   "training_exposure": "1-4 others",
+   "diagnosis_groups": 714,
+   "0/4": 0.41316526610644255,
+   "1-3/4": 0.32492997198879553,
+   "4/4": 0.2619047619047619
+  },
+  {
+   "policy_window": "late (55-84)",
+   "visit": "earlier",
+   "training_exposure": "5+ others",
+   "diagnosis_groups": 555,
+   "0/4": 0.10810810810810811,
+   "1-3/4": 0.1873873873873874,
+   "4/4": 0.7045045045045045
+  },
+  {
+   "policy_window": "late (55-84)",
+   "visit": "earlier",
+   "training_exposure": "all",
+   "diagnosis_groups": 1474,
+   "0/4": 0.34531886024423336,
+   "1-3/4": 0.2503392130257802,
+   "4/4": 0.4043419267299864
+  },
+  {
+   "policy_window": "late (55-84)",
+   "visit": "final",
+   "training_exposure": "0 others",
+   "diagnosis_groups": 57,
+   "0/4": 0.9298245614035088,
+   "1-3/4": 0.05263157894736842,
+   "4/4": 0.017543859649122806
+  },
+  {
+   "policy_window": "late (55-84)",
+   "visit": "final",
+   "training_exposure": "1-4 others",
+   "diagnosis_groups": 173,
+   "0/4": 0.6242774566473989,
+   "1-3/4": 0.2832369942196532,
+   "4/4": 0.09248554913294797
+  },
+  {
+   "policy_window": "late (55-84)",
+   "visit": "final",
+   "training_exposure": "5+ others",
+   "diagnosis_groups": 121,
+   "0/4": 0.23140495867768596,
+   "1-3/4": 0.4462809917355372,
+   "4/4": 0.32231404958677684
+  },
+  {
+   "policy_window": "late (55-84)",
+   "visit": "final",
+   "training_exposure": "all",
+   "diagnosis_groups": 351,
+   "0/4": 0.5384615384615384,
+   "1-3/4": 0.301994301994302,
+   "4/4": 0.15954415954415954
+  },
+  {
+   "policy_window": "middle (30-54)",
+   "visit": "earlier",
+   "training_exposure": "0 others",
+   "diagnosis_groups": 157,
+   "0/4": 0.6815286624203821,
+   "1-3/4": 0.2356687898089172,
+   "4/4": 0.08280254777070063
+  },
+  {
+   "policy_window": "middle (30-54)",
+   "visit": "earlier",
+   "training_exposure": "1-4 others",
+   "diagnosis_groups": 529,
+   "0/4": 0.41965973534971646,
+   "1-3/4": 0.4064272211720227,
+   "4/4": 0.17391304347826086
+  },
+  {
+   "policy_window": "middle (30-54)",
+   "visit": "earlier",
+   "training_exposure": "5+ others",
+   "diagnosis_groups": 421,
+   "0/4": 0.10688836104513064,
+   "1-3/4": 0.28978622327790976,
+   "4/4": 0.6033254156769596
+  },
+  {
+   "policy_window": "middle (30-54)",
+   "visit": "earlier",
+   "training_exposure": "all",
+   "diagnosis_groups": 1107,
+   "0/4": 0.33785004516711836,
+   "1-3/4": 0.33785004516711836,
+   "4/4": 0.32429990966576333
+  },
+  {
+   "policy_window": "middle (30-54)",
+   "visit": "final",
+   "training_exposure": "0 others",
+   "diagnosis_groups": 53,
+   "0/4": 0.8867924528301887,
+   "1-3/4": 0.09433962264150944,
+   "4/4": 0.018867924528301886
+  },
+  {
+   "policy_window": "middle (30-54)",
+   "visit": "final",
+   "training_exposure": "1-4 others",
+   "diagnosis_groups": 132,
+   "0/4": 0.6439393939393939,
+   "1-3/4": 0.2878787878787879,
+   "4/4": 0.06818181818181818
+  },
+  {
+   "policy_window": "middle (30-54)",
+   "visit": "final",
+   "training_exposure": "5+ others",
+   "diagnosis_groups": 84,
+   "0/4": 0.2619047619047619,
+   "1-3/4": 0.47619047619047616,
+   "4/4": 0.2619047619047619
+  },
+  {
+   "policy_window": "middle (30-54)",
+   "visit": "final",
+   "training_exposure": "all",
+   "diagnosis_groups": 269,
+   "0/4": 0.5724907063197026,
+   "1-3/4": 0.30855018587360594,
+   "4/4": 0.11895910780669144
+  }
+ ]
+}

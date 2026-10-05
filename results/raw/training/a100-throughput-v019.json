@@ -1,0 +1,273 @@
+{
+  "stack": {
+    "vllm": "0.19.1",
+    "torch": "2.10.0+cu128"
+  },
+  "trials": [
+    {
+      "tasks": 64,
+      "concurrency": 8,
+      "seconds": 1470.9083405546844,
+      "episodes_per_hour": 156.63790438030654,
+      "successful_episodes_per_hour": 154.19043712436422,
+      "rollout_error_rate": 0,
+      "model_call_error_episode_rate": 0.015625,
+      "model_call_error_types": {
+        "ProviderError": 1
+      },
+      "output_tokens": 395505,
+      "output_tokens_per_second": 268.88487140595976,
+      "mean_reward": 0.12738807136153915,
+      "submitted_rate": 0.984375,
+      "gpu_util_mean_percent": 97.20308123249299,
+      "gpu_util_max_percent": 100.0,
+      "kv_cache_peak_fraction": 0.265570451054322,
+      "requests_running_peak": 8.0,
+      "requests_waiting_peak": 0.0,
+      "hospital_health_mean_ms": 24.43896890526601,
+      "preemptions": 0.0,
+      "prefix_cache_hits": 14263408.0,
+      "prefix_cache_queries": 14531583.0,
+      "trace_file": "/workspace/synthetic-hospital-rl/runs/a100-throughput-v019/c8/eval/traces.jsonl"
+    },
+    {
+      "tasks": 64,
+      "concurrency": 16,
+      "seconds": 775.0453562261537,
+      "episodes_per_hour": 297.2729249315967,
+      "successful_episodes_per_hour": 297.2729249315967,
+      "rollout_error_rate": 0,
+      "model_call_error_episode_rate": 0,
+      "model_call_error_types": {},
+      "output_tokens": 313933,
+      "output_tokens_per_second": 405.0511334312107,
+      "mean_reward": 0.1271916134079252,
+      "submitted_rate": 1.0,
+      "gpu_util_mean_percent": 95.72872340425532,
+      "gpu_util_max_percent": 100.0,
+      "kv_cache_peak_fraction": 0.32882977237815947,
+      "requests_running_peak": 16.0,
+      "requests_waiting_peak": 0.0,
+      "hospital_health_mean_ms": 24.849379625904593,
+      "preemptions": 0.0,
+      "prefix_cache_hits": 12259968.0,
+      "prefix_cache_queries": 12524464.0,
+      "trace_file": "/workspace/synthetic-hospital-rl/runs/a100-throughput-v019/c16/eval/traces.jsonl"
+    },
+    {
+      "tasks": 64,
+      "concurrency": 32,
+      "seconds": 1018.914558715187,
+      "episodes_per_hour": 226.1229835507756,
+      "successful_episodes_per_hour": 222.58981193279473,
+      "rollout_error_rate": 0,
+      "model_call_error_episode_rate": 0.015625,
+      "model_call_error_types": {
+        "ProviderError": 1
+      },
+      "output_tokens": 305094,
+      "output_tokens_per_second": 299.4304060045153,
+      "mean_reward": 0.13924170961418655,
+      "submitted_rate": 0.984375,
+      "gpu_util_mean_percent": 94.39473684210526,
+      "gpu_util_max_percent": 100.0,
+      "kv_cache_peak_fraction": 0.40626309174696273,
+      "requests_running_peak": 32.0,
+      "requests_waiting_peak": 0.0,
+      "hospital_health_mean_ms": 24.911517419697724,
+      "preemptions": 0.0,
+      "prefix_cache_hits": 10836080.0,
+      "prefix_cache_queries": 11095899.0,
+      "trace_file": "/workspace/synthetic-hospital-rl/runs/a100-throughput-v019/c32/eval/traces.jsonl"
+    },
+    {
+      "tasks": 64,
+      "concurrency": 64,
+      "seconds": 1124.0321900784038,
+      "episodes_per_hour": 204.97633611714366,
+      "successful_episodes_per_hour": 201.77358086531328,
+      "rollout_error_rate": 0,
+      "model_call_error_episode_rate": 0.015625,
+      "model_call_error_types": {
+        "ProviderError": 1
+      },
+      "output_tokens": 353572,
+      "output_tokens_per_second": 314.5568277500465,
+      "mean_reward": 0.12671738668082178,
+      "submitted_rate": 0.984375,
+      "gpu_util_mean_percent": 93.55045871559633,
+      "gpu_util_max_percent": 100.0,
+      "kv_cache_peak_fraction": 0.5424870828096635,
+      "requests_running_peak": 64.0,
+      "requests_waiting_peak": 0.0,
+      "hospital_health_mean_ms": 25.305742314170807,
+      "preemptions": 0.0,
+      "prefix_cache_hits": 12692512.0,
+      "prefix_cache_queries": 12961312.0,
+      "trace_file": "/workspace/synthetic-hospital-rl/runs/a100-throughput-v019/c64/eval/traces.jsonl"
+    }
+  ],
+  "diagnostics": [
+    {
+      "concurrency": 8,
+      "count": 64,
+      "episodes_per_hour": 156.63790438030654,
+      "low_active_sample_fraction": 0.24369747899159663,
+      "peak_sample_generation_tokens_per_second": 588.8405508887702,
+      "errors": [
+        {
+          "gt_id": 7344,
+          "error": {
+            "type": "ProviderError",
+            "message": "upstream 400: {\"error\":{\"message\":\"This model's maximum context length is 65536 tokens. However, you requested 2048 output tokens and your prompt contains at least 63489 input tokens, for a total of at least 65537 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=63489)\",\"type\":\"BadRequestError\",\"param\":\"input_tokens\",\"code\":400}}",
+            "status_code": 400
+          }
+        }
+      ],
+      "slowest_output_tokens": [
+        57538,
+        18608,
+        17360
+      ],
+      "patient_7344": {
+        "output_tokens": 57538,
+        "calls": 36,
+        "metrics": {
+          "submitted": 0.0,
+          "forced_submit": 0.0,
+          "malformed_submit": 0.0,
+          "submitted_as_text": 0.0,
+          "nudges": 28.0,
+          "actions": 7.0,
+          "tool_errors": 0.0
+        },
+        "rewards": {
+          "official_score": {
+            "score": 0.0,
+            "weight": 1.0
+          }
+        }
+      }
+    },
+    {
+      "concurrency": 16,
+      "count": 64,
+      "episodes_per_hour": 297.2729249315967,
+      "low_active_sample_fraction": 0.16489361702127658,
+      "peak_sample_generation_tokens_per_second": 849.36112388513,
+      "errors": [],
+      "slowest_output_tokens": [
+        21954,
+        17353,
+        16495
+      ],
+      "patient_7344": {
+        "output_tokens": 16495,
+        "calls": 41,
+        "metrics": {
+          "submitted": 1.0,
+          "forced_submit": 1.0,
+          "malformed_submit": 0.0,
+          "submitted_as_text": 1.0,
+          "nudges": 32.0,
+          "actions": 8.0,
+          "tool_errors": 0.0,
+          "problem_list_precision_neutral": 1.0,
+          "weighted_problem_list_recall": 0.09090909090909091,
+          "problem_list_recall": 0.14285714285714285,
+          "acuity_accuracy": 1.0,
+          "n_scored": 1.0
+        },
+        "rewards": {
+          "official_score": {
+            "score": 0.16666666666666669,
+            "weight": 1.0
+          }
+        }
+      }
+    },
+    {
+      "concurrency": 32,
+      "count": 64,
+      "episodes_per_hour": 226.1229835507756,
+      "low_active_sample_fraction": 0.5040485829959515,
+      "peak_sample_generation_tokens_per_second": 1020.0577518325376,
+      "errors": [
+        {
+          "gt_id": 7344,
+          "error": {
+            "type": "ProviderError",
+            "message": "upstream 400: {\"error\":{\"message\":\"This model's maximum context length is 65536 tokens. However, you requested 2048 output tokens and your prompt contains at least 63489 input tokens, for a total of at least 65537 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=63489)\",\"type\":\"BadRequestError\",\"param\":\"input_tokens\",\"code\":400}}",
+            "status_code": 400
+          }
+        }
+      ],
+      "slowest_output_tokens": [
+        57538,
+        18404,
+        17360
+      ],
+      "patient_7344": {
+        "output_tokens": 57538,
+        "calls": 36,
+        "metrics": {
+          "submitted": 0.0,
+          "forced_submit": 0.0,
+          "malformed_submit": 0.0,
+          "submitted_as_text": 0.0,
+          "nudges": 28.0,
+          "actions": 7.0,
+          "tool_errors": 0.0
+        },
+        "rewards": {
+          "official_score": {
+            "score": 0.0,
+            "weight": 1.0
+          }
+        }
+      }
+    },
+    {
+      "concurrency": 64,
+      "count": 64,
+      "episodes_per_hour": 204.97633611714366,
+      "low_active_sample_fraction": 0.46605504587155966,
+      "peak_sample_generation_tokens_per_second": 1376.062734121671,
+      "errors": [
+        {
+          "gt_id": 7344,
+          "error": {
+            "type": "ProviderError",
+            "message": "upstream 400: {\"error\":{\"message\":\"This model's maximum context length is 65536 tokens. However, you requested 2048 output tokens and your prompt contains at least 63489 input tokens, for a total of at least 65537 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=63489)\",\"type\":\"BadRequestError\",\"param\":\"input_tokens\",\"code\":400}}",
+            "status_code": 400
+          }
+        }
+      ],
+      "slowest_output_tokens": [
+        57538,
+        21954,
+        18232
+      ],
+      "patient_7344": {
+        "output_tokens": 57538,
+        "calls": 36,
+        "metrics": {
+          "submitted": 0.0,
+          "forced_submit": 0.0,
+          "malformed_submit": 0.0,
+          "submitted_as_text": 0.0,
+          "nudges": 28.0,
+          "actions": 7.0,
+          "tool_errors": 0.0
+        },
+        "rewards": {
+          "official_score": {
+            "score": 0.0,
+            "weight": 1.0
+          }
+        }
+      }
+    }
+  ],
+  "decision": "Keep concurrency 32 for fixed checkpoint comparisons. Concurrency 16 had the shortest finite-cohort wall time, but patient 7344 did not exhibit the 57,538-token context-limit loop seen in the other trials. This single sweep does not establish a throughput optimum."
+}

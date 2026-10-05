@@ -1,0 +1,27 @@
+{
+ "verified_at": "2026-10-05T04:58:15.886471+00:00",
+ "remote_root": "/workspace/synthetic-hospital-rl",
+ "paths": [
+  "runs/rl/rl-sft-paper-v1/checkpoints"
+ ],
+ "excluded": "wandb process metadata",
+ "file_count": 3,
+ "bytes": 18046767042,
+ "files": [
+  {
+   "path": "runs/rl/rl-sft-paper-v1/checkpoints/step_85/orchestrator/progress.pt",
+   "bytes": 5293,
+   "sha256": "f8be621c4ba8a27d1c4dce26d2ad444e1af0b2db0bb8bb5e82ae596d5c376f50"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/checkpoints/step_85/trainer/.metadata",
+   "bytes": 840278,
+   "sha256": "d705d261030ace3e736852a78eade7d186666b4eab585a11b98bb68e43cf834b"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/checkpoints/step_85/trainer/__0_0.distcp",
+   "bytes": 18045921471,
+   "sha256": "162c32ff4021c922ddd3bb0073edc7c7b9920ffab947fffd1a42e4978382d57f"
+  }
+ ]
+}

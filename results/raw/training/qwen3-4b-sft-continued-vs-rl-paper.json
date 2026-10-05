@@ -1,0 +1,1567 @@
+{
+ "split": "dev",
+ "method": "Paired patient bootstrap, 1000 resamples, seed 0; all fixed dev patients, failures retained; replicate reports within an arm are averaged per patient before pairing",
+ "reference": [
+  {
+   "path": "results/raw/training/qwen3-4b-rl-paper-dev.json",
+   "sha256": "d7e5f5cae8256bae63b6ae8682fba7a25ca8cafe2f5d31e5a7e23c19570aa5cc",
+   "summary": {
+    "n": 120,
+    "valid_submit_rate": 1.0,
+    "mean_reward": 0.40632610238265693,
+    "official_f1": 0.4129894181783311,
+    "official_f1_strict": 0.4129894181783311,
+    "weighted_recall": 0.39773185241257997,
+    "recall": 0.41321428571428576,
+    "precision_neutral": 0.4294642857142857,
+    "precision_raw": 0.41583333333333333,
+    "acuity_accuracy": 0.9209039548022598,
+    "mean_predictions": 3.3833333333333333,
+    "mean_reward_ci95": [
+     0.3381606987368321,
+     0.47300350467329993
+    ],
+    "official_f1_strict_ci95": [
+     0.3448672422414316,
+     0.4800978235531785
+    ],
+    "visit_split": {
+     "recall_earlier_visits": 0.5014409221902018,
+     "recall_final_visit": 0.11428571428571428,
+     "n_earlier": 347,
+     "n_final": 70
+    },
+    "split": "dev",
+    "mean_actions": 3.0,
+    "actions_observed_n": 120,
+    "episode_metrics_observed_n": 120,
+    "mean_total_tokens": 7576.791666666667,
+    "mean_input_tokens": 7384.116666666667,
+    "mean_output_tokens": 192.675,
+    "mean_unique_input_tokens": 3303.1,
+    "mean_unique_total_tokens": 3495.775,
+    "budget_exhausted_rate": 0,
+    "malformed_submit_rate": 0,
+    "rollout_error_rate": 0,
+    "model_call_error_episode_rate": 0,
+    "model_call_error_types": {},
+    "mean_nudges": 0.0,
+    "tool_calls": {
+     "view_encounters": 120,
+     "view_encounter_detail": 120,
+     "submit_diagnosis": 120
+    },
+    "name": "qwen3-4b-rl-paper-dev"
+   }
+  }
+ ],
+ "candidate": [
+  {
+   "path": "results/raw/training/qwen3-4b-sft-continued-paper-dev.json",
+   "sha256": "4356228639f1f05949ceb31111e84ef9186dfbd8722d463bfe5b0a4ca62c2657",
+   "summary": {
+    "n": 120,
+    "valid_submit_rate": 1.0,
+    "mean_reward": 0.4768895828826148,
+    "official_f1": 0.4846832192519619,
+    "official_f1_strict": 0.4846832192519619,
+    "weighted_recall": 0.4723939556244123,
+    "recall": 0.4900694444444444,
+    "precision_neutral": 0.49762896825396824,
+    "precision_raw": 0.4799305555555556,
+    "acuity_accuracy": 0.9484536082474226,
+    "mean_predictions": 3.4916666666666667,
+    "mean_reward_ci95": [
+     0.41361737418386346,
+     0.5384834281270152
+    ],
+    "official_f1_strict_ci95": [
+     0.4228396865895061,
+     0.5469953999742853
+    ],
+    "visit_split": {
+     "recall_earlier_visits": 0.5504322766570605,
+     "recall_final_visit": 0.14285714285714285,
+     "n_earlier": 347,
+     "n_final": 70
+    },
+    "split": "dev",
+    "mean_actions": 3.0,
+    "actions_observed_n": 120,
+    "episode_metrics_observed_n": 120,
+    "mean_total_tokens": 7580.9,
+    "mean_input_tokens": 7384.116666666667,
+    "mean_output_tokens": 196.78333333333333,
+    "mean_unique_input_tokens": 3303.1,
+    "mean_unique_total_tokens": 3499.883333333333,
+    "budget_exhausted_rate": 0,
+    "malformed_submit_rate": 0,
+    "rollout_error_rate": 0,
+    "model_call_error_episode_rate": 0,
+    "model_call_error_types": {},
+    "mean_nudges": 0.0,
+    "tool_calls": {
+     "view_encounters": 120,
+     "view_encounter_detail": 120,
+     "submit_diagnosis": 120
+    },
+    "name": "qwen3-4b-sft-continued-paper-dev"
+   }
+  }
+ ],
+ "paired": {
+  "n": 120,
+  "reference_replicates": 1,
+  "candidate_replicates": 1,
+  "mean_reward_difference": 0.07056348049995786,
+  "ci95": [
+   0.0209466901477233,
+   0.12238644305131233
+  ],
+  "wins": 32,
+  "losses": 22,
+  "ties": 66
+ },
+ "patients": [
+  {
+   "gt_id": 7011,
+   "reference_reward": 0.8,
+   "candidate_reward": 0.3243243243243243,
+   "delta": -0.47567567567567576,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7015,
+   "reference_reward": 0.0,
+   "candidate_reward": 1.0,
+   "delta": 1.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7025,
+   "reference_reward": 1.0,
+   "candidate_reward": 0.8,
+   "delta": -0.19999999999999996,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7033,
+   "reference_reward": 0.6976744186046512,
+   "candidate_reward": 0.7706422018348624,
+   "delta": 0.07296778323021125,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7047,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.2580645161290323,
+   "delta": 0.2580645161290323,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7066,
+   "reference_reward": 0.34285714285714286,
+   "candidate_reward": 0.3157894736842105,
+   "delta": -0.02706766917293235,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7070,
+   "reference_reward": 0.6722689075630253,
+   "candidate_reward": 0.5063291139240506,
+   "delta": -0.1659397936389747,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7076,
+   "reference_reward": 0.49557522123893805,
+   "candidate_reward": 0.5,
+   "delta": 0.004424778761061954,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7077,
+   "reference_reward": 0.3076923076923077,
+   "candidate_reward": 0.3076923076923077,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7080,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7087,
+   "reference_reward": 0.30769230769230765,
+   "candidate_reward": 0.6153846153846153,
+   "delta": 0.30769230769230765,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7136,
+   "reference_reward": 0.631578947368421,
+   "candidate_reward": 0.4444444444444445,
+   "delta": -0.18713450292397654,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7150,
+   "reference_reward": 0.5714285714285715,
+   "candidate_reward": 0.4,
+   "delta": -0.17142857142857149,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7158,
+   "reference_reward": 0.5,
+   "candidate_reward": 0.5,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7165,
+   "reference_reward": 0.2,
+   "candidate_reward": 0.5217391304347826,
+   "delta": 0.3217391304347826,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7176,
+   "reference_reward": 0.5,
+   "candidate_reward": 0.5,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7182,
+   "reference_reward": 0.4,
+   "candidate_reward": 0.8,
+   "delta": 0.4,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7183,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.5454545454545454,
+   "delta": 0.5454545454545454,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7189,
+   "reference_reward": 1.0,
+   "candidate_reward": 1.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7206,
+   "reference_reward": 0.4,
+   "candidate_reward": 0.4,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7210,
+   "reference_reward": 0.4,
+   "candidate_reward": 0.4,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7236,
+   "reference_reward": 0.0,
+   "candidate_reward": 1.0,
+   "delta": 1.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7237,
+   "reference_reward": 1.0,
+   "candidate_reward": 1.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7253,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7255,
+   "reference_reward": 1.0,
+   "candidate_reward": 1.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7259,
+   "reference_reward": 1.0,
+   "candidate_reward": 1.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7266,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7274,
+   "reference_reward": 1.0,
+   "candidate_reward": 1.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7282,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7302,
+   "reference_reward": 1.0,
+   "candidate_reward": 1.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7308,
+   "reference_reward": 0.6666666666666666,
+   "candidate_reward": 0.6666666666666666,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7344,
+   "reference_reward": 0.6,
+   "candidate_reward": 0.6,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7367,
+   "reference_reward": 0.4827586206896552,
+   "candidate_reward": 0.4827586206896552,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7397,
+   "reference_reward": 0.15384615384615385,
+   "candidate_reward": 0.38709677419354843,
+   "delta": 0.23325062034739458,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7398,
+   "reference_reward": 0.47058823529411764,
+   "candidate_reward": 0.47058823529411764,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7402,
+   "reference_reward": 0.42857142857142855,
+   "candidate_reward": 0.5106382978723405,
+   "delta": 0.08206686930091195,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7403,
+   "reference_reward": 0.4,
+   "candidate_reward": 0.4,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7418,
+   "reference_reward": 1.0,
+   "candidate_reward": 0.6666666666666666,
+   "delta": -0.33333333333333337,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7422,
+   "reference_reward": 0.12903225806451615,
+   "candidate_reward": 0.273972602739726,
+   "delta": 0.14494034467520986,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7427,
+   "reference_reward": 0.28571428571428575,
+   "candidate_reward": 0.0,
+   "delta": -0.28571428571428575,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7454,
+   "reference_reward": 0.8,
+   "candidate_reward": 0.6666666666666666,
+   "delta": -0.13333333333333341,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7457,
+   "reference_reward": 1.0,
+   "candidate_reward": 1.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7458,
+   "reference_reward": 0.5,
+   "candidate_reward": 0.0,
+   "delta": -0.5,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7463,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7476,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7485,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.5,
+   "delta": 0.5,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7486,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7493,
+   "reference_reward": 1.0,
+   "candidate_reward": 1.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7504,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7510,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7512,
+   "reference_reward": 0.0,
+   "candidate_reward": 1.0,
+   "delta": 1.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7519,
+   "reference_reward": 0.41379310344827586,
+   "candidate_reward": 0.41379310344827586,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7539,
+   "reference_reward": 0.7766990291262137,
+   "candidate_reward": 0.7766990291262137,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7545,
+   "reference_reward": 0.42857142857142855,
+   "candidate_reward": 0.8571428571428571,
+   "delta": 0.42857142857142855,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7549,
+   "reference_reward": 0.4444444444444445,
+   "candidate_reward": 0.1818181818181818,
+   "delta": -0.26262626262626265,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7580,
+   "reference_reward": 0.3870967741935484,
+   "candidate_reward": 0.6790123456790124,
+   "delta": 0.291915571485464,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7583,
+   "reference_reward": 0.7636363636363638,
+   "candidate_reward": 0.7636363636363638,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7584,
+   "reference_reward": 0.6666666666666666,
+   "candidate_reward": 0.6666666666666666,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7589,
+   "reference_reward": 0.35294117647058826,
+   "candidate_reward": 0.47058823529411764,
+   "delta": 0.11764705882352938,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7592,
+   "reference_reward": 0.375,
+   "candidate_reward": 0.5,
+   "delta": 0.125,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7595,
+   "reference_reward": 0.1111111111111111,
+   "candidate_reward": 0.11764705882352942,
+   "delta": 0.006535947712418319,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7604,
+   "reference_reward": 0.5454545454545454,
+   "candidate_reward": 0.6451612903225806,
+   "delta": 0.09970674486803521,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7625,
+   "reference_reward": 0.48484848484848486,
+   "candidate_reward": 0.7155963302752295,
+   "delta": 0.23074784542674465,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7629,
+   "reference_reward": 0.8088235294117647,
+   "candidate_reward": 0.8088235294117647,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7636,
+   "reference_reward": 0.6666666666666666,
+   "candidate_reward": 0.5,
+   "delta": -0.16666666666666663,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7647,
+   "reference_reward": 0.5,
+   "candidate_reward": 1.0,
+   "delta": 0.5,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7663,
+   "reference_reward": 1.0,
+   "candidate_reward": 1.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7673,
+   "reference_reward": 0.25,
+   "candidate_reward": 0.25,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7675,
+   "reference_reward": 0.28571428571428575,
+   "candidate_reward": 0.28571428571428575,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7701,
+   "reference_reward": 0.3636363636363636,
+   "candidate_reward": 0.3636363636363636,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7705,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.16666666666666666,
+   "delta": 0.16666666666666666,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7710,
+   "reference_reward": 0.5,
+   "candidate_reward": 0.5,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7725,
+   "reference_reward": 0.5714285714285715,
+   "candidate_reward": 0.7482993197278911,
+   "delta": 0.1768707482993196,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7736,
+   "reference_reward": 1.0,
+   "candidate_reward": 1.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7744,
+   "reference_reward": 1.0,
+   "candidate_reward": 1.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7745,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7749,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7757,
+   "reference_reward": 0.2222222222222222,
+   "candidate_reward": 0.4,
+   "delta": 0.1777777777777778,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7768,
+   "reference_reward": 0.8571428571428571,
+   "candidate_reward": 0.5454545454545454,
+   "delta": -0.3116883116883117,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7770,
+   "reference_reward": 1.0,
+   "candidate_reward": 1.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7772,
+   "reference_reward": 0.0,
+   "candidate_reward": 1.0,
+   "delta": 1.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7775,
+   "reference_reward": 0.4,
+   "candidate_reward": 0.4,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7785,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7792,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7843,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7853,
+   "reference_reward": 0.6666666666666666,
+   "candidate_reward": 0.5333333333333333,
+   "delta": -0.1333333333333333,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7868,
+   "reference_reward": 0.30769230769230765,
+   "candidate_reward": 0.30769230769230765,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7869,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7873,
+   "reference_reward": 0.7636363636363638,
+   "candidate_reward": 0.631578947368421,
+   "delta": -0.13205741626794276,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7875,
+   "reference_reward": 1.0,
+   "candidate_reward": 1.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7882,
+   "reference_reward": 0.28571428571428575,
+   "candidate_reward": 0.28571428571428575,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7893,
+   "reference_reward": 0.6666666666666666,
+   "candidate_reward": 0.5263157894736842,
+   "delta": -0.14035087719298245,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7899,
+   "reference_reward": 0.5,
+   "candidate_reward": 0.5,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7909,
+   "reference_reward": 1.0,
+   "candidate_reward": 0.3636363636363636,
+   "delta": -0.6363636363636365,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7910,
+   "reference_reward": 0.4,
+   "candidate_reward": 0.4,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7934,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7956,
+   "reference_reward": 0.0,
+   "candidate_reward": 1.0,
+   "delta": 1.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7973,
+   "reference_reward": 0.5,
+   "candidate_reward": 1.0,
+   "delta": 0.5,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7974,
+   "reference_reward": 0.6666666666666666,
+   "candidate_reward": 0.6666666666666666,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7985,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7990,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 7996,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 8004,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 8038,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.5,
+   "delta": 0.5,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 8046,
+   "reference_reward": 0.09523809523809522,
+   "candidate_reward": 0.09090909090909091,
+   "delta": -0.004329004329004307,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 8049,
+   "reference_reward": 0.3582089552238806,
+   "candidate_reward": 0.3582089552238806,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 8078,
+   "reference_reward": 0.5333333333333333,
+   "candidate_reward": 0.26666666666666666,
+   "delta": -0.26666666666666666,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 8101,
+   "reference_reward": 1.0,
+   "candidate_reward": 1.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 8106,
+   "reference_reward": 0.6666666666666666,
+   "candidate_reward": 0.5714285714285715,
+   "delta": -0.09523809523809512,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 8119,
+   "reference_reward": 0.5,
+   "candidate_reward": 0.5,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 8126,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 8160,
+   "reference_reward": 0.4528301886792453,
+   "candidate_reward": 0.3614457831325301,
+   "delta": -0.09138440554671518,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 8179,
+   "reference_reward": 0.5333333333333333,
+   "candidate_reward": 0.5333333333333333,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 8180,
+   "reference_reward": 0.5426356589147286,
+   "candidate_reward": 0.4528301886792453,
+   "delta": -0.08980547023548335,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 8199,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.28571428571428575,
+   "delta": 0.28571428571428575,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 8208,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 8222,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 8243,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.8,
+   "delta": 0.8,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 8254,
+   "reference_reward": 0.0,
+   "candidate_reward": 0.0,
+   "delta": 0.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  },
+  {
+   "gt_id": 8262,
+   "reference_reward": 0.0,
+   "candidate_reward": 1.0,
+   "delta": 1.0,
+   "reference_ok": [
+    true
+   ],
+   "candidate_ok": [
+    true
+   ]
+  }
+ ]
+}

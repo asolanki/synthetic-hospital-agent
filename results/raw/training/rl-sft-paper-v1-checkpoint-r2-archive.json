@@ -1,0 +1,18 @@
+{
+ "archive": "r2://synthetic-hospital-rl-artifacts/2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/",
+ "manifest_key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/manifest.json",
+ "manifest_sha256": "2dc9d1b2a55af664d4553b643f565334293ae85261543c3ce647daa0f6121c0e",
+ "archive_sha256": "f7cd55e5c3602c03079e12a2fe725ca96d070fb0fa06df382fac3af9cc0bb069",
+ "archive_bytes": 8635935967,
+ "parts": 515,
+ "verified_at": "2026-10-05T06:18:44.867574+00:00",
+ "verification": "Every source file hashed on the rental; every tar member of the local parts matched those bytes and SHA-256; every part matched remote size and ETag; the downloaded manifest matches byte-for-byte; first and last downloaded parts match SHA-256.",
+ "downloaded_part_keys": [
+  "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaaa",
+  "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aatu"
+ ],
+ "source_files": 3,
+ "source_bytes": 18046767042,
+ "source_manifest": "results/raw/training/rl-sft-paper-v1-checkpoint-files.json",
+ "privacy": "r2.dev disabled; no custom domains"
+}

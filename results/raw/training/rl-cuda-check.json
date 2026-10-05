@@ -1,0 +1,7 @@
+{
+  "torch": "2.13.0+cu130",
+  "cuda": "13.0",
+  "flash_attn": "2.8.3",
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "forward_and_backward_finite": true
+}

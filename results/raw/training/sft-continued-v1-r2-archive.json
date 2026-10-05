@@ -1,0 +1,18 @@
+{
+ "archive": "r2://synthetic-hospital-rl-artifacts/2026-10-05/sft-continued-v1/chunks-16m/",
+ "manifest_key": "2026-10-05/sft-continued-v1/chunks-16m/manifest.json",
+ "manifest_sha256": "35c5035cfd821d969c41ec1fbf537b6c1eb8730c31da0609de4927564f4b8dcd",
+ "archive_sha256": "03b06a0e07f185d3d8fde9a7ec61e3e282b00d2c7b9e64d51ac265ea381face0",
+ "archive_bytes": 495303363,
+ "parts": 30,
+ "verified_at": "2026-10-05T06:21:06.921836+00:00",
+ "verification": "Every source file hashed on the rental; every tar member of the local parts matched those bytes and SHA-256; every part matched remote size and ETag; the downloaded manifest matches byte-for-byte; first and last downloaded parts match SHA-256.",
+ "downloaded_part_keys": [
+  "2026-10-05/sft-continued-v1/chunks-16m/archive.tar.gz.part-aaaa",
+  "2026-10-05/sft-continued-v1/chunks-16m/archive.tar.gz.part-aabd"
+ ],
+ "source_files": 33,
+ "source_bytes": 560954858,
+ "source_manifest": "results/raw/training/sft-continued-v1-files.json",
+ "privacy": "r2.dev disabled; no custom domains"
+}

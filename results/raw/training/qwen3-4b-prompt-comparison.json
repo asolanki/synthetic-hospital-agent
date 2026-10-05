@@ -1,0 +1,22 @@
+{
+  "n": 120,
+  "contrast": "strong_v1 minus paper",
+  "mean_reward_difference": 0.005273451950887664,
+  "mean_reward_difference_ci95": [
+    -0.03102493912247598,
+    0.03901958390608338
+  ],
+  "strict_f1_difference": 0.0023645067812069487,
+  "strict_f1_difference_ci95": [
+    -0.034973768606528816,
+    0.037554627309352856
+  ],
+  "bootstrap": {
+    "seed": 0,
+    "resamples": 1000,
+    "unit": "paired patient"
+  },
+  "strong_wins": 23,
+  "paper_wins": 31,
+  "ties": 66
+}

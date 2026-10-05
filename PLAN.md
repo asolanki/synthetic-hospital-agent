@@ -30,12 +30,16 @@ Do not use OpenRouter's generic `qwen/qwen3-4b` as the experimental model: it is
 
 ## Main comparison
 
-The final agent comparison should include:
+The active checkpoint comparison uses the **unchanged paper prompt** throughout:
 
-* Base model with a strong fixed prompt
-* Prompt-optimized model
+* Exact untrained `Qwen/Qwen3-4B-Instruct-2507`
 * Supervised fine-tuning / behavior cloning
-* RL fine-tuning
+* RL fine-tuning from the SFT checkpoint
+
+Prompt engineering is a completed negative control, not an ongoing branch.
+Repeated strong-prompt comparisons found no demonstrated gain. Retain their
+artifacts, but do not run strong-prompt or prompt-optimization experiments after
+new checkpoints. This paper-only decision was confirmed on 2026-10-04.
 
 Frontier models and published benchmark results are reference points, not the main comparison.
 
@@ -86,7 +90,7 @@ These serve two purposes:
 
 Do not automatically classify a high-scoring extraction strategy as an exploit. If copying documented diagnoses legitimately solves much of the benchmark, that is an important property of the task.
 
-Keep final evaluation on the official metric even if training requires a modified reward.
+Keep the official reward unchanged for both training and evaluation.
 
 ---
 
@@ -94,31 +98,54 @@ Keep final evaluation on the official metric even if training requires a modifie
 
 Build the agent baselines before serious RL:
 
-### Prompting
+### Prompting — complete
 
-Develop a strong fixed prompt and, if useful, run prompt optimization such as GEPA.
+The paper and strong-prompt comparisons are recorded in `LOG.md`. Prompting did
+not produce a demonstrated improvement and is retired from the active plan.
 
 ### SFT / behavior cloning
 
-Train on successful tool-use trajectories.
+The completed control trained on 680 label-informed `oracle-copy-v1`
+demonstrations, with no dev or heldout examples used for gradients. These are
+reference-answer demonstrations, not trajectories from an independently
+successful policy; final-visit labels can go beyond what the note reveals.
 
-Trajectories can come from:
-
-* successful base-model runs
-* rejection sampling
-* a stronger open model
-
-The goal is to establish whether ordinary imitation learning already captures most of the available improvement.
-
-If the base agent rarely completes episodes successfully, use SFT as a warm start.
+Three epochs of LoRA SFT increased paper-prompt dev mean official reward from
+**0.1017 to 0.3961**. Finalized episodes used three EHR actions without nudges or
+forced submission. Earlier-visit recall improved much more than final-visit
+recall. This checkpoint is the control for measuring what RL adds.
 
 ---
 
 ## Phase 4 — RL
 
-Train on the training patients and select checkpoints on dev.
+Train only on the 680 training patients, starting from the completed SFT
+checkpoint. First verify real rollout tokens/log-probabilities, assistant-only
+loss masking, official reward delivery, and policy-weight refresh in Prime-RL.
+The two-step setup check is not an experimental result and its adapter is not
+the starting point for the full run.
 
-GRPO is a reasonable starting point, but do not lock in the training framework before a small integration spike. Try the existing Harbor/Verifiers/prime-rl route and a direct `/env` integration, then use whichever is simpler and reliable.
+Initial controlled arm: group-relative advantages with a PPO-clipped objective,
+LoRA rank 16 / alpha 32 / dropout 0, learning rate 1e-5, four rollouts per patient,
+32 rollouts per update, and 85 updates. This is one nominal pass over the training
+patients; record actual coverage and errored/stale-rollout exclusions. Use the
+paper prompt, unchanged official reward, and no length penalty or added reward.
+
+Evaluate the predeclared terminal checkpoint once on all 120 dev patients with
+the same paper-prompt evaluation stack and controls as SFT. Do not choose the
+best-looking intermediate dev result. Heldout remains sealed.
+
+Prediction: a smaller gain than SFT, possibly no statistically clear gain.
+Protocol compliance is already largely repaired; any gain needs diagnosis/code
+and seen-versus-unseen analysis before attributing it to medical reasoning.
+
+This is a pilot of one RL recipe against one SFT recipe, not a claim that either
+method is exhausted. After the pilot, assess SFT train-versus-dev performance
+and define a continued-SFT control from the same preserved checkpoint, with a
+comparable additional GPU budget and the same prompt/data split. A method-level
+claim for RL requires separating the effect of the objective from the effect of
+more training. Do not launch an open-ended SFT hyperparameter sweep or treat
+repeated dev selection as an unbiased final test.
 
 During training, log full trajectories and continuously inspect:
 
@@ -133,11 +160,26 @@ During training, log full trajectories and continuously inspect:
 
 The interesting question is not simply whether reward rises, but **what behavior changes as it rises**.
 
+### Outcome (2026-10-05; details in `results/milestone3_training.md`)
+
+The pilot ran as declared and its prediction held. On dev (seed 0) RL scored
+0.406 versus SFT 0.396 (+0.010, CI −0.019 to +0.038); five sampling seeds
+gave +0.020 (+0.003 to +0.038). The untouched public split agreed: RL − SFT
+was +0.008 (−0.014 to +0.032). The continued-SFT control (three more epochs of
+the same recipe, ~0.6 GPU-h versus RL's ~4.1) beat both SFT and RL on dev and
+public (public +0.047 and +0.038). RL did not change behaviour; it sharpened codes the policy already
+sampled, while about a third of training diagnoses were never coded correctly
+in any of four samples. After SFT the agent names almost every documented
+diagnosis; the remaining error is ICD-10 coding, which tracks how often a code
+appeared in training. Final-visit diagnoses remain the genuine inference gap.
+By the decision rule "if SFT matches RL, do not manufacture an RL claim", this
+phase reports no RL advantage.
+
 ---
 
 ## Evaluation
 
-Primary metric: official severity-weighted diagnosis F1.
+Primary training/comparison metric: mean official per-episode reward (`weighted_problem_list_f1_neutral`). Also report the paper's batch F1 and its failure-inclusive strict variant.
 
 Also report:
 
@@ -177,7 +219,7 @@ Use bootstrap confidence intervals where practical and multiple training seeds i
 
 ## Final questions the project must answer
 
-1. Does RL outperform a strong prompted agent?
+1. Does RL outperform the untrained paper-prompt agent?
 2. Does RL outperform SFT / behavior cloning?
 3. Where do the improvements occur?
 4. Does agent behavior meaningfully change?
@@ -212,7 +254,7 @@ The write-up should emphasize **what the model learned and what the benchmark ac
 ## Decision rules
 
 * If the task is mostly solved by trivial extraction, reassess whether agentic RL can produce an interesting result before investing heavily.
-* If the reward is genuinely exploitable, fix the training objective while preserving official evaluation.
+* If the reward is genuinely exploitable, stop and report the limitation rather than silently changing the agreed official objective.
 * If the base agent cannot generate useful trajectories, warm-start with SFT.
 * If SFT matches RL, do not manufacture an RL claim.
 * If RL raises F1 without meaningful behavioral improvement, investigate whether it learned output priors rather than better chart use.
@@ -220,17 +262,14 @@ The write-up should emphasize **what the model learned and what the benchmark ac
 
 ---
 
-## First implementation milestone
+## Current implementation milestone
 
-Do **not** build the full RL trainer yet.
+Benchmark audit, prompting baselines, SFT, the SFT→RL pilot, the continued-SFT
+control and the public final test are complete; see `LOG.md`,
+`results/milestone3_training.md` and `results/raw/training/`. Heldout remains sealed.
 
-First produce:
-
-| Model            | Agent F1 | Valid submit % | Actions | Tokens | Budget exhausted |
-| ---------------- | -------: | -------------: | ------: | -----: | ---------------: |
-| Qwen candidate A |          |                |         |        |                  |
-| Qwen candidate B |          |                |         |        |                  |
-
-And a second table containing the simple task/reward-audit strategies and their scores.
-
-Once those numbers exist, decide whether the benchmark has enough headroom and whether the agent pipeline is healthy enough to justify RL.
+Next, if continued: write-up and release (code, adapters, cached outputs, a
+heads-up to the benchmark authors and upstream bug reports). Further training is
+only worth it for questions this phase opened: how far longer single-run SFT
+schedules go, and whether any method improves coding of unseen diagnoses or
+final-visit inference, the two parts SFT and RL leave untouched.

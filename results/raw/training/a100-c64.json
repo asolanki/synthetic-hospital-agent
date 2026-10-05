@@ -1,0 +1,4161 @@
+{
+ "source": "runs/a100-throughput/c64/eval/traces.jsonl",
+ "split": "dev",
+ "models": [
+  "Qwen/Qwen3-4B-Instruct-2507"
+ ],
+ "complete_split": false,
+ "summary": {
+  "n": 64,
+  "valid_submit_rate": 0.71875,
+  "mean_reward": 0.11167196917676457,
+  "official_f1": 0.1703091187235501,
+  "official_f1_strict": 0.12240967908255161,
+  "weighted_recall": 0.16553898551307353,
+  "recall": 0.17696687370600414,
+  "precision_neutral": 0.1753623188405797,
+  "precision_raw": 0.13657067570111045,
+  "acuity_accuracy": 0.7241379310344828,
+  "mean_predictions": 4.328125,
+  "mean_reward_ci95": [
+   0.06334541847449457,
+   0.16841184388538927
+  ],
+  "official_f1_strict_ci95": [
+   0.0699622174985125,
+   0.1823989555619109
+  ],
+  "visit_split": {
+   "recall_earlier_visits": 0.14622641509433962,
+   "recall_final_visit": 0.0,
+   "n_earlier": 212,
+   "n_final": 36
+  },
+  "split": "dev",
+  "mean_actions": 8.3125,
+  "actions_observed_n": 48,
+  "episode_metrics_observed_n": 48,
+  "mean_total_tokens": 162993.671875,
+  "mean_input_tokens": 158434.78125,
+  "mean_output_tokens": 4558.890625,
+  "mean_unique_input_tokens": 4747.1875,
+  "mean_unique_total_tokens": 9306.078125,
+  "budget_exhausted_rate": 0.4583333333333333,
+  "malformed_submit_rate": 0,
+  "rollout_error_rate": 0.25,
+  "mean_nudges": 15.583333333333334,
+  "tool_calls": {
+   "open_chart": 64,
+   "view_encounters": 49,
+   "search_chart": 96,
+   "view_problem_list": 46,
+   "view_section": 6,
+   "submit_diagnosis": 40,
+   "view_results": 65,
+   "view_medications": 15,
+   "view_encounter_detail": 34
+  },
+  "name": "a100-c64"
+ },
+ "records": [
+  {
+   "gt_id": 7274,
+   "n_pred": 0,
+   "reward": 0.0,
+   "metrics": null,
+   "submission": null,
+   "episode_metrics": {},
+   "ok": false,
+   "errors": [
+    {
+     "type": "ProviderError",
+     "message": "upstream 400: {\"error\":{\"message\":\"Expecting ',' delimiter: line 1 column 20 (char 19) None\",\"type\":\"BadRequestError\",\"param\":null,\"code\":400}}",
+     "status_code": 400
+    }
+   ],
+   "input_tokens": 1807,
+   "output_tokens": 24,
+   "total_tokens": 1831,
+   "unique_input_tokens": 1807,
+   "unique_total_tokens": 1831,
+   "budget": 40
+  },
+  {
+   "gt_id": 7189,
+   "n_pred": 0,
+   "reward": 0.0,
+   "metrics": null,
+   "submission": null,
+   "episode_metrics": {},
+   "ok": false,
+   "errors": [
+    {
+     "type": "ProviderError",
+     "message": "upstream 400: {\"error\":{\"message\":\"Expecting ',' delimiter: line 1 column 20 (char 19) None\",\"type\":\"BadRequestError\",\"param\":null,\"code\":400}}",
+     "status_code": 400
+    }
+   ],
+   "input_tokens": 1807,
+   "output_tokens": 24,
+   "total_tokens": 1831,
+   "unique_input_tokens": 1807,
+   "unique_total_tokens": 1831,
+   "budget": 40
+  },
+  {
+   "gt_id": 7427,
+   "n_pred": 0,
+   "reward": 0.0,
+   "metrics": null,
+   "submission": null,
+   "episode_metrics": {},
+   "ok": false,
+   "errors": [
+    {
+     "type": "ProviderError",
+     "message": "upstream 400: {\"error\":{\"message\":\"Expecting ',' delimiter: line 1 column 20 (char 19) None\",\"type\":\"BadRequestError\",\"param\":null,\"code\":400}}",
+     "status_code": 400
+    }
+   ],
+   "input_tokens": 1807,
+   "output_tokens": 24,
+   "total_tokens": 1831,
+   "unique_input_tokens": 1807,
+   "unique_total_tokens": 1831,
+   "budget": 40
+  },
+  {
+   "gt_id": 7136,
+   "n_pred": 0,
+   "reward": 0.0,
+   "metrics": null,
+   "submission": null,
+   "episode_metrics": {},
+   "ok": false,
+   "errors": [
+    {
+     "type": "ProviderError",
+     "message": "upstream 400: {\"error\":{\"message\":\"Expecting ',' delimiter: line 1 column 17 (char 16) None\",\"type\":\"BadRequestError\",\"param\":null,\"code\":400}}",
+     "status_code": 400
+    }
+   ],
+   "input_tokens": 1807,
+   "output_tokens": 24,
+   "total_tokens": 1831,
+   "unique_input_tokens": 1807,
+   "unique_total_tokens": 1831,
+   "budget": 40
+  },
+  {
+   "gt_id": 7253,
+   "n_pred": 0,
+   "reward": 0.0,
+   "metrics": null,
+   "submission": null,
+   "episode_metrics": {},
+   "ok": false,
+   "errors": [
+    {
+     "type": "HarnessError",
+     "message": "harness 'null' exited 1: ntil_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/asyncio/base_events.py\", line 687, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/root/.cache/verifiers/runtimes/scripts/4943eb86cb750889dcc155b7efa96b3ac9c373138d4e1e57207205a6f66df79b.py\", line 983, in main\n    await run_chat_loop(args, compactor, messages, dispatch, servers, tool_client)\n  File \"/root/.cache/verifiers/runtimes/scripts/4943eb86cb750889dcc155b7efa96b3ac9c373138d4e1e57207205a6f66df79b.py\", line 831, in run_chat_loop\n    completion, messages = await compactor.complete(messages)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/.cache/verifiers/runtimes/scripts/4943eb86cb750889dcc155b7efa96b3ac9c373138d4e1e57207205a6f66df79b.py\", line 387, in complete\n    completion = await chat(self.client, self.model, messages, self.tools)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/.cache/verifiers/runtimes/scripts/4943eb86cb750889dcc155b7efa96b3ac9c373138d4e1e57207205a6f66df79b.py\", line 744, in chat\n    raw_stream = await client.chat.completions.create(\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py\", line 2907, in create\n    return await self._post(\n           ^^^^^^^^^^^^^^^^^\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/openai/_base_client.py\", line 1992, in post\n    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/openai/_base_client.py\", line 1777, in request\n    raise self._make_status_error_from_response(err.response) from None\nopenai.InternalServerError: 500 Internal Server Error\n\nServer got itself in trouble",
+     "traceback": "Traceback (most recent call last):\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/verifiers/v1/rollout.py\", line 441, in step\n    await self._harness_session.turn(messages)\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/verifiers/v1/harness.py\", line 358, in turn\n    await self.harness._check_result(self.trace, self.runtime, result)\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/verifiers/v1/harness.py\", line 191, in _check_result\n    raise HarnessError(\nverifiers.v1.errors.HarnessError: harness 'null' exited 1: ntil_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/asyncio/base_events.py\", line 687, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/root/.cache/verifiers/runtimes/scripts/4943eb86cb750889dcc155b7efa96b3ac9c373138d4e1e57207205a6f66df79b.py\", line 983, in main\n    await run_chat_loop(args, compactor, messages, dispatch, servers, tool_client)\n  File \"/root/.cache/verifiers/runtimes/scripts/4943eb86cb750889dcc155b7efa96b3ac9c373138d4e1e57207205a6f66df79b.py\", line 831, in run_chat_loop\n    completion, messages = await compactor.complete(messages)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/.cache/verifiers/runtimes/scripts/4943eb86cb750889dcc155b7efa96b3ac9c373138d4e1e57207205a6f66df79b.py\", line 387, in complete\n    completion = await chat(self.client, self.model, messages, self.tools)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/.cache/verifiers/runtimes/scripts/4943eb86cb750889dcc155b7efa96b3ac9c373138d4e1e57207205a6f66df79b.py\", line 744, in chat\n    raw_stream = await client.chat.completions.create(\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py\", line 2907, in create\n    return await self._post(\n           ^^^^^^^^^^^^^^^^^\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/openai/_base_client.py\", line 1992, in post\n    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/openai/_base_client.py\", line 1777, in request\n    raise self._make_status_error_from_response(err.response) from None\nopenai.InternalServerError: 500 Internal Server Error\n\nServer got itself in trouble\n"
+    }
+   ],
+   "input_tokens": 4108,
+   "output_tokens": 49,
+   "total_tokens": 4157,
+   "unique_input_tokens": 2277,
+   "unique_total_tokens": 2326,
+   "budget": 40
+  },
+  {
+   "gt_id": 7150,
+   "n_pred": 0,
+   "reward": 0.0,
+   "metrics": null,
+   "submission": null,
+   "episode_metrics": {},
+   "ok": false,
+   "errors": [
+    {
+     "type": "ProviderError",
+     "message": "upstream 400: {\"error\":{\"message\":\"Expecting ',' delimiter: line 1 column 20 (char 19) None\",\"type\":\"BadRequestError\",\"param\":null,\"code\":400}}",
+     "status_code": 400
+    }
+   ],
+   "input_tokens": 1807,
+   "output_tokens": 24,
+   "total_tokens": 1831,
+   "unique_input_tokens": 1807,
+   "unique_total_tokens": 1831,
+   "budget": 40
+  },
+  {
+   "gt_id": 7070,
+   "n_pred": 0,
+   "reward": 0.0,
+   "metrics": null,
+   "submission": null,
+   "episode_metrics": {},
+   "ok": false,
+   "errors": [
+    {
+     "type": "ProviderError",
+     "message": "upstream 400: {\"error\":{\"message\":\"Expecting ',' delimiter: line 1 column 20 (char 19) None\",\"type\":\"BadRequestError\",\"param\":null,\"code\":400}}",
+     "status_code": 400
+    }
+   ],
+   "input_tokens": 1807,
+   "output_tokens": 24,
+   "total_tokens": 1831,
+   "unique_input_tokens": 1807,
+   "unique_total_tokens": 1831,
+   "budget": 40
+  },
+  {
+   "gt_id": 7080,
+   "n_pred": 0,
+   "reward": 0.0,
+   "metrics": null,
+   "submission": null,
+   "episode_metrics": {},
+   "ok": false,
+   "errors": [
+    {
+     "type": "ProviderError",
+     "message": "upstream 400: {\"error\":{\"message\":\"Expecting ',' delimiter: line 1 column 19 (char 18) None\",\"type\":\"BadRequestError\",\"param\":null,\"code\":400}}",
+     "status_code": 400
+    }
+   ],
+   "input_tokens": 1807,
+   "output_tokens": 24,
+   "total_tokens": 1831,
+   "unique_input_tokens": 1807,
+   "unique_total_tokens": 1831,
+   "budget": 40
+  },
+  {
+   "gt_id": 7282,
+   "n_pred": 0,
+   "reward": 0.0,
+   "metrics": null,
+   "submission": null,
+   "episode_metrics": {},
+   "ok": false,
+   "errors": [
+    {
+     "type": "ProviderError",
+     "message": "upstream 400: {\"error\":{\"message\":\"Expecting ',' delimiter: line 1 column 20 (char 19) None\",\"type\":\"BadRequestError\",\"param\":null,\"code\":400}}",
+     "status_code": 400
+    }
+   ],
+   "input_tokens": 1807,
+   "output_tokens": 24,
+   "total_tokens": 1831,
+   "unique_input_tokens": 1807,
+   "unique_total_tokens": 1831,
+   "budget": 40
+  },
+  {
+   "gt_id": 7033,
+   "n_pred": 0,
+   "reward": 0.0,
+   "metrics": null,
+   "submission": null,
+   "episode_metrics": {},
+   "ok": false,
+   "errors": [
+    {
+     "type": "ProviderError",
+     "message": "upstream 400: {\"error\":{\"message\":\"Expecting ',' delimiter: line 1 column 19 (char 18) None\",\"type\":\"BadRequestError\",\"param\":null,\"code\":400}}",
+     "status_code": 400
+    }
+   ],
+   "input_tokens": 1807,
+   "output_tokens": 24,
+   "total_tokens": 1831,
+   "unique_input_tokens": 1807,
+   "unique_total_tokens": 1831,
+   "budget": 40
+  },
+  {
+   "gt_id": 7266,
+   "n_pred": 0,
+   "reward": 0.0,
+   "metrics": null,
+   "submission": null,
+   "episode_metrics": {},
+   "ok": false,
+   "errors": [
+    {
+     "type": "ProviderError",
+     "message": "upstream 400: {\"error\":{\"message\":\"Expecting ',' delimiter: line 1 column 20 (char 19) None\",\"type\":\"BadRequestError\",\"param\":null,\"code\":400}}",
+     "status_code": 400
+    }
+   ],
+   "input_tokens": 1807,
+   "output_tokens": 24,
+   "total_tokens": 1831,
+   "unique_input_tokens": 1807,
+   "unique_total_tokens": 1831,
+   "budget": 40
+  },
+  {
+   "gt_id": 7519,
+   "n_pred": 0,
+   "reward": 0.0,
+   "metrics": null,
+   "submission": null,
+   "episode_metrics": {},
+   "ok": false,
+   "errors": [
+    {
+     "type": "ProviderError",
+     "message": "upstream 400: {\"error\":{\"message\":\"Expecting ',' delimiter: line 1 column 19 (char 18) None\",\"type\":\"BadRequestError\",\"param\":null,\"code\":400}}",
+     "status_code": 400
+    }
+   ],
+   "input_tokens": 1807,
+   "output_tokens": 24,
+   "total_tokens": 1831,
+   "unique_input_tokens": 1807,
+   "unique_total_tokens": 1831,
+   "budget": 40
+  },
+  {
+   "gt_id": 7165,
+   "n_pred": 0,
+   "reward": 0.0,
+   "metrics": null,
+   "submission": null,
+   "episode_metrics": {},
+   "ok": false,
+   "errors": [
+    {
+     "type": "ProviderError",
+     "message": "upstream 400: {\"error\":{\"message\":\"Expecting ',' delimiter: line 1 column 20 (char 19) None\",\"type\":\"BadRequestError\",\"param\":null,\"code\":400}}",
+     "status_code": 400
+    }
+   ],
+   "input_tokens": 1807,
+   "output_tokens": 24,
+   "total_tokens": 1831,
+   "unique_input_tokens": 1807,
+   "unique_total_tokens": 1831,
+   "budget": 40
+  },
+  {
+   "gt_id": 7308,
+   "n_pred": 0,
+   "reward": 0.0,
+   "metrics": null,
+   "submission": null,
+   "episode_metrics": {},
+   "ok": false,
+   "errors": [
+    {
+     "type": "ProviderError",
+     "message": "upstream 400: {\"error\":{\"message\":\"Expecting ',' delimiter: line 1 column 20 (char 19) None\",\"type\":\"BadRequestError\",\"param\":null,\"code\":400}}",
+     "status_code": 400
+    }
+   ],
+   "input_tokens": 1807,
+   "output_tokens": 24,
+   "total_tokens": 1831,
+   "unique_input_tokens": 1807,
+   "unique_total_tokens": 1831,
+   "budget": 40
+  },
+  {
+   "gt_id": 7237,
+   "n_pred": 0,
+   "reward": 0.0,
+   "metrics": null,
+   "submission": null,
+   "episode_metrics": {},
+   "ok": false,
+   "errors": [
+    {
+     "type": "HarnessError",
+     "message": "harness 'null' exited 1: ntil_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/asyncio/base_events.py\", line 687, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/root/.cache/verifiers/runtimes/scripts/4943eb86cb750889dcc155b7efa96b3ac9c373138d4e1e57207205a6f66df79b.py\", line 983, in main\n    await run_chat_loop(args, compactor, messages, dispatch, servers, tool_client)\n  File \"/root/.cache/verifiers/runtimes/scripts/4943eb86cb750889dcc155b7efa96b3ac9c373138d4e1e57207205a6f66df79b.py\", line 831, in run_chat_loop\n    completion, messages = await compactor.complete(messages)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/.cache/verifiers/runtimes/scripts/4943eb86cb750889dcc155b7efa96b3ac9c373138d4e1e57207205a6f66df79b.py\", line 387, in complete\n    completion = await chat(self.client, self.model, messages, self.tools)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/.cache/verifiers/runtimes/scripts/4943eb86cb750889dcc155b7efa96b3ac9c373138d4e1e57207205a6f66df79b.py\", line 744, in chat\n    raw_stream = await client.chat.completions.create(\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py\", line 2907, in create\n    return await self._post(\n           ^^^^^^^^^^^^^^^^^\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/openai/_base_client.py\", line 1992, in post\n    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/openai/_base_client.py\", line 1777, in request\n    raise self._make_status_error_from_response(err.response) from None\nopenai.InternalServerError: 500 Internal Server Error\n\nServer got itself in trouble",
+     "traceback": "Traceback (most recent call last):\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/verifiers/v1/rollout.py\", line 441, in step\n    await self._harness_session.turn(messages)\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/verifiers/v1/harness.py\", line 358, in turn\n    await self.harness._check_result(self.trace, self.runtime, result)\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/verifiers/v1/harness.py\", line 191, in _check_result\n    raise HarnessError(\nverifiers.v1.errors.HarnessError: harness 'null' exited 1: ntil_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/asyncio/base_events.py\", line 687, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/root/.cache/verifiers/runtimes/scripts/4943eb86cb750889dcc155b7efa96b3ac9c373138d4e1e57207205a6f66df79b.py\", line 983, in main\n    await run_chat_loop(args, compactor, messages, dispatch, servers, tool_client)\n  File \"/root/.cache/verifiers/runtimes/scripts/4943eb86cb750889dcc155b7efa96b3ac9c373138d4e1e57207205a6f66df79b.py\", line 831, in run_chat_loop\n    completion, messages = await compactor.complete(messages)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/.cache/verifiers/runtimes/scripts/4943eb86cb750889dcc155b7efa96b3ac9c373138d4e1e57207205a6f66df79b.py\", line 387, in complete\n    completion = await chat(self.client, self.model, messages, self.tools)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/.cache/verifiers/runtimes/scripts/4943eb86cb750889dcc155b7efa96b3ac9c373138d4e1e57207205a6f66df79b.py\", line 744, in chat\n    raw_stream = await client.chat.completions.create(\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py\", line 2907, in create\n    return await self._post(\n           ^^^^^^^^^^^^^^^^^\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/openai/_base_client.py\", line 1992, in post\n    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/openai/_base_client.py\", line 1777, in request\n    raise self._make_status_error_from_response(err.response) from None\nopenai.InternalServerError: 500 Internal Server Error\n\nServer got itself in trouble\n"
+    }
+   ],
+   "input_tokens": 6245,
+   "output_tokens": 82,
+   "total_tokens": 6327,
+   "unique_input_tokens": 2271,
+   "unique_total_tokens": 2353,
+   "budget": 40
+  },
+  {
+   "gt_id": 7066,
+   "n_pred": 0,
+   "reward": 0.0,
+   "metrics": null,
+   "submission": null,
+   "episode_metrics": {},
+   "ok": false,
+   "errors": [
+    {
+     "type": "HarnessError",
+     "message": "harness 'null' exited 1: ntil_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/asyncio/base_events.py\", line 687, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/root/.cache/verifiers/runtimes/scripts/4943eb86cb750889dcc155b7efa96b3ac9c373138d4e1e57207205a6f66df79b.py\", line 983, in main\n    await run_chat_loop(args, compactor, messages, dispatch, servers, tool_client)\n  File \"/root/.cache/verifiers/runtimes/scripts/4943eb86cb750889dcc155b7efa96b3ac9c373138d4e1e57207205a6f66df79b.py\", line 831, in run_chat_loop\n    completion, messages = await compactor.complete(messages)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/.cache/verifiers/runtimes/scripts/4943eb86cb750889dcc155b7efa96b3ac9c373138d4e1e57207205a6f66df79b.py\", line 387, in complete\n    completion = await chat(self.client, self.model, messages, self.tools)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/.cache/verifiers/runtimes/scripts/4943eb86cb750889dcc155b7efa96b3ac9c373138d4e1e57207205a6f66df79b.py\", line 744, in chat\n    raw_stream = await client.chat.completions.create(\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py\", line 2907, in create\n    return await self._post(\n           ^^^^^^^^^^^^^^^^^\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/openai/_base_client.py\", line 1992, in post\n    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/openai/_base_client.py\", line 1777, in request\n    raise self._make_status_error_from_response(err.response) from None\nopenai.InternalServerError: 500 Internal Server Error\n\nServer got itself in trouble",
+     "traceback": "Traceback (most recent call last):\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/verifiers/v1/rollout.py\", line 441, in step\n    await self._harness_session.turn(messages)\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/verifiers/v1/harness.py\", line 358, in turn\n    await self.harness._check_result(self.trace, self.runtime, result)\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/verifiers/v1/harness.py\", line 191, in _check_result\n    raise HarnessError(\nverifiers.v1.errors.HarnessError: harness 'null' exited 1: ntil_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/asyncio/base_events.py\", line 687, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/root/.cache/verifiers/runtimes/scripts/4943eb86cb750889dcc155b7efa96b3ac9c373138d4e1e57207205a6f66df79b.py\", line 983, in main\n    await run_chat_loop(args, compactor, messages, dispatch, servers, tool_client)\n  File \"/root/.cache/verifiers/runtimes/scripts/4943eb86cb750889dcc155b7efa96b3ac9c373138d4e1e57207205a6f66df79b.py\", line 831, in run_chat_loop\n    completion, messages = await compactor.complete(messages)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/.cache/verifiers/runtimes/scripts/4943eb86cb750889dcc155b7efa96b3ac9c373138d4e1e57207205a6f66df79b.py\", line 387, in complete\n    completion = await chat(self.client, self.model, messages, self.tools)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/.cache/verifiers/runtimes/scripts/4943eb86cb750889dcc155b7efa96b3ac9c373138d4e1e57207205a6f66df79b.py\", line 744, in chat\n    raw_stream = await client.chat.completions.create(\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py\", line 2907, in create\n    return await self._post(\n           ^^^^^^^^^^^^^^^^^\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/openai/_base_client.py\", line 1992, in post\n    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/synthetic-hospital-rl/.venv/lib/python3.12/site-packages/openai/_base_client.py\", line 1777, in request\n    raise self._make_status_error_from_response(err.response) from None\nopenai.InternalServerError: 500 Internal Server Error\n\nServer got itself in trouble\n"
+    }
+   ],
+   "input_tokens": 11343,
+   "output_tokens": 114,
+   "total_tokens": 11457,
+   "unique_input_tokens": 3493,
+   "unique_total_tokens": 3607,
+   "budget": 40
+  },
+  {
+   "gt_id": 7183,
+   "n_pred": 1,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 0,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "A54.0",
+      "name": "Secondary syphilis",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": []
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 1.0,
+    "actions": 7.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 20487,
+   "output_tokens": 290,
+   "total_tokens": 20777,
+   "unique_input_tokens": 2924,
+   "unique_total_tokens": 3214,
+   "budget": 40
+  },
+  {
+   "gt_id": 7236,
+   "n_pred": 0,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 0,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 0,
+    "n_tier_c": 1
+   },
+   "submission": {
+    "active_diagnoses": [],
+    "chronic_conditions": []
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 1.0,
+    "actions": 8.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 0.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 22794,
+   "output_tokens": 389,
+   "total_tokens": 23183,
+   "unique_input_tokens": 2744,
+   "unique_total_tokens": 3133,
+   "budget": 40
+  },
+  {
+   "gt_id": 7259,
+   "n_pred": 1,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 0,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [],
+    "chronic_conditions": [
+     {
+      "icd10": "Z79.81",
+      "name": "Use of oral contraceptives",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 1.0,
+    "actions": 7.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 22787,
+   "output_tokens": 404,
+   "total_tokens": 23191,
+   "unique_input_tokens": 3446,
+   "unique_total_tokens": 3850,
+   "budget": 40
+  },
+  {
+   "gt_id": 7457,
+   "n_pred": 2,
+   "reward": 0.6666666666666666,
+   "metrics": {
+    "problem_list_recall": 1.0,
+    "problem_list_precision": 0.5,
+    "problem_list_f1": 0.6666666666666666,
+    "weighted_problem_list_recall": 1.0,
+    "weighted_problem_list_f1": 0.6666666666666666,
+    "problem_list_precision_neutral": 0.5,
+    "problem_list_f1_neutral": 0.6666666666666666,
+    "weighted_problem_list_f1_neutral": 0.6666666666666666,
+    "n_neutral_predictions": 0,
+    "icd10_specificity_score": 0.75,
+    "acuity_accuracy": 1.0,
+    "acuity_confusion_matrix": {
+     "acute:acute": 1
+    },
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "N20.9",
+      "name": "Unspecified nephrolithiasis",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 1.0,
+    "actions": 10.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.5,
+    "weighted_problem_list_recall": 1.0,
+    "problem_list_recall": 1.0,
+    "acuity_accuracy": 1.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 30017,
+   "output_tokens": 456,
+   "total_tokens": 30473,
+   "unique_input_tokens": 3024,
+   "unique_total_tokens": 3480,
+   "budget": 40
+  },
+  {
+   "gt_id": 7210,
+   "n_pred": 2,
+   "reward": 0.4,
+   "metrics": {
+    "problem_list_recall": 0.3333333333333333,
+    "problem_list_precision": 0.5,
+    "problem_list_f1": 0.4,
+    "weighted_problem_list_recall": 0.3333333333333333,
+    "weighted_problem_list_f1": 0.4,
+    "problem_list_precision_neutral": 0.5,
+    "problem_list_f1_neutral": 0.4,
+    "weighted_problem_list_f1_neutral": 0.4,
+    "n_neutral_predictions": 0,
+    "icd10_specificity_score": 0.75,
+    "acuity_accuracy": 1.0,
+    "acuity_confusion_matrix": {
+     "acute:acute": 1
+    },
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "J10.9",
+      "name": "Influenza, unspecified",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "J86.9",
+      "name": "Pneumonia, unspecified",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": []
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 1.0,
+    "actions": 9.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.5,
+    "weighted_problem_list_recall": 0.3333333333333333,
+    "problem_list_recall": 0.3333333333333333,
+    "acuity_accuracy": 1.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 29429,
+   "output_tokens": 510,
+   "total_tokens": 29939,
+   "unique_input_tokens": 3415,
+   "unique_total_tokens": 3925,
+   "budget": 40
+  },
+  {
+   "gt_id": 7486,
+   "n_pred": 1,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 0,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [],
+    "chronic_conditions": [
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 1.0,
+    "actions": 7.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 32056,
+   "output_tokens": 538,
+   "total_tokens": 32594,
+   "unique_input_tokens": 3637,
+   "unique_total_tokens": 4175,
+   "budget": 40
+  },
+  {
+   "gt_id": 7463,
+   "n_pred": 2,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 0,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "D53.9",
+      "name": "Vitamin D deficiency",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "E86.0",
+      "name": "Hypoparathyroidism",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 1.0,
+    "actions": 11.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 31283,
+   "output_tokens": 658,
+   "total_tokens": 31941,
+   "unique_input_tokens": 2746,
+   "unique_total_tokens": 3404,
+   "budget": 40
+  },
+  {
+   "gt_id": 7493,
+   "n_pred": 5,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 0,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "I35.9",
+      "name": "Pericardial effusion",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "I21.01",
+      "name": "STEMI involving LAD",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "E88.0",
+      "name": "Obesity (BMI 32)",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "R07.1",
+      "name": "Seasonal allergic rhinitis",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 1.0,
+    "actions": 8.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 30258,
+   "output_tokens": 643,
+   "total_tokens": 30901,
+   "unique_input_tokens": 3935,
+   "unique_total_tokens": 4578,
+   "budget": 40
+  },
+  {
+   "gt_id": 7302,
+   "n_pred": 6,
+   "reward": 0.5,
+   "metrics": {
+    "problem_list_recall": 1.0,
+    "problem_list_precision": 0.16666666666666666,
+    "problem_list_f1": 0.2857142857142857,
+    "weighted_problem_list_recall": 1.0,
+    "weighted_problem_list_f1": 0.2857142857142857,
+    "problem_list_precision_neutral": 0.3333333333333333,
+    "problem_list_f1_neutral": 0.5,
+    "weighted_problem_list_f1_neutral": 0.5,
+    "n_neutral_predictions": 3,
+    "icd10_specificity_score": 0.75,
+    "acuity_accuracy": 1.0,
+    "acuity_confusion_matrix": {
+     "acute:acute": 1
+    },
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "K22.0",
+      "name": "Esophageal rupture with pleural effusion",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "I21.01",
+      "name": "STEMI involving LAD",
+      "acuity": "acute_on_chronic"
+     },
+     {
+      "icd10": "R07.9",
+      "name": "Chest pain, unspecified",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "K21.9",
+      "name": "Gastroesophageal reflux disease (GERD)",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "E66.9",
+      "name": "Obesity (class I)",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 1.0,
+    "actions": 7.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.3333333333333333,
+    "weighted_problem_list_recall": 1.0,
+    "problem_list_recall": 1.0,
+    "acuity_accuracy": 1.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 33798,
+   "output_tokens": 749,
+   "total_tokens": 34547,
+   "unique_input_tokens": 5849,
+   "unique_total_tokens": 6598,
+   "budget": 40
+  },
+  {
+   "gt_id": 7206,
+   "n_pred": 3,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 0,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "T38.0X1A",
+      "name": "Anesthetic medication reaction, initial encounter",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "M00.0",
+      "name": "Fever of unknown origin",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "J40.9",
+      "name": "Asthma, unspecified",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 1.0,
+    "actions": 9.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 40265,
+   "output_tokens": 837,
+   "total_tokens": 41102,
+   "unique_input_tokens": 6439,
+   "unique_total_tokens": 7276,
+   "budget": 40
+  },
+  {
+   "gt_id": 7485,
+   "n_pred": 4,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 1,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "R06.0",
+      "name": "Scleral icterus",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "E88.0",
+      "name": "Autosomal dominant polycystic kidney disease",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "R90.0",
+      "name": "Seasonal allergic rhinitis",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 1.0,
+    "actions": 9.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 33045,
+   "output_tokens": 867,
+   "total_tokens": 33912,
+   "unique_input_tokens": 3950,
+   "unique_total_tokens": 4817,
+   "budget": 40
+  },
+  {
+   "gt_id": 7539,
+   "n_pred": 8,
+   "reward": 0.3243243243243243,
+   "metrics": {
+    "problem_list_recall": 0.3333333333333333,
+    "problem_list_precision": 0.25,
+    "problem_list_f1": 0.28571428571428575,
+    "weighted_problem_list_recall": 0.2727272727272727,
+    "weighted_problem_list_f1": 0.2608695652173913,
+    "problem_list_precision_neutral": 0.4,
+    "problem_list_f1_neutral": 0.3636363636363636,
+    "weighted_problem_list_f1_neutral": 0.3243243243243243,
+    "n_neutral_predictions": 3,
+    "icd10_specificity_score": 0.8,
+    "acuity_accuracy": 1.0,
+    "acuity_confusion_matrix": {
+     "chronic:chronic": 2
+    },
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "R00.0",
+      "name": "Palpitations",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "R01.9",
+      "name": "Lightheadedness",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "E11.9",
+      "name": "Type 2 Diabetes Mellitus without specification",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "E78.0",
+      "name": "Hyperlipidemia",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "C67.1",
+      "name": "Prostate cancer, status post radical prostatectomy with biochemical recurrence",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G31.9",
+      "name": "Vascular dementia, unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "I69.3",
+      "name": "History of ischemic stroke",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 1.0,
+    "actions": 7.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.4,
+    "weighted_problem_list_recall": 0.2727272727272727,
+    "problem_list_recall": 0.3333333333333333,
+    "acuity_accuracy": 1.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 25659,
+   "output_tokens": 985,
+   "total_tokens": 26644,
+   "unique_input_tokens": 4306,
+   "unique_total_tokens": 5291,
+   "budget": 40
+  },
+  {
+   "gt_id": 7025,
+   "n_pred": 3,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 2,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "I13.9",
+      "name": "Hypertensive crisis with evidence of end-organ damage",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "G60.0",
+      "name": "Myasthenia gravis",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 1.0,
+    "actions": 7.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 29964,
+   "output_tokens": 970,
+   "total_tokens": 30934,
+   "unique_input_tokens": 4182,
+   "unique_total_tokens": 5152,
+   "budget": 40
+  },
+  {
+   "gt_id": 7011,
+   "n_pred": 10,
+   "reward": 0.23076923076923075,
+   "metrics": {
+    "problem_list_recall": 0.3333333333333333,
+    "problem_list_precision": 0.2,
+    "problem_list_f1": 0.25,
+    "weighted_problem_list_recall": 0.2727272727272727,
+    "weighted_problem_list_f1": 0.23076923076923075,
+    "problem_list_precision_neutral": 0.2,
+    "problem_list_f1_neutral": 0.25,
+    "weighted_problem_list_f1_neutral": 0.23076923076923075,
+    "n_neutral_predictions": 0,
+    "icd10_specificity_score": 0.8,
+    "acuity_accuracy": 0.5,
+    "acuity_confusion_matrix": {
+     "chronic:chronic": 1,
+     "acute:chronic": 1
+    },
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "M32.9",
+      "name": "Lupus nephritis",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "I95.9",
+      "name": "Acute kidney injury",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "D64.9",
+      "name": "Anemia",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "D70.0",
+      "name": "Thrombocytopenia",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "I95.9",
+      "name": "Acute kidney injury",
+      "acuity": "acute_on_chronic"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "M32.9",
+      "name": "Lupus nephritis",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "M00.0",
+      "name": "Systemic lupus erythematosus",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "D64.9",
+      "name": "Anemia",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "D70.0",
+      "name": "Thrombocytopenia",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "D50.9",
+      "name": "Photosensitivity",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 1.0,
+    "actions": 8.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.2,
+    "weighted_problem_list_recall": 0.2727272727272727,
+    "problem_list_recall": 0.3333333333333333,
+    "acuity_accuracy": 0.5,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 43972,
+   "output_tokens": 1043,
+   "total_tokens": 45015,
+   "unique_input_tokens": 8010,
+   "unique_total_tokens": 9053,
+   "budget": 40
+  },
+  {
+   "gt_id": 7015,
+   "n_pred": 2,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 1,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [],
+    "chronic_conditions": [
+     {
+      "icd10": "D64.0",
+      "name": "Iron deficiency anemia",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "N70.0",
+      "name": "Obesity (BMI 34)",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 1.0,
+    "actions": 9.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 36706,
+   "output_tokens": 1179,
+   "total_tokens": 37885,
+   "unique_input_tokens": 3444,
+   "unique_total_tokens": 4623,
+   "budget": 40
+  },
+  {
+   "gt_id": 7595,
+   "n_pred": 12,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 1,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "E11.9",
+      "name": "Essential hypertension",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "R11.20",
+      "name": "Orthostatic hypotension",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "N18.9",
+      "name": "Spigelian hernia",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "R11.10",
+      "name": "Dizziness",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "R11.30",
+      "name": "Palpitations",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "R11.40",
+      "name": "Blurred vision",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "N20.9",
+      "name": "Acute renal failure",
+      "acuity": "acute_on_chronic"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "D64.9",
+      "name": "Schizophrenia, unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "D08.0",
+      "name": "Benign prostatic hyperplasia",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "E11.9",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "M25.9",
+      "name": "Osteoarthritis, unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "D26.9",
+      "name": "Primary adrenal insufficiency (Addison disease)",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 1.0,
+    "actions": 8.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 47216,
+   "output_tokens": 1239,
+   "total_tokens": 48455,
+   "unique_input_tokens": 7992,
+   "unique_total_tokens": 9231,
+   "budget": 40
+  },
+  {
+   "gt_id": 7397,
+   "n_pred": 4,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 2,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [],
+    "chronic_conditions": [
+     {
+      "icd10": "K85.1",
+      "name": "Chronic calcific pancreatitis with exocrine insufficiency",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "E66.0",
+      "name": "Severe protein-calorie malnutrition with multiple micronutrient deficiencies",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G61.0",
+      "name": "Alcoholic peripheral sensory-motor polyneuropathy",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "D50.0",
+      "name": "Acquired sideroblastic anemia (alcohol-related)",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 0.0,
+    "actions": 8.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 42582,
+   "output_tokens": 1402,
+   "total_tokens": 43984,
+   "unique_input_tokens": 6366,
+   "unique_total_tokens": 7768,
+   "budget": 40
+  },
+  {
+   "gt_id": 7422,
+   "n_pred": 3,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 0,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "A54.0",
+      "name": "Acquired methemoglobinemia",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "G00.9",
+      "name": "HIV infection, unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G00.4",
+      "name": "Primary central nervous system lymphoma",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 1.0,
+    "actions": 7.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 49847,
+   "output_tokens": 1332,
+   "total_tokens": 51179,
+   "unique_input_tokens": 7984,
+   "unique_total_tokens": 9316,
+   "budget": 40
+  },
+  {
+   "gt_id": 7604,
+   "n_pred": 6,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 4,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "I21.01",
+      "name": "STEMI involving LAD",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "I21.01",
+      "name": "STEMI involving LAD",
+      "acuity": "acute_on_chronic"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "I13.9",
+      "name": "Congestive heart failure, unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "E78.0",
+      "name": "Hyperlipidemia",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "M16.0",
+      "name": "Osteoarthritis, unspecified",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 1.0,
+    "actions": 10.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 53104,
+   "output_tokens": 1398,
+   "total_tokens": 54502,
+   "unique_input_tokens": 6746,
+   "unique_total_tokens": 8144,
+   "budget": 40
+  },
+  {
+   "gt_id": 7476,
+   "n_pred": 6,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 1,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "D68.9",
+      "name": "Hepatitis C virus reinfection",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "D68.0",
+      "name": "Chronic hepatitis C",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "F90.3",
+      "name": "Opioid use disorder, sustained remission",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "F43.3",
+      "name": "Post-traumatic stress disorder",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "E03.0",
+      "name": "Hypothyroidism",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 3.0,
+    "actions": 7.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 45870,
+   "output_tokens": 1327,
+   "total_tokens": 47197,
+   "unique_input_tokens": 5470,
+   "unique_total_tokens": 6797,
+   "budget": 40
+  },
+  {
+   "gt_id": 7592,
+   "n_pred": 6,
+   "reward": 0.16666666666666666,
+   "metrics": {
+    "problem_list_recall": 0.125,
+    "problem_list_precision": 0.16666666666666666,
+    "problem_list_f1": 0.14285714285714288,
+    "weighted_problem_list_recall": 0.1111111111111111,
+    "weighted_problem_list_f1": 0.13333333333333333,
+    "problem_list_precision_neutral": 0.3333333333333333,
+    "problem_list_f1_neutral": 0.18181818181818182,
+    "weighted_problem_list_f1_neutral": 0.16666666666666666,
+    "n_neutral_predictions": 3,
+    "icd10_specificity_score": 0.6,
+    "acuity_accuracy": 1.0,
+    "acuity_confusion_matrix": {
+     "chronic:chronic": 1
+    },
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "I69.309",
+      "name": "Acute ischemic stroke, unspecified site",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "G92.3",
+      "name": "Chorea",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "I69.319",
+      "name": "Central retinal artery occlusion, unspecified",
+      "acuity": "acute_on_chronic"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "I48.9",
+      "name": "Atrial fibrillation, unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "D83.9",
+      "name": "Polycythemia vera",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 2.0,
+    "actions": 9.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.3333333333333333,
+    "weighted_problem_list_recall": 0.1111111111111111,
+    "problem_list_recall": 0.125,
+    "acuity_accuracy": 1.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 81621,
+   "output_tokens": 1393,
+   "total_tokens": 83014,
+   "unique_input_tokens": 8957,
+   "unique_total_tokens": 10350,
+   "budget": 40
+  },
+  {
+   "gt_id": 7076,
+   "n_pred": 4,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 2,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "I95.9",
+      "name": "Acute respiratory distress syndrome (ARDS), unspecified",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "J45.90",
+      "name": "Asthma, unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "Z73.89",
+      "name": "Tobacco use disorder",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 4.0,
+    "actions": 8.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 55935,
+   "output_tokens": 1369,
+   "total_tokens": 57304,
+   "unique_input_tokens": 5323,
+   "unique_total_tokens": 6692,
+   "budget": 40
+  },
+  {
+   "gt_id": 7367,
+   "n_pred": 6,
+   "reward": 0.3478260869565218,
+   "metrics": {
+    "problem_list_recall": 0.25,
+    "problem_list_precision": 0.3333333333333333,
+    "problem_list_f1": 0.28571428571428575,
+    "weighted_problem_list_recall": 0.26666666666666666,
+    "weighted_problem_list_f1": 0.2962962962962963,
+    "problem_list_precision_neutral": 0.5,
+    "problem_list_f1_neutral": 0.3333333333333333,
+    "weighted_problem_list_f1_neutral": 0.3478260869565218,
+    "n_neutral_predictions": 2,
+    "icd10_specificity_score": 1.0,
+    "acuity_accuracy": 0.5,
+    "acuity_confusion_matrix": {
+     "chronic:chronic": 1,
+     "chronic:acute_on_chronic": 1
+    },
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "I48.9",
+      "name": "Atrial fibrillation",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "C18.3",
+      "name": "Stage IV colorectal adenocarcinoma",
+      "acuity": "acute_on_chronic"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "I25.10",
+      "name": "Coronary artery disease with stable angina",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G20.9",
+      "name": "Essential tremor",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "C99.1",
+      "name": "Chronic myeloid leukemia (BCR-ABL positive)",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 1.0,
+    "actions": 7.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.5,
+    "weighted_problem_list_recall": 0.26666666666666666,
+    "problem_list_recall": 0.25,
+    "acuity_accuracy": 0.5,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 36028,
+   "output_tokens": 1502,
+   "total_tokens": 37530,
+   "unique_input_tokens": 5594,
+   "unique_total_tokens": 7096,
+   "budget": 40
+  },
+  {
+   "gt_id": 7583,
+   "n_pred": 5,
+   "reward": 0.16666666666666666,
+   "metrics": {
+    "problem_list_recall": 0.25,
+    "problem_list_precision": 0.2,
+    "problem_list_f1": 0.22222222222222224,
+    "weighted_problem_list_recall": 0.1111111111111111,
+    "weighted_problem_list_f1": 0.14285714285714285,
+    "problem_list_precision_neutral": 0.3333333333333333,
+    "problem_list_f1_neutral": 0.28571428571428575,
+    "weighted_problem_list_f1_neutral": 0.16666666666666666,
+    "n_neutral_predictions": 2,
+    "icd10_specificity_score": 1.0,
+    "acuity_accuracy": 1.0,
+    "acuity_confusion_matrix": {
+     "chronic:chronic": 1
+    },
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "I71.2",
+      "name": "Status post Type A aortic dissection with cardiac tamponade",
+      "acuity": "acute_on_chronic"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "E78.5",
+      "name": "Hyperlipidemia",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "C34.31",
+      "name": "Stage IIIB Non-Small Cell Lung Cancer (adenocarcinoma)",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "R00.9",
+      "name": "First-degree atrioventricular block",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 3.0,
+    "actions": 7.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.3333333333333333,
+    "weighted_problem_list_recall": 0.1111111111111111,
+    "problem_list_recall": 0.25,
+    "acuity_accuracy": 1.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 40284,
+   "output_tokens": 1805,
+   "total_tokens": 42089,
+   "unique_input_tokens": 4306,
+   "unique_total_tokens": 6111,
+   "budget": 40
+  },
+  {
+   "gt_id": 7545,
+   "n_pred": 4,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 3,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "I21.01",
+      "name": "STEMI involving LAD",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "J18.9",
+      "name": "Status post right lower lobe pneumonia",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "J44.9",
+      "name": "Chronic obstructive pulmonary disease (COPD), severe (GOLD Group D)",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 1.0,
+    "actions": 7.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 29487,
+   "output_tokens": 1912,
+   "total_tokens": 31399,
+   "unique_input_tokens": 5038,
+   "unique_total_tokens": 6950,
+   "budget": 40
+  },
+  {
+   "gt_id": 7255,
+   "n_pred": 1,
+   "reward": 1.0,
+   "metrics": {
+    "problem_list_recall": 1.0,
+    "problem_list_precision": 1.0,
+    "problem_list_f1": 1.0,
+    "weighted_problem_list_recall": 1.0,
+    "weighted_problem_list_f1": 1.0,
+    "problem_list_precision_neutral": 1.0,
+    "problem_list_f1_neutral": 1.0,
+    "weighted_problem_list_f1_neutral": 1.0,
+    "n_neutral_predictions": 0,
+    "icd10_specificity_score": 0.6,
+    "acuity_accuracy": 1.0,
+    "acuity_confusion_matrix": {
+     "chronic:chronic": 1
+    },
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "F40.2",
+      "name": "Social anxiety disorder (performance type)",
+      "acuity": "chronic"
+     }
+    ],
+    "chronic_conditions": []
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 1.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 1.0,
+    "nudges": 34.0,
+    "actions": 6.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 1.0,
+    "weighted_problem_list_recall": 1.0,
+    "problem_list_recall": 1.0,
+    "acuity_accuracy": 1.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 168450,
+   "output_tokens": 2256,
+   "total_tokens": 170706,
+   "unique_input_tokens": 3893,
+   "unique_total_tokens": 6149,
+   "budget": 40
+  },
+  {
+   "gt_id": 7176,
+   "n_pred": 1,
+   "reward": 0.6666666666666666,
+   "metrics": {
+    "problem_list_recall": 0.5,
+    "problem_list_precision": 1.0,
+    "problem_list_f1": 0.6666666666666666,
+    "weighted_problem_list_recall": 0.5,
+    "weighted_problem_list_f1": 0.6666666666666666,
+    "problem_list_precision_neutral": 1.0,
+    "problem_list_f1_neutral": 0.6666666666666666,
+    "weighted_problem_list_f1_neutral": 0.6666666666666666,
+    "n_neutral_predictions": 0,
+    "icd10_specificity_score": 0.8,
+    "acuity_accuracy": 1.0,
+    "acuity_confusion_matrix": {
+     "acute:acute": 1
+    },
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "N30.0",
+      "name": "Uncomplicated cystitis",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": []
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 1.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 1.0,
+    "nudges": 33.0,
+    "actions": 7.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 1.0,
+    "weighted_problem_list_recall": 0.5,
+    "problem_list_recall": 0.5,
+    "acuity_accuracy": 1.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 228233,
+   "output_tokens": 2412,
+   "total_tokens": 230645,
+   "unique_input_tokens": 5361,
+   "unique_total_tokens": 7773,
+   "budget": 40
+  },
+  {
+   "gt_id": 7398,
+   "n_pred": 10,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 6,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "K25.9",
+      "name": "Peptic ulcer disease",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "R07.9",
+      "name": "Hematemesis, unspecified",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "R06.0",
+      "name": "Melena, unspecified",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "R07.9",
+      "name": "Hematemesis, unspecified",
+      "acuity": "acute_on_chronic"
+     },
+     {
+      "icd10": "R06.0",
+      "name": "Melena, unspecified",
+      "acuity": "acute_on_chronic"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "E78.0",
+      "name": "Hyperlipidemia",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "N18.3",
+      "name": "Chronic kidney disease, status post renal transplantation",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "J44.9",
+      "name": "Chronic obstructive pulmonary disease",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "M16.1",
+      "name": "Osteoarthritis of the knees",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 1.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 1.0,
+    "nudges": 31.0,
+    "actions": 9.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 273438,
+   "output_tokens": 2871,
+   "total_tokens": 276309,
+   "unique_input_tokens": 6444,
+   "unique_total_tokens": 9315,
+   "budget": 40
+  },
+  {
+   "gt_id": 7077,
+   "n_pred": 10,
+   "reward": 0.11764705882352941,
+   "metrics": {
+    "problem_list_recall": 0.2,
+    "problem_list_precision": 0.1,
+    "problem_list_f1": 0.13333333333333333,
+    "weighted_problem_list_recall": 0.125,
+    "weighted_problem_list_f1": 0.11111111111111112,
+    "problem_list_precision_neutral": 0.1111111111111111,
+    "problem_list_f1_neutral": 0.14285714285714285,
+    "weighted_problem_list_f1_neutral": 0.11764705882352941,
+    "n_neutral_predictions": 1,
+    "icd10_specificity_score": 1.0,
+    "acuity_accuracy": 1.0,
+    "acuity_confusion_matrix": {
+     "chronic:chronic": 1
+    },
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "G47.309",
+      "name": "Trigeminal neuralgia, unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G47.31",
+      "name": "Trigeminal neuralgia, right side",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G47.32",
+      "name": "Trigeminal neuralgia, left side",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G47.33",
+      "name": "Trigeminal neuralgia, bilateral",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G47.34",
+      "name": "Trigeminal neuralgia, unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G47.35",
+      "name": "Trigeminal neuralgia, unspecified",
+      "acuity": "chronic"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "G00.9",
+      "name": "Multiple sclerosis, unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "D55.9",
+      "name": "Hashimoto's thyroiditis, unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "J45.909",
+      "name": "Asthma, unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "F32.6",
+      "name": "Major depressive disorder, recurrent, moderate",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 1.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 1.0,
+    "nudges": 32.0,
+    "actions": 8.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.1111111111111111,
+    "weighted_problem_list_recall": 0.125,
+    "problem_list_recall": 0.2,
+    "acuity_accuracy": 1.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 285462,
+   "output_tokens": 2782,
+   "total_tokens": 288244,
+   "unique_input_tokens": 6748,
+   "unique_total_tokens": 9530,
+   "budget": 40
+  },
+  {
+   "gt_id": 7510,
+   "n_pred": 3,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 0,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "A41.9",
+      "name": "Pasteurellosis, unspecified",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "D02.9",
+      "name": "Hypothyroidism",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 1.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 1.0,
+    "nudges": 31.0,
+    "actions": 9.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 259568,
+   "output_tokens": 4611,
+   "total_tokens": 264179,
+   "unique_input_tokens": 5348,
+   "unique_total_tokens": 9959,
+   "budget": 40
+  },
+  {
+   "gt_id": 7512,
+   "n_pred": 4,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 0,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "G75.0",
+      "name": "Bell's palsy",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "E11.9",
+      "name": "Type 2 diabetes mellitus, unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "D01.9",
+      "name": "Hypothyroidism",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 1.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 1.0,
+    "nudges": 32.0,
+    "actions": 8.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 292171,
+   "output_tokens": 6015,
+   "total_tokens": 298186,
+   "unique_input_tokens": 5577,
+   "unique_total_tokens": 11592,
+   "budget": 40
+  },
+  {
+   "gt_id": 7584,
+   "n_pred": 5,
+   "reward": 0.4,
+   "metrics": {
+    "problem_list_recall": 0.3333333333333333,
+    "problem_list_precision": 0.2,
+    "problem_list_f1": 0.25,
+    "weighted_problem_list_recall": 0.3333333333333333,
+    "weighted_problem_list_f1": 0.25,
+    "problem_list_precision_neutral": 0.5,
+    "problem_list_f1_neutral": 0.4,
+    "weighted_problem_list_f1_neutral": 0.4,
+    "n_neutral_predictions": 3,
+    "icd10_specificity_score": 0.8,
+    "acuity_accuracy": 1.0,
+    "acuity_confusion_matrix": {
+     "acute:acute": 1
+    },
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "I21.01",
+      "name": "STEMI involving LAD",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "I25.10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "E78.5",
+      "name": "Hyperlipidemia",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "E11.9",
+      "name": "Type 2 diabetes mellitus without specification",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "E66.01",
+      "name": "Obesity",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 1.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 1.0,
+    "nudges": 31.0,
+    "actions": 9.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.5,
+    "weighted_problem_list_recall": 0.3333333333333333,
+    "problem_list_recall": 0.3333333333333333,
+    "acuity_accuracy": 1.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 308754,
+   "output_tokens": 6595,
+   "total_tokens": 315349,
+   "unique_input_tokens": 5760,
+   "unique_total_tokens": 12355,
+   "budget": 40
+  },
+  {
+   "gt_id": 7418,
+   "n_pred": 5,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 2,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "I34.9",
+      "name": "Infective endocarditis, unspecified",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "Z73.8",
+      "name": "Active opioid use disorder",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "J11.9",
+      "name": "Chronic hepatitis C infection, unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "M54.5",
+      "name": "Degenerative disc disease of the lumbar spine",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "F11.31",
+      "name": "Tobacco use disorder, severe",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 1.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 1.0,
+    "nudges": 32.0,
+    "actions": 8.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 373693,
+   "output_tokens": 7709,
+   "total_tokens": 381402,
+   "unique_input_tokens": 7023,
+   "unique_total_tokens": 14732,
+   "budget": 40
+  },
+  {
+   "gt_id": 7182,
+   "n_pred": 5,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 2,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "D00.9",
+      "name": "Graves' disease",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "E03.9",
+      "name": "Hypothyroidism (post-radioactive iodine ablation)",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "E04.9",
+      "name": "Recurrent thyrotoxicosis",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "D00.9",
+      "name": "Graves' disease",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "E03.9",
+      "name": "Hypothyroidism (post-radioactive iodine ablation)",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 1.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 1.0,
+    "nudges": 32.0,
+    "actions": 8.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 307965,
+   "output_tokens": 7915,
+   "total_tokens": 315880,
+   "unique_input_tokens": 5226,
+   "unique_total_tokens": 13141,
+   "budget": 40
+  },
+  {
+   "gt_id": 7087,
+   "n_pred": 6,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 2,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "F32.6",
+      "name": "Major Depressive Disorder, recurrent, severe with psychotic features",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "A54.0",
+      "name": "Genital herpes due to herpes simplex virus type 2",
+      "acuity": "chronic"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "F32.6",
+      "name": "Major Depressive Disorder, recurrent, severe with psychotic features",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "F40.1",
+      "name": "Anorexia Nervosa, restricting type",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "A54.0",
+      "name": "Genital herpes due to herpes simplex virus type 2",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "N18.6",
+      "name": "Chronic kidney disease, stage 3",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 1.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 1.0,
+    "nudges": 31.0,
+    "actions": 9.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 322483,
+   "output_tokens": 7999,
+   "total_tokens": 330482,
+   "unique_input_tokens": 5605,
+   "unique_total_tokens": 13604,
+   "budget": 40
+  },
+  {
+   "gt_id": 7589,
+   "n_pred": 8,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 1,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "I21.01",
+      "name": "STEMI involving LAD",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "I25.11",
+      "name": "Papillary muscle rupture",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "I25.10",
+      "name": "Ventricular septal defect",
+      "acuity": "acute_on_chronic"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "M80.0",
+      "name": "Osteopenia",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G00.1",
+      "name": "Chronic tophaceous gout",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "R11.10",
+      "name": "Chronic idiopathic constipation",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G30.9",
+      "name": "Parkinson disease dementia",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 1.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 1.0,
+    "nudges": 29.0,
+    "actions": 11.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 381615,
+   "output_tokens": 8273,
+   "total_tokens": 389888,
+   "unique_input_tokens": 7883,
+   "unique_total_tokens": 16156,
+   "budget": 40
+  },
+  {
+   "gt_id": 7625,
+   "n_pred": 11,
+   "reward": 0.10810810810810811,
+   "metrics": {
+    "problem_list_recall": 0.125,
+    "problem_list_precision": 0.09090909090909091,
+    "problem_list_f1": 0.10526315789473685,
+    "weighted_problem_list_recall": 0.10526315789473684,
+    "weighted_problem_list_f1": 0.0975609756097561,
+    "problem_list_precision_neutral": 0.1111111111111111,
+    "problem_list_f1_neutral": 0.11764705882352941,
+    "weighted_problem_list_f1_neutral": 0.10810810810810811,
+    "n_neutral_predictions": 2,
+    "icd10_specificity_score": 1.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {
+     "chronic:acute_on_chronic": 1
+    },
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "J44.9",
+      "name": "Chronic obstructive pulmonary disease (COPD) unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "J68.9",
+      "name": "Idiopathic pulmonary fibrosis",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "C34.31",
+      "name": "Stage IIIB non-small cell lung cancer",
+      "acuity": "acute_on_chronic"
+     },
+     {
+      "icd10": "G93.3",
+      "name": "History of ischemic stroke",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G40.3",
+      "name": "Atrioventricular nodal re-entrant tachycardia",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "R79.0",
+      "name": "Syndrome of inappropriate antidiuretic hormone secretion (SIADH)",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "R07.9",
+      "name": "Fever of unknown origin",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "J44.9",
+      "name": "Chronic obstructive pulmonary disease (COPD) unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "J68.9",
+      "name": "Idiopathic pulmonary fibrosis",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G93.3",
+      "name": "History of ischemic stroke",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G40.3",
+      "name": "Atrioventricular nodal re-entrant tachycardia",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 1.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 1.0,
+    "nudges": 32.0,
+    "actions": 8.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.1111111111111111,
+    "weighted_problem_list_recall": 0.10526315789473684,
+    "problem_list_recall": 0.125,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 436154,
+   "output_tokens": 8800,
+   "total_tokens": 444954,
+   "unique_input_tokens": 8289,
+   "unique_total_tokens": 17089,
+   "budget": 40
+  },
+  {
+   "gt_id": 7629,
+   "n_pred": 7,
+   "reward": 0.6666666666666666,
+   "metrics": {
+    "problem_list_recall": 0.5714285714285714,
+    "problem_list_precision": 0.5714285714285714,
+    "problem_list_f1": 0.5714285714285714,
+    "weighted_problem_list_recall": 0.5714285714285714,
+    "weighted_problem_list_f1": 0.5714285714285714,
+    "problem_list_precision_neutral": 0.8,
+    "problem_list_f1_neutral": 0.6666666666666666,
+    "weighted_problem_list_f1_neutral": 0.6666666666666666,
+    "n_neutral_predictions": 2,
+    "icd10_specificity_score": 0.7000000000000001,
+    "acuity_accuracy": 0.75,
+    "acuity_confusion_matrix": {
+     "chronic:chronic": 3,
+     "acute:chronic": 1
+    },
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "I25.10",
+      "name": "Coronary artery disease status post myocardial infarction",
+      "acuity": "acute_on_chronic"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "I50.9",
+      "name": "Ischemic cardiomyopathy with reduced ejection fraction",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "J44.9",
+      "name": "Chronic obstructive pulmonary disease",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "C34.90",
+      "name": "Metastatic prostate adenocarcinoma",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "C66.2",
+      "name": "Urothelial carcinoma of the bladder",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "C34.31",
+      "name": "Small cell lung cancer, right upper lobe",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G70.3",
+      "name": "Lambert-Eaton myasthenic syndrome",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 1.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 1.0,
+    "nudges": 31.0,
+    "actions": 9.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.8,
+    "weighted_problem_list_recall": 0.5714285714285714,
+    "problem_list_recall": 0.5714285714285714,
+    "acuity_accuracy": 0.75,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 336826,
+   "output_tokens": 9424,
+   "total_tokens": 346250,
+   "unique_input_tokens": 5482,
+   "unique_total_tokens": 14906,
+   "budget": 40
+  },
+  {
+   "gt_id": 7458,
+   "n_pred": 6,
+   "reward": 0.25,
+   "metrics": {
+    "problem_list_recall": 0.5,
+    "problem_list_precision": 0.16666666666666666,
+    "problem_list_f1": 0.25,
+    "weighted_problem_list_recall": 0.5,
+    "weighted_problem_list_f1": 0.25,
+    "problem_list_precision_neutral": 0.16666666666666666,
+    "problem_list_f1_neutral": 0.25,
+    "weighted_problem_list_f1_neutral": 0.25,
+    "n_neutral_predictions": 0,
+    "icd10_specificity_score": 0.8,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {
+     "acute:chronic": 1
+    },
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "T36.0X1A",
+      "name": "Organophosphate poisoning",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "R05.2",
+      "name": "Acute onset of confusion",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "J12.9",
+      "name": "Allergic rhinitis, unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "E11.9",
+      "name": "Type 2 diabetes mellitus, unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "A49.00",
+      "name": "Methicillin-resistant Staphylococcus aureus (MRSA) skin and soft tissue infection",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 1.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 1.0,
+    "nudges": 32.0,
+    "actions": 8.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.16666666666666666,
+    "weighted_problem_list_recall": 0.5,
+    "problem_list_recall": 0.5,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 369690,
+   "output_tokens": 9304,
+   "total_tokens": 378994,
+   "unique_input_tokens": 6191,
+   "unique_total_tokens": 15495,
+   "budget": 40
+  },
+  {
+   "gt_id": 7158,
+   "n_pred": 8,
+   "reward": 0.5128205128205129,
+   "metrics": {
+    "problem_list_recall": 0.5,
+    "problem_list_precision": 0.5,
+    "problem_list_f1": 0.5,
+    "weighted_problem_list_recall": 0.4166666666666667,
+    "weighted_problem_list_f1": 0.45454545454545453,
+    "problem_list_precision_neutral": 0.6666666666666666,
+    "problem_list_f1_neutral": 0.5714285714285715,
+    "weighted_problem_list_f1_neutral": 0.5128205128205129,
+    "n_neutral_predictions": 2,
+    "icd10_specificity_score": 0.625,
+    "acuity_accuracy": 0.75,
+    "acuity_confusion_matrix": {
+     "chronic:chronic": 3,
+     "chronic:acute_on_chronic": 1
+    },
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "J45.909",
+      "name": "Asthma, unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "R96.31",
+      "name": "Allergic rhinitis, seasonal",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "F41.30",
+      "name": "Generalized anxiety disorder",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "F42.10",
+      "name": "Obsessive-compulsive disorder",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "M32.10",
+      "name": "Lupus nephritis",
+      "acuity": "acute_on_chronic"
+     },
+     {
+      "icd10": "G43.81",
+      "name": "Migraine without aura",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "L70.0",
+      "name": "Acne vulgaris",
+      "acuity": "chronic"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "M70.0",
+      "name": "Systemic lupus erythematosus",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 1.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 1.0,
+    "nudges": 32.0,
+    "actions": 8.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.6666666666666666,
+    "weighted_problem_list_recall": 0.4166666666666667,
+    "problem_list_recall": 0.5,
+    "acuity_accuracy": 0.75,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 436121,
+   "output_tokens": 11722,
+   "total_tokens": 447843,
+   "unique_input_tokens": 7001,
+   "unique_total_tokens": 18723,
+   "budget": 40
+  },
+  {
+   "gt_id": 7549,
+   "n_pred": 10,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 4,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "E11.9",
+      "name": "Type 2 Diabetes Mellitus without specification",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "R60.0",
+      "name": "Acute confusion",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "R00.1",
+      "name": "Visual hallucinations",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "N30.0",
+      "name": "Urinary retention",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "E86.0",
+      "name": "Hyperkalemia",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "E11.9",
+      "name": "Type 2 Diabetes Mellitus without specification",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "N30.0",
+      "name": "Benign Prostatic Hyperplasia",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "R60.0",
+      "name": "Orthostatic hypotension",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 1.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 1.0,
+    "nudges": 30.0,
+    "actions": 10.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 413810,
+   "output_tokens": 12764,
+   "total_tokens": 426574,
+   "unique_input_tokens": 6319,
+   "unique_total_tokens": 19083,
+   "budget": 40
+  },
+  {
+   "gt_id": 7454,
+   "n_pred": 11,
+   "reward": 0.25,
+   "metrics": {
+    "problem_list_recall": 0.3333333333333333,
+    "problem_list_precision": 0.09090909090909091,
+    "problem_list_f1": 0.14285714285714288,
+    "weighted_problem_list_recall": 0.3333333333333333,
+    "weighted_problem_list_f1": 0.14285714285714288,
+    "problem_list_precision_neutral": 0.2,
+    "problem_list_f1_neutral": 0.25,
+    "weighted_problem_list_f1_neutral": 0.25,
+    "n_neutral_predictions": 6,
+    "icd10_specificity_score": 0.6,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {
+     "acute:acute_on_chronic": 1
+    },
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "F20.9",
+      "name": "Schizophrenia, unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "F32.6",
+      "name": "Major depressive disorder, single episode, moderate",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G20.9",
+      "name": "Tardive dyskinesia",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G24.9",
+      "name": "Medication-induced extrapyramidal symptoms",
+      "acuity": "acute_on_chronic"
+     },
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G24.2",
+      "name": "Oculogyric crisis",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "R50.81",
+      "name": "Hyperthermia",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "F20.9",
+      "name": "Schizophrenia, unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "F32.6",
+      "name": "Major depressive disorder, single episode, moderate",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G20.9",
+      "name": "Tardive dyskinesia",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 1.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 1.0,
+    "nudges": 29.0,
+    "actions": 11.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.2,
+    "weighted_problem_list_recall": 0.3333333333333333,
+    "problem_list_recall": 0.3333333333333333,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 436089,
+   "output_tokens": 14041,
+   "total_tokens": 450130,
+   "unique_input_tokens": 6680,
+   "unique_total_tokens": 20721,
+   "budget": 40
+  },
+  {
+   "gt_id": 7403,
+   "n_pred": 10,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 4,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "A54.0",
+      "name": "Cytomegalovirus esophagitis",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "D63.0",
+      "name": "Agranulocytosis",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "R10.00",
+      "name": "Fever of unknown origin",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "A54.9",
+      "name": "Human immunodeficiency virus infection with AIDS (CD4 count <50 cells/mm\u00b3)",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "F20.6",
+      "name": "Schizophrenia, treatment-refractory",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "F32.6",
+      "name": "Major depressive disorder, recurrent",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "F41.3",
+      "name": "Generalized anxiety disorder",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "F11.3",
+      "name": "Opioid use disorder, severe, in unstable remission",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "P16.0",
+      "name": "History of invasive fungal pneumonia (Pneumocystis jirovecii)",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "A39.0",
+      "name": "History of disseminated Mycobacterium avium complex infection",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 1.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 1.0,
+    "nudges": 31.0,
+    "actions": 9.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 489908,
+   "output_tokens": 14946,
+   "total_tokens": 504854,
+   "unique_input_tokens": 7140,
+   "unique_total_tokens": 22086,
+   "budget": 40
+  },
+  {
+   "gt_id": 7402,
+   "n_pred": 12,
+   "reward": 0.14285714285714285,
+   "metrics": {
+    "problem_list_recall": 0.16666666666666666,
+    "problem_list_precision": 0.08333333333333333,
+    "problem_list_f1": 0.1111111111111111,
+    "weighted_problem_list_recall": 0.1111111111111111,
+    "weighted_problem_list_f1": 0.09523809523809525,
+    "problem_list_precision_neutral": 0.2,
+    "problem_list_f1_neutral": 0.1818181818181818,
+    "weighted_problem_list_f1_neutral": 0.14285714285714285,
+    "n_neutral_predictions": 7,
+    "icd10_specificity_score": 1.0,
+    "acuity_accuracy": 1.0,
+    "acuity_confusion_matrix": {
+     "chronic:chronic": 1
+    },
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "E11.9",
+      "name": "Type 2 Diabetes Mellitus without specification",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "D50.9",
+      "name": "Hereditary hemochromatosis without specification",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "E66.9",
+      "name": "Obesity (Class II) without specification",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "M54.5",
+      "name": "Chronic lower back pain",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "M25.4",
+      "name": "Hemochromatosis-associated arthropathy",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "M54.51",
+      "name": "Chronic lower back pain with radiculopathy",
+      "acuity": "acute_on_chronic"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "E11.9",
+      "name": "Type 2 Diabetes Mellitus without specification",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "D50.9",
+      "name": "Hereditary hemochromatosis without specification",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "E66.9",
+      "name": "Obesity (Class II) without specification",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "M25.4",
+      "name": "Hemochromatosis-associated arthropathy",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 1.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 1.0,
+    "nudges": 30.0,
+    "actions": 10.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.2,
+    "weighted_problem_list_recall": 0.1111111111111111,
+    "problem_list_recall": 0.16666666666666666,
+    "acuity_accuracy": 1.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 463111,
+   "output_tokens": 16532,
+   "total_tokens": 479643,
+   "unique_input_tokens": 5969,
+   "unique_total_tokens": 22501,
+   "budget": 40
+  },
+  {
+   "gt_id": 7504,
+   "n_pred": 13,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 6,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "G00.9",
+      "name": "Syphilis, unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G00.3",
+      "name": "Tabes dorsalis",
+      "acuity": "acute_on_chronic"
+     },
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "E78.5",
+      "name": "Hyperlipidemia, unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "I70.2",
+      "name": "Peripheral arterial disease, lower extremity",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G91.1",
+      "name": "Neurogenic bladder",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G60.1",
+      "name": "Chronic sensory polyneuropathy",
+      "acuity": "chronic"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "G00.9",
+      "name": "Syphilis, unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "E78.5",
+      "name": "Hyperlipidemia, unspecified",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "I70.2",
+      "name": "Peripheral arterial disease, lower extremity",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G91.1",
+      "name": "Neurogenic bladder",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G60.1",
+      "name": "Chronic sensory polyneuropathy",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 1.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 1.0,
+    "nudges": 30.0,
+    "actions": 9.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 451252,
+   "output_tokens": 16867,
+   "total_tokens": 468119,
+   "unique_input_tokens": 5597,
+   "unique_total_tokens": 22464,
+   "budget": 40
+  },
+  {
+   "gt_id": 7047,
+   "n_pred": 11,
+   "reward": 0.1212121212121212,
+   "metrics": {
+    "problem_list_recall": 0.14285714285714285,
+    "problem_list_precision": 0.09090909090909091,
+    "problem_list_f1": 0.1111111111111111,
+    "weighted_problem_list_recall": 0.13333333333333333,
+    "weighted_problem_list_f1": 0.10810810810810811,
+    "problem_list_precision_neutral": 0.1111111111111111,
+    "problem_list_f1_neutral": 0.125,
+    "weighted_problem_list_f1_neutral": 0.1212121212121212,
+    "n_neutral_predictions": 2,
+    "icd10_specificity_score": 0.6,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {
+     "acute:chronic": 1
+    },
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "G90.0",
+      "name": "Hereditary hemorrhagic telangiectasia (Osler-Weber-Rendu syndrome)",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G91.0",
+      "name": "Rectovaginal fistula",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "M32.0",
+      "name": "Systemic lupus erythematosus with central nervous system involvement (neuropsychiatric SLE)",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "C22.0",
+      "name": "Choriocarcinoma",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "G00.0",
+      "name": "Mild intermittent asthma",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "I95.3",
+      "name": "Hemorrhagic stroke (acute hemorrhage in left parietal lobe)",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "K50.9",
+      "name": "Crohn's disease",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G90.0",
+      "name": "Hereditary hemorrhagic telangiectasia (Osler-Weber-Rendu syndrome)",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G91.0",
+      "name": "Rectovaginal fistula",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "M32.0",
+      "name": "Systemic lupus erythematosus with central nervous system involvement (neuropsychiatric SLE)",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G00.0",
+      "name": "Mild intermittent asthma",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 1.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 1.0,
+    "nudges": 31.0,
+    "actions": 9.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.1111111111111111,
+    "weighted_problem_list_recall": 0.13333333333333333,
+    "problem_list_recall": 0.14285714285714285,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 528556,
+   "output_tokens": 16890,
+   "total_tokens": 545446,
+   "unique_input_tokens": 7467,
+   "unique_total_tokens": 24357,
+   "budget": 40
+  },
+  {
+   "gt_id": 7580,
+   "n_pred": 14,
+   "reward": 0.1081081081081081,
+   "metrics": {
+    "problem_list_recall": 0.14285714285714285,
+    "problem_list_precision": 0.07142857142857142,
+    "problem_list_f1": 0.09523809523809523,
+    "weighted_problem_list_recall": 0.11764705882352941,
+    "weighted_problem_list_f1": 0.08888888888888889,
+    "problem_list_precision_neutral": 0.1,
+    "problem_list_f1_neutral": 0.11764705882352941,
+    "weighted_problem_list_f1_neutral": 0.1081081081081081,
+    "n_neutral_predictions": 4,
+    "icd10_specificity_score": 0.6,
+    "acuity_accuracy": 1.0,
+    "acuity_confusion_matrix": {
+     "chronic:chronic": 1
+    },
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "I25.10",
+      "name": "Atrial fibrillation (paroxysmal)",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "I21.9",
+      "name": "Hypertension",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "I25.11",
+      "name": "Hyperlipidemia",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "I65.1",
+      "name": "Carotid artery stenosis",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "G93.81",
+      "name": "Ischemic stroke with residual oropharyngeal dysphagia",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "E78.0",
+      "name": "Metastatic carcinoma to bone",
+      "acuity": "acute"
+     },
+     {
+      "icd10": "I80.2",
+      "name": "Acute peripheral arterial thrombosis/embolism",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "E78.0",
+      "name": "Metastatic carcinoma to bone",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "I25.10",
+      "name": "Atrial fibrillation (paroxysmal)",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "I25.11",
+      "name": "Hyperlipidemia",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "I65.1",
+      "name": "Carotid artery stenosis",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "G93.81",
+      "name": "Ischemic stroke with residual oropharyngeal dysphagia",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "D00.9",
+      "name": "Hypothyroidism",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 1.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 1.0,
+    "nudges": 32.0,
+    "actions": 8.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.1,
+    "weighted_problem_list_recall": 0.11764705882352941,
+    "problem_list_recall": 0.14285714285714285,
+    "acuity_accuracy": 1.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 616361,
+   "output_tokens": 17749,
+   "total_tokens": 634110,
+   "unique_input_tokens": 9020,
+   "unique_total_tokens": 26769,
+   "budget": 40
+  },
+  {
+   "gt_id": 7344,
+   "n_pred": 0,
+   "reward": 0.0,
+   "metrics": null,
+   "submission": null,
+   "episode_metrics": {
+    "submitted": 0.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 28.0,
+    "actions": 7.0,
+    "tool_errors": 0.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 970435,
+   "output_tokens": 57538,
+   "total_tokens": 1027973,
+   "unique_input_tokens": 6438,
+   "unique_total_tokens": 63976,
+   "budget": 40
+  }
+ ],
+ "inference_version": "vllm 0.11.0; Hermes streaming corruption observed"
+}

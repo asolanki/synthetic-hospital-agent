@@ -1,0 +1,368 @@
+{
+ "verified_at": "2026-10-05T04:56:21.266983+00:00",
+ "remote_root": "/workspace/synthetic-hospital-rl",
+ "paths": [
+  "runs/rl/rl-sft-paper-v1/broadcasts",
+  "runs/rl/rl-sft-paper-v1/initial_adapter",
+  "runs/rl/rl-sft-paper-v1/configs",
+  "runs/rl/rl-sft-paper-v1/logs",
+  "runs/rl/rl-sft-paper-v1/monitors",
+  "results/raw/training/rl-sft-paper-v1-training.json",
+  "results/raw/training/rl-serving-check.json",
+  "results/raw/training/rl-initial-adapter-check.json",
+  "training/configs/rl_diagnosis.toml",
+  "training/configs/rl_inference.toml",
+  "training/prime-rl-shutdown.patch",
+  "training/run_rl.sh",
+  "training/serve_rl.sh",
+  "training/setup_rl.sh",
+  "training/track_rl.py",
+  "training/rl_report.py",
+  "training/environment",
+  "runs/services/rl-requirements.txt",
+  "runs/services/shrl-rl-inference.conf",
+  "runs/services/post_rl_chain.sh",
+  "runs/services/rl_serving_check.py",
+  "runs/services/post-rl.log"
+ ],
+ "excluded": "wandb process metadata",
+ "file_count": 67,
+ "bytes": 552710888,
+ "files": [
+  {
+   "path": "results/raw/training/rl-initial-adapter-check.json",
+   "bytes": 230,
+   "sha256": "1a3662242db188111deb737984046d9b2bfae515f1f617f1643a09f79063b207"
+  },
+  {
+   "path": "results/raw/training/rl-serving-check.json",
+   "bytes": 6013,
+   "sha256": "6f8baf93e66f68df0464e6feae6d4b5a75a249416b33845658c5d10250331516"
+  },
+  {
+   "path": "results/raw/training/rl-sft-paper-v1-training.json",
+   "bytes": 84484,
+   "sha256": "1b267bc68dc18d6f2ac0a7d55104970259d54c9c6ed956dcd6b2ced2dcb30802"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/broadcasts/step_84/.finished",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/broadcasts/step_84/.receiver_ready",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/broadcasts/step_84/.sender_ready",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/broadcasts/step_84/.started",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/broadcasts/step_84/adapter_config.json",
+   "bytes": 381,
+   "sha256": "dc6f85b76d2591bf5f7119be00ec0e2d0fab9f1b0a175d37f15e839ba0193a08"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/broadcasts/step_84/adapter_model.safetensors",
+   "bytes": 132179320,
+   "sha256": "7ed65098b69e6eefe0931354a430a34c5c799ea939c210c6251394c8fd14efb0"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/broadcasts/step_85/.finished",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/broadcasts/step_85/.receiver_ready",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/broadcasts/step_85/.sender_ready",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/broadcasts/step_85/.started",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/broadcasts/step_85/adapter_config.json",
+   "bytes": 381,
+   "sha256": "dc6f85b76d2591bf5f7119be00ec0e2d0fab9f1b0a175d37f15e839ba0193a08"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/broadcasts/step_85/adapter_model.safetensors",
+   "bytes": 132179320,
+   "sha256": "d1bb0bd4d71dee2d0efbc42f1db3089b4a535161b5144bee6eef4bf1936edf61"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/configs/attempt_1/command.txt",
+   "bytes": 80,
+   "sha256": "23421e6a1d3ba1b4fc826ec77261b60a502d4ba9dff6b5a87aadb5db85d55434"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/configs/attempt_1/resolved/envs/train/hospital-train.address",
+   "bytes": 21,
+   "sha256": "b7aae25c1da5d868a3c2b3f4fcf12783265673e0441ad4e0bd33f0286614acb7"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/configs/attempt_1/resolved/envs/train/hospital-train.json",
+   "bytes": 1802,
+   "sha256": "23ebcbba4e2f64eeb156616451cd27163d014b26d16eb91f7153611f29608a40"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/configs/attempt_1/resolved/orchestrator.json",
+   "bytes": 6501,
+   "sha256": "04e8b8b23c8fd0f153e5e80bf19f9d060dd7a0e9a2e1fc1d41efb228fb7c8a4c"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/configs/attempt_1/resolved/trainer.json",
+   "bytes": 3548,
+   "sha256": "f5bdb9d633f7a14ad18991dd8d05ba82334139dc96b4ccf00cfca4801cac9baf"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/configs/attempt_1/rl.toml",
+   "bytes": 2578,
+   "sha256": "4efd11c5bd08fea589116694311d2f39a9064f8670de41637cd6e48a2c07c664"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/initial_adapter/.finished",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/initial_adapter/.receiver_ready",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/initial_adapter/.sender_ready",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/initial_adapter/.started",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/initial_adapter/adapter_config.json",
+   "bytes": 381,
+   "sha256": "dc6f85b76d2591bf5f7119be00ec0e2d0fab9f1b0a175d37f15e839ba0193a08"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/initial_adapter/adapter_model.safetensors",
+   "bytes": 132179320,
+   "sha256": "ac102c7ff86386fb96e1a7f5ba10a61652cf8511884ed85599c6b48a9bd82bf5"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/logs/attempt_1/envs/train/hospital-train.log",
+   "bytes": 2372348,
+   "sha256": "90b861dd9a52df778d1d455112f1f11a9e8745a240b6d348d161aef02224551e"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/logs/attempt_1/orchestrator.log",
+   "bytes": 275699,
+   "sha256": "5e1ca77b7209e0aff41f9935c098eda6d4ba5de629810728e1c376d451d9afac"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/logs/attempt_1/trainer.log",
+   "bytes": 51208,
+   "sha256": "ff818564882517049a35d9ab4711cf5f2779cb5adca1b89990f97729984d8543"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/logs/attempt_1/trainer/torchrun/5a3bf71d124c42038988db4b8c2a6e4b_neva96ai/attempt_0/0/stderr.log",
+   "bytes": 5481,
+   "sha256": "0b0caa8ca9de5b4d53a3848bb8ee595ed027c19e6f5a57ef22f4dfe9c634b6c4"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/logs/attempt_1/trainer/torchrun/5a3bf71d124c42038988db4b8c2a6e4b_neva96ai/attempt_0/0/stdout.log",
+   "bytes": 42823,
+   "sha256": "8abacb39486042174316bba8698b602b6e346235ceaaceaf5787c83d5b53b236"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/monitors/file/metrics.jsonl",
+   "bytes": 133921864,
+   "sha256": "7ce8081330a0bf0758fb2c2bdb052b6ac31eb347552211aaa93e147b7984a16f"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/monitors/file/traces/annotations/orch.index.jsonl",
+   "bytes": 479895,
+   "sha256": "05109b3b483ea3cbc5524eec0ccd92a03deb5837cbd094d75159ad6daa364f28"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/monitors/file/traces/annotations/orch/00000.jsonl.zst",
+   "bytes": 183539,
+   "sha256": "40a8a88ce170af58435b0570a36e917d46667a6c0287e414dc9b55bd17979e94"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/monitors/file/traces/annotations/trainer.index.jsonl",
+   "bytes": 234160,
+   "sha256": "ecef21337515325b5aac1fa113403a16f6a0f8bd33d6a0d4b05fdf5bf19fb3a5"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/monitors/file/traces/annotations/trainer/00000.jsonl.zst",
+   "bytes": 2890615,
+   "sha256": "91550e477b415a620dd26c82f6952681f38b47bdc091864a9f2fdb6b718f748e"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/monitors/file/traces/live/7f5b5062789d4a50842f87124e4b23fb.jsonl",
+   "bytes": 4399,
+   "sha256": "f4c12b45efb583328900286923818fc3dcc15e15bbbf867dad358ee67bb241ad"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/monitors/file/traces/live/ebcb88dbd0874deaa4f7767173ebab76.jsonl",
+   "bytes": 9341,
+   "sha256": "079f0eb32acd335b9d5341f85b1017c992962302a94fc31080021e804efbbfc6"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/monitors/file/traces/stream.index.jsonl",
+   "bytes": 2778204,
+   "sha256": "d8e04cb26b1fc541aaecdaf5685d7d8e82c2920a61ed2c3923b3a8057388fe7c"
+  },
+  {
+   "path": "runs/rl/rl-sft-paper-v1/monitors/file/traces/stream/00000.jsonl.zst",
+   "bytes": 12720510,
+   "sha256": "a97d3f004306e9fa6dd81ce91347c0382947ddcde29919bd2f0e14aec400db52"
+  },
+  {
+   "path": "runs/services/post-rl.log",
+   "bytes": 12761,
+   "sha256": "063fbc409f381eb4411ca2df09cd55befe1a9a4818e84b8a7d092f2b15557cb2"
+  },
+  {
+   "path": "runs/services/post_rl_chain.sh",
+   "bytes": 2220,
+   "sha256": "afffe819414454b13f4e8a37c3162788963e46b1861d51a0231fa37e09db0ef5"
+  },
+  {
+   "path": "runs/services/rl-requirements.txt",
+   "bytes": 6951,
+   "sha256": "afed19948cdb8105d330792bc40970bc36c95bcd816822836a161c3fd878753d"
+  },
+  {
+   "path": "runs/services/rl_serving_check.py",
+   "bytes": 4830,
+   "sha256": "274ea585ac564146d31e9be6fb6f2e70bd2148e8f79b851a9c45e664d1a02f66"
+  },
+  {
+   "path": "runs/services/shrl-rl-inference.conf",
+   "bytes": 452,
+   "sha256": "a81c109308838ab7b5a34ed598d81eec42ce164bee0692ea8f1347c7abf2ed3e"
+  },
+  {
+   "path": "training/configs/rl_diagnosis.toml",
+   "bytes": 2578,
+   "sha256": "4efd11c5bd08fea589116694311d2f39a9064f8670de41637cd6e48a2c07c664"
+  },
+  {
+   "path": "training/configs/rl_inference.toml",
+   "bytes": 628,
+   "sha256": "00cf86709599b50c8ad52345b56d7b16c10ae45b720631588444feb911ce9f42"
+  },
+  {
+   "path": "training/environment/pyproject.toml",
+   "bytes": 398,
+   "sha256": "b1e65a3224de5398180bd2c6e0255b9b7d25513c55a28b2eccf6b9e3b8dac470"
+  },
+  {
+   "path": "training/environment/synthetic_hospital_dx/__init__.py",
+   "bytes": 198,
+   "sha256": "e7834ad91569dad681a0482b57a9f6ce3ef7652503aa2931b775ba28e258c519"
+  },
+  {
+   "path": "training/environment/synthetic_hospital_dx/__pycache__/__init__.cpython-312.pyc",
+   "bytes": 378,
+   "sha256": "c6d8c92ddfc39646656f70c102620e96bebb9808951be1b152195c31591db46e"
+  },
+  {
+   "path": "training/environment/synthetic_hospital_dx/__pycache__/env.cpython-312.pyc",
+   "bytes": 7618,
+   "sha256": "1e0bf38d23cc1ce81f26aa893492b998991789bc0b3e80e6147743baa05b7de5"
+  },
+  {
+   "path": "training/environment/synthetic_hospital_dx/__pycache__/simulator.cpython-312.pyc",
+   "bytes": 2476,
+   "sha256": "a4e0e188d67f84485e1e1c7ab5fe8f9b614816404a81bcdae93fc7544efde129"
+  },
+  {
+   "path": "training/environment/synthetic_hospital_dx/__pycache__/state.cpython-312.pyc",
+   "bytes": 997,
+   "sha256": "a6638fba210d0bcb20c13089c96abb67049afe43865b12409ac77dd2221bc13a"
+  },
+  {
+   "path": "training/environment/synthetic_hospital_dx/__pycache__/taskset.cpython-312.pyc",
+   "bytes": 8576,
+   "sha256": "870fb5db3b5b7e417ea38b606895dd35158dd15a5d2c90f011cd65956b8ed63c"
+  },
+  {
+   "path": "training/environment/synthetic_hospital_dx/__pycache__/tools.cpython-312.pyc",
+   "bytes": 9513,
+   "sha256": "57854d6eb0a4e9e9cea63f53bda8348a728b36a1f31a24fbeee788b320ba3fc3"
+  },
+  {
+   "path": "training/environment/synthetic_hospital_dx/env.py",
+   "bytes": 5146,
+   "sha256": "840c2720968e5f72bcbe4ffe1135a592dcf113048e984e7289d50787b8b56c7b"
+  },
+  {
+   "path": "training/environment/synthetic_hospital_dx/simulator.py",
+   "bytes": 1193,
+   "sha256": "4c71e87af9be855a0b92d114875b273fa72045dc435628e783b6624bf7cbb51b"
+  },
+  {
+   "path": "training/environment/synthetic_hospital_dx/state.py",
+   "bytes": 802,
+   "sha256": "0aef36359d41ddc482bced66fd8b192252a84d6c7203ef25bad0eb2bd7c0b7c1"
+  },
+  {
+   "path": "training/environment/synthetic_hospital_dx/taskset.py",
+   "bytes": 5363,
+   "sha256": "69d4ec4c679c6e15ed9a8124c60bde842a93b87fa14ab40b8e5a0ab16111284d"
+  },
+  {
+   "path": "training/environment/synthetic_hospital_dx/tools.py",
+   "bytes": 6253,
+   "sha256": "9b2386ed88ca58b8a762dfc9c7809fcf2bf5afe9170c6d91ba4bfb8817063437"
+  },
+  {
+   "path": "training/prime-rl-shutdown.patch",
+   "bytes": 826,
+   "sha256": "c84ac6f57ff2e6efa72ffa28f000632ac000147a88b54fd96d23eb69001cc3da"
+  },
+  {
+   "path": "training/rl_report.py",
+   "bytes": 7284,
+   "sha256": "f884542e22172221ad931e9079d4ec8a2aaf0bbd51d95a4a321dc437e69ca77e"
+  },
+  {
+   "path": "training/run_rl.sh",
+   "bytes": 453,
+   "sha256": "99546ebf4c00c4c03f1fbc53364f7b767e06f9c6be0b3e52878689288c98e05a"
+  },
+  {
+   "path": "training/serve_rl.sh",
+   "bytes": 525,
+   "sha256": "d066663b5c9287df838bdba89f9c4ee725d525262eadfcad28043fc9e03aafed"
+  },
+  {
+   "path": "training/setup_rl.sh",
+   "bytes": 2095,
+   "sha256": "811201ddf6a445f3c3431b6c0ef5afb06df14f76c1d7a0e0b57499468618b74f"
+  },
+  {
+   "path": "training/track_rl.py",
+   "bytes": 5928,
+   "sha256": "26ef0aae9638992409f4ae591c063e316401cc3f59dc21ed8ca026fe01e2e731"
+  }
+ ]
+}

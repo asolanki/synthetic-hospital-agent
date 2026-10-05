@@ -1,0 +1,110 @@
+# Fixed terminal-checkpoint experiment. Override --max-steps 2 and --run.name
+# rl-setup-check for the separate integration check; never continue its adapter.
+max_steps = 85
+seq_len = 65536
+output_dir = "/workspace/synthetic-hospital-rl/runs/rl"
+dashboard = false
+
+[run]
+name = "rl-sft-paper-v1"
+
+# Inference is launched separately on the same GPU with a bounded memory pool.
+# Do not add [inference]: the stock launcher allocates disjoint GPUs.
+[deployment]
+gpus_per_node = 1
+num_train_gpus = 1
+num_infer_gpus = 0
+
+[model]
+name = "/workspace/synthetic-hospital-rl/runs/sft-oracle-copy-v1/merged"
+
+[weight_broadcast]
+type = "filesystem"
+
+[monitors.wandb]
+project = "synthetic-hospital-rl"
+entity = "grid-labs-llc"
+group = "qwen3-4b"
+tags = ["rl", "paper-prompt", "sft-warm-start"]
+
+# This pin propagates only the shared file path, not precision settings.
+[orchestrator.monitors.file]
+float_decimals = "None"
+
+[trainer.monitors.file]
+float_decimals = "None"
+
+[trainer.model]
+attn = "flash_attention_2"
+conversion_dir = "/workspace/synthetic-hospital-rl/runs/rl-converted-sft"
+
+[trainer.model.lora]
+rank = 16
+alpha = 32
+dropout = 0.0
+target_modules = ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+
+[trainer.optim]
+lr = 1e-5
+weight_decay = 0.0
+max_norm = 1.0
+
+[trainer.loss]
+type = "ppo"
+ratio_low = 0.8
+ratio_high = 1.2
+
+[orchestrator]
+batch_size = 32
+max_off_policy_steps = 0
+
+[orchestrator.model.lora]
+rank = 16
+alpha = 32
+
+[orchestrator.model.client]
+base_url = "http://127.0.0.1:8000/v1"
+admin_base_url = ["http://127.0.0.1:8000"]
+api_key_var = "OPENAI_API_KEY"
+
+# enable_thinking=false would inject empty thinking markers. The default true
+# setting matches all 2,040 native generation prefixes audited for this model.
+[orchestrator.renderer]
+name = "qwen3"
+enable_thinking = true
+
+[orchestrator.concurrency]
+initial_inflight = 8
+min_inflight = 8
+max_inflight = 8
+
+[orchestrator.train]
+group_size = 4
+
+[orchestrator.train.select]
+shuffle = true
+seed = 0
+
+# Untruncated training sampling avoids changing log-probability normalization.
+# Dev evaluation keeps the original temperature=0.7 / top_p=0.8 controls.
+[orchestrator.train.sampling]
+temperature = 1.0
+top_p = 1.0
+max_completion_tokens = 2048
+
+[orchestrator.train.algo]
+type = "grpo"
+loss_aggregation = "prompt"
+
+[[orchestrator.train.source]]
+name = "hospital-train"
+env.taskset.id = "synthetic-hospital-dx"
+env.taskset.split = "train"
+env.taskset.budget = 40
+env.agent.max_turns = 50
+env.agent.harness.id = "null"
+env.agent.runtime.type = "subprocess"
+
+[ckpt]
+interval = 20
+keep_last = 1

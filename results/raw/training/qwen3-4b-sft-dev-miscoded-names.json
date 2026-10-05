@@ -1,0 +1,1692 @@
+{
+ "scope": "SFT seed-0 dev: reference diagnoses whose exact name the model submitted under a different match key.",
+ "source": "results/raw/training/qwen3-4b-sft-paper-dev.json",
+ "n": 187,
+ "model_key_is_a_training_target_key": 139,
+ "same_chapter_letter": 118,
+ "rows": [
+  {
+   "gt_id": 7236,
+   "name": "Respiratory distress syndrome",
+   "model_code": "P70.0",
+   "reference_code": "P22.0",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7253,
+   "name": "Bartholin's gland cyst",
+   "model_code": "N85.2",
+   "reference_code": "N75.0",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7015,
+   "name": "Uterine rupture",
+   "model_code": "O72.2",
+   "reference_code": "O71.1",
+   "training_patients_with_reference_key": 4,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7266,
+   "name": "Scabies",
+   "model_code": "B80",
+   "reference_code": "B86",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7282,
+   "name": "Condylomata acuminata",
+   "model_code": "A67.1",
+   "reference_code": "A63.0",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7210,
+   "name": "Influenza",
+   "model_code": "A08.1",
+   "reference_code": "J10.1",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7210,
+   "name": "Community-Acquired Methicillin-Resistant Staphylococcus aureus Pneumonia",
+   "model_code": "J72.0",
+   "reference_code": "J15.212",
+   "training_patients_with_reference_key": 5,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7165,
+   "name": "Sarcoidosis",
+   "model_code": "M31.1",
+   "reference_code": "D86.0",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7165,
+   "name": "Sarcoidosis",
+   "model_code": "M31.1",
+   "reference_code": "D86.9",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7080,
+   "name": "External anal sphincter injury",
+   "model_code": "O72.21",
+   "reference_code": "O70.21",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7080,
+   "name": "Active genital herpes simplex virus infection at term",
+   "model_code": "O99.21",
+   "reference_code": "O98.43",
+   "training_patients_with_reference_key": 4,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7080,
+   "name": "Uterine rupture",
+   "model_code": "O99.3",
+   "reference_code": "O71.1",
+   "training_patients_with_reference_key": 4,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7182,
+   "name": "Agranulocytosis",
+   "model_code": "D71.1",
+   "reference_code": "D70.2",
+   "training_patients_with_reference_key": 5,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7087,
+   "name": "Hyperphosphatemia",
+   "model_code": "E87.4",
+   "reference_code": "E83.30",
+   "training_patients_with_reference_key": 11,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7206,
+   "name": "Anesthetic medication reaction",
+   "model_code": "T42.2X1A",
+   "reference_code": "T88.6XXA",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7150,
+   "name": "Acute Promyelocytic Leukemia (ATRA therapy mechanism)",
+   "model_code": "D82.1",
+   "reference_code": "C92.40",
+   "training_patients_with_reference_key": 4,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7150,
+   "name": "Hypergonadotropic hypogonadism",
+   "model_code": "N95.0",
+   "reference_code": "E28.39",
+   "training_patients_with_reference_key": 4,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7136,
+   "name": "Uterine Leiomyoma (Intramural)",
+   "model_code": "N80.9",
+   "reference_code": "D25.1",
+   "training_patients_with_reference_key": 3,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7077,
+   "name": "Drug-induced tremor due to sertraline (Enhanced physiologic tremor)",
+   "model_code": "T82.21XA",
+   "reference_code": "G25.1",
+   "training_patients_with_reference_key": 7,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7077,
+   "name": "Trigeminal neuralgia",
+   "model_code": "G51.02",
+   "reference_code": "G50.0",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7308,
+   "name": "Peripheral arterial disease",
+   "model_code": "I70.0",
+   "reference_code": "I73.9",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7070,
+   "name": "Chloroquine-sensitive malaria prophylaxis",
+   "model_code": "B24.9",
+   "reference_code": "B50.9",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7070,
+   "name": "Fetal Atrioventricular Block",
+   "model_code": "O97.21",
+   "reference_code": "Q24.6",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7066,
+   "name": "Tibial stress fracture",
+   "model_code": "S72.01XA",
+   "reference_code": "M84.361A",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7066,
+   "name": "Disuse osteoporosis (Immobilization)",
+   "model_code": "M80.0",
+   "reference_code": "M81.8",
+   "training_patients_with_reference_key": 6,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7066,
+   "name": "Crohn's disease flare with inflammatory stricture (without complete obstruction)",
+   "model_code": "K55.21",
+   "reference_code": "K50.00",
+   "training_patients_with_reference_key": 3,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7033,
+   "name": "Alopecia areata",
+   "model_code": "L81.0",
+   "reference_code": "L63.9",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7033,
+   "name": "Hypothyroidism",
+   "model_code": "E07.00",
+   "reference_code": "E03.9",
+   "training_patients_with_reference_key": 8,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7076,
+   "name": "Acute cystitis",
+   "model_code": "N99.0",
+   "reference_code": "O23.13",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7076,
+   "name": "Traumatic hemorrhagic shock with acute coagulopathy",
+   "model_code": "T74.0XXA",
+   "reference_code": "T79.4XXA",
+   "training_patients_with_reference_key": 3,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7076,
+   "name": "Traumatic hemorrhagic shock with acute coagulopathy",
+   "model_code": "T74.0XXA",
+   "reference_code": "T79.4XXA",
+   "training_patients_with_reference_key": 3,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7076,
+   "name": "Late spontaneous abortion (history)",
+   "model_code": "O45.0",
+   "reference_code": "O03.9",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7076,
+   "name": "Cervical insufficiency",
+   "model_code": "O45.1",
+   "reference_code": "O34.32",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7344,
+   "name": "Lisinopril adverse effect",
+   "model_code": "T45.2X5A",
+   "reference_code": "T46.4X5A",
+   "training_patients_with_reference_key": 5,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7344,
+   "name": "Stage 2 Essential Hypertension (Suspected/White Coat Variation)",
+   "model_code": "I11.0",
+   "reference_code": "R03.0",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7344,
+   "name": "Erectile dysfunction (organic, secondary to diabetes mellitus)",
+   "model_code": "N48.1",
+   "reference_code": "N52.1",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7158,
+   "name": "Serotonin syndrome",
+   "model_code": "T42.2X5A",
+   "reference_code": "G25.82",
+   "training_patients_with_reference_key": 7,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7158,
+   "name": "SSRI-induced sexual dysfunction",
+   "model_code": "F43.22",
+   "reference_code": "T43.205A",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7158,
+   "name": "Hydrochlorothiazide-induced photosensitivity",
+   "model_code": "T47.4X5A",
+   "reference_code": "L56.8",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7047,
+   "name": "Systemic Lupus Erythematosus with Central Nervous System Involvement (Neuropsychiatric SLE)",
+   "model_code": "M35.9",
+   "reference_code": "M32.19",
+   "training_patients_with_reference_key": 5,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7047,
+   "name": "Choriocarcinoma",
+   "model_code": "C54.9",
+   "reference_code": "C58",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7047,
+   "name": "Breast engorgement (postpartum)",
+   "model_code": "Z39.81",
+   "reference_code": "O92.20",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7047,
+   "name": "Herpetic whitlow or viral lymphangitis",
+   "model_code": "B01.0",
+   "reference_code": "B00.89",
+   "training_patients_with_reference_key": 4,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7047,
+   "name": "Superficial surgical site infection (cellulitis) following cesarean delivery",
+   "model_code": "L03.101",
+   "reference_code": "O86.01",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7047,
+   "name": "Hereditary Hemorrhagic Telangiectasia (Osler-Weber-Rendu Syndrome)",
+   "model_code": "Q82.1",
+   "reference_code": "I78.0",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7486,
+   "name": "Nasopharyngeal Carcinoma",
+   "model_code": "C13.1",
+   "reference_code": "C11.9",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7463,
+   "name": "Vitamin D deficiency",
+   "model_code": "E53.9",
+   "reference_code": "E55.9",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7476,
+   "name": "Hepatitis C virus reinfection",
+   "model_code": "B19.2",
+   "reference_code": "B17.1",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7403,
+   "name": "Agranulocytosis",
+   "model_code": "D71.0",
+   "reference_code": "D70.2",
+   "training_patients_with_reference_key": 5,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7485,
+   "name": "Autosomal Dominant Polycystic Kidney Disease",
+   "model_code": "Q63.1",
+   "reference_code": "Q61.2",
+   "training_patients_with_reference_key": 3,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7510,
+   "name": "Pasteurella multocida infection",
+   "model_code": "A39.2",
+   "reference_code": "A28.0",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7504,
+   "name": "Tabes dorsalis",
+   "model_code": "G13.1",
+   "reference_code": "A52.11",
+   "training_patients_with_reference_key": 3,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7512,
+   "name": "Bell's palsy",
+   "model_code": "G56.0",
+   "reference_code": "G51.0",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7427,
+   "name": "Nocardiosis",
+   "model_code": "B39.2",
+   "reference_code": "A42.7",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7398,
+   "name": "Long-distance running",
+   "model_code": "Z71.89",
+   "reference_code": "Z72.3",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7398,
+   "name": "Acute upper gastrointestinal hemorrhage secondary to peptic ulcer disease",
+   "model_code": "I82.01",
+   "reference_code": "K27.0",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7454,
+   "name": "Oculogyric crisis due to antipsychotic medication",
+   "model_code": "G21.22",
+   "reference_code": "G24.01",
+   "training_patients_with_reference_key": 4,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7458,
+   "name": "Methicillin-resistant Staphylococcus aureus (MRSA) skin and soft tissue infection",
+   "model_code": "L03.01",
+   "reference_code": "A49.02",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7458,
+   "name": "Organophosphate poisoning",
+   "model_code": "T56.0X1A",
+   "reference_code": "T60.0X1A",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7458,
+   "name": "Organophosphate poisoning",
+   "model_code": "T56.0X1A",
+   "reference_code": "T60.0X1A",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7402,
+   "name": "Sialolithiasis",
+   "model_code": "K81.21",
+   "reference_code": "K11.5",
+   "training_patients_with_reference_key": 3,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7402,
+   "name": "Ludwig angina",
+   "model_code": "I85.0",
+   "reference_code": "K12.2",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7402,
+   "name": "Hereditary Hemochromatosis with arthropathy",
+   "model_code": "E70.0",
+   "reference_code": "E83.110",
+   "training_patients_with_reference_key": 11,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7367,
+   "name": "Flecainide adverse effect",
+   "model_code": "T45.2X5A",
+   "reference_code": "T46.2X5A",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7367,
+   "name": "Normal sinus rhythm",
+   "model_code": "R00.0",
+   "reference_code": "Z00.8",
+   "training_patients_with_reference_key": 8,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7367,
+   "name": "Erectile dysfunction",
+   "model_code": "N43.2",
+   "reference_code": "N52.9",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7397,
+   "name": "Wernicke encephalopathy",
+   "model_code": "E52.2",
+   "reference_code": "E51.2",
+   "training_patients_with_reference_key": 3,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7397,
+   "name": "Hypomagnesemia",
+   "model_code": "E53.1",
+   "reference_code": "E83.42",
+   "training_patients_with_reference_key": 11,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7397,
+   "name": "Peripheral neuropathy",
+   "model_code": "G61.0",
+   "reference_code": "G62.1",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7422,
+   "name": "Pneumocystis jirovecii pneumonia",
+   "model_code": "B44.1",
+   "reference_code": "B20.6",
+   "training_patients_with_reference_key": 5,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7422,
+   "name": "Immune reconstitution inflammatory syndrome",
+   "model_code": "B44.2",
+   "reference_code": "D89.3",
+   "training_patients_with_reference_key": 3,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7422,
+   "name": "Acquired methemoglobinemia",
+   "model_code": "D72.2",
+   "reference_code": "D74.8",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7422,
+   "name": "Cryptococcal meningitis",
+   "model_code": "B46.0",
+   "reference_code": "B45.1",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7422,
+   "name": "Primary central nervous system lymphoma",
+   "model_code": "D69.3",
+   "reference_code": "C83.390",
+   "training_patients_with_reference_key": 5,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7422,
+   "name": "Bacillary angiomatosis",
+   "model_code": "B56.1",
+   "reference_code": "A44.1",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7549,
+   "name": "Urinary retention",
+   "model_code": "N39.0",
+   "reference_code": "R33.9",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7549,
+   "name": "Recurrent benign prostatic hyperplasia",
+   "model_code": "N62",
+   "reference_code": "N40.1",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7539,
+   "name": "Nephrogenic Diabetes Insipidus",
+   "model_code": "N23.0",
+   "reference_code": "N25.1",
+   "training_patients_with_reference_key": 7,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7539,
+   "name": "Vascular dementia",
+   "model_code": "G31.22",
+   "reference_code": "F01.50",
+   "training_patients_with_reference_key": 3,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7580,
+   "name": "Lung abscess (aspiration)",
+   "model_code": "I26.99",
+   "reference_code": "J85.2",
+   "training_patients_with_reference_key": 3,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7580,
+   "name": "Acute peripheral arterial thrombosis/embolism",
+   "model_code": "I86.4",
+   "reference_code": "I74.3",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7629,
+   "name": "Lambert-Eaton myasthenic syndrome",
+   "model_code": "G81.1",
+   "reference_code": "G70.81",
+   "training_patients_with_reference_key": 3,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7519,
+   "name": "History of rheumatic fever",
+   "model_code": "I03.9",
+   "reference_code": "Z86.79",
+   "training_patients_with_reference_key": 3,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7519,
+   "name": "Abdominal aortic aneurysm",
+   "model_code": "I71.0",
+   "reference_code": "I77.811",
+   "training_patients_with_reference_key": 5,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7519,
+   "name": "Peripheral arterial disease",
+   "model_code": "I70.2",
+   "reference_code": "I73.9",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7519,
+   "name": "Hypertensive Heart Disease with End-Organ Damage (indication for echocardiography)",
+   "model_code": "I25.0",
+   "reference_code": "I11.9",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7595,
+   "name": "Recurrent benign prostatic hyperplasia",
+   "model_code": "N60",
+   "reference_code": "N40.1",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7595,
+   "name": "Calcium channel blocker-induced peripheral edema",
+   "model_code": "T45.5X5A",
+   "reference_code": "T46.1X5A",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7595,
+   "name": "Senile purpura",
+   "model_code": "L84.8",
+   "reference_code": "D69.2",
+   "training_patients_with_reference_key": 8,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7595,
+   "name": "Spigelian hernia",
+   "model_code": "K42.8",
+   "reference_code": "K43.1",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7595,
+   "name": "Orthostatic hypotension",
+   "model_code": "N99.0",
+   "reference_code": "I95.1",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7592,
+   "name": "Postoperative hemorrhage following inguinal hernia repair",
+   "model_code": "T81.31XA",
+   "reference_code": "T81.0XXA",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7592,
+   "name": "Spinal epidural hematoma",
+   "model_code": "G81.0",
+   "reference_code": "G95.19",
+   "training_patients_with_reference_key": 4,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7592,
+   "name": "Central retinal artery occlusion",
+   "model_code": "H35.11",
+   "reference_code": "H34.11",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7592,
+   "name": "Polycythemia vera",
+   "model_code": "D69.0",
+   "reference_code": "D45",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7604,
+   "name": "Statin-associated muscle symptoms",
+   "model_code": "M32.2",
+   "reference_code": "G72.0",
+   "training_patients_with_reference_key": 4,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7604,
+   "name": "Actinic keratosis",
+   "model_code": "L92.1",
+   "reference_code": "L57.0",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7604,
+   "name": "Presbycusis",
+   "model_code": "H90.81",
+   "reference_code": "H91.13",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7625,
+   "name": "Uncomplicated parapneumonic effusion",
+   "model_code": "J98.01",
+   "reference_code": "J90",
+   "training_patients_with_reference_key": 3,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7625,
+   "name": "Complicated parapneumonic effusion",
+   "model_code": "J98.11",
+   "reference_code": "J86.9",
+   "training_patients_with_reference_key": 4,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7625,
+   "name": "Atrioventricular Nodal Re-entrant Tachycardia",
+   "model_code": "I45.1",
+   "reference_code": "I47.1",
+   "training_patients_with_reference_key": 4,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7625,
+   "name": "Syndrome of inappropriate antidiuretic hormone secretion (SIADH)",
+   "model_code": "E21.0",
+   "reference_code": "E22.2",
+   "training_patients_with_reference_key": 5,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7589,
+   "name": "Flaccid paralysis",
+   "model_code": "G92.2",
+   "reference_code": "M62.50",
+   "training_patients_with_reference_key": 4,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7589,
+   "name": "Ventricular septal defect",
+   "model_code": "Q21.1",
+   "reference_code": "I23.2",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7589,
+   "name": "Papillary muscle rupture",
+   "model_code": "I26.0",
+   "reference_code": "I23.3",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7647,
+   "name": "Uncomplicated parapneumonic effusion",
+   "model_code": "J92.0",
+   "reference_code": "J90",
+   "training_patients_with_reference_key": 3,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7710,
+   "name": "Congenital ptosis",
+   "model_code": "Q00.0",
+   "reference_code": "Q10.0",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7701,
+   "name": "Renal artery thrombosis",
+   "model_code": "I75.2",
+   "reference_code": "I74.8",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7701,
+   "name": "Necrotizing enterocolitis",
+   "model_code": "P79.3",
+   "reference_code": "P77.9",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7673,
+   "name": "Bronchopulmonary Dysplasia",
+   "model_code": "P70.0",
+   "reference_code": "P27.1",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7673,
+   "name": "DiGeorge syndrome",
+   "model_code": "Q87.8",
+   "reference_code": "D82.1",
+   "training_patients_with_reference_key": 3,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7673,
+   "name": "X-linked (Bruton) agammaglobulinemia",
+   "model_code": "D72.1",
+   "reference_code": "D80.0",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7673,
+   "name": "Nutritional rickets",
+   "model_code": "M98.1",
+   "reference_code": "E55.0",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7745,
+   "name": "Acute iron poisoning",
+   "model_code": "T50.211A",
+   "reference_code": "T45.4X1A",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7705,
+   "name": "Gastroschisis",
+   "model_code": "P70.0",
+   "reference_code": "Q79.3",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7705,
+   "name": "Transposition of the great arteries",
+   "model_code": "Q21.1",
+   "reference_code": "Q20.3",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7705,
+   "name": "Neonatal sepsis",
+   "model_code": "Q21.0",
+   "reference_code": "P36.9",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7705,
+   "name": "Vitamin K deficiency (Hemorrhagic disease of the newborn)",
+   "model_code": "P70.1",
+   "reference_code": "P53",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7705,
+   "name": "Neonatal chlamydial conjunctivitis",
+   "model_code": "B21.1",
+   "reference_code": "P39.1",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7772,
+   "name": "Acute lymphoblastic leukemia",
+   "model_code": "D69.0",
+   "reference_code": "C91.02",
+   "training_patients_with_reference_key": 4,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7675,
+   "name": "Bicuspid aortic valve",
+   "model_code": "I35.1",
+   "reference_code": "Q23.81",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7675,
+   "name": "X-linked (Bruton) agammaglobulinemia",
+   "model_code": "D81.1",
+   "reference_code": "D80.0",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7675,
+   "name": "Aortic valve stenosis",
+   "model_code": "I35.0",
+   "reference_code": "Q23.0",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7749,
+   "name": "Chronic otitis media with effusion",
+   "model_code": "H66.13",
+   "reference_code": "H65.93",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7843,
+   "name": "Orchitis",
+   "model_code": "N49.2",
+   "reference_code": "B26.0",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7792,
+   "name": "Vitamin D-dependent rickets type II",
+   "model_code": "E23.1",
+   "reference_code": "E83.32",
+   "training_patients_with_reference_key": 11,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7792,
+   "name": "Craniopharyngioma",
+   "model_code": "C74.3",
+   "reference_code": "D44.4",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7785,
+   "name": "Testicular torsion",
+   "model_code": "N62.0",
+   "reference_code": "N44.00",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7785,
+   "name": "Testicular torsion",
+   "model_code": "N62.0",
+   "reference_code": "N44.02",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7775,
+   "name": "Conductive hearing loss",
+   "model_code": "H62.1",
+   "reference_code": "H90.0",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7757,
+   "name": "Simple febrile seizure",
+   "model_code": "P70.0",
+   "reference_code": "R56.00",
+   "training_patients_with_reference_key": 3,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7869,
+   "name": "Rhabdomyolysis requiring fluid resuscitation",
+   "model_code": "T42.2X5A",
+   "reference_code": "M62.82",
+   "training_patients_with_reference_key": 4,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7725,
+   "name": "Glucose-6-phosphate dehydrogenase deficiency",
+   "model_code": "D59.1",
+   "reference_code": "D55.0",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7725,
+   "name": "Functional constipation",
+   "model_code": "K52.10",
+   "reference_code": "K59.04",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7868,
+   "name": "Compartment syndrome of hand",
+   "model_code": "S52.2XXA",
+   "reference_code": "T79.A12A",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7910,
+   "name": "Serotonin syndrome",
+   "model_code": "T45.2X1A",
+   "reference_code": "G44.83",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7882,
+   "name": "Traumatic hemorrhagic shock with acute coagulopathy",
+   "model_code": "T79.21XA",
+   "reference_code": "T79.4XXA",
+   "training_patients_with_reference_key": 3,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7934,
+   "name": "Esophageal rupture with pleural effusion",
+   "model_code": "S31.21XA",
+   "reference_code": "K22.3",
+   "training_patients_with_reference_key": 12,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 7934,
+   "name": "Blunt thoracic aortic injury",
+   "model_code": "S36.00XA",
+   "reference_code": "S25.00XA",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7873,
+   "name": "Maternal HIV infection",
+   "model_code": "Z32.0",
+   "reference_code": "Z21",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7873,
+   "name": "HIV-related opportunistic skin infection",
+   "model_code": "B59.8",
+   "reference_code": "B20",
+   "training_patients_with_reference_key": 5,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7853,
+   "name": "Cryptococcal meningitis",
+   "model_code": "B35.2",
+   "reference_code": "B45.1",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7853,
+   "name": "IgA nephropathy",
+   "model_code": "N04.0",
+   "reference_code": "N02.9",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7853,
+   "name": "HIV-related opportunistic skin infection",
+   "model_code": "B59.8",
+   "reference_code": "B20",
+   "training_patients_with_reference_key": 5,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7956,
+   "name": "Primary sclerosing cholangitis",
+   "model_code": "K81.1",
+   "reference_code": "K83.01",
+   "training_patients_with_reference_key": 4,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7893,
+   "name": "Heroin overdose",
+   "model_code": "T40.6X1A",
+   "reference_code": "T40.1X1A",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7990,
+   "name": "Epidural hematoma",
+   "model_code": "S06.2X1A",
+   "reference_code": "S06.4X9A",
+   "training_patients_with_reference_key": 3,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7985,
+   "name": "High-altitude pulmonary edema",
+   "model_code": "T79.2XXA",
+   "reference_code": "T70.29XA",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 7996,
+   "name": "Infected human bite wound of hand (clenched fist injury/fight bite)",
+   "model_code": "S52.211A",
+   "reference_code": "S61.451A",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 8004,
+   "name": "Cocaine abuse",
+   "model_code": "F15.210",
+   "reference_code": "F14.10",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 8004,
+   "name": "Acute cocaine intoxication",
+   "model_code": "T40.211A",
+   "reference_code": "F14.92",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 8038,
+   "name": "Genitourinary syndrome of menopause (Atrophic vaginitis)",
+   "model_code": "N93.1",
+   "reference_code": "N95.2",
+   "training_patients_with_reference_key": 4,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 8126,
+   "name": "Incisional hernia",
+   "model_code": "K42.8",
+   "reference_code": "K43.2",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 8222,
+   "name": "Acute rheumatic fever",
+   "model_code": "M32.0",
+   "reference_code": "I01.9",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 8106,
+   "name": "Bell's palsy",
+   "model_code": "H57.01",
+   "reference_code": "G51.0",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 8262,
+   "name": "Congenital adrenal hyperplasia",
+   "model_code": "E23.1",
+   "reference_code": "E25.0",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 8078,
+   "name": "Extranodal marginal zone B-cell lymphoma of mucosa-associated lymphoid tissue (MALT lymphoma) of the stomach",
+   "model_code": "C84.110",
+   "reference_code": "C88.41",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 8078,
+   "name": "Scleroderma renal crisis",
+   "model_code": "I92.2",
+   "reference_code": "M34.0",
+   "training_patients_with_reference_key": 3,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 8078,
+   "name": "Interstitial lung disease",
+   "model_code": "J44.9",
+   "reference_code": "J84.9",
+   "training_patients_with_reference_key": 11,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 8208,
+   "name": "M\u00fcllerian agenesis",
+   "model_code": "Q63.1",
+   "reference_code": "Q51.0",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 8208,
+   "name": "Complete Androgen Insensitivity Syndrome",
+   "model_code": "Q56.8",
+   "reference_code": "E34.51",
+   "training_patients_with_reference_key": 3,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 8208,
+   "name": "Complete Androgen Insensitivity Syndrome",
+   "model_code": "Q56.8",
+   "reference_code": "E34.52",
+   "training_patients_with_reference_key": 3,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 8254,
+   "name": "Thyroglossal duct cyst",
+   "model_code": "Q03.1",
+   "reference_code": "Q89.2",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 8199,
+   "name": "Chronic radiation proctitis",
+   "model_code": "K63.5",
+   "reference_code": "K62.7",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 8199,
+   "name": "Carcinoid syndrome",
+   "model_code": "E21.1",
+   "reference_code": "E34.09",
+   "training_patients_with_reference_key": 3,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 8243,
+   "name": "Acoustic neuroma (Vestibular schwannoma)",
+   "model_code": "C73.1",
+   "reference_code": "D33.3",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 8179,
+   "name": "Acute pulmonary edema",
+   "model_code": "I50.9",
+   "reference_code": "J81.0",
+   "training_patients_with_reference_key": 4,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 8179,
+   "name": "Gallbladder carcinoma",
+   "model_code": "C50.9",
+   "reference_code": "C23",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 8049,
+   "name": "Anastomotic leak (postoperative)",
+   "model_code": "K92.2",
+   "reference_code": "T81.83XA",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 8049,
+   "name": "Streptococcal infection or syphilis",
+   "model_code": "B36.1",
+   "reference_code": "A46",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 8049,
+   "name": "Anastomotic stricture",
+   "model_code": "K56.4",
+   "reference_code": "K63.89",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 8046,
+   "name": "Benign paroxysmal positional vertigo",
+   "model_code": "I69.20",
+   "reference_code": "H81.10",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 8046,
+   "name": "Rhegmatogenous retinal detachment",
+   "model_code": "I70.0",
+   "reference_code": "H33.8",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 8046,
+   "name": "Transfusion-related acute lung injury",
+   "model_code": "D75.8",
+   "reference_code": "J95.84",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 8046,
+   "name": "Calcium channel blocker-induced peripheral edema",
+   "model_code": "I69.21",
+   "reference_code": "T46.1X5A",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 8046,
+   "name": "Paget disease of the breast",
+   "model_code": "M81.2",
+   "reference_code": "C50.011",
+   "training_patients_with_reference_key": 6,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 8046,
+   "name": "Cervical squamous cell carcinoma",
+   "model_code": "C18.100",
+   "reference_code": "C53.1",
+   "training_patients_with_reference_key": 1,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 8046,
+   "name": "AA amyloidosis",
+   "model_code": "E88.0",
+   "reference_code": "E85.4",
+   "training_patients_with_reference_key": 4,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 8180,
+   "name": "Theophylline toxicity",
+   "model_code": "T45.1X1A",
+   "reference_code": "T48.6X5A",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 8180,
+   "name": "Creutzfeldt-Jakob disease",
+   "model_code": "G11.2",
+   "reference_code": "A81.09",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 8180,
+   "name": "Creutzfeldt-Jakob disease",
+   "model_code": "G11.2",
+   "reference_code": "A81.09",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 8180,
+   "name": "Creutzfeldt-Jakob disease",
+   "model_code": "G11.2",
+   "reference_code": "A81.00",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 8180,
+   "name": "Creutzfeldt-Jakob disease",
+   "model_code": "G11.2",
+   "reference_code": "A81.00",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": false
+  },
+  {
+   "gt_id": 8160,
+   "name": "Lisinopril adverse effect",
+   "model_code": "T82.21XA",
+   "reference_code": "T46.4X5A",
+   "training_patients_with_reference_key": 5,
+   "model_key_is_a_training_target_key": false,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 8160,
+   "name": "Adverse effect of anticholinergic medication",
+   "model_code": "T79.4XXA",
+   "reference_code": "T44.3X5A",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 8160,
+   "name": "Status post mechanical mitral valve replacement",
+   "model_code": "Z90.89",
+   "reference_code": "Z95.2",
+   "training_patients_with_reference_key": 2,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  },
+  {
+   "gt_id": 8160,
+   "name": "Age-related bilateral cataracts",
+   "model_code": "H35.12",
+   "reference_code": "H25.13",
+   "training_patients_with_reference_key": 0,
+   "model_key_is_a_training_target_key": true,
+   "same_chapter_letter": true
+  }
+ ]
+}

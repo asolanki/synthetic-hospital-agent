@@ -1,0 +1,6 @@
+{
+  "path": "/workspace/synthetic-hospital-rl/runs/rl/rl-sft-paper-v1/initial_adapter",
+  "sha256": "ac102c7ff86386fb96e1a7f5ba10a61652cf8511884ed85599c6b48a9bd82bf5",
+  "tensor_count": 504,
+  "zero_initialized_B_matrices": 252
+}

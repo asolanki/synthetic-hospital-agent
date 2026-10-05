@@ -38,7 +38,7 @@ def baseline_table(summaries: list[dict]) -> str:
             f"{_f(lo)}–{_f(hi)} | {_f(s['official_f1_strict'])} | {_f(s['precision_neutral'])} | "
             f"{_f(s['weighted_recall'])} | {_f(split.get('recall_earlier_visits'))} | "
             f"{_f(split.get('recall_final_visit'))} | {_f(s['acuity_accuracy'])} | {_pct(s['valid_submit_rate'])} | "
-            f"{s['mean_actions']:.1f} | {s['mean_total_tokens']:,.0f} | {_pct(s['budget_exhausted_rate'])} |")
+            f"{_f(s['mean_actions'], 1)} | {s['mean_total_tokens']:,.0f} | {_pct(s['budget_exhausted_rate'])} |")
     return "\n".join(lines)
 
 
@@ -58,11 +58,21 @@ def build() -> str:
     baselines = [json.loads(p.read_text())
                  for p in sorted((config.RAW_RESULTS_DIR / "baselines").glob("*.json"))]
     if baselines:
-        instances = {i.gt_id: i for i in benchmark.load_instances(("train", "public"))}
+        # Train/dev comparisons use the released training pool; leave heldout unopened.
+        instances = {i.gt_id: i for i in benchmark.load_instances(("train",))}
         for s in baselines:
             traj = config.RUNS_DIR / s.get("name", "") / "trajectories.jsonl"
             if s.get("name") and traj.exists():
                 s["visit_split"] = visit_split_for_run(traj, instances)
+    for path in sorted((config.RAW_RESULTS_DIR / "training").glob("*.json")):
+        result = json.loads(path.read_text())
+        # Setup checks and throughput subsets are not baseline-table entries; sampling
+        # replicates (seed > 0) are summarized by training.compare, and decoding
+        # diagnostics (non-paper temperature) are reported separately.
+        if (result.get("complete_split") and not result.get("sampling_seed")
+                and not result.get("decoding_override")):
+            baselines.append(result["summary"])
+    if baselines:
         parts.append("## Agent baselines\n\n" + baseline_table(baselines))
     for path in sorted((config.RAW_RESULTS_DIR / "audit").glob("strategies_*.json")):
         result = json.loads(path.read_text())

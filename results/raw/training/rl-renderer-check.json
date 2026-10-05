@@ -1,0 +1,19 @@
+{
+  "counts": {
+    "demonstrations": 680,
+    "native_full_matches": 669,
+    "automatic_full_matches": 0,
+    "native_generation_prefix_matches": 2040,
+    "automatic_generation_prefix_matches": 2040,
+    "generation_prefixes": 2040,
+    "native_mismatches": 11
+  },
+  "first_automatic_difference": {
+    "gt_id": 7003,
+    "position": 3726,
+    "native": "<|im_end|>\n<|im_start|>assistant\n<tool_call>\n{\"name\": \"submit_diagnosis\", \"arguments\": {\"active_diagnoses\": [{\"",
+    "automatic": "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n<tool_call>\n{\"name\": \"submit_diagnosis\", \"arguments\": {\"active_di"
+  },
+  "template_sha256": "64f85b198065d0fba2a81f37e10ed68161ce2c19a754c7100e67e0ca2ee9c326",
+  "gpu_used": false
+}

@@ -22,6 +22,7 @@ exclude = ["training/environment"]
 
 [dependency-groups]
 dev = ["pytest>=8"]
+tracking = ["wandb==0.26.1"]
 # Verifiers v1 pinned to the commit the environment was written against (prime-rl tracks main).
 # Its null harness runs `uv sync --script` with ~/.local/bin first on PATH, so the uv
 # installed there must be >= 0.9 (see training/README.md).

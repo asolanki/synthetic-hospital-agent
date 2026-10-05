@@ -1,0 +1,22 @@
+# Continued-SFT control for the RL pilot: the unchanged oracle-copy recipe, run again as a
+# fresh LoRA adapter on the frozen merged SFT checkpoint (the same base RL trained on).
+# Run with --no-merge and serve the adapter unmerged, like RL.
+model = "runs/sft-oracle-copy-v1/merged"
+# Original base revision, kept for provenance; a local checkpoint directory ignores it.
+revision = "cdbee75f17c01a7cc42f958dc650907174af0554"
+data = "data/sft/oracle-copy-v1/train.jsonl"
+output_dir = "runs/sft-continued-v1"
+wandb_project = "synthetic-hospital-rl"
+wandb_entity = "grid-labs-llc"
+max_length = 8192
+seed = 0
+epochs = 3
+learning_rate = 0.0001
+micro_batch_size = 1
+gradient_accumulation_steps = 8
+warmup_ratio = 0.03
+weight_decay = 0.0
+max_grad_norm = 1.0
+lora_rank = 16
+lora_alpha = 32
+lora_dropout = 0.05

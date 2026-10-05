@@ -1,0 +1,26 @@
+{
+ "format": "ordered chunks of one tar.gz stream",
+ "bucket": "synthetic-hospital-rl-artifacts",
+ "prefix": "2026-10-05/post-rl-evaluations/chunks-16m/",
+ "verified_at": "2026-10-05T07:02:01.982210+00:00",
+ "archive_sha256": "9399e0b70638b59958dc8f2ef48bbe8996143615e0f1424382d81a68d83fb052",
+ "archive_bytes": 31691537,
+ "parts": [
+  {
+   "file": "archive.tar.gz.part-aaaa",
+   "key": "2026-10-05/post-rl-evaluations/chunks-16m/archive.tar.gz.part-aaaa",
+   "bytes": 16777216,
+   "sha256": "4fe514145e060c622732da617e68cd8d2cf8ca30ed7000ca32c714503c077041",
+   "md5": "9c5c9aa77b4d2fc38ca5f5261c13e787"
+  },
+  {
+   "file": "archive.tar.gz.part-aaab",
+   "key": "2026-10-05/post-rl-evaluations/chunks-16m/archive.tar.gz.part-aaab",
+   "bytes": 14914321,
+   "sha256": "ae8579d331dc6561040db266a38845af3bc788a29642f275f92a160ac023d982",
+   "md5": "5e63df5cb660a6f1e00da89b571229ed"
+  }
+ ],
+ "verification": "Every part's server-reported size and ETag match local bytes and MD5; SHA-256 hashes permit independent restoration checks.",
+ "restore": "Download all listed parts, verify their SHA-256 hashes, concatenate in manifest order, then extract the tar.gz stream."
+}

@@ -1,0 +1,3617 @@
+{
+ "format": "ordered chunks of one tar.gz stream",
+ "bucket": "synthetic-hospital-rl-artifacts",
+ "prefix": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/",
+ "verified_at": "2026-10-05T06:18:38.433020+00:00",
+ "archive_sha256": "f7cd55e5c3602c03079e12a2fe725ca96d070fb0fa06df382fac3af9cc0bb069",
+ "archive_bytes": 8635935967,
+ "parts": [
+  {
+   "file": "archive.tar.gz.part-aaaa",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaaa",
+   "bytes": 16777216,
+   "sha256": "e832b995ddcbdcb65cad393cea4532f8d61668289cc7101d361cba2ad4ae8bca",
+   "md5": "674fb30b75f182ab4fde9a773cab8f1f"
+  },
+  {
+   "file": "archive.tar.gz.part-aaab",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaab",
+   "bytes": 16777216,
+   "sha256": "f40b9442cde202938dbec5a6b5cf5c1bb3318e694fa23205a79c193714fc3df1",
+   "md5": "b938a866f2b113dd110c42585ed2ca60"
+  },
+  {
+   "file": "archive.tar.gz.part-aaac",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaac",
+   "bytes": 16777216,
+   "sha256": "22d245f1590778c6a43660195e617da6d7a9e3862c02f8aacb6f6652a7c88906",
+   "md5": "d8d089696b7358e4f4269c2b27b57464"
+  },
+  {
+   "file": "archive.tar.gz.part-aaad",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaad",
+   "bytes": 16777216,
+   "sha256": "003bc5b79e832f5a875e244e9721eb9693ed83fcea73d6854f9c5766b15cb279",
+   "md5": "c74a6c58566c13a19370f106ace2ef42"
+  },
+  {
+   "file": "archive.tar.gz.part-aaae",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaae",
+   "bytes": 16777216,
+   "sha256": "684e24f18a9902e961d37d3399862816497841641b5a776b396fe3d761904a15",
+   "md5": "44aed320ccc3aebda9aed1f89bcefe4c"
+  },
+  {
+   "file": "archive.tar.gz.part-aaaf",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaaf",
+   "bytes": 16777216,
+   "sha256": "f17ff26111613d1330a07f6361d56a520f5bc0bbffad1c44444ee2050d1e2c2a",
+   "md5": "d3c6f444c5dd181e255f7c3f3e87591c"
+  },
+  {
+   "file": "archive.tar.gz.part-aaag",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaag",
+   "bytes": 16777216,
+   "sha256": "9e2e143b076f5ea0a464c29becf790de750e1a74dc5eda7a311eb258873511d2",
+   "md5": "5a5e922f457af4169032afedc54a2a45"
+  },
+  {
+   "file": "archive.tar.gz.part-aaah",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaah",
+   "bytes": 16777216,
+   "sha256": "13d9399276673b0dcf6b7667687f8cfd5dc03fef9022f2ec04c1891777f06185",
+   "md5": "c817ce072ee62029aea006de28b4e5d5"
+  },
+  {
+   "file": "archive.tar.gz.part-aaai",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaai",
+   "bytes": 16777216,
+   "sha256": "ba43e1e2cf3d63a5ce73dc020e5d3a0442c8d98a3415fbb7f42e3a6a768d7c64",
+   "md5": "5b23cc919566d2b11a507fd12d48ff7c"
+  },
+  {
+   "file": "archive.tar.gz.part-aaaj",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaaj",
+   "bytes": 16777216,
+   "sha256": "4e179f0923c5f0caab38b5886ff9432fffcf5210a1eaf39f4a76d1ce79892bbf",
+   "md5": "545901f618af9eff6e34be14241775bd"
+  },
+  {
+   "file": "archive.tar.gz.part-aaak",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaak",
+   "bytes": 16777216,
+   "sha256": "81953e1f02d5b599e7667bff6971cf0df304f1e48afc6a56f638f44791a81a1f",
+   "md5": "c06c8d1bb23ea85475629b06daaae667"
+  },
+  {
+   "file": "archive.tar.gz.part-aaal",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaal",
+   "bytes": 16777216,
+   "sha256": "35e2fbe35c6c474bcab9e33b6d289268ee15e8398d94aac5646490c85dfdad09",
+   "md5": "bfe3a024565ee01f006b59fa55a60e10"
+  },
+  {
+   "file": "archive.tar.gz.part-aaam",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaam",
+   "bytes": 16777216,
+   "sha256": "bb7ab09bbea33d8c81b98f1939cf5b67074ce23947ccf5878ee25829f14a116f",
+   "md5": "6bbd5a2879c0e9ec8d8b26a7a54784dd"
+  },
+  {
+   "file": "archive.tar.gz.part-aaan",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaan",
+   "bytes": 16777216,
+   "sha256": "ad4c5ec598ede677db79721e4bcb223cbbd8f78f8048bfc18ca63177d2423567",
+   "md5": "c306472f0ac4a6fbe62205e2da599a9b"
+  },
+  {
+   "file": "archive.tar.gz.part-aaao",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaao",
+   "bytes": 16777216,
+   "sha256": "698ef7f8afc653dc91ed532fab9c166853683bfb0313d23c22923832de59839b",
+   "md5": "1d41cd7bf0af1f6f4b919f7b83dd8f65"
+  },
+  {
+   "file": "archive.tar.gz.part-aaap",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaap",
+   "bytes": 16777216,
+   "sha256": "1c0ca9d854c9c8b055840b6fe8096d8d7835bbdb48043c02584b97dc0d5c449d",
+   "md5": "89235ec17ea2e8e4333ba06a94b6def6"
+  },
+  {
+   "file": "archive.tar.gz.part-aaaq",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaaq",
+   "bytes": 16777216,
+   "sha256": "75c3a6e41e736d29431783e2591057bb705aa687e4b9662ec02085d887a5c404",
+   "md5": "a667cae8bd150cd921ce5da219f3c061"
+  },
+  {
+   "file": "archive.tar.gz.part-aaar",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaar",
+   "bytes": 16777216,
+   "sha256": "85f11b2f09c14e39fdd2006d939f77fc1898a7ce4d2a5c7dfc6f746ae7abf6fe",
+   "md5": "db96073dcf451cadb69297967f77c8d8"
+  },
+  {
+   "file": "archive.tar.gz.part-aaas",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaas",
+   "bytes": 16777216,
+   "sha256": "943eaa8531bf817a30c5da0b4fe2ce54b290d4d1acdc794d3aafdbd55c056489",
+   "md5": "a5a7b02de16662aa422a76804cb69bd3"
+  },
+  {
+   "file": "archive.tar.gz.part-aaat",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaat",
+   "bytes": 16777216,
+   "sha256": "40a785188a00597968ed025a34b66d46b4bcab6291c6a551de523b7813983bcf",
+   "md5": "75232cc597a8f62d32e422b30f262dd0"
+  },
+  {
+   "file": "archive.tar.gz.part-aaau",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaau",
+   "bytes": 16777216,
+   "sha256": "ac0b43c994f2895c4e6f23c127d4aa58261d47a209dad32dae58f8d75251abf3",
+   "md5": "f0cb33dd16b8a5dd8dbe1d5f30313a95"
+  },
+  {
+   "file": "archive.tar.gz.part-aaav",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaav",
+   "bytes": 16777216,
+   "sha256": "b64f73f50ec1d07a6a7ffaca80aa00c58beb04f157cc16b84185247e8bd79de2",
+   "md5": "c81cfde81573893a42dc17e94a4a0866"
+  },
+  {
+   "file": "archive.tar.gz.part-aaaw",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaaw",
+   "bytes": 16777216,
+   "sha256": "44127d5e6453b4c21f118b7e2af2198e4fbcd6471196c8286bf9b5e9445bced4",
+   "md5": "cc6c9f4a5cd6417f0f345555daf1e5ee"
+  },
+  {
+   "file": "archive.tar.gz.part-aaax",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaax",
+   "bytes": 16777216,
+   "sha256": "5d1ff9098a0d9e18968c2b7bbd700d38c2f02e2e7a07d2ba07c4b5b8a0766bb7",
+   "md5": "8f38d9f0d66844c97ebae5d89f522072"
+  },
+  {
+   "file": "archive.tar.gz.part-aaay",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaay",
+   "bytes": 16777216,
+   "sha256": "ff4803641de8f91626374a6ff6e3c9ee0a9d6d253f4ae7630a25ed8d8f33ee38",
+   "md5": "6a7d1ead98654e6c2a54d8d9e28bcae9"
+  },
+  {
+   "file": "archive.tar.gz.part-aaaz",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaaz",
+   "bytes": 16777216,
+   "sha256": "874ef9f8f23b090b3c8839ffb7ec34b99b260d84ea1329dfb02fa077d05be2b2",
+   "md5": "618dd8e7aa8b9d85ce51ee265e28cb08"
+  },
+  {
+   "file": "archive.tar.gz.part-aaba",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaba",
+   "bytes": 16777216,
+   "sha256": "227be0bc70d0b2b0a7ad17845245d266f08f7f8568eeaa27c2ca7aef450ab524",
+   "md5": "3bec1ba4d66059457b018c49f1e7fd83"
+  },
+  {
+   "file": "archive.tar.gz.part-aabb",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aabb",
+   "bytes": 16777216,
+   "sha256": "ee1b199dc168be0983ec3d0e5e09805492ace3fe76ccae6480eecf92b8e18fe5",
+   "md5": "1e260f2561867c411dbe8a1556fd2391"
+  },
+  {
+   "file": "archive.tar.gz.part-aabc",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aabc",
+   "bytes": 16777216,
+   "sha256": "94cd5867a445fbac0942f5c7dfa9317d6178b5195a99507a864f3cc51ea86be4",
+   "md5": "05137bfbd2d1f9d861f77b489aa58971"
+  },
+  {
+   "file": "archive.tar.gz.part-aabd",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aabd",
+   "bytes": 16777216,
+   "sha256": "7b4cf1bb60ebf1365562edef5dbff0ebe65ab1a063034b6e0eb53b459629e1ec",
+   "md5": "f7bb263be4b027bd6b891335a6216781"
+  },
+  {
+   "file": "archive.tar.gz.part-aabe",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aabe",
+   "bytes": 16777216,
+   "sha256": "54f7810536dbf7590cc228177686e45220fa7a95000c1201aa1bb2e4a300c39e",
+   "md5": "179329e49c2d80df9d4e668457c9f34b"
+  },
+  {
+   "file": "archive.tar.gz.part-aabf",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aabf",
+   "bytes": 16777216,
+   "sha256": "6d976189a1edcb600a9b1c0d91194a3dc3edfb4b67952cf984f9055e27d24e9a",
+   "md5": "fd44d177b7eac125de6b39f7e55ac4b1"
+  },
+  {
+   "file": "archive.tar.gz.part-aabg",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aabg",
+   "bytes": 16777216,
+   "sha256": "38b94e09dc34596d252ebc626ef7dab3a3791290de65f151b1912e23b92e39da",
+   "md5": "575ec9d960c60cc64d29cb14c9f61238"
+  },
+  {
+   "file": "archive.tar.gz.part-aabh",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aabh",
+   "bytes": 16777216,
+   "sha256": "8e94741acca89a8d9ac5c0385bded8f7bfc09115c37d01fbba4c7288b038e224",
+   "md5": "a829a09331316393a970036d61c2c7ad"
+  },
+  {
+   "file": "archive.tar.gz.part-aabi",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aabi",
+   "bytes": 16777216,
+   "sha256": "c384103ba17cd3229027b60a64913c79299fbdd39585dc29bab90ba7b55c6194",
+   "md5": "c17c26952b28c9021208cae531645763"
+  },
+  {
+   "file": "archive.tar.gz.part-aabj",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aabj",
+   "bytes": 16777216,
+   "sha256": "b07492bd2e6ead57931766fc6bf05923e968144d8efe69e0610b4b3adf8acf73",
+   "md5": "a7da60b3058fb5bf32b686d2c0ac9921"
+  },
+  {
+   "file": "archive.tar.gz.part-aabk",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aabk",
+   "bytes": 16777216,
+   "sha256": "cc8f8e7e5e9739f5bea5578427f5ea006933f64aa827e3341a6e31cfcab29f9c",
+   "md5": "ccb8366f7047370f34fc5f8fd53e1564"
+  },
+  {
+   "file": "archive.tar.gz.part-aabl",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aabl",
+   "bytes": 16777216,
+   "sha256": "6448d53873f087724ad26f1fdabe2511663103d47c15dbd0d04b5c84a02343aa",
+   "md5": "60f7e7159cd67eb381e8e101335d93e8"
+  },
+  {
+   "file": "archive.tar.gz.part-aabm",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aabm",
+   "bytes": 16777216,
+   "sha256": "ee43171f6a6f418aa37989f99e5d783d18ec8fc2eb8aae5a5ceac7edfc3c3e1a",
+   "md5": "12a7a2a5ce35a74b59101c94bde477d3"
+  },
+  {
+   "file": "archive.tar.gz.part-aabn",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aabn",
+   "bytes": 16777216,
+   "sha256": "1d88727470386466e8ddef288d77d3b0f4d403d467955f418bcdd3e9fdeb87c0",
+   "md5": "f3f48aa9a207f86131e24057c4c8454e"
+  },
+  {
+   "file": "archive.tar.gz.part-aabo",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aabo",
+   "bytes": 16777216,
+   "sha256": "7ac080262f1cc5a65b36cdf589bb75b0b7835501fbc5a4671bd79c9fc288e8fd",
+   "md5": "081f6cb1534386ec5eed8b3427f6296b"
+  },
+  {
+   "file": "archive.tar.gz.part-aabp",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aabp",
+   "bytes": 16777216,
+   "sha256": "98089c882c257432165c7efe1d650174fb9769e80a5d761f178ff6499d518f97",
+   "md5": "f0ca1509c1e36ec37ed7d9f6f0d04a1e"
+  },
+  {
+   "file": "archive.tar.gz.part-aabq",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aabq",
+   "bytes": 16777216,
+   "sha256": "d94a31fdc83cee0fa153f7637bb4499aaeb4e45c62329d6052da30bcf299e5f4",
+   "md5": "25d7816d89f71ffa18877979856c5e37"
+  },
+  {
+   "file": "archive.tar.gz.part-aabr",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aabr",
+   "bytes": 16777216,
+   "sha256": "542e90dc439d834f80bbbd5405122bc8cad456bd8ebb8a8c00be09fe3760c9f8",
+   "md5": "644fca691b552e705902919961c0f72f"
+  },
+  {
+   "file": "archive.tar.gz.part-aabs",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aabs",
+   "bytes": 16777216,
+   "sha256": "a7157c677a54d2ec2672d6b7f415f6fcb6b42b954b440c5f52869486efdb66ef",
+   "md5": "29caf943491c8f3adb17d4828c873347"
+  },
+  {
+   "file": "archive.tar.gz.part-aabt",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aabt",
+   "bytes": 16777216,
+   "sha256": "120c0faa6a748c2f5a76f03aeec15b99f7438073cfde45c3048b8e69c18e62ae",
+   "md5": "23f4ce05db21a83ec15203dd5b3b7f3b"
+  },
+  {
+   "file": "archive.tar.gz.part-aabu",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aabu",
+   "bytes": 16777216,
+   "sha256": "7afca8590c5d855e08239a0d0ba195beffc4247f496a5ba85cdc5d0a51461d4a",
+   "md5": "8f23d0e0bee3a6ce69a848b6f5015137"
+  },
+  {
+   "file": "archive.tar.gz.part-aabv",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aabv",
+   "bytes": 16777216,
+   "sha256": "ff2673801ac9fda2b4ae2e5637064a9b683e24b0a023f2994f6594512cab5544",
+   "md5": "9205fdad96ac73c8ac059792dfc5ba45"
+  },
+  {
+   "file": "archive.tar.gz.part-aabw",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aabw",
+   "bytes": 16777216,
+   "sha256": "42ef960d744330e9b3aa36dd600e56aa0adff1f8a22eeda49a931c2dc45c2023",
+   "md5": "5f193bb7c2ebcad064b7ce6b893f3167"
+  },
+  {
+   "file": "archive.tar.gz.part-aabx",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aabx",
+   "bytes": 16777216,
+   "sha256": "70a76d09f4779db14bdbfeafa28c8fb83ca940ef96ddbcb406ed7c4056e9c631",
+   "md5": "1c049d44bafbaefd298de4ac5aa86872"
+  },
+  {
+   "file": "archive.tar.gz.part-aaby",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaby",
+   "bytes": 16777216,
+   "sha256": "7558da91993c0b31baca56291e39439c7103d139be53d295b68f134902b27aac",
+   "md5": "4344a81e1f580912c58c3698e9afb0be"
+  },
+  {
+   "file": "archive.tar.gz.part-aabz",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aabz",
+   "bytes": 16777216,
+   "sha256": "6b4a57611042947354f3aec268b8bc8200610635f663e92f2cfcb2c110cbf429",
+   "md5": "dbb350957ca3ef72256f5ff366b57d8a"
+  },
+  {
+   "file": "archive.tar.gz.part-aaca",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaca",
+   "bytes": 16777216,
+   "sha256": "434ed436ab4c689fd7f628a03d4c5f92bee862f73447e73382651fdbfe594122",
+   "md5": "5872bbdbec1ef371e08722f0a894b8b7"
+  },
+  {
+   "file": "archive.tar.gz.part-aacb",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aacb",
+   "bytes": 16777216,
+   "sha256": "4650d85465826ab51ed07f790e34efef2e47cf355d980b9a6359788f17cd25cd",
+   "md5": "4090db42dd5aeaa8c454de285af7b93c"
+  },
+  {
+   "file": "archive.tar.gz.part-aacc",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aacc",
+   "bytes": 16777216,
+   "sha256": "db02bc8efdcbe8d0b5ecff12ab523ae46637f6eb9a5a9c9020c547ba75a1c1f7",
+   "md5": "8b2d116dfeade4f4b6935db8d1ee5d25"
+  },
+  {
+   "file": "archive.tar.gz.part-aacd",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aacd",
+   "bytes": 16777216,
+   "sha256": "e7822ec4cc768ad5263e5b85d4bdf4487757f58bd678ed73274e45bb5e8d573c",
+   "md5": "049b3875e04c91b60c7001171dd4d77d"
+  },
+  {
+   "file": "archive.tar.gz.part-aace",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aace",
+   "bytes": 16777216,
+   "sha256": "9663d578035364c1369d061d0bf66dfc82472c0430d87eb811a7bc3ab6daf135",
+   "md5": "b750442021a5fcea9d8e134dc470885c"
+  },
+  {
+   "file": "archive.tar.gz.part-aacf",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aacf",
+   "bytes": 16777216,
+   "sha256": "5c463f19662e320de6473bc42e2794b4bef2bc8de5307ff4ca2e35da6bc9dbfe",
+   "md5": "bb33b3d99b491016c6490ea34b6cd47b"
+  },
+  {
+   "file": "archive.tar.gz.part-aacg",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aacg",
+   "bytes": 16777216,
+   "sha256": "1bc7fbf3690da371fa39ce29ef02e3ea422fd7ca4eb4eb8ba408fbccef6a04fe",
+   "md5": "cbfa57c9a00c2df2e2a5d123c7febaee"
+  },
+  {
+   "file": "archive.tar.gz.part-aach",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aach",
+   "bytes": 16777216,
+   "sha256": "61791db1caeb65a14af3697dbac7c0da0be29ac78234d79d6bb82f76d653b7a6",
+   "md5": "86c76d3b85a2b7f2049beba7a40ca89f"
+  },
+  {
+   "file": "archive.tar.gz.part-aaci",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaci",
+   "bytes": 16777216,
+   "sha256": "e56c08c62009a8901712924a0f525cdfc411ccae00bb7dd6a931477bd12517d3",
+   "md5": "04e99291567be2f10a1bf3a0737cae3c"
+  },
+  {
+   "file": "archive.tar.gz.part-aacj",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aacj",
+   "bytes": 16777216,
+   "sha256": "650bdd4803581a11c1859340a15474db3dc2dda77cf8cfe3705223d7fb7db51d",
+   "md5": "e6af411c8e3bfec66330964dc26bf995"
+  },
+  {
+   "file": "archive.tar.gz.part-aack",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aack",
+   "bytes": 16777216,
+   "sha256": "36be3c7096f2372e6df720c3e71565ba26b7fa419432fa6488fdce6dd16cd711",
+   "md5": "f458a25578425a63522ffb98fd046e1f"
+  },
+  {
+   "file": "archive.tar.gz.part-aacl",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aacl",
+   "bytes": 16777216,
+   "sha256": "e842619a62f0f4d79e0134f613ae4119bf1dbe4524a689365a067305fdb4bc3f",
+   "md5": "9b355948356a8b09a011f05d77db06fb"
+  },
+  {
+   "file": "archive.tar.gz.part-aacm",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aacm",
+   "bytes": 16777216,
+   "sha256": "b4529c748fe9c4d14f2eb8957f146e56507d9ca03f231da3719a8ddebbac8430",
+   "md5": "e14d0afd21823fb2b38a93d83a0ddc88"
+  },
+  {
+   "file": "archive.tar.gz.part-aacn",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aacn",
+   "bytes": 16777216,
+   "sha256": "fce9a3cda25da61344e47920fce9da4bcf3e24ce21449fee6fbd66998899519e",
+   "md5": "c53d955f3914c39f56f7eace2213fc55"
+  },
+  {
+   "file": "archive.tar.gz.part-aaco",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaco",
+   "bytes": 16777216,
+   "sha256": "6529ffbc4536f44863da18096a588a610933502b72c8e91cbc894584eee9bc30",
+   "md5": "37a12f171dae121e5550570a794a7fe8"
+  },
+  {
+   "file": "archive.tar.gz.part-aacp",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aacp",
+   "bytes": 16777216,
+   "sha256": "cc25d41b9674ced888b6649b1a1cad7b81e2c271a2eb571e26a8efb61ded46db",
+   "md5": "83d2d1794f2c141bd72d5c9c9c0b6394"
+  },
+  {
+   "file": "archive.tar.gz.part-aacq",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aacq",
+   "bytes": 16777216,
+   "sha256": "1d914d2573d79f2c94f147650c64ccd5dff987a4a637151a37ed1cbce8e942e2",
+   "md5": "2136720ade8264358dfba4c84e094eb6"
+  },
+  {
+   "file": "archive.tar.gz.part-aacr",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aacr",
+   "bytes": 16777216,
+   "sha256": "80079a0ddd678a10e44c1b8fb3edabf791280b5bb2cf85c02ce08d4a60cdfea5",
+   "md5": "99f1f64d6a470b971e07e1b9c4487a42"
+  },
+  {
+   "file": "archive.tar.gz.part-aacs",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aacs",
+   "bytes": 16777216,
+   "sha256": "b886f5764189e8560d955e11c7a5e330f27c07771e32d252e47c678c22eb810e",
+   "md5": "eb29e2123ac3c9b7c0901f0db289d443"
+  },
+  {
+   "file": "archive.tar.gz.part-aact",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aact",
+   "bytes": 16777216,
+   "sha256": "516b4ae1fd97085745999f765c941e63f04e097caebf2e798f59cc39c0e20727",
+   "md5": "17ed74545551993fbfb98cf100c20b3e"
+  },
+  {
+   "file": "archive.tar.gz.part-aacu",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aacu",
+   "bytes": 16777216,
+   "sha256": "0a28159f03c54508cef44ead2591e14bd5b744fb52ed90765fccd9c40582ff95",
+   "md5": "c8838e65bff6b740ceadec71d7921557"
+  },
+  {
+   "file": "archive.tar.gz.part-aacv",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aacv",
+   "bytes": 16777216,
+   "sha256": "4bcf8167914d8fddb1bb774d8368b41a15afaf237ed691d765d08c0f5806d065",
+   "md5": "ce63e99614abe4ab33abc6554dd530ba"
+  },
+  {
+   "file": "archive.tar.gz.part-aacw",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aacw",
+   "bytes": 16777216,
+   "sha256": "19e6f898f1cad6ed01df0514a2655cb3e2e4a2815a584f726928a3e10851efee",
+   "md5": "054e98bd3100ef0854c6fee91aa9e324"
+  },
+  {
+   "file": "archive.tar.gz.part-aacx",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aacx",
+   "bytes": 16777216,
+   "sha256": "b5ffe32dc366ce8fd5da9627d65cb6b160b4f0419ec1783f980b792d2d00c6ab",
+   "md5": "f43808f0cc18ded63aa15617497326d1"
+  },
+  {
+   "file": "archive.tar.gz.part-aacy",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aacy",
+   "bytes": 16777216,
+   "sha256": "c7a8194aa136231fa6363395350e5ea1825d23c9cc612112849921f81f876faa",
+   "md5": "ca749ae548ecb422950438611ff1191a"
+  },
+  {
+   "file": "archive.tar.gz.part-aacz",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aacz",
+   "bytes": 16777216,
+   "sha256": "5f85ce28117639fba58bfc863fbdaad78da1533adcf01155bd2bda346c856aa7",
+   "md5": "c3f29b2b32df455746bec69a1bc417b5"
+  },
+  {
+   "file": "archive.tar.gz.part-aada",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aada",
+   "bytes": 16777216,
+   "sha256": "11303a8b67b21977f3c2a00ed322f51066863d598f2987ad1cb94c1d97073bd5",
+   "md5": "0c307668836a810fbf03908251cf92c8"
+  },
+  {
+   "file": "archive.tar.gz.part-aadb",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aadb",
+   "bytes": 16777216,
+   "sha256": "8a55b8c62e6922ab9cdaeb5f449ce3fdab1373fce6d2a3ae52fd238e3cb777e6",
+   "md5": "feb28291f205dfaea4eef4604aa78230"
+  },
+  {
+   "file": "archive.tar.gz.part-aadc",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aadc",
+   "bytes": 16777216,
+   "sha256": "f2bb6090f24bfd39b605584aceeb03306baa6cbfe6cfe7f9b09fea610674a235",
+   "md5": "3bc91ae049c3f53afbfaadfd08f6c6e3"
+  },
+  {
+   "file": "archive.tar.gz.part-aadd",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aadd",
+   "bytes": 16777216,
+   "sha256": "ecfb19ecf2e3d0723d9eb51ca57067a6115453497573fd72412b8bff1d55901a",
+   "md5": "7cd0b91eae76de2820052135aafb2099"
+  },
+  {
+   "file": "archive.tar.gz.part-aade",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aade",
+   "bytes": 16777216,
+   "sha256": "ab15c495b6c76a37074d39c72f998fbd0d5c9e9a76c473c5e796029b1e7e08ac",
+   "md5": "12a086ce02ab064925df23cbb7a6caad"
+  },
+  {
+   "file": "archive.tar.gz.part-aadf",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aadf",
+   "bytes": 16777216,
+   "sha256": "158deb349a16838db574b61d172b8f1dce4ab8bb1d79b9d429a13ae09ed9b2a2",
+   "md5": "ddd66f695655a08bed750afb2e308bc4"
+  },
+  {
+   "file": "archive.tar.gz.part-aadg",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aadg",
+   "bytes": 16777216,
+   "sha256": "94c9fd14e399f8b2093ff563fd0746117b77ad9f06d3fd5f99db1c43cd4fde33",
+   "md5": "eabb9cc2a65cf7cd7fcacb4888f69045"
+  },
+  {
+   "file": "archive.tar.gz.part-aadh",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aadh",
+   "bytes": 16777216,
+   "sha256": "64f1403c7abe41115b44cadb8a28053e21f089eabdaf2393a8a79a17e0dc014f",
+   "md5": "c55e5742952744ac3a0922476bfa1e56"
+  },
+  {
+   "file": "archive.tar.gz.part-aadi",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aadi",
+   "bytes": 16777216,
+   "sha256": "d6fb302a7767bd96f5d9a9818ca6c585bb283d2b63ce5ace1ebffa2742917dcb",
+   "md5": "7b63c6a5f2a76fbffd98cc7ad05b65a7"
+  },
+  {
+   "file": "archive.tar.gz.part-aadj",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aadj",
+   "bytes": 16777216,
+   "sha256": "f029578418f653019213205f5d7871ac4db24bb23130c460027e8b16c97de910",
+   "md5": "af20909bad68903e23ea5799cc7c5f61"
+  },
+  {
+   "file": "archive.tar.gz.part-aadk",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aadk",
+   "bytes": 16777216,
+   "sha256": "f8b0a96eeb1ff24725ae6e5f81f24ae09065cc5502d43f7343861a663df64fe0",
+   "md5": "a43e342d15ebab191a714004f30e7fbc"
+  },
+  {
+   "file": "archive.tar.gz.part-aadl",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aadl",
+   "bytes": 16777216,
+   "sha256": "18599e2cda6c8adadeb257f9df4f247126c96ef5558fd787f1056e098b604936",
+   "md5": "2078fc42ce266f8d82f7a063436ef30b"
+  },
+  {
+   "file": "archive.tar.gz.part-aadm",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aadm",
+   "bytes": 16777216,
+   "sha256": "b50ee7b6352f03b73ad364e821331905380ac157eedff850d47efc6090015922",
+   "md5": "b5dacc03d8b4c4c406a5edd4dde2ec02"
+  },
+  {
+   "file": "archive.tar.gz.part-aadn",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aadn",
+   "bytes": 16777216,
+   "sha256": "86b365c0c918981852f153cd7b753161263b7507a57641bc25f556972ae0dcea",
+   "md5": "84e37bae347d75245e670b86194168d1"
+  },
+  {
+   "file": "archive.tar.gz.part-aado",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aado",
+   "bytes": 16777216,
+   "sha256": "b9b6a521c1285aacf365f8caeb6666b191bbb7ae1f738b02bf924e49e1fc4f06",
+   "md5": "278cd55822cb7962d1dfef1f72875ca5"
+  },
+  {
+   "file": "archive.tar.gz.part-aadp",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aadp",
+   "bytes": 16777216,
+   "sha256": "3b4c84d15f1eb2d0fa3937f53c47f07e35d40497a42e9de9da4430d099d782f4",
+   "md5": "f63e3a50bb1adba90e51e432cbb540f0"
+  },
+  {
+   "file": "archive.tar.gz.part-aadq",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aadq",
+   "bytes": 16777216,
+   "sha256": "874a99f10abe463ce632ebb4a323b86679f56865f332ec1f8b984748fb962204",
+   "md5": "2be8a6dc2aa813424d8fd64fea43fde9"
+  },
+  {
+   "file": "archive.tar.gz.part-aadr",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aadr",
+   "bytes": 16777216,
+   "sha256": "52142331eda72f47ac88f70aca0042fc68abffb2ac7ccaf37891345abc3390b7",
+   "md5": "2f6a9bd09c04fb9b3976e4a385bf6348"
+  },
+  {
+   "file": "archive.tar.gz.part-aads",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aads",
+   "bytes": 16777216,
+   "sha256": "7386503a0750ea0b5a318ef5e7c9227d93b5d766b06e94a2bbb8eeef7b6de8d0",
+   "md5": "16816d3581f4224d88bbcaf5f2e8fc83"
+  },
+  {
+   "file": "archive.tar.gz.part-aadt",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aadt",
+   "bytes": 16777216,
+   "sha256": "c35a53c0f28eec92d07f5a7fa08415fd46d29591fb9d9ad282e3c7063ff9e0fc",
+   "md5": "ae99a6d0b9ce3b395b20cffea16b8eb3"
+  },
+  {
+   "file": "archive.tar.gz.part-aadu",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aadu",
+   "bytes": 16777216,
+   "sha256": "eff2425991fa71b0dfb78fcd3edaa6ffae2ce528776d379903a1f7ce465ac31f",
+   "md5": "401373e53b1fce892e61e19d1c93311a"
+  },
+  {
+   "file": "archive.tar.gz.part-aadv",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aadv",
+   "bytes": 16777216,
+   "sha256": "d6bf86c9ebda9ba3ee46a38fb2168af43b4a658a3518b6faaa3267ecbfacb17b",
+   "md5": "331520cb289d66292c91afc0e11259d1"
+  },
+  {
+   "file": "archive.tar.gz.part-aadw",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aadw",
+   "bytes": 16777216,
+   "sha256": "c42a2fb5082b2703d2d3cd217cd540a3a4cba2a2590f0371bb87f4e0b042033e",
+   "md5": "6a70d0c1546b7e1de90f61f51760f689"
+  },
+  {
+   "file": "archive.tar.gz.part-aadx",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aadx",
+   "bytes": 16777216,
+   "sha256": "baa3a9858a397ba2da054cc6ff611012d4ce792a69d7797c8c156d61e175fd4d",
+   "md5": "cd5105b616ac2ca72f17d9d4c5ebf687"
+  },
+  {
+   "file": "archive.tar.gz.part-aady",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aady",
+   "bytes": 16777216,
+   "sha256": "a2b7b0e93eb552e68c1d5d92097031b6f6f6f4cbd9b67474feb823285bd37f6c",
+   "md5": "716689c755907d9fc5edd67204930668"
+  },
+  {
+   "file": "archive.tar.gz.part-aadz",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aadz",
+   "bytes": 16777216,
+   "sha256": "a454200f84afe48f4cd14a4a59bdef8c0e1d9603d1c1ef95520c9d1571ee8a28",
+   "md5": "a73c281c3d6b733c51576ce3f21d0945"
+  },
+  {
+   "file": "archive.tar.gz.part-aaea",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaea",
+   "bytes": 16777216,
+   "sha256": "17a24687721dc3e43c75d67152d40975bdf3a0951ae50c9b6557f548b5949b21",
+   "md5": "6bbb05eda956d6ce6ef82d35351788bd"
+  },
+  {
+   "file": "archive.tar.gz.part-aaeb",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaeb",
+   "bytes": 16777216,
+   "sha256": "d23497c32d51f502a579573a9a256d334ccb9ec7bdb6bfe62ea19c8d22542715",
+   "md5": "d760fecb0bbaa8d457aa3f6df0958b52"
+  },
+  {
+   "file": "archive.tar.gz.part-aaec",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaec",
+   "bytes": 16777216,
+   "sha256": "d54da846bfdb8a0cff25b41ec58af9ce0d9509aac8ee4d2a5c28efc343fd03f3",
+   "md5": "f1010513a1c0812b6f3ea82273f97de6"
+  },
+  {
+   "file": "archive.tar.gz.part-aaed",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaed",
+   "bytes": 16777216,
+   "sha256": "14ca914b568c6decf43efb4004cd84c8841d3bd9f4937ba8ad4797aff0ff6492",
+   "md5": "fe01c95bbbdc1af4591ce0df6c1844cd"
+  },
+  {
+   "file": "archive.tar.gz.part-aaee",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaee",
+   "bytes": 16777216,
+   "sha256": "ad09e9414eb2c8afc33c9b325c7528611bb1cc9bb2059a0c893893ed98ca1589",
+   "md5": "de0550caebad974f7f7145e0598f937f"
+  },
+  {
+   "file": "archive.tar.gz.part-aaef",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaef",
+   "bytes": 16777216,
+   "sha256": "bc806927ae8fa4a40b5cfc6e78c3b4eb8a0f7bb81354a3f9ca117ab71e959751",
+   "md5": "8d316653a23a7961f1150135141493e3"
+  },
+  {
+   "file": "archive.tar.gz.part-aaeg",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaeg",
+   "bytes": 16777216,
+   "sha256": "748624517e2e33ab017eb1f79528155a5e53d749501cd5e02cd7703c2a21bb88",
+   "md5": "eba5b8ef30a6986a664a4ff1f8987c09"
+  },
+  {
+   "file": "archive.tar.gz.part-aaeh",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaeh",
+   "bytes": 16777216,
+   "sha256": "302a7a79c24a3bf15c84c9551423c621dbf79b62d419e1182d7662bdfc19a390",
+   "md5": "9d1f9a5844c6fcdf43e5f4fd5bf2ec19"
+  },
+  {
+   "file": "archive.tar.gz.part-aaei",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaei",
+   "bytes": 16777216,
+   "sha256": "793bde310c48e9686d0478a5f69f824c74ad89762c12b934207f76ca838b16ac",
+   "md5": "9fc79bb3241310ab9f3b91157a6c794c"
+  },
+  {
+   "file": "archive.tar.gz.part-aaej",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaej",
+   "bytes": 16777216,
+   "sha256": "7352d872c87f0931a22056ad48b78dccc5ca2b244cc717ca847a1051436d7b78",
+   "md5": "79588b0e7e992655de7859cce764f6e3"
+  },
+  {
+   "file": "archive.tar.gz.part-aaek",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaek",
+   "bytes": 16777216,
+   "sha256": "212e7c28b9c02aecbc334806725ca7e72f5a20c82d65c86a636b1d51a5e396b4",
+   "md5": "d6045cc8a313f9813122864b32d21c76"
+  },
+  {
+   "file": "archive.tar.gz.part-aael",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aael",
+   "bytes": 16777216,
+   "sha256": "02a8c3db90b9cb820dbad47b7743d24cbd34d6e2ea786f9469097f5eb92b8447",
+   "md5": "edf48ab3dc7caf94260b8e79d9cf40e7"
+  },
+  {
+   "file": "archive.tar.gz.part-aaem",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaem",
+   "bytes": 16777216,
+   "sha256": "9cdb8837ee8eba8a0215df150ca201d8684194871a0630be27750bc0361f3ff4",
+   "md5": "33522581391a85debacb96fafcc53406"
+  },
+  {
+   "file": "archive.tar.gz.part-aaen",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaen",
+   "bytes": 16777216,
+   "sha256": "8a06b9fcf0be1f3d1012a2b19a86ce6a76d62d132d2cd36d4b9dbd1ddfe67a6d",
+   "md5": "14fc183efbdf5b82ea3cc76ca9b4e0fb"
+  },
+  {
+   "file": "archive.tar.gz.part-aaeo",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaeo",
+   "bytes": 16777216,
+   "sha256": "202fa60a239e092508c113aff8f7985e43131a1eb88fd90ed6f5d07268c9c444",
+   "md5": "d21b9ad4f239f34b576518628f8cdb90"
+  },
+  {
+   "file": "archive.tar.gz.part-aaep",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaep",
+   "bytes": 16777216,
+   "sha256": "7560c33cd3b28ead3a5100510db33ca38cb8c7a3c908ac84a9375f16ed3d4143",
+   "md5": "e7e11fbbe2a681822fd04613248afc01"
+  },
+  {
+   "file": "archive.tar.gz.part-aaeq",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaeq",
+   "bytes": 16777216,
+   "sha256": "a9b60e736db0c746c27eeb2af6c96671343108589db739672e00bdda518427de",
+   "md5": "d4471f9ef02ad221fad650084a595538"
+  },
+  {
+   "file": "archive.tar.gz.part-aaer",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaer",
+   "bytes": 16777216,
+   "sha256": "32abdaf691942f8d0dbc7fdcf10666de5850e2a368309d3851481311d91a8aae",
+   "md5": "b83616ae9ab14004c79cea7eb2d37e33"
+  },
+  {
+   "file": "archive.tar.gz.part-aaes",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaes",
+   "bytes": 16777216,
+   "sha256": "3946bbe95a3f4d985bc3928be92ec3ad2df7afcb37eae9f8af9ae409665e9ab7",
+   "md5": "241f6b9b07c2c94aa3dcb0c53cfb2582"
+  },
+  {
+   "file": "archive.tar.gz.part-aaet",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaet",
+   "bytes": 16777216,
+   "sha256": "44ed3aa7d755955d4e0ea7b1d9b7d1e22c4f438e909c0ac91bdf9ae7c22236f5",
+   "md5": "3ed0bce59ebf48f710e288ebc7ebb110"
+  },
+  {
+   "file": "archive.tar.gz.part-aaeu",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaeu",
+   "bytes": 16777216,
+   "sha256": "cc0e762e6e7a34ed24e249d4323aa4b3f58f08d7d93cfbe3ff53281402cda305",
+   "md5": "7b92228f713be5cd2f5a3419eb0ce978"
+  },
+  {
+   "file": "archive.tar.gz.part-aaev",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaev",
+   "bytes": 16777216,
+   "sha256": "4474d8e01e80b18ade3f013fb09897e65197c7231dac51ab3fd01c3696961a33",
+   "md5": "1097efd4a928fec65181d42eb9551bb6"
+  },
+  {
+   "file": "archive.tar.gz.part-aaew",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaew",
+   "bytes": 16777216,
+   "sha256": "2ae9e683c4c61fa9e9690315a169fa02566c3433918084b2c78400afc1081c8b",
+   "md5": "de774ab3c1498bd6eec835b5f0ad56d8"
+  },
+  {
+   "file": "archive.tar.gz.part-aaex",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaex",
+   "bytes": 16777216,
+   "sha256": "f3447568099f8b1583b5bd32c3c7607924e3912210fdc02e0ec6d5e827ab722c",
+   "md5": "1b273e01ce171ef00d3f43cb415b385c"
+  },
+  {
+   "file": "archive.tar.gz.part-aaey",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaey",
+   "bytes": 16777216,
+   "sha256": "1610a3441619cd7b8626acae5d66e0475464ee2ece4f12f532c24e7a4a67c6d3",
+   "md5": "d64bca65890a46a1095ab26bcc43e427"
+  },
+  {
+   "file": "archive.tar.gz.part-aaez",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaez",
+   "bytes": 16777216,
+   "sha256": "9787492b1db822166c471eb254078d9ee508d30957eea087f15a352e9062b352",
+   "md5": "b480ef463e4165935477d9de4d96fdff"
+  },
+  {
+   "file": "archive.tar.gz.part-aafa",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aafa",
+   "bytes": 16777216,
+   "sha256": "b516268fce9d40d89a09234d044abae671aa5fedff3adb22351145cac2df350f",
+   "md5": "39a29a1e38a315646574bfef15fb45b4"
+  },
+  {
+   "file": "archive.tar.gz.part-aafb",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aafb",
+   "bytes": 16777216,
+   "sha256": "17825a4cb7b6cea7ad5432113fd4c6604895f4e84438d17cab43cee60651a1bb",
+   "md5": "8575eaa823af937541fce562fba6997c"
+  },
+  {
+   "file": "archive.tar.gz.part-aafc",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aafc",
+   "bytes": 16777216,
+   "sha256": "1f593c68f399aedcae700823183beadb1490393bc8e531aa31f029342a4909d0",
+   "md5": "6366098700bc3dc862f567c24ee3d162"
+  },
+  {
+   "file": "archive.tar.gz.part-aafd",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aafd",
+   "bytes": 16777216,
+   "sha256": "990aa3dca5cecbafc0b30926944fd4e5cbb367b5f798975f7b02857b6194f6c0",
+   "md5": "68a0dd64f465acdf6793ebf50dc45faf"
+  },
+  {
+   "file": "archive.tar.gz.part-aafe",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aafe",
+   "bytes": 16777216,
+   "sha256": "cd98f9eb15e2c1a058f63d2b550c3f91b0c36a752a09b3b984287c4377b92c5b",
+   "md5": "02eb2a068f719806809077e8fb687be6"
+  },
+  {
+   "file": "archive.tar.gz.part-aaff",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaff",
+   "bytes": 16777216,
+   "sha256": "632c5c94942e895f8e1236fe6ecf5aa5f9c9adcd7d9e671bf418d223f2402cc1",
+   "md5": "472e010d46539d5825bfacdc5253fdc7"
+  },
+  {
+   "file": "archive.tar.gz.part-aafg",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aafg",
+   "bytes": 16777216,
+   "sha256": "8f4a8f869407a83f0a612c057cf176db523e9a89d69d0d7ccaee6f2a4adf9ee8",
+   "md5": "dfe7fadded695aa86bcbad16720f6ec6"
+  },
+  {
+   "file": "archive.tar.gz.part-aafh",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aafh",
+   "bytes": 16777216,
+   "sha256": "37e488bb2b6d5c1a6706c7b5b1d176e436c07aaec1791877eb7c65c25da6f32a",
+   "md5": "79ef43215b528f6d64b9a227dfb25247"
+  },
+  {
+   "file": "archive.tar.gz.part-aafi",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aafi",
+   "bytes": 16777216,
+   "sha256": "95819b023890115e9829ae884731c2d09c8abd480f7dffa02917711fe8c6951e",
+   "md5": "b21591023dbc5bce239f2c73cb58b86e"
+  },
+  {
+   "file": "archive.tar.gz.part-aafj",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aafj",
+   "bytes": 16777216,
+   "sha256": "a356d7142ca0f59ab8c508ec5a5b4a1f5242c10ac9ead6fb165432fc55f55216",
+   "md5": "a4f10c2fdea317ba8efc61f451cb6ac1"
+  },
+  {
+   "file": "archive.tar.gz.part-aafk",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aafk",
+   "bytes": 16777216,
+   "sha256": "9d82954cdcd3ada9f1b80a6cb2df995bf5a4e73caf0dc255164d486dc00fcd47",
+   "md5": "5cd60d8dedaab01227bccee6e4a39404"
+  },
+  {
+   "file": "archive.tar.gz.part-aafl",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aafl",
+   "bytes": 16777216,
+   "sha256": "026046eaa89bb84cad659f3e32b141e4e0110ffa6b1e18fb150aad42ab872bfe",
+   "md5": "5817c0da8f1af19b58afd24338a06bdb"
+  },
+  {
+   "file": "archive.tar.gz.part-aafm",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aafm",
+   "bytes": 16777216,
+   "sha256": "f35564bf8f365f1434f2a2088960c4c50734c9ddd7360e1d21f296b0d4e45b58",
+   "md5": "95ee607285b2396af6c0b124982bc468"
+  },
+  {
+   "file": "archive.tar.gz.part-aafn",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aafn",
+   "bytes": 16777216,
+   "sha256": "93f4558e0a87b0c7bafe2fd44da4b5ade460713f1693f8699347ad8ca11d15a0",
+   "md5": "3b5ebebf6b665bff387788125b3809f1"
+  },
+  {
+   "file": "archive.tar.gz.part-aafo",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aafo",
+   "bytes": 16777216,
+   "sha256": "3360857d12e24efad170c20f9e6055b52b5d0056a1350d27b833a6854382747f",
+   "md5": "e1912edbdfb9cb406c28ea4453813167"
+  },
+  {
+   "file": "archive.tar.gz.part-aafp",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aafp",
+   "bytes": 16777216,
+   "sha256": "c14cbd5b673347f3c5f5480fccf7f380330bd602c31e899936ae39f0923eebee",
+   "md5": "ae277efe2bec7c64c9357f81a6c2a600"
+  },
+  {
+   "file": "archive.tar.gz.part-aafq",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aafq",
+   "bytes": 16777216,
+   "sha256": "49eb2d1d7c4a4f74fdbe3d0183d5e9062c8927445fb1b89fdd05b1ab38f8f241",
+   "md5": "ae72d36374b4e4df1e2de98033de9a7f"
+  },
+  {
+   "file": "archive.tar.gz.part-aafr",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aafr",
+   "bytes": 16777216,
+   "sha256": "84d788d2a926606b81d57b082647ee7936b397c363fa23bf230ba475f5c54d89",
+   "md5": "db505e9a7f487301a59d3088595c0f3a"
+  },
+  {
+   "file": "archive.tar.gz.part-aafs",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aafs",
+   "bytes": 16777216,
+   "sha256": "4197fb0926008417655173194e610eaee829206cf33ddebfd609294d9a47c053",
+   "md5": "7e7822872c164d74c0c2e2bca261eff6"
+  },
+  {
+   "file": "archive.tar.gz.part-aaft",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaft",
+   "bytes": 16777216,
+   "sha256": "bf66f5dbeb6fa76895903a1025b34d30c73387459c38ab7df159b48330cc5e94",
+   "md5": "3dfe4989d5b08ac5b82c1729fa2bc02a"
+  },
+  {
+   "file": "archive.tar.gz.part-aafu",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aafu",
+   "bytes": 16777216,
+   "sha256": "41bf0a75df5a93a464f1e2d3b04b9ee3253f9ef9030abcbb63aa55cba298412c",
+   "md5": "1b13d3f4eb740460699b6374d923b510"
+  },
+  {
+   "file": "archive.tar.gz.part-aafv",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aafv",
+   "bytes": 16777216,
+   "sha256": "f55046c73b4b38fcefa2c12ba2348ad0e12c70014a742348fb2a5265885f6691",
+   "md5": "fecae4ea911720f7d5e2878d054328e0"
+  },
+  {
+   "file": "archive.tar.gz.part-aafw",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aafw",
+   "bytes": 16777216,
+   "sha256": "7ce2a60921301487f0768d11e72cf9b1f6ce5345db99d8ce6134126be9c894e6",
+   "md5": "9e32056a3602c60ba916c569f7610925"
+  },
+  {
+   "file": "archive.tar.gz.part-aafx",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aafx",
+   "bytes": 16777216,
+   "sha256": "509f34bcd9fa6d90eccfdaa884fd2472f82a85679af2cebe71d0b7f5b51f05cd",
+   "md5": "9905982bb32d8e518cf3ffd24a4e92c0"
+  },
+  {
+   "file": "archive.tar.gz.part-aafy",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aafy",
+   "bytes": 16777216,
+   "sha256": "6d4a1952bb8994cd68946561096faa727fe59d9927317fda21556d87c510804c",
+   "md5": "c092e7a1a38cf9ebd8449ddcfb4d3420"
+  },
+  {
+   "file": "archive.tar.gz.part-aafz",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aafz",
+   "bytes": 16777216,
+   "sha256": "9f2acbe5382247e7d606670cb4e1875d422b4a7aee33bb01797f60a00f0fbd1e",
+   "md5": "62c99bbf3e08b11f20492657baca0752"
+  },
+  {
+   "file": "archive.tar.gz.part-aaga",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaga",
+   "bytes": 16777216,
+   "sha256": "c9391014723bdb4ab36bd62d12b6544d34bd9e3f40b8ed461420cb1032d8e7da",
+   "md5": "43115cc3a94d36735abacb5784949ec7"
+  },
+  {
+   "file": "archive.tar.gz.part-aagb",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aagb",
+   "bytes": 16777216,
+   "sha256": "02975c6ca43b19898297618afa2f21fb6d416977aeaa914d6f48243efb88d136",
+   "md5": "c1e77ddbcdfb08ed4caedd41808ce8a9"
+  },
+  {
+   "file": "archive.tar.gz.part-aagc",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aagc",
+   "bytes": 16777216,
+   "sha256": "2fc941f39c3f83279caed932d027a1c54b80edfcce1fc7f7a0af8e7094fa5e86",
+   "md5": "c1ef2c1efff1466383fcb7f33d0431c1"
+  },
+  {
+   "file": "archive.tar.gz.part-aagd",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aagd",
+   "bytes": 16777216,
+   "sha256": "1bd12cf0967dcdcc9e73b05370eb5f7df954087fb3a4de773c039d3029cf69d0",
+   "md5": "e9c96d8e6fd2c507229c88a5ac78468c"
+  },
+  {
+   "file": "archive.tar.gz.part-aage",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aage",
+   "bytes": 16777216,
+   "sha256": "2d94e319436baa71fece79556b0411eeca33ca93cae8e467a2b3591336fda3d4",
+   "md5": "fd0a2a6d18657dc6c7bd3f2c715ab512"
+  },
+  {
+   "file": "archive.tar.gz.part-aagf",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aagf",
+   "bytes": 16777216,
+   "sha256": "8f111f1c6f78ab33f500ab45333d074fbe1ab41bcc1c451d63da8696e4d1730c",
+   "md5": "f2ac7181c6fb95be2d4110780a127277"
+  },
+  {
+   "file": "archive.tar.gz.part-aagg",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aagg",
+   "bytes": 16777216,
+   "sha256": "209f1ad112c65ca86192076127defba5759359811ed41dd8715a7972360ab140",
+   "md5": "491f20b355353779f348714a0e843170"
+  },
+  {
+   "file": "archive.tar.gz.part-aagh",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aagh",
+   "bytes": 16777216,
+   "sha256": "2c89f0355e67dc427aaa18bc445456f4602b2286fbe1b9baee48e81c69af2e8d",
+   "md5": "990e2da32b483721b3a1b717437d8c4d"
+  },
+  {
+   "file": "archive.tar.gz.part-aagi",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aagi",
+   "bytes": 16777216,
+   "sha256": "e1a734eafb132a83c4efefc6733f7908f8f9cfb29c10a720a09be7bd4ec4026e",
+   "md5": "a5c615db5972317b520438ef264f9bc5"
+  },
+  {
+   "file": "archive.tar.gz.part-aagj",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aagj",
+   "bytes": 16777216,
+   "sha256": "85b2ad1e89f6aa37a9663256ab4ccc2dec3ee10aff0d3ee14b49bf75878811cc",
+   "md5": "2022c625f5ad0db77d964ee448e7300a"
+  },
+  {
+   "file": "archive.tar.gz.part-aagk",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aagk",
+   "bytes": 16777216,
+   "sha256": "b1322df726b6d863dc37c9c2fedda6f35e475e3ddf7e6333960afc7ffe65ac3a",
+   "md5": "08465fa7aec8b2f2cc7ce14e1b48424f"
+  },
+  {
+   "file": "archive.tar.gz.part-aagl",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aagl",
+   "bytes": 16777216,
+   "sha256": "3c516d969a7396204fb370e4e30befda267216ccfd633a4ec91916a5573bc4ff",
+   "md5": "b6c0db29e7bc487ff26d7294e8871533"
+  },
+  {
+   "file": "archive.tar.gz.part-aagm",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aagm",
+   "bytes": 16777216,
+   "sha256": "a870bea4eb97ca46f7ba9e374abdff3c2ae5441a3d076becafbe14284af93002",
+   "md5": "bbcd15daed58623ef5a1f6e23ca9e0a7"
+  },
+  {
+   "file": "archive.tar.gz.part-aagn",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aagn",
+   "bytes": 16777216,
+   "sha256": "7eac420c8415c3d6620067f8dc37d9d2b20e706629c96e8955d0c992da0d0c85",
+   "md5": "b5550eba0bdeca4f689e4709b821964d"
+  },
+  {
+   "file": "archive.tar.gz.part-aago",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aago",
+   "bytes": 16777216,
+   "sha256": "f252d8b157412beb8074dffb7676c4da2f056bd3c7e71a05c4c5ba0a96d7a967",
+   "md5": "03981181e6e750757ab6943ccac5cd82"
+  },
+  {
+   "file": "archive.tar.gz.part-aagp",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aagp",
+   "bytes": 16777216,
+   "sha256": "68fe6a0cb9dec8ce144670b4a6505bcfa406a23a1f3d5ca2d87b6e955e3775c6",
+   "md5": "4ab1ae3540a544b4b4cfd07487bbc22b"
+  },
+  {
+   "file": "archive.tar.gz.part-aagq",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aagq",
+   "bytes": 16777216,
+   "sha256": "23cd2b78cf2240a11da4136b312e7d46686419fc3f671783cab85db57b34c643",
+   "md5": "5c61d2516cac6385475247c4f0e3b1d4"
+  },
+  {
+   "file": "archive.tar.gz.part-aagr",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aagr",
+   "bytes": 16777216,
+   "sha256": "7917743a3f121a3ea83f1ad8b966037f3a2cb27cf885cc0fbf82c9e023ce67a7",
+   "md5": "19eff02889ff446bfed834513cd6f9dc"
+  },
+  {
+   "file": "archive.tar.gz.part-aags",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aags",
+   "bytes": 16777216,
+   "sha256": "a9c436180f571af438c98691e8ba7b8f9e4f7f5b6b19f41363bdba953c5b5c54",
+   "md5": "e1615df1d44435449a08dbed9e3a920b"
+  },
+  {
+   "file": "archive.tar.gz.part-aagt",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aagt",
+   "bytes": 16777216,
+   "sha256": "5513c0fa9d4fca454097dde9ed3bd3e491405f7c1dda19be6fea2fbd5854f716",
+   "md5": "e3b115738a14a3118000807bfc5f7841"
+  },
+  {
+   "file": "archive.tar.gz.part-aagu",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aagu",
+   "bytes": 16777216,
+   "sha256": "7b40794e4ea628bb65babd7a4bde2efc16c5ffec78c36a288553656ecf45cf83",
+   "md5": "15cff1e9bb3db28420ac22ee058d4e78"
+  },
+  {
+   "file": "archive.tar.gz.part-aagv",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aagv",
+   "bytes": 16777216,
+   "sha256": "f91c3a1859143b0778761a85786952dd4686cbb701b8981f15c8281ca9189156",
+   "md5": "f3712045d02cd1aee13cfcc54341ad40"
+  },
+  {
+   "file": "archive.tar.gz.part-aagw",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aagw",
+   "bytes": 16777216,
+   "sha256": "84c181d7733e56bf80f34639ea6fcaa10d1a8a3a7589fc12f5a68e4f65907884",
+   "md5": "cc6e1bc940252397414a084d42a0e35d"
+  },
+  {
+   "file": "archive.tar.gz.part-aagx",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aagx",
+   "bytes": 16777216,
+   "sha256": "91ad5778c9ff2f9ec724d4ab8c7fe87adf70ae11dcd8439076b7ef0f35003940",
+   "md5": "cbdfecc6534572b3fc2a037eb5363152"
+  },
+  {
+   "file": "archive.tar.gz.part-aagy",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aagy",
+   "bytes": 16777216,
+   "sha256": "8ce9c5cb9f49ab1b853d59b23afd3331ccf9603f9f0b66e8cb32173692d368ec",
+   "md5": "e2c741e4cc68986deb63de1815208bb2"
+  },
+  {
+   "file": "archive.tar.gz.part-aagz",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aagz",
+   "bytes": 16777216,
+   "sha256": "806ea0386584dd188421b0b99035adf202a246dc9a751daa773f670ca1ba4154",
+   "md5": "3881f95cd4648e2d390641e42a713f7d"
+  },
+  {
+   "file": "archive.tar.gz.part-aaha",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaha",
+   "bytes": 16777216,
+   "sha256": "adf279df5aad084d8aee3c22044b455280f45143c3a1d3fef8b6b139a3ed6bbb",
+   "md5": "dbcd39ab437c7ce3005ee3ef01bc8090"
+  },
+  {
+   "file": "archive.tar.gz.part-aahb",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aahb",
+   "bytes": 16777216,
+   "sha256": "6713de421b4903c7217fa9433007b7c9baf4ef89836e02a9a1431901f448f9d1",
+   "md5": "9291237514232f9798cd0f54f393be1d"
+  },
+  {
+   "file": "archive.tar.gz.part-aahc",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aahc",
+   "bytes": 16777216,
+   "sha256": "69cf42c8314fcee160107961eeda8f6ecd9c3dacb24a16ce841c10bf852ee3e3",
+   "md5": "350a83d75d5eace68c78b1e50ef7479b"
+  },
+  {
+   "file": "archive.tar.gz.part-aahd",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aahd",
+   "bytes": 16777216,
+   "sha256": "20a58a35c734b98ae61f59433419df15f79d3c07829fa4c9c51635f3b1de920e",
+   "md5": "f41fc9557df11fb14ffc3fe1ae8cec47"
+  },
+  {
+   "file": "archive.tar.gz.part-aahe",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aahe",
+   "bytes": 16777216,
+   "sha256": "ca044bedd4a28a17916fa9a1d40d31a5e8850137f49c3f72ad67cc54f2754741",
+   "md5": "8f051288da231e0772e770c175292748"
+  },
+  {
+   "file": "archive.tar.gz.part-aahf",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aahf",
+   "bytes": 16777216,
+   "sha256": "27e55adc26909a744b6a576509bd7d87cabef6cc29a996ed1aff4b426c3476ca",
+   "md5": "4efca227a66b30ee573b9f03f626b1bd"
+  },
+  {
+   "file": "archive.tar.gz.part-aahg",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aahg",
+   "bytes": 16777216,
+   "sha256": "1d28f96bf27e30ef2a584c77192e4e66a577f9064dac1af9251cce8cf783d3dc",
+   "md5": "b6dde5ff5439e6bfd8bf4a8f613b3efc"
+  },
+  {
+   "file": "archive.tar.gz.part-aahh",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aahh",
+   "bytes": 16777216,
+   "sha256": "72baf5598ab8bfa5e8793b04e09c709bf987af2e679f48fe262623651206757f",
+   "md5": "ffdd0e675821d150e3b6a26725dbedce"
+  },
+  {
+   "file": "archive.tar.gz.part-aahi",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aahi",
+   "bytes": 16777216,
+   "sha256": "9e54962dc56d3066ac9b685965cc2d79e1946b4e2fa5eb43ce8633d907dcdae6",
+   "md5": "e649665a56bc8b2e4062c239251c896d"
+  },
+  {
+   "file": "archive.tar.gz.part-aahj",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aahj",
+   "bytes": 16777216,
+   "sha256": "e322b0e0043fff223344173e555d7ce97e3129caa7db4cdb0f6b4731c11fc197",
+   "md5": "16432fa09641ab5facba7d5cefd83194"
+  },
+  {
+   "file": "archive.tar.gz.part-aahk",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aahk",
+   "bytes": 16777216,
+   "sha256": "267cf20b0dfd3860eae93873cc1ed1766ce55c9709c1dd27cbbcec7b9964234c",
+   "md5": "a0b8550dcd6d05f1716bc5203bc6feb3"
+  },
+  {
+   "file": "archive.tar.gz.part-aahl",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aahl",
+   "bytes": 16777216,
+   "sha256": "18b94515d492884ce8a8ab03101631d3802a95f810a887c1ce54bf74e06515e2",
+   "md5": "1e328202460b621bdd5f80b40780a885"
+  },
+  {
+   "file": "archive.tar.gz.part-aahm",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aahm",
+   "bytes": 16777216,
+   "sha256": "e242057c6b2fd174a288abe3e39f9592f2d7894c539ab36bebcb7a75eb95a890",
+   "md5": "f8fdd0bd23704218f793fc57aaf1b0fb"
+  },
+  {
+   "file": "archive.tar.gz.part-aahn",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aahn",
+   "bytes": 16777216,
+   "sha256": "68636c4518198a08ceb107b6e22b183756e0d9b2f90220a8e9ee526fbcacd81d",
+   "md5": "f364ce931b928daf51d164fd3068791c"
+  },
+  {
+   "file": "archive.tar.gz.part-aaho",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaho",
+   "bytes": 16777216,
+   "sha256": "55d1d049acf2c110788b09061b01991eed285154500d0f4bb5ca555ddbd73f82",
+   "md5": "8e7c472a84f698f6c830d15dec7c06f9"
+  },
+  {
+   "file": "archive.tar.gz.part-aahp",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aahp",
+   "bytes": 16777216,
+   "sha256": "da92c60e7cc1fb7af4b7c91aec74852a46d2a6486f60a8017c795a2e8e90aaaf",
+   "md5": "8467af3b1060abe8b93ddf0855506e13"
+  },
+  {
+   "file": "archive.tar.gz.part-aahq",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aahq",
+   "bytes": 16777216,
+   "sha256": "54ef1b690fbda408f73a366fd427822ca2b8e7677a20f62db280cad1c0bd14a3",
+   "md5": "bdd4e2f912a3e4699d6f60a5315fff9c"
+  },
+  {
+   "file": "archive.tar.gz.part-aahr",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aahr",
+   "bytes": 16777216,
+   "sha256": "7bb026938e851757f61ccb9343455c86be6d6467a916bfa3a1f31c89cad2cb59",
+   "md5": "3e90e285e879844732fb5a1a012c3ecb"
+  },
+  {
+   "file": "archive.tar.gz.part-aahs",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aahs",
+   "bytes": 16777216,
+   "sha256": "a61ac187e58bd7b6d2295873df3cf854d2efddc98e82549bc805552691e6e3e0",
+   "md5": "e5da51eb2478ad4e1943b4e00de32c9c"
+  },
+  {
+   "file": "archive.tar.gz.part-aaht",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaht",
+   "bytes": 16777216,
+   "sha256": "98027265ce9ba42738934afaf040ba858af1a3dd3e7e321086a78441f443ea0b",
+   "md5": "b24f49f5383979ce1c51fb1191971061"
+  },
+  {
+   "file": "archive.tar.gz.part-aahu",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aahu",
+   "bytes": 16777216,
+   "sha256": "6057baa1d7d77eb495fc44a3944ed79d061a7778a9e06ba9bf68ba81e55c106b",
+   "md5": "099d94ab639f458b04e0296e40de32f3"
+  },
+  {
+   "file": "archive.tar.gz.part-aahv",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aahv",
+   "bytes": 16777216,
+   "sha256": "07e1a602ce4cce87b54f5013e8775fb4da79e96caae66da18cc03cf939716eb2",
+   "md5": "5d7fb8c2ae54a9860a9d28f026f22ab0"
+  },
+  {
+   "file": "archive.tar.gz.part-aahw",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aahw",
+   "bytes": 16777216,
+   "sha256": "01fd7714caabfea3aa8a1936e041ca23ef504f54aaf3d87606b8bf6259851045",
+   "md5": "118e3e9087f3f9cbca4cb6da656f7bef"
+  },
+  {
+   "file": "archive.tar.gz.part-aahx",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aahx",
+   "bytes": 16777216,
+   "sha256": "9fdc29085121f41921e3c516cba5f0284ef6fa94ff53813c1667f430dad01e97",
+   "md5": "b4decae8b73fb04f29d46996e2e82435"
+  },
+  {
+   "file": "archive.tar.gz.part-aahy",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aahy",
+   "bytes": 16777216,
+   "sha256": "2fb5c9a3af15b5deb8aa24b5ab97bcc4bfc229a38a624d37f02b6002a5de2112",
+   "md5": "35f4cc907414c11fcbb16482f628a2c2"
+  },
+  {
+   "file": "archive.tar.gz.part-aahz",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aahz",
+   "bytes": 16777216,
+   "sha256": "f5518f9070df6884b38aded63e67e2d6c0379738f525cfa9e52c91454c58d734",
+   "md5": "f63f2ebf04c1bbe1726e45334715cf3f"
+  },
+  {
+   "file": "archive.tar.gz.part-aaia",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaia",
+   "bytes": 16777216,
+   "sha256": "42301cb50d0eee10a385e0840103fff89fd0440a2131cd29090976a3447ccf9d",
+   "md5": "3dd50826c2abac0dc832c7fece396edf"
+  },
+  {
+   "file": "archive.tar.gz.part-aaib",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaib",
+   "bytes": 16777216,
+   "sha256": "23c413ce1d04e5c74c22492e32233303d2737e2b14bcc4765eb0cbff81ac5522",
+   "md5": "218ee53e833cb09f3e7d15c121315595"
+  },
+  {
+   "file": "archive.tar.gz.part-aaic",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaic",
+   "bytes": 16777216,
+   "sha256": "2b506aecfc38c013429174c61aed98f38fae48d0a8da967c325fc5a3b3fe0c7d",
+   "md5": "5814fb6839f288d5808f7b647927d2cc"
+  },
+  {
+   "file": "archive.tar.gz.part-aaid",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaid",
+   "bytes": 16777216,
+   "sha256": "9145f3f4357453a483c9a636e944f200a90fdc7c13cebdf90cf1a9699b30a3d8",
+   "md5": "baef6570689bb7384b2c74ccf73989ab"
+  },
+  {
+   "file": "archive.tar.gz.part-aaie",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaie",
+   "bytes": 16777216,
+   "sha256": "46db19ce1f3233ddc230ae660f07d5f405cd4ca5e857c490d49400962c7f1f3c",
+   "md5": "5f93a4a8c4df7da6e2b707c0dfbea130"
+  },
+  {
+   "file": "archive.tar.gz.part-aaif",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaif",
+   "bytes": 16777216,
+   "sha256": "349bfc6ccfd9a83581dfcc600a4a077ba9ce016395d9194bb1308e859d6fe159",
+   "md5": "d75a257ad9e902f591a3dc2fcc525804"
+  },
+  {
+   "file": "archive.tar.gz.part-aaig",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaig",
+   "bytes": 16777216,
+   "sha256": "d895012cc51ff6bbe3f8090593ed7ab8af4f6a6962b4e57388f40179f52b452b",
+   "md5": "92f84e35a44a5118647a5710969c7af9"
+  },
+  {
+   "file": "archive.tar.gz.part-aaih",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaih",
+   "bytes": 16777216,
+   "sha256": "a64dd0192313d89132714b454449fd60de7b6328bbd6e1bafb1897328084cddb",
+   "md5": "0414e4d89ded0a7c5bb6526f535d941a"
+  },
+  {
+   "file": "archive.tar.gz.part-aaii",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaii",
+   "bytes": 16777216,
+   "sha256": "dfd5460673aeac784dedf198a3308d955f757b64e21857200be28428ab150fa0",
+   "md5": "4fe25afae3dcaee3250863353bdc2bab"
+  },
+  {
+   "file": "archive.tar.gz.part-aaij",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaij",
+   "bytes": 16777216,
+   "sha256": "d5fde858ec939a7bc3be5ebd8e4a865bfa5bff09343c35242b486c8864c516f2",
+   "md5": "f628efdd435c8c9e59103a329c42d1ba"
+  },
+  {
+   "file": "archive.tar.gz.part-aaik",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaik",
+   "bytes": 16777216,
+   "sha256": "54901e20a2f6e89de66215fde4cb3342481478bc91ef639b5c1cad4284711a19",
+   "md5": "bc00dc6974aed640503781d4520d346b"
+  },
+  {
+   "file": "archive.tar.gz.part-aail",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aail",
+   "bytes": 16777216,
+   "sha256": "9075ecd47611e2708bb75d25619fd0ace30522cee7b9dd47487b85f6acea627f",
+   "md5": "02a0d66982bb470683adbac8f88da2df"
+  },
+  {
+   "file": "archive.tar.gz.part-aaim",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaim",
+   "bytes": 16777216,
+   "sha256": "31f1aa485987051d6d1ba8cbcdda2224897bace8212ba5e7369694a14a9e58dd",
+   "md5": "10d876b2ac0cbaa85bf0c058cc452fc0"
+  },
+  {
+   "file": "archive.tar.gz.part-aain",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aain",
+   "bytes": 16777216,
+   "sha256": "08f48926b6f1bc27503acd9f0670ca62dc5ffd9843e4821eac3210ebdbc4696f",
+   "md5": "e8c651d31178af9099a169f83f1b10b2"
+  },
+  {
+   "file": "archive.tar.gz.part-aaio",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaio",
+   "bytes": 16777216,
+   "sha256": "2ba19ad03e8c2e0e53219696b3b0bb0f35dd6085272786b18190afe9596f86bb",
+   "md5": "5d58bd3b734cddb768c5d59f1507a4bf"
+  },
+  {
+   "file": "archive.tar.gz.part-aaip",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaip",
+   "bytes": 16777216,
+   "sha256": "77c848905bd1dd5a0ed1ac6a94f03bfbe11f84bdfc8d3d2303372e283b714eb8",
+   "md5": "c65eb70d9ecfc127bf89b3f0ecce6db9"
+  },
+  {
+   "file": "archive.tar.gz.part-aaiq",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaiq",
+   "bytes": 16777216,
+   "sha256": "79cf43206dd0fb4ffd0a3f6e05f65206b71b8c0d54f98d4e106935e606796e25",
+   "md5": "e3664d430fad03a9eea2d6667801c530"
+  },
+  {
+   "file": "archive.tar.gz.part-aair",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aair",
+   "bytes": 16777216,
+   "sha256": "de299044cb3eb368e03d291a65cfae383be4e351f54aa873dd036b3ce2654f02",
+   "md5": "f720bf0f3a5c8dc0de3f63ee674a727f"
+  },
+  {
+   "file": "archive.tar.gz.part-aais",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aais",
+   "bytes": 16777216,
+   "sha256": "134e918fd32f6c5774025306e73c0fe91864578451b18b62b58f36059afd3d95",
+   "md5": "fe6dae69e977056f71598be3c5fb62a1"
+  },
+  {
+   "file": "archive.tar.gz.part-aait",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aait",
+   "bytes": 16777216,
+   "sha256": "2aee8a5c109832272e9eb50d94b07a8b613591d25e55e884f95a66810091f6e8",
+   "md5": "ec10ef12b68a8f21aa8b6333d15251bd"
+  },
+  {
+   "file": "archive.tar.gz.part-aaiu",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaiu",
+   "bytes": 16777216,
+   "sha256": "cef391a04d28576aacfdb1a3297a2c1b9a546ebf41d64b01eb600cf692798eb2",
+   "md5": "07563367b1a8c3f7a1ff0133c42c544e"
+  },
+  {
+   "file": "archive.tar.gz.part-aaiv",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaiv",
+   "bytes": 16777216,
+   "sha256": "c5b5e227fa5d9cfbde54ae9edbb7108fa4ad63a9d28ff501cc58beeb1fbc1ce3",
+   "md5": "a6e926746cac81137672eb1cf8075758"
+  },
+  {
+   "file": "archive.tar.gz.part-aaiw",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaiw",
+   "bytes": 16777216,
+   "sha256": "8dd9474b52f3d8e6da7fe18f4c682c932a76c03f85b2e497e65620cba3e12b9a",
+   "md5": "7f3d4edd8b6b4822cafd9ec56a69156e"
+  },
+  {
+   "file": "archive.tar.gz.part-aaix",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaix",
+   "bytes": 16777216,
+   "sha256": "b81679f5ebe6ac197ea25bf1c496e5ce44a5da6bfbb3c7d3061a1f0502a37c83",
+   "md5": "fb390b968926e20df6451ce94ea71224"
+  },
+  {
+   "file": "archive.tar.gz.part-aaiy",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaiy",
+   "bytes": 16777216,
+   "sha256": "72f0cbe9ce5359d6a4445c76c302954cebce0fb52d7104010479921c9c77c200",
+   "md5": "9ddd8ac8dc6de2e6640d18aa81b3e9d3"
+  },
+  {
+   "file": "archive.tar.gz.part-aaiz",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaiz",
+   "bytes": 16777216,
+   "sha256": "23234f9e314064fb522f884992b03135d6b97af1385c25473ed2f85e997b3a77",
+   "md5": "e487241d81b5ac28dce8fa31af230009"
+  },
+  {
+   "file": "archive.tar.gz.part-aaja",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaja",
+   "bytes": 16777216,
+   "sha256": "1092953e74e6fd5b2128a658c6229fced76b010efbb70015fe29eef324f1c646",
+   "md5": "9fb98754aa80196a91ba8bbcd19df65f"
+  },
+  {
+   "file": "archive.tar.gz.part-aajb",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aajb",
+   "bytes": 16777216,
+   "sha256": "07936fe32795f83f88c2aa93ca7f20aa64dd74ab99b03f3815233e8589b91231",
+   "md5": "d9647af2a7e733e50e9b92003513da7a"
+  },
+  {
+   "file": "archive.tar.gz.part-aajc",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aajc",
+   "bytes": 16777216,
+   "sha256": "eed2723b6d560091f671fc4c6edc92a012a4f4a9aa19505d0de5a0b76597f3e1",
+   "md5": "c697b4224a2ddf6bd4e535a53232b55a"
+  },
+  {
+   "file": "archive.tar.gz.part-aajd",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aajd",
+   "bytes": 16777216,
+   "sha256": "1c180b3ff1d809789381a7f2050bfbb8be392168b3e887060322a721f59039a0",
+   "md5": "1691680d4a002b2c18d2f8a1c5d34c4a"
+  },
+  {
+   "file": "archive.tar.gz.part-aaje",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaje",
+   "bytes": 16777216,
+   "sha256": "0fa4b5388e7313db4c6fcb33c6e2d48e5dcc083c0d24f88a0206424e0b4b33c9",
+   "md5": "09898ec7d4ceab82881be29194d55614"
+  },
+  {
+   "file": "archive.tar.gz.part-aajf",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aajf",
+   "bytes": 16777216,
+   "sha256": "a73ad10ffd445bb8c44075c0c61c70df2318cc2154087eb887886841b628cbde",
+   "md5": "a3d2030803b517bacddd024ad47b3c40"
+  },
+  {
+   "file": "archive.tar.gz.part-aajg",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aajg",
+   "bytes": 16777216,
+   "sha256": "3d43c86e4850652fbc91336f3bfe524029d077c5e5ff0aab01094a1dd32ab47d",
+   "md5": "a57247ebfe2161333999f2dd735f89c7"
+  },
+  {
+   "file": "archive.tar.gz.part-aajh",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aajh",
+   "bytes": 16777216,
+   "sha256": "29d1508950379117cf64a6cfc4ddc81fac49e2d37c540e6dd27ef23a4ed965dc",
+   "md5": "860e896b9ae9e255c9e54ec70557bfd0"
+  },
+  {
+   "file": "archive.tar.gz.part-aaji",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaji",
+   "bytes": 16777216,
+   "sha256": "28be4200eb8aef5e516f64ca18c3795a92ddeba39d30bd886f3c0480c79b3025",
+   "md5": "f25a2a6b206bba9caeccd7419a6fbbce"
+  },
+  {
+   "file": "archive.tar.gz.part-aajj",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aajj",
+   "bytes": 16777216,
+   "sha256": "3a0a2461645fa2d40d0f4ffcc8f00469e5c54fd8118ce80f026d468f9d5d2509",
+   "md5": "692090ab4561c27ba31fe44e27d9a348"
+  },
+  {
+   "file": "archive.tar.gz.part-aajk",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aajk",
+   "bytes": 16777216,
+   "sha256": "f038b45a6dc6f5394c84982294f2414a00765a30e097b4327ea800075bbfcdea",
+   "md5": "d42778a0dbad635659d6bd71706edaf1"
+  },
+  {
+   "file": "archive.tar.gz.part-aajl",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aajl",
+   "bytes": 16777216,
+   "sha256": "3e4e706715c0526a6df33a0b76a58f6f97da419d6c2e4e989bb2f533b0795006",
+   "md5": "82708929142b1036a9e6ea59b7be61bd"
+  },
+  {
+   "file": "archive.tar.gz.part-aajm",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aajm",
+   "bytes": 16777216,
+   "sha256": "259a34644b85ecaf6bb281f7bff3f0e879d1ce898071554faea163149e0a6702",
+   "md5": "43d36bff2d9dfdfcc3cdc1dc4cf8975b"
+  },
+  {
+   "file": "archive.tar.gz.part-aajn",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aajn",
+   "bytes": 16777216,
+   "sha256": "d0d2cbd2865c4d4e4f4b8fd138fdd7f4346282fdf01be9df76c0008b7c5b894c",
+   "md5": "f4c62cf607bb2d5f715397cd60b11c12"
+  },
+  {
+   "file": "archive.tar.gz.part-aajo",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aajo",
+   "bytes": 16777216,
+   "sha256": "65f17ba280f24c1cab1c8062b35d7c2a298f0dd9447ca39336e534a93b20ed85",
+   "md5": "5deb318b2789dfdcb97aba289fe881ef"
+  },
+  {
+   "file": "archive.tar.gz.part-aajp",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aajp",
+   "bytes": 16777216,
+   "sha256": "0e98babcf0cfe41a0f06a6517df7fbda29c5cd516a72515c7d420ad16bf47113",
+   "md5": "17e036d46aa323776e5f9acae8d29c4b"
+  },
+  {
+   "file": "archive.tar.gz.part-aajq",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aajq",
+   "bytes": 16777216,
+   "sha256": "e8cc4e96101415c62dcf26b6382b63f97e16a70c0694426d8c35592ee1b94ad6",
+   "md5": "ace4fdc9aa7821a4fe388c1da1076e8c"
+  },
+  {
+   "file": "archive.tar.gz.part-aajr",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aajr",
+   "bytes": 16777216,
+   "sha256": "65926785d4a4d38c86c235a3a4c37d06c0692f66f9fe9d56f99b0e8f40ffcc2a",
+   "md5": "113396df67809548d95eab21eb090cd3"
+  },
+  {
+   "file": "archive.tar.gz.part-aajs",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aajs",
+   "bytes": 16777216,
+   "sha256": "ff99ef96231d3a645462bb690fa3a6f01db01cc32d61c0eb798d109fb42604b4",
+   "md5": "a5d3c69310d6b2a3c007f83a93b9bbd6"
+  },
+  {
+   "file": "archive.tar.gz.part-aajt",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aajt",
+   "bytes": 16777216,
+   "sha256": "1c43495d942eec21bcdfbecbe0df0cd17f0add2c47c134784bccf343bb055ffa",
+   "md5": "1036777b5a9cb27f67db19bdd1012cf9"
+  },
+  {
+   "file": "archive.tar.gz.part-aaju",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaju",
+   "bytes": 16777216,
+   "sha256": "d09c41b0b2192f40d8ff5dd0e48fcce50121a6441dbc0d83e9ca7509a702135c",
+   "md5": "6796128e55c37680cb07a30c82882069"
+  },
+  {
+   "file": "archive.tar.gz.part-aajv",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aajv",
+   "bytes": 16777216,
+   "sha256": "544f69b2e678360fdce8ae6034f8f976d906c0409c5b9b9ad6fe154187f3686a",
+   "md5": "a70ead3a78e118410eb5952996fb765a"
+  },
+  {
+   "file": "archive.tar.gz.part-aajw",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aajw",
+   "bytes": 16777216,
+   "sha256": "5b11cbb44e57ba37ba26ff5034eaecff1532272ac3b4b8d0e317a1c681e37c37",
+   "md5": "5152dc87038e8674c3da724fe9e95720"
+  },
+  {
+   "file": "archive.tar.gz.part-aajx",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aajx",
+   "bytes": 16777216,
+   "sha256": "cc2101777be24ce2899e00162e85e5c87e2031d6cc540d93f0d9ef9c85062b76",
+   "md5": "496b2e1fcf218de9afbd12c76da77567"
+  },
+  {
+   "file": "archive.tar.gz.part-aajy",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aajy",
+   "bytes": 16777216,
+   "sha256": "5143b7748f62e9da4575523bd6449e91a95eddec8e065b727311ed42317fccd4",
+   "md5": "0dae1464c27f15bd3ff738ab09c19ea2"
+  },
+  {
+   "file": "archive.tar.gz.part-aajz",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aajz",
+   "bytes": 16777216,
+   "sha256": "6ed352c17add4f4bc53b811fbda77acf0428558b66c89c2109c7bd8eb5e84ae6",
+   "md5": "f6caeb0852d92953135eecb4965803e2"
+  },
+  {
+   "file": "archive.tar.gz.part-aaka",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaka",
+   "bytes": 16777216,
+   "sha256": "c1e83408969fc99652b6fb10d0aeaec14bcb5c926ca29a1e2f58e97fcc9c6960",
+   "md5": "e9700ed5dbd8e54a31fd94c2a3114b62"
+  },
+  {
+   "file": "archive.tar.gz.part-aakb",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aakb",
+   "bytes": 16777216,
+   "sha256": "70056381ede910aeda03206d21aa94fe892dd11ab003af9cbe557cef63e7ec4c",
+   "md5": "b2a593e1a7fc873f5ca62da467a62ce8"
+  },
+  {
+   "file": "archive.tar.gz.part-aakc",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aakc",
+   "bytes": 16777216,
+   "sha256": "f43a1f2b93fc38fd33704f7d1063fbaa7d9afddcde35ffcf7683df812a0f0965",
+   "md5": "46d383d66a131b8335f5cd427f658e0d"
+  },
+  {
+   "file": "archive.tar.gz.part-aakd",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aakd",
+   "bytes": 16777216,
+   "sha256": "6dc3b7e677c0435c3af7937835f33dda628bb7890dfe38e65dbb07d3edb50b71",
+   "md5": "4c7d7bbe4aa7ed7c7ff3dd25cb4bdb65"
+  },
+  {
+   "file": "archive.tar.gz.part-aake",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aake",
+   "bytes": 16777216,
+   "sha256": "0b152ceb2af1b982e3d43496a3d6df76c9c9f76548d7ce05ed2eb8b7c69987bb",
+   "md5": "f2586a8199491882bd5d7334ff2e52aa"
+  },
+  {
+   "file": "archive.tar.gz.part-aakf",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aakf",
+   "bytes": 16777216,
+   "sha256": "9dbfe41eb63174fe9812765c49238b940de3005ae4c4c1fdd6aba5363e34a430",
+   "md5": "ff7ed5b4935dad8c2f71a8f07c53de9b"
+  },
+  {
+   "file": "archive.tar.gz.part-aakg",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aakg",
+   "bytes": 16777216,
+   "sha256": "638e7395bf6726ae7fd9838c018a091e36858dd7cd192c0f33c10b85ce5e6edf",
+   "md5": "1cb20f2f51a3a0053467cf0c44904dab"
+  },
+  {
+   "file": "archive.tar.gz.part-aakh",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aakh",
+   "bytes": 16777216,
+   "sha256": "81ced96381551d3f51106d31ab36b2b32e072973a9f42f8ce965b3340e5d45dc",
+   "md5": "271479cf66e50e0dc8a58b189e91f7fc"
+  },
+  {
+   "file": "archive.tar.gz.part-aaki",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaki",
+   "bytes": 16777216,
+   "sha256": "3d35aa935f944222d24a92a199417f6e77d2d8d5dcce325b6d666d47e6503d2f",
+   "md5": "820866b1b0605a2a9a5537e6055cde20"
+  },
+  {
+   "file": "archive.tar.gz.part-aakj",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aakj",
+   "bytes": 16777216,
+   "sha256": "4c6a13208381a0e6faff6aeffc5f629126cf99ac8908b3ced4c9a623acd6c4fd",
+   "md5": "7fde015c197ce7c7cb716d292cc2398d"
+  },
+  {
+   "file": "archive.tar.gz.part-aakk",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aakk",
+   "bytes": 16777216,
+   "sha256": "28707645ab040e304e1f3ff2e6fd206712eb4f4583c0aff81d9636a73902d8fc",
+   "md5": "6e86631148326f303075842af9a5c85f"
+  },
+  {
+   "file": "archive.tar.gz.part-aakl",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aakl",
+   "bytes": 16777216,
+   "sha256": "0fab3996f93c70f69de4923f40e8315c106380610ff78babf30ae2effe62e465",
+   "md5": "ba60a8e87ff5a2abb6d39ac08ab31466"
+  },
+  {
+   "file": "archive.tar.gz.part-aakm",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aakm",
+   "bytes": 16777216,
+   "sha256": "fa965e68e969aebe038a5ef9fc242cd0f3e1cb7d34b198eb6301f811be990c68",
+   "md5": "d5ce65c4a0a92714edb4139f15e81940"
+  },
+  {
+   "file": "archive.tar.gz.part-aakn",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aakn",
+   "bytes": 16777216,
+   "sha256": "7a0799fa014a47aa259ef01978da0f6c84bf90ee3f45410f5ad0f38f821bd5cb",
+   "md5": "11283a66d5696f83e34d86dee929b5b2"
+  },
+  {
+   "file": "archive.tar.gz.part-aako",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aako",
+   "bytes": 16777216,
+   "sha256": "7e5445f011bcccfc90155b01d165df6c4b7e3ce8b6e7f4b0832cc63db6390463",
+   "md5": "9f40b46900036be3ca5fa666fd83610c"
+  },
+  {
+   "file": "archive.tar.gz.part-aakp",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aakp",
+   "bytes": 16777216,
+   "sha256": "d77673fa1b3c82c086906b426c0ae2c501746e24c130006a2217e3e2ac2bdb09",
+   "md5": "041e88e46b670e4731c74ae13bc1c0d1"
+  },
+  {
+   "file": "archive.tar.gz.part-aakq",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aakq",
+   "bytes": 16777216,
+   "sha256": "a45b03533cf2cfac58b177395d7c55a30435450f531e82a73d6787ccb9634efd",
+   "md5": "89a7b5ef3911b568ddb1c480d0bc338b"
+  },
+  {
+   "file": "archive.tar.gz.part-aakr",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aakr",
+   "bytes": 16777216,
+   "sha256": "71a04a0b3b3a85799de685abd41eac1bfdf0d13dca178bbc9acb6489c9b2f698",
+   "md5": "73783be42280335d31b9d8f9cb140d1d"
+  },
+  {
+   "file": "archive.tar.gz.part-aaks",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaks",
+   "bytes": 16777216,
+   "sha256": "2d29c6313fcf2c953df6ecebb57286a16dc90a03dfad42752590bb3b6b74cc0e",
+   "md5": "6c8c6fe769d8fcc76876d1f861c02cd1"
+  },
+  {
+   "file": "archive.tar.gz.part-aakt",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aakt",
+   "bytes": 16777216,
+   "sha256": "1704de0fe0bd544d72297e4fa20e8379683d07f1f7d07a1d9291c9c54af511e8",
+   "md5": "e26306c99f963869a5a5abdf7c526a65"
+  },
+  {
+   "file": "archive.tar.gz.part-aaku",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaku",
+   "bytes": 16777216,
+   "sha256": "c046dfc4e2742b883fc27581abd61a827ffbc7b6d5d4f134a1b1716a01dcc7e4",
+   "md5": "79986c8bfc88c54a2465bbe5bacc80fc"
+  },
+  {
+   "file": "archive.tar.gz.part-aakv",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aakv",
+   "bytes": 16777216,
+   "sha256": "95079f0daeec5ab0e3e0c05afc8be5f637b94cc830c0b08f335b9b3a5fc586b5",
+   "md5": "ac085a0b4f328a731e9176f151646975"
+  },
+  {
+   "file": "archive.tar.gz.part-aakw",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aakw",
+   "bytes": 16777216,
+   "sha256": "321c0bf4ddfb22f675d973558579687202c2a67e9fde64fdd47e9edb3088dae9",
+   "md5": "3ddbb017a7275b9da6a2521d494b7742"
+  },
+  {
+   "file": "archive.tar.gz.part-aakx",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aakx",
+   "bytes": 16777216,
+   "sha256": "b40872a927917f9d6b496eee39b9cf6e021a9f7d23c74a9010443d2530edbcb5",
+   "md5": "4bb0dc05e35678408f0e5c61729e3739"
+  },
+  {
+   "file": "archive.tar.gz.part-aaky",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaky",
+   "bytes": 16777216,
+   "sha256": "622caadc22c0b1d9265141224efe3157c8b08bba40541863fc2377a6f58c0282",
+   "md5": "68ff587276085d99a50cd1b683370d69"
+  },
+  {
+   "file": "archive.tar.gz.part-aakz",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aakz",
+   "bytes": 16777216,
+   "sha256": "f89ce5036aabe6cd3fb9eaa45c6bd5bec3e24b602e924f85d879e5b33fe2e4c1",
+   "md5": "c80046467fa41514af1667002cc2eda1"
+  },
+  {
+   "file": "archive.tar.gz.part-aala",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aala",
+   "bytes": 16777216,
+   "sha256": "9184164a7628856ad86ce0e88a07e291144399df66304dabf2881abad6b730a8",
+   "md5": "ce1cf36e2186f53029a9486f5ef7b37c"
+  },
+  {
+   "file": "archive.tar.gz.part-aalb",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aalb",
+   "bytes": 16777216,
+   "sha256": "e1b75e1a894b68968e5fe098acc0aaefcecd662f92683a3637f92e838b93ef0d",
+   "md5": "c0e350d16d87ff806786c71b60136d5d"
+  },
+  {
+   "file": "archive.tar.gz.part-aalc",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aalc",
+   "bytes": 16777216,
+   "sha256": "7925c2cb23ae74969a11e81f5fe8c339fac14d83f1eddb1f53e66edd39accca1",
+   "md5": "08113c5496206900a94f1a1257d41534"
+  },
+  {
+   "file": "archive.tar.gz.part-aald",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aald",
+   "bytes": 16777216,
+   "sha256": "d6bb391593bcbb0663194dd1eb8a034ce61df2870aeb21f589bc36a0694ab32c",
+   "md5": "5b511849ba8d3694107a989fbc2b838e"
+  },
+  {
+   "file": "archive.tar.gz.part-aale",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aale",
+   "bytes": 16777216,
+   "sha256": "30bd47d8957b885fbabba950793fe4951080ef26c962b38deeda4e080737aca8",
+   "md5": "5818d5aa13ff0bbb25944aedf6b436be"
+  },
+  {
+   "file": "archive.tar.gz.part-aalf",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aalf",
+   "bytes": 16777216,
+   "sha256": "5900ed8d4909ef96728b96e75a367e73c999803321c46a1e3c53e22f75c13385",
+   "md5": "d62d798fb80245c33129f834242d1c02"
+  },
+  {
+   "file": "archive.tar.gz.part-aalg",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aalg",
+   "bytes": 16777216,
+   "sha256": "7ad8231435432df00c41da5d30e14352e7baec095018970dd4752b53baa07ac4",
+   "md5": "dbd15faeaa742dba0e1cd5121a83d05a"
+  },
+  {
+   "file": "archive.tar.gz.part-aalh",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aalh",
+   "bytes": 16777216,
+   "sha256": "512a1b606f2c7aa472f37202135441bcd851d0484cc2c2292ecd979f4aa31d87",
+   "md5": "d28fc0fd6f81f0a945784818731b61f3"
+  },
+  {
+   "file": "archive.tar.gz.part-aali",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aali",
+   "bytes": 16777216,
+   "sha256": "d09f7f3d03bccaaf54f24ca16b2cd6ea70ba8b08968c00050a496e160e940a84",
+   "md5": "cf520f545fe191fa1d0f57ae3d8a79e7"
+  },
+  {
+   "file": "archive.tar.gz.part-aalj",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aalj",
+   "bytes": 16777216,
+   "sha256": "4bbadbc2e2e7fd9838eefeecccb3bea07ed34ef4ba3288b422274dcfb57cc9de",
+   "md5": "7c5a1e39b0f687ce8b1a199f245821f4"
+  },
+  {
+   "file": "archive.tar.gz.part-aalk",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aalk",
+   "bytes": 16777216,
+   "sha256": "c83e3dc79d552e8277d85a2df90b311be59df360bfe151c48c244503ba86d269",
+   "md5": "dc4e7ddae9f77b25c8c0457325223b6d"
+  },
+  {
+   "file": "archive.tar.gz.part-aall",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aall",
+   "bytes": 16777216,
+   "sha256": "b0fc6152708dc3e699b4b0b4908c5997daf9edf9a8df8e921d2165bccfc83c0f",
+   "md5": "1c4340ec3d6dd643d17740907aaeecbd"
+  },
+  {
+   "file": "archive.tar.gz.part-aalm",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aalm",
+   "bytes": 16777216,
+   "sha256": "13689624fc0e72555733f2287fd01c737b9cc722988e0b9fadd4ab6a20fb070d",
+   "md5": "c2346e8efbc17e915150b8d7ca56973a"
+  },
+  {
+   "file": "archive.tar.gz.part-aaln",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaln",
+   "bytes": 16777216,
+   "sha256": "c166ce21e6377f96b8ca80e28b6af01c38f50eb4deae2d4016154f32fd3590eb",
+   "md5": "24894d66dc13058ac7dffe2584e5f6bf"
+  },
+  {
+   "file": "archive.tar.gz.part-aalo",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aalo",
+   "bytes": 16777216,
+   "sha256": "572eb4cf11722afb0349fc62644d555fce79f6471170772060cb3bb489d11cb9",
+   "md5": "656608b686da85a9ea1048fdae7943a0"
+  },
+  {
+   "file": "archive.tar.gz.part-aalp",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aalp",
+   "bytes": 16777216,
+   "sha256": "1fa09dddb314c2d8c57b5558da78ecf243749c18aa432d579657925af97f0213",
+   "md5": "3f782212d7b45d29d1659c8504ccfff8"
+  },
+  {
+   "file": "archive.tar.gz.part-aalq",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aalq",
+   "bytes": 16777216,
+   "sha256": "b5df15497bc917df32403899b85094ee304d81d52b163f3a67f51fab14a7f91c",
+   "md5": "6cc554889e3c5d7e30cdadb3f2f34947"
+  },
+  {
+   "file": "archive.tar.gz.part-aalr",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aalr",
+   "bytes": 16777216,
+   "sha256": "23e228b27f205e7a01b6811ac5ba1bc2b1e6877c9a5f19ffdad8000fe932d32b",
+   "md5": "1e402552c3b5208d4a9375d296de0c55"
+  },
+  {
+   "file": "archive.tar.gz.part-aals",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aals",
+   "bytes": 16777216,
+   "sha256": "78fab410e87a17ec9119c83f34546f18e63c0ef845956c15c18455f323842daf",
+   "md5": "5e020d207b05442a8a385fc688c71c1c"
+  },
+  {
+   "file": "archive.tar.gz.part-aalt",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aalt",
+   "bytes": 16777216,
+   "sha256": "27ad4a244952e657057f4d1b005ab7e9a0c95334e018ca270fce7bdbd3023be6",
+   "md5": "16acbcddcde10085fc4d083c4aef597c"
+  },
+  {
+   "file": "archive.tar.gz.part-aalu",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aalu",
+   "bytes": 16777216,
+   "sha256": "b8a8d8e5d9b2a1506abda78193c2e725301268aba322d34ab9a7402c61ed7e07",
+   "md5": "4ad4de0bfcd3c0c84c3633834b2d5a14"
+  },
+  {
+   "file": "archive.tar.gz.part-aalv",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aalv",
+   "bytes": 16777216,
+   "sha256": "bc34338e83ea493b858f87ac42a33ddf8e6fefa20570428e21d140e63732f959",
+   "md5": "1aa5729b8e7efb445c33c92f3ac1c5bc"
+  },
+  {
+   "file": "archive.tar.gz.part-aalw",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aalw",
+   "bytes": 16777216,
+   "sha256": "2b6d2de48cdde5bf6fcbc999b99d3f959a69887833852710bb5e9f141a95e852",
+   "md5": "2df85d9a1ac7130415a83dfe4744ca4a"
+  },
+  {
+   "file": "archive.tar.gz.part-aalx",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aalx",
+   "bytes": 16777216,
+   "sha256": "fa9bfcab029069e1556415033e5fddd23b3b86827071bd3e50acef764998ac1c",
+   "md5": "c3fe661a96f743feaabd62421d6ff394"
+  },
+  {
+   "file": "archive.tar.gz.part-aaly",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaly",
+   "bytes": 16777216,
+   "sha256": "b1c98df708e836c5790ef102aab8ca5026273892cdbc864e7a60afdf9bfbac76",
+   "md5": "d563bd51d9940436cbed6a3a2302a99c"
+  },
+  {
+   "file": "archive.tar.gz.part-aalz",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aalz",
+   "bytes": 16777216,
+   "sha256": "30515c33030e6150a3bb839a119a8952a67860e0ff8c68644101c6500bd4b946",
+   "md5": "3072dad8d7d99c22a78f7df150e50109"
+  },
+  {
+   "file": "archive.tar.gz.part-aama",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aama",
+   "bytes": 16777216,
+   "sha256": "bac47d7757fa76408d6c84b719bbb7b0d36cee76bd8dd2b41d66c518394e5450",
+   "md5": "256ef4a3703ec4126162ea418a707a44"
+  },
+  {
+   "file": "archive.tar.gz.part-aamb",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aamb",
+   "bytes": 16777216,
+   "sha256": "3f693285fdc59da6eab98e6fe21228bdcdde3eced41b0a690ace2b5159dfdac6",
+   "md5": "a9d321135cf549340bcd8df6d12049f7"
+  },
+  {
+   "file": "archive.tar.gz.part-aamc",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aamc",
+   "bytes": 16777216,
+   "sha256": "040f997d5d4e85ef9edbf408d2f8cf718667ce562d8d49d291485a9d60594fd3",
+   "md5": "8549d611ae4d94ca662ba46a74caaa7e"
+  },
+  {
+   "file": "archive.tar.gz.part-aamd",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aamd",
+   "bytes": 16777216,
+   "sha256": "c44dfaa40f156a88b76ca2ef3a0a41467b35af56221573b1e5ceb30e675bc4fb",
+   "md5": "799923cc0dad40e51406f579fbd1cf5c"
+  },
+  {
+   "file": "archive.tar.gz.part-aame",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aame",
+   "bytes": 16777216,
+   "sha256": "95a64ff0c59bd0d373f1ede0ed46b4006d731cdc8b965a127cdbb2e0219d8941",
+   "md5": "d26584a0c8f0283c8363e4cfa36baf70"
+  },
+  {
+   "file": "archive.tar.gz.part-aamf",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aamf",
+   "bytes": 16777216,
+   "sha256": "8fbca7ea6d6f34ad42717ecdf5e9873c384bd0690b286cc9b13a7244819c6996",
+   "md5": "32f714adc17590a339db2d02e973db6c"
+  },
+  {
+   "file": "archive.tar.gz.part-aamg",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aamg",
+   "bytes": 16777216,
+   "sha256": "3834c03a09c27af90a0242cd2a5f0a24506fbb9848125dbc9ba2ce9b0a12c519",
+   "md5": "e6966bdcad409274ce028ef9697a0eaa"
+  },
+  {
+   "file": "archive.tar.gz.part-aamh",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aamh",
+   "bytes": 16777216,
+   "sha256": "d479a8993b69fe53af1dfacd341cc52266e80c9013c203c55f6c2b58a1868312",
+   "md5": "5fedd5b2bfd090c5a7e748141e25f09d"
+  },
+  {
+   "file": "archive.tar.gz.part-aami",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aami",
+   "bytes": 16777216,
+   "sha256": "7896f6dc7368aab329187270a23cb1ad580be5d7b30f77dd85d43e6d85ef550d",
+   "md5": "b4f369ca8301f4094c69b1eca996a272"
+  },
+  {
+   "file": "archive.tar.gz.part-aamj",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aamj",
+   "bytes": 16777216,
+   "sha256": "25a08c1618314c00199429634520cd9c45b5d19b67c19bbedcce8cc0bcc8e0cb",
+   "md5": "07007e62f6f34f57f522f828c56cf9a8"
+  },
+  {
+   "file": "archive.tar.gz.part-aamk",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aamk",
+   "bytes": 16777216,
+   "sha256": "233da83c62e9ee1891e3d610eed8f1276b8be836f45e21f1efc6f2544c0f25c3",
+   "md5": "99e294cf801815bff11d65eaccea92e1"
+  },
+  {
+   "file": "archive.tar.gz.part-aaml",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaml",
+   "bytes": 16777216,
+   "sha256": "51787c84d5aaf4217e64814de2e5dda1eb9ef8e7e01c6de77343938459df9268",
+   "md5": "02416cd9379cb5aeaef1fa6ce8497bd6"
+  },
+  {
+   "file": "archive.tar.gz.part-aamm",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aamm",
+   "bytes": 16777216,
+   "sha256": "d6fe569822dfe6d94a239ae15717c896fe45fa136651d1e4bb3c0d6d8b9a96ba",
+   "md5": "c22a6a8d4d96489db1fed5c82e259988"
+  },
+  {
+   "file": "archive.tar.gz.part-aamn",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aamn",
+   "bytes": 16777216,
+   "sha256": "b455ad4b8f545a5acc8466b9145b71c1109176a80be239a4bda17c6ed0b3e828",
+   "md5": "ba67ef4d6efc4df2d7ce6cb50c85b306"
+  },
+  {
+   "file": "archive.tar.gz.part-aamo",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aamo",
+   "bytes": 16777216,
+   "sha256": "f9134ca5b00d3c50657eefad3e8cb925beea9a4b07a3762c49d03bc7051dcf5e",
+   "md5": "1693449ba3caf6aacc855284c490a818"
+  },
+  {
+   "file": "archive.tar.gz.part-aamp",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aamp",
+   "bytes": 16777216,
+   "sha256": "cedb28ebecf30264fbc02a80e837c08847ec8a96c9b5fde3fbcd46407f827c25",
+   "md5": "0f9a7064a83af0fee19179e91be2f9ec"
+  },
+  {
+   "file": "archive.tar.gz.part-aamq",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aamq",
+   "bytes": 16777216,
+   "sha256": "961a7b7c26869e892817d1e7cce5033a2c90ce680a7c671853fd065050356c43",
+   "md5": "20b99022e03dc87c1c245d3aa9d024b6"
+  },
+  {
+   "file": "archive.tar.gz.part-aamr",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aamr",
+   "bytes": 16777216,
+   "sha256": "21d3c826e901c9f5075a094c46b86bdf26cc873640a1ee3b41cdc10753f2ddfa",
+   "md5": "0d7de980a3aa5ede041d3b2f9e9704a9"
+  },
+  {
+   "file": "archive.tar.gz.part-aams",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aams",
+   "bytes": 16777216,
+   "sha256": "82740a437969f932c40aa9314ae69cfacf6bb9a172e9ce3a0bcc83a6bfa0bfe0",
+   "md5": "32a9bae7a286fac645f2903dec60b570"
+  },
+  {
+   "file": "archive.tar.gz.part-aamt",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aamt",
+   "bytes": 16777216,
+   "sha256": "423195c969be8412e7a0952c791afa3d8efb40b408406595158d831ca500a232",
+   "md5": "fb9c1058aab94576e7027f4e228ed90d"
+  },
+  {
+   "file": "archive.tar.gz.part-aamu",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aamu",
+   "bytes": 16777216,
+   "sha256": "b667bcc9a415fba6f8ea3aa0ebfdab237113c894604450d4021803a5d5c02515",
+   "md5": "ee877b94d3ca041d22e4878d88939c1e"
+  },
+  {
+   "file": "archive.tar.gz.part-aamv",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aamv",
+   "bytes": 16777216,
+   "sha256": "c8431eea30b9c233c5769295cc6846f23cf7088329c40372c108b7c76b821f0b",
+   "md5": "ba3a364c3289d1012839be546f74fe34"
+  },
+  {
+   "file": "archive.tar.gz.part-aamw",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aamw",
+   "bytes": 16777216,
+   "sha256": "3be7fea71cc1ede7616ff54a9a2490419c202506bfa03a5ac2d67d7582952035",
+   "md5": "2f92a601a448669dc47466304045a194"
+  },
+  {
+   "file": "archive.tar.gz.part-aamx",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aamx",
+   "bytes": 16777216,
+   "sha256": "1b62c6517fb44b73b5199f1d588559ffa12da92bed901a8dcb07f3299067aa01",
+   "md5": "9a976f4e353fc41c2aebe63463eb4a7b"
+  },
+  {
+   "file": "archive.tar.gz.part-aamy",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aamy",
+   "bytes": 16777216,
+   "sha256": "ef505ab3c553cf6b46d8d907b3325b6fdb89f08c509cea58e0fb8d521477ee6d",
+   "md5": "5e59bf51f995116198872d95f14f44f9"
+  },
+  {
+   "file": "archive.tar.gz.part-aamz",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aamz",
+   "bytes": 16777216,
+   "sha256": "269a4376416c7d60b01256584344d83abd06bb770e8c52389f6f754d2b3fb026",
+   "md5": "6e02e201f30c0ec298136735d9dc7752"
+  },
+  {
+   "file": "archive.tar.gz.part-aana",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aana",
+   "bytes": 16777216,
+   "sha256": "f3254668686661ef2e014a8f072037ac5cdf466572a34fcd6938ef601cd50b09",
+   "md5": "98186aa4416d6e9bd3f1173ffc01cb70"
+  },
+  {
+   "file": "archive.tar.gz.part-aanb",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aanb",
+   "bytes": 16777216,
+   "sha256": "fef2f586a906d7cdae631d8bb15e2b0862446062b1d8732ef9c3d6239b8c02bc",
+   "md5": "0e2d4da2ecfe57191af12bd0dd2071a2"
+  },
+  {
+   "file": "archive.tar.gz.part-aanc",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aanc",
+   "bytes": 16777216,
+   "sha256": "1903bd1caa2eb2f5e5cea1fb76b9dc509d6bbaab9e497fb83b4165bae9e4d1db",
+   "md5": "c397fd80eb730a8d7cb1d54708cdab85"
+  },
+  {
+   "file": "archive.tar.gz.part-aand",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aand",
+   "bytes": 16777216,
+   "sha256": "50eef849735fa9d3cc4435cd61e3eb9facf54cacfadae5ef642eb4f6232b78c8",
+   "md5": "5912b1096d4b036e9148ad5107444a5a"
+  },
+  {
+   "file": "archive.tar.gz.part-aane",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aane",
+   "bytes": 16777216,
+   "sha256": "5d3332a375b63be3f0d89611e5662a2acd9cd163eeeb0298f35253e404880ed5",
+   "md5": "8fe038e7a560438fe95a7aae3035f969"
+  },
+  {
+   "file": "archive.tar.gz.part-aanf",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aanf",
+   "bytes": 16777216,
+   "sha256": "73584262ab6538075771f0f84d77f2304cbf865d3f25f66ee30b3fc7e8b21c58",
+   "md5": "5fcade89b5ca3b90f30703e65ee3c353"
+  },
+  {
+   "file": "archive.tar.gz.part-aang",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aang",
+   "bytes": 16777216,
+   "sha256": "d67da113d74e6c36ac0f462bfb52fcff6d6f1122b6ae050f94d934c594d129a6",
+   "md5": "ce684ed2901ca065afb594de5860dccc"
+  },
+  {
+   "file": "archive.tar.gz.part-aanh",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aanh",
+   "bytes": 16777216,
+   "sha256": "b161bccb16571f42315d939c565dc31651a616beb194ca7b71e2ca0c37e20816",
+   "md5": "3eef06d66e8b03c3f6789f154fa7a1cc"
+  },
+  {
+   "file": "archive.tar.gz.part-aani",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aani",
+   "bytes": 16777216,
+   "sha256": "17e0859afcc0f3ad0eb20cc179c03bbd801894248669d9f6b61d132191c3fc4d",
+   "md5": "d2b7b8cbb276f61176987ea01ad359f3"
+  },
+  {
+   "file": "archive.tar.gz.part-aanj",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aanj",
+   "bytes": 16777216,
+   "sha256": "690a5ed2231665fe93d01652a0498322b471dcf995fc72609b2f9b7923882352",
+   "md5": "84a4f1bc00f9787a408dc01d19256ce7"
+  },
+  {
+   "file": "archive.tar.gz.part-aank",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aank",
+   "bytes": 16777216,
+   "sha256": "6f4f1b775bdea42465d3a01a69cb9d2eb3a927389b594ea6a7b3ed69b7cd2435",
+   "md5": "7fc344575b685d8976d7f7a7e0e877c4"
+  },
+  {
+   "file": "archive.tar.gz.part-aanl",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aanl",
+   "bytes": 16777216,
+   "sha256": "175adf66f9277e0cc2278ee0cd83efda5e56a4b0dc0188ecd23b9bf97dec3148",
+   "md5": "d958c2636d1d692209f40bdc741b6110"
+  },
+  {
+   "file": "archive.tar.gz.part-aanm",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aanm",
+   "bytes": 16777216,
+   "sha256": "01d5d5a34e43a7e22bad629180682029e204fe1d91f1a96da058391f8ef972c2",
+   "md5": "d3f037c122a8b0e912093cd425b15c83"
+  },
+  {
+   "file": "archive.tar.gz.part-aann",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aann",
+   "bytes": 16777216,
+   "sha256": "2e1ec4a9a53eb6f3e6512be494f8e07678c069519e06a19df046d4a3bdfefcdb",
+   "md5": "c7734382312ec93844b5b19429e62a84"
+  },
+  {
+   "file": "archive.tar.gz.part-aano",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aano",
+   "bytes": 16777216,
+   "sha256": "0feebb69af5155f54fc21973276eff5e11108e452c5bd37bb73d448c4696b3a3",
+   "md5": "c0e6d7aa4babff61afc76c18c4e59c26"
+  },
+  {
+   "file": "archive.tar.gz.part-aanp",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aanp",
+   "bytes": 16777216,
+   "sha256": "dd649bbdf6e7a8e9774314b2a9abe89af7f938b2ecf751bb931000651d894633",
+   "md5": "5dc22cfbca22cf3127cdca4405cb4101"
+  },
+  {
+   "file": "archive.tar.gz.part-aanq",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aanq",
+   "bytes": 16777216,
+   "sha256": "3819ff0a1851e78077dc05a206e3cebc36acd73942294e8d077a2a357c8c765c",
+   "md5": "e7dcbb7572c0423146637658bb2ad87a"
+  },
+  {
+   "file": "archive.tar.gz.part-aanr",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aanr",
+   "bytes": 16777216,
+   "sha256": "55de11125e58ef550c593e60d868fe24cf7835c6cf5d77e45f6da0cc14a41af6",
+   "md5": "e5201a97594d781ab9d49c45d688eeec"
+  },
+  {
+   "file": "archive.tar.gz.part-aans",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aans",
+   "bytes": 16777216,
+   "sha256": "a71873a34a51ba52af379a7916aced56ba86e0ee8ebcd44ca713ee1822b53887",
+   "md5": "650461e811de3b75e60bd81d627ecc45"
+  },
+  {
+   "file": "archive.tar.gz.part-aant",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aant",
+   "bytes": 16777216,
+   "sha256": "18069f8c98eb5c6c624f4c954366fbb22212a697db04912dbba6fa0d98e6f00b",
+   "md5": "3bf425d12367ad908887717bf8d8c1ae"
+  },
+  {
+   "file": "archive.tar.gz.part-aanu",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aanu",
+   "bytes": 16777216,
+   "sha256": "0db4f60299e31dde55ec277041b7f07a6795ea58b867d205046c45b2a17c74a5",
+   "md5": "f9511c0f9cd8a5d617e0445b0c345195"
+  },
+  {
+   "file": "archive.tar.gz.part-aanv",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aanv",
+   "bytes": 16777216,
+   "sha256": "84b281044359ec790458f24ba8ae387e97a7a727d595b5769b260ab561c7074e",
+   "md5": "86f7d127c59289486690217f38556310"
+  },
+  {
+   "file": "archive.tar.gz.part-aanw",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aanw",
+   "bytes": 16777216,
+   "sha256": "5feec144e903d663938147d5854d3912e0164012d29182aadaebeec119292d56",
+   "md5": "6b7f476cadb1ce4d1d1269a2698aaeb9"
+  },
+  {
+   "file": "archive.tar.gz.part-aanx",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aanx",
+   "bytes": 16777216,
+   "sha256": "2a1768422c576d8b29003cbf8ae93b749f0ba1acb4db62bedfb6456929006f61",
+   "md5": "30cdf77f3a6d5a186a1f7d91cedf7553"
+  },
+  {
+   "file": "archive.tar.gz.part-aany",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aany",
+   "bytes": 16777216,
+   "sha256": "c685b64598d750888a5e2c667178b9c46a8e6d6db826f629bbd725f7b931e70a",
+   "md5": "1e774f107802139e9b6079112622dbe7"
+  },
+  {
+   "file": "archive.tar.gz.part-aanz",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aanz",
+   "bytes": 16777216,
+   "sha256": "ff65130998ae8611b294ed6dbbcb5a595e71b9c1a62aa9974fc1904368fa1c48",
+   "md5": "2c94e59c79d05d39a25295b088e382af"
+  },
+  {
+   "file": "archive.tar.gz.part-aaoa",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaoa",
+   "bytes": 16777216,
+   "sha256": "979f0d7b347653beb9477468ad4ed368ca4aff2159e18c373db0c7cd2d054620",
+   "md5": "50944b23395c3a1606bb66f7023aa60c"
+  },
+  {
+   "file": "archive.tar.gz.part-aaob",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaob",
+   "bytes": 16777216,
+   "sha256": "653519ec71f3db9665ca24473525208874b5ee0b656830c7f46977e5b651a191",
+   "md5": "14daf6f208068f783cd4497647535f75"
+  },
+  {
+   "file": "archive.tar.gz.part-aaoc",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaoc",
+   "bytes": 16777216,
+   "sha256": "51d6058a4e1609a36a60d3365993012812419e6fede3daa061827a166993b8d5",
+   "md5": "4d102d5c1a1e031fb2e76ba475b3a5ae"
+  },
+  {
+   "file": "archive.tar.gz.part-aaod",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaod",
+   "bytes": 16777216,
+   "sha256": "394b322406e8d839afb77495dd2b8e38c1ee1fa22750df18a5d4e77d10d5b5f2",
+   "md5": "2ceda66e116e88f0ac1539e06823e23e"
+  },
+  {
+   "file": "archive.tar.gz.part-aaoe",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaoe",
+   "bytes": 16777216,
+   "sha256": "8ac95218527207b75784b3fb73b0ee36d44e5a17f3e37ef85bdaaf0548473f66",
+   "md5": "ad7ec820f039e9a3d03465c3d4aba302"
+  },
+  {
+   "file": "archive.tar.gz.part-aaof",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaof",
+   "bytes": 16777216,
+   "sha256": "3820245df9e57f57294bc79de63214188f40a549fde5ff3559d847399d6e6fe3",
+   "md5": "d1bb5d695edee6d8e6eae10ee43ee953"
+  },
+  {
+   "file": "archive.tar.gz.part-aaog",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaog",
+   "bytes": 16777216,
+   "sha256": "acd6f750f68bbbb8cecc4718e66b15dda7fa5ce9686c859ade28fa37c25d8f5f",
+   "md5": "a287e15e644097b8e6024787a7b7d001"
+  },
+  {
+   "file": "archive.tar.gz.part-aaoh",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaoh",
+   "bytes": 16777216,
+   "sha256": "1af5ef35d6f503fbf93b392bbedd1c7138b57889a37668f3b0f756dc8da4723f",
+   "md5": "36cc718e8f65a01f46a2183a05d7703c"
+  },
+  {
+   "file": "archive.tar.gz.part-aaoi",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaoi",
+   "bytes": 16777216,
+   "sha256": "e4375064e84adc9428b4c92f47acef5d0e40551f762dd5655187754924c7b9ae",
+   "md5": "d1d9362c141f225eac69c931b71d4100"
+  },
+  {
+   "file": "archive.tar.gz.part-aaoj",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaoj",
+   "bytes": 16777216,
+   "sha256": "331823fc7e3fb823dd4af9357ba695049fb51de3809ea1f4e4760fea2073c608",
+   "md5": "904ca4e00562a945da00db19cd8c5404"
+  },
+  {
+   "file": "archive.tar.gz.part-aaok",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaok",
+   "bytes": 16777216,
+   "sha256": "75ff19ee214d7a63c6447a2c6330913a2bd967c10278050dec3e8430a3092453",
+   "md5": "55f7d37701d954e0590f1b4981eca8c7"
+  },
+  {
+   "file": "archive.tar.gz.part-aaol",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaol",
+   "bytes": 16777216,
+   "sha256": "eb723efc0f4d20b03a6a5251c663590f2fbc1f51619ab4284bb6c4635a7bc79c",
+   "md5": "fb858f24a3d1b2d4a1ea5d6d6ef80cba"
+  },
+  {
+   "file": "archive.tar.gz.part-aaom",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaom",
+   "bytes": 16777216,
+   "sha256": "43042fb9dfee40fbdd83f0fbf16382dec3339492c50997262851bea6c063384d",
+   "md5": "2df8162dabc78c61b2fa0557a1f1312c"
+  },
+  {
+   "file": "archive.tar.gz.part-aaon",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaon",
+   "bytes": 16777216,
+   "sha256": "ec78ed062890a195d19c2c1697b7c75d4b0060a9a69b9571d060b4c84b4c77f9",
+   "md5": "9761bd4c2301b46e80082cb6073c44ce"
+  },
+  {
+   "file": "archive.tar.gz.part-aaoo",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaoo",
+   "bytes": 16777216,
+   "sha256": "f1f1eedc061973db4e9b2f82557cbdd74a1755930e38047b8310f1b757c168db",
+   "md5": "b342df8afaba3b27ca5d42115038df2c"
+  },
+  {
+   "file": "archive.tar.gz.part-aaop",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaop",
+   "bytes": 16777216,
+   "sha256": "b633d6b8db76e1274373a609f073ecd99c37263e429accccbb4eac2e74563c41",
+   "md5": "bf8fb827e7002472d8cecfa08baadbdb"
+  },
+  {
+   "file": "archive.tar.gz.part-aaoq",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaoq",
+   "bytes": 16777216,
+   "sha256": "dcc2a9362ad249d8d0b23e9e4c077894478952e0718243ab00b08cb381567573",
+   "md5": "81924dcd7d6b3e2e2e8bfcf01e7a9a1f"
+  },
+  {
+   "file": "archive.tar.gz.part-aaor",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaor",
+   "bytes": 16777216,
+   "sha256": "7513f86c02c6dc93e198988d0156a1993b6adab31a626cb59ec2dac18c76eca9",
+   "md5": "5075a3696ea2bbaed3694f5b270d6329"
+  },
+  {
+   "file": "archive.tar.gz.part-aaos",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaos",
+   "bytes": 16777216,
+   "sha256": "a2f08d4c589fbb349429facb3e5dc2cb754b60c189bf45d4d9014c872d577048",
+   "md5": "e42e266991fdb1f2dc81cb45e4238a9a"
+  },
+  {
+   "file": "archive.tar.gz.part-aaot",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaot",
+   "bytes": 16777216,
+   "sha256": "0fbab46df95b189147d972fdd452ce5bc0b7e983ad7b577dcc830a1cfc471da8",
+   "md5": "3f62a49fb404017412514526276eda2d"
+  },
+  {
+   "file": "archive.tar.gz.part-aaou",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaou",
+   "bytes": 16777216,
+   "sha256": "4b4183ec2edcd09c8422046760648a905105082c476f6adffcea09490a60cabe",
+   "md5": "794cd050f2439778c285fa9f90edb59a"
+  },
+  {
+   "file": "archive.tar.gz.part-aaov",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaov",
+   "bytes": 16777216,
+   "sha256": "c9df47f89b16516d9dbf59e44a41ad4b4e25041cb975c62a1aa0de6110a142d1",
+   "md5": "8d4ba816b4a94c339320439e3384b22f"
+  },
+  {
+   "file": "archive.tar.gz.part-aaow",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaow",
+   "bytes": 16777216,
+   "sha256": "e45d6d4549e6290aed16247e3c00cc0c9c019b31c2eb539ed138acb9f5db70b9",
+   "md5": "8135a3b8d5b0f1e5b1a11d8355d40a7d"
+  },
+  {
+   "file": "archive.tar.gz.part-aaox",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaox",
+   "bytes": 16777216,
+   "sha256": "d4b45212235dc603049055d841181ec04e17a137b9853cf169e0813197f66953",
+   "md5": "991883402e3768ea95e945ee28c48279"
+  },
+  {
+   "file": "archive.tar.gz.part-aaoy",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaoy",
+   "bytes": 16777216,
+   "sha256": "74c767b79f7e26d3f61d610a94421ae1c35c77017d80ca1eae1e8d93a39ac7df",
+   "md5": "36cf399c2fdf481a6d8a46f07de4a2ad"
+  },
+  {
+   "file": "archive.tar.gz.part-aaoz",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaoz",
+   "bytes": 16777216,
+   "sha256": "7c2b4b0f4cc2d58359d643dae42ef4fd87702d04eeef915b17e282d5587df31f",
+   "md5": "6d1c5f2094d0122bc024cff603ac88d3"
+  },
+  {
+   "file": "archive.tar.gz.part-aapa",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aapa",
+   "bytes": 16777216,
+   "sha256": "fc6457a2e3394cc1caa60ba27f0bc7e4db082b0708c6ae1a24024c1894da6714",
+   "md5": "a1a795ef807efa77323cb4105e2363e6"
+  },
+  {
+   "file": "archive.tar.gz.part-aapb",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aapb",
+   "bytes": 16777216,
+   "sha256": "7a2d17a90fba9ce94db10733fb9d21eb35760fcc3b55cef8dfa01852d47e0c7b",
+   "md5": "2a27aed6588e8a8fde6aec25962de0f1"
+  },
+  {
+   "file": "archive.tar.gz.part-aapc",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aapc",
+   "bytes": 16777216,
+   "sha256": "31367186b16028a0081754afb618ea6edd0f2849cbface58d5b1e0c1a658bbcf",
+   "md5": "d82ad309d3beb745d44db52f44b39c03"
+  },
+  {
+   "file": "archive.tar.gz.part-aapd",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aapd",
+   "bytes": 16777216,
+   "sha256": "f7d8f415469a1e1bea8d4f8cc1ab96c1d0795f12e625b0a6f3d9cbcc99afdb59",
+   "md5": "bd62ec44b4bbf85290795a6c25a52d0e"
+  },
+  {
+   "file": "archive.tar.gz.part-aape",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aape",
+   "bytes": 16777216,
+   "sha256": "83e9f591d48ea3bb181340a10946cdfd354010c03fce4e59564672eace4d4b3e",
+   "md5": "c396c5b2e1e26f579c30db77e4960b63"
+  },
+  {
+   "file": "archive.tar.gz.part-aapf",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aapf",
+   "bytes": 16777216,
+   "sha256": "81df523d917fd23518b1d892d46b2a5ef9661eb39671d7e0b02cf10c751e05d9",
+   "md5": "ed8df3a7071f8ddbc4fa6a1636c6657d"
+  },
+  {
+   "file": "archive.tar.gz.part-aapg",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aapg",
+   "bytes": 16777216,
+   "sha256": "f0a262b7d8a1408a3a45fcfc6f6f0284a0feb4db980f3ffd7b8ea9467c93b893",
+   "md5": "ed1563a9f1268b6a8d1e85992178f735"
+  },
+  {
+   "file": "archive.tar.gz.part-aaph",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaph",
+   "bytes": 16777216,
+   "sha256": "8b44240108e1e82100f8fcf8359259e62aa87a80acd61a086c5bd45703b921bb",
+   "md5": "82f4083b2a31147546dc74bc325e60c6"
+  },
+  {
+   "file": "archive.tar.gz.part-aapi",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aapi",
+   "bytes": 16777216,
+   "sha256": "274e8a43253a17e375a69fab2ebcf75349766eb6c82e46fe2a181a0885d99b9c",
+   "md5": "9470d632e9fc039d29992ed387dd0d0d"
+  },
+  {
+   "file": "archive.tar.gz.part-aapj",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aapj",
+   "bytes": 16777216,
+   "sha256": "d9976eb9210f4d1623231d251f594490a0e665364e335b06095a7a9ecdc62702",
+   "md5": "2e81b5b8303e71aef4c6dd6ddbaec277"
+  },
+  {
+   "file": "archive.tar.gz.part-aapk",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aapk",
+   "bytes": 16777216,
+   "sha256": "1ec5b797d78b870608f2aa5da8195f50145b54661a48b6ad1f24b3182b430e3a",
+   "md5": "88058023e31a2354807967c80b2327af"
+  },
+  {
+   "file": "archive.tar.gz.part-aapl",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aapl",
+   "bytes": 16777216,
+   "sha256": "2786c5bc1b542f2f6065093f8fbae26723c8038f88cb5f076d9760a7507120d8",
+   "md5": "fe58492d4f89a579c02ddb93ea278e1d"
+  },
+  {
+   "file": "archive.tar.gz.part-aapm",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aapm",
+   "bytes": 16777216,
+   "sha256": "f012043e501768f9412fe62c4fda111d8b7c986a88f4cb4fb436cbb801736dab",
+   "md5": "e2cf977950182a5f9dcf52b2a3fd8bae"
+  },
+  {
+   "file": "archive.tar.gz.part-aapn",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aapn",
+   "bytes": 16777216,
+   "sha256": "6f0928244ce4c37dab907f020484e8fac3280d9ac320fd3fb5b32eb1f95b6579",
+   "md5": "bce194742fadae62dc5f54f0e92d2e85"
+  },
+  {
+   "file": "archive.tar.gz.part-aapo",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aapo",
+   "bytes": 16777216,
+   "sha256": "e11535eb9818c8f9bab8715908d261513a738f87d4cd295aba435252c66956e2",
+   "md5": "3c54e7aea16cb12c72bea931998b230b"
+  },
+  {
+   "file": "archive.tar.gz.part-aapp",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aapp",
+   "bytes": 16777216,
+   "sha256": "34df58815e72826468b4d11e7ea434f3b97b802392d366bd2c4fe272aa088fd0",
+   "md5": "337e76b9cb2ca52fa4ffbe92cbbbb2e6"
+  },
+  {
+   "file": "archive.tar.gz.part-aapq",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aapq",
+   "bytes": 16777216,
+   "sha256": "61d96f4fea697cfb77ba17c5a8733eaea5b501effa0c4cf05a0efe4c5a5eef71",
+   "md5": "bd53c88af0474fb2071666d04412b8cf"
+  },
+  {
+   "file": "archive.tar.gz.part-aapr",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aapr",
+   "bytes": 16777216,
+   "sha256": "432336c14fa2fee94e55459dc1a45cf125612a63f8bc902abac2c0018b263fc8",
+   "md5": "f116c1554bfd3da6ebb715c0579dccbd"
+  },
+  {
+   "file": "archive.tar.gz.part-aaps",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaps",
+   "bytes": 16777216,
+   "sha256": "b45ec3ae8e567ea8d3f99ba77859bd3c056350107884fc71229e0ec0b7dec8cd",
+   "md5": "df7864b413c42ccfd48871cb8e47c810"
+  },
+  {
+   "file": "archive.tar.gz.part-aapt",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aapt",
+   "bytes": 16777216,
+   "sha256": "c57acff0e29cf6a8c7b837c00e25d759ea0710ccc0f55ccf26b8f7feeacc8c97",
+   "md5": "42225cba71a6811c149671af947f2684"
+  },
+  {
+   "file": "archive.tar.gz.part-aapu",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aapu",
+   "bytes": 16777216,
+   "sha256": "8a426b1b50a79f813fd9ef5e19d4e45ddb89f559604d7cfd9173c7fd7ddea1b5",
+   "md5": "7902b75937443c752ac81cf7ffd7e300"
+  },
+  {
+   "file": "archive.tar.gz.part-aapv",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aapv",
+   "bytes": 16777216,
+   "sha256": "62bcd96c0eed67e0ab9bb4d333dc73d9c1b43dcd98c06b95967311a35f3de305",
+   "md5": "871229a7da3de49ee558f0c7272da05b"
+  },
+  {
+   "file": "archive.tar.gz.part-aapw",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aapw",
+   "bytes": 16777216,
+   "sha256": "6774ac53510b0c8f82f3ee42916170d60c66aeeb941a750ad101c811ec828240",
+   "md5": "cfca21f9d059806a23b3cbbd4a2e7717"
+  },
+  {
+   "file": "archive.tar.gz.part-aapx",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aapx",
+   "bytes": 16777216,
+   "sha256": "e15488d38d28e162e8e85115d0971e3363a22de40742c6c15c4426080b82c032",
+   "md5": "d367fe93eae378a20d5e7bf9e2b7d612"
+  },
+  {
+   "file": "archive.tar.gz.part-aapy",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aapy",
+   "bytes": 16777216,
+   "sha256": "01f0ed4e831980d118c794a0a53fb2085eb772d5a17874f98512eea0d60c9923",
+   "md5": "d8f7dfeac0256fbd467f848f697ebf41"
+  },
+  {
+   "file": "archive.tar.gz.part-aapz",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aapz",
+   "bytes": 16777216,
+   "sha256": "107f6c0505580aec827d42e214ceca6ed460492ed2b49e0e989177608455c3bd",
+   "md5": "95d6ab4b7d3e9f7e9c33554c76248464"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqa",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqa",
+   "bytes": 16777216,
+   "sha256": "2f5c37486cefe6639611eb0513e0705b825b1c747a70ec159118bd0542960e1f",
+   "md5": "e2dbaff3bda43fd04d333f17b23c4204"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqb",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqb",
+   "bytes": 16777216,
+   "sha256": "1cdcd9d55ff8080b1ccce909a4eb57a374f41037e5d5604ccf272e14874f6d13",
+   "md5": "684c438fd078a8d238f0901eec93581f"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqc",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqc",
+   "bytes": 16777216,
+   "sha256": "ccac09e3bff69e9a83672dc594a7a8d35e12f5957a400a129fbf9ac6fb6d7c55",
+   "md5": "495ec2f0df73cdd401e2d89672a01db6"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqd",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqd",
+   "bytes": 16777216,
+   "sha256": "48718ee1af418a3b175739b474e7ed27e2138c9ae8de9134cf3ba1117052291f",
+   "md5": "6a4ef2bc4ad1e53807769ee20ab3723c"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqe",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqe",
+   "bytes": 16777216,
+   "sha256": "2ccace5fa5a8f7949db41d13c6c9334465c9a48d513375af771c92afa45da320",
+   "md5": "223f1ccbd214a28064d693a8c5676b07"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqf",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqf",
+   "bytes": 16777216,
+   "sha256": "2e8974df6f7c9fc32ab1623b1ac59626cd432480c508004b79b4245740847e61",
+   "md5": "3bf564f60241be1fdc989cad1f2a10b5"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqg",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqg",
+   "bytes": 16777216,
+   "sha256": "271bcebb73f4d26c2fc29e02d2ac63c3a3690b10ebe6b248f50f5d9a1c5a9acd",
+   "md5": "546ae62a25a242038a2ef750eaf7e1c6"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqh",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqh",
+   "bytes": 16777216,
+   "sha256": "4b2170ed9d3083f37259d7e93df2235ce9321ea177ebe9e9e56b59bca59475ca",
+   "md5": "df5ea4a92a34102f8c284f1763ea350c"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqi",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqi",
+   "bytes": 16777216,
+   "sha256": "7069d04c83b698af122d074c1f87d806b41cc816efbdf74beb22dfb8968a437f",
+   "md5": "77efe17c143a1d5cce6c553f7ac50587"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqj",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqj",
+   "bytes": 16777216,
+   "sha256": "d787afc82b8637bf44cab0bbd1c1152aca441b2427c9b1681b066163c87e2b47",
+   "md5": "3ab6512b68969e0fb5a8e9038915b867"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqk",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqk",
+   "bytes": 16777216,
+   "sha256": "b495b7740e65e93b0756d365ff207e82d98b2604bb7ab0ca55cafcd930e68911",
+   "md5": "240631f6018118cbb744f95d927f5a8b"
+  },
+  {
+   "file": "archive.tar.gz.part-aaql",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaql",
+   "bytes": 16777216,
+   "sha256": "30a9a01bb0a560936d237d22c5c4a2b1feaadb2a5e13c4d13e22d3afa748d9ea",
+   "md5": "e910319a62ebb3e53f5601ef9d61d351"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqm",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqm",
+   "bytes": 16777216,
+   "sha256": "8e762186c9b13ff583038163f33ac27340a451898ca7369ed345dc0916e1af2a",
+   "md5": "24ccc1bd7f49c75dfd46e3ca4369fe34"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqn",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqn",
+   "bytes": 16777216,
+   "sha256": "7757045d41b3b13d6def0a318f45171464d07bf6d6a8f33aef57cc5a1b5717da",
+   "md5": "d3ab9fb2a9d4089f7c31ffd023b5b6c3"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqo",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqo",
+   "bytes": 16777216,
+   "sha256": "34cde0e4b1e1ca30bbe5999ebac1ba2255dc06d0c0c6408f1de5185f4a150aa6",
+   "md5": "1b2f156ccee5d885373ae76571feef87"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqp",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqp",
+   "bytes": 16777216,
+   "sha256": "3fc28aa4e46204335602a8c752cbe4d7d9b5c8ea57b8354cf7cc540724187995",
+   "md5": "c0c220f6409adfda3778a5e44d370ecb"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqq",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqq",
+   "bytes": 16777216,
+   "sha256": "d714828ac1fcf4ebf94e2bc07b8e3bf0324609ac0afd5d3135a184f8d074b5c8",
+   "md5": "1b674ad91118f550c52ba0136f53323f"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqr",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqr",
+   "bytes": 16777216,
+   "sha256": "f6ff31619be0adddf0442eb818b36cf49697a895721d5b1fec38f3fe2d3a2a24",
+   "md5": "7083e52569eb2da3f42ddf704febb05c"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqs",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqs",
+   "bytes": 16777216,
+   "sha256": "d8d78da065242c3711b329b655750d2c6e4cecba583ac1f831df77d63cc3a4e1",
+   "md5": "a34496ddf07347fbc3206f84de299d7c"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqt",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqt",
+   "bytes": 16777216,
+   "sha256": "8ddfc1f4e8460ba871992168012e3ddb10f033c560651cfcefc5f26da23e5952",
+   "md5": "88bffbe253537e515fbcb0504ec68d3d"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqu",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqu",
+   "bytes": 16777216,
+   "sha256": "b8fb6a10dfa38380c57602f0ed9e257f3ac44bb5385a4500bebd3fdc1e0ae595",
+   "md5": "c6924436d031232c4633ba02d602b4e3"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqv",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqv",
+   "bytes": 16777216,
+   "sha256": "ce50ca29cad39f45b9eaeebb55c107449457b2e03eb9dc1d2067e9fbf4d5033f",
+   "md5": "32bf88bd6f21c9522781fa106e7cfd63"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqw",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqw",
+   "bytes": 16777216,
+   "sha256": "a7273f7bb2a5b823fd69569a6f3dc035fefdf719ff2f45e1b4d0ee7d31a11f65",
+   "md5": "31cb5f492be4d3af3af36ba373145e14"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqx",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqx",
+   "bytes": 16777216,
+   "sha256": "4e43597ce22b78ea5c8051412d29a9dd4e8b406144f22dcee0fb9a7cd46341c9",
+   "md5": "5b5aafefba05e14856773d6a5a573305"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqy",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqy",
+   "bytes": 16777216,
+   "sha256": "e3c292115b5fcafe3d63abe73ffaf7ebc0bb3b864cf5bf0b9618a6b1fa78e2fe",
+   "md5": "7e4edf29937270d3c4e1d24405808921"
+  },
+  {
+   "file": "archive.tar.gz.part-aaqz",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaqz",
+   "bytes": 16777216,
+   "sha256": "443d0cb336566e2cc0f76696f7556ca899e14e801ef93b68096f65d4fb759a37",
+   "md5": "ae6e5da73a46fcf9e063dfb3e75b99ba"
+  },
+  {
+   "file": "archive.tar.gz.part-aara",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aara",
+   "bytes": 16777216,
+   "sha256": "90896475f23b781f5e9f1b2dc34309fea2837f74688614f139a3ab339052e6b7",
+   "md5": "2ca23b99c986867a2c1cbd68a78b3be0"
+  },
+  {
+   "file": "archive.tar.gz.part-aarb",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aarb",
+   "bytes": 16777216,
+   "sha256": "4f606dcb29341d6117723d2f740818bc29015e5f345143884ec121fba87566bd",
+   "md5": "57a9eaa19dd6f0dee6a9be35c492c6de"
+  },
+  {
+   "file": "archive.tar.gz.part-aarc",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aarc",
+   "bytes": 16777216,
+   "sha256": "3347e4ebdce64de5c44daf686e297a235289aa39d29e614698dfa5bb755753c6",
+   "md5": "53256782a7e995a788d7ed870a2959f5"
+  },
+  {
+   "file": "archive.tar.gz.part-aard",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aard",
+   "bytes": 16777216,
+   "sha256": "fc831b5ce46f9e8fa67c38e93bea0a43a2578ebda81df4813661514bee97d3b0",
+   "md5": "be198752121e5bb6301211b4e5e141d7"
+  },
+  {
+   "file": "archive.tar.gz.part-aare",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aare",
+   "bytes": 16777216,
+   "sha256": "0a8d2e531037a58d324fe09e42b36155333e08ecf395103bcb33dd68bd0c2247",
+   "md5": "6e8a3380d160d19e9e014fe87533ac71"
+  },
+  {
+   "file": "archive.tar.gz.part-aarf",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aarf",
+   "bytes": 16777216,
+   "sha256": "879b5d67b18da9c13848f5b89f34558c100d7d02432491de1db6cd1f9a2ba8dd",
+   "md5": "66a3b2ae99e15bbae9ef77b561730596"
+  },
+  {
+   "file": "archive.tar.gz.part-aarg",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aarg",
+   "bytes": 16777216,
+   "sha256": "4fd037d5431240310add1f927f800f5746d0a8ffa864ee4431a995be7238c8d5",
+   "md5": "74d9a11494859d50ff0020d693d12324"
+  },
+  {
+   "file": "archive.tar.gz.part-aarh",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aarh",
+   "bytes": 16777216,
+   "sha256": "f4057708107eec7199b74561c06bb9095892cdbd69efc6c79b468843d45a10d3",
+   "md5": "d6710b65382242efcce3f5ba389a1756"
+  },
+  {
+   "file": "archive.tar.gz.part-aari",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aari",
+   "bytes": 16777216,
+   "sha256": "e8252cacbdb63845babb20ab661c99fd8d93b8a08a425af9e9a14088fbc6ff4d",
+   "md5": "b85ed953e06f5dd9dae806fd799b827e"
+  },
+  {
+   "file": "archive.tar.gz.part-aarj",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aarj",
+   "bytes": 16777216,
+   "sha256": "beffee55ddaa05c0795d4a20ba2f4505e8347c716338a75a8ecec55da80f6428",
+   "md5": "5d15b4fac06a40bbea01f85c0757298f"
+  },
+  {
+   "file": "archive.tar.gz.part-aark",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aark",
+   "bytes": 16777216,
+   "sha256": "6c79d5dddc97a170800e832c88e39d6f594f5483e21a42dcbaf536f1109de02d",
+   "md5": "1c67e9c6839381cfc75ed1f401c449c3"
+  },
+  {
+   "file": "archive.tar.gz.part-aarl",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aarl",
+   "bytes": 16777216,
+   "sha256": "59406ccfdb8c95f585540c9d2715556b22255fd71a60cbfa4df6838d9ead8c80",
+   "md5": "b5f4c9918aa7a9f303e520a0d426ff54"
+  },
+  {
+   "file": "archive.tar.gz.part-aarm",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aarm",
+   "bytes": 16777216,
+   "sha256": "e445984ce09e8a1d477b1dbb0fb41fd7cd6a7621c3808e81045a847ef7becbb8",
+   "md5": "41b7e9851bba86f2f11c27ea24e443b3"
+  },
+  {
+   "file": "archive.tar.gz.part-aarn",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aarn",
+   "bytes": 16777216,
+   "sha256": "47398a714cfd06fd06b1c1ebfe4084fb63764ffe5a03ea602339d48642708ce7",
+   "md5": "68d9e76a650544dbb0db69d6ac4d1daf"
+  },
+  {
+   "file": "archive.tar.gz.part-aaro",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaro",
+   "bytes": 16777216,
+   "sha256": "23707fb5117057f4e67cbc47c92f31ecb4a400958849bb228d7f6139a95e1035",
+   "md5": "67e87d9de4b25af124e997b425fecc4d"
+  },
+  {
+   "file": "archive.tar.gz.part-aarp",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aarp",
+   "bytes": 16777216,
+   "sha256": "fe767d7843d417e56aaad889828985a4e18ba39a6f9cd25db37104c06398dadd",
+   "md5": "281f9758d8902f0b2d0e11d77d971ac3"
+  },
+  {
+   "file": "archive.tar.gz.part-aarq",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aarq",
+   "bytes": 16777216,
+   "sha256": "d5413c775cebbbf312fd8fb85c67c3b7cbae23a7a56d5903e3ff8b17d315a1df",
+   "md5": "9339cf4c1f1d79746e4904717294f972"
+  },
+  {
+   "file": "archive.tar.gz.part-aarr",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aarr",
+   "bytes": 16777216,
+   "sha256": "8048cd1271c89b76e230b3b9c2a6745672647be5136750bdc03b6693db9f190b",
+   "md5": "59b687b364c4f02320687517db25acc1"
+  },
+  {
+   "file": "archive.tar.gz.part-aars",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aars",
+   "bytes": 16777216,
+   "sha256": "f681bc65a170c69c86977a92e826ad392d8731dcdde28d3bdfaad9a27644e058",
+   "md5": "be218742255794adb347bce699a8ccc2"
+  },
+  {
+   "file": "archive.tar.gz.part-aart",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aart",
+   "bytes": 16777216,
+   "sha256": "6f5283e323553ae0b3b40bd61aab3cbb3c5cb90ac0dbb574a5c3a33393cf3854",
+   "md5": "82479071a617a7fab61da477008adb0a"
+  },
+  {
+   "file": "archive.tar.gz.part-aaru",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaru",
+   "bytes": 16777216,
+   "sha256": "9b63b64d212f976d5ee543b4a60e3f398c41ee8a806cbe1d4b5c592d9f0e3f30",
+   "md5": "ee075409ac92b69e97bb8be90c78422a"
+  },
+  {
+   "file": "archive.tar.gz.part-aarv",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aarv",
+   "bytes": 16777216,
+   "sha256": "07491e7c0e2f36da793ad3f242a9f1be5af873806a7176a0f6b6f62f13490661",
+   "md5": "687ac16d1c2c937e9b62dbf13ad45152"
+  },
+  {
+   "file": "archive.tar.gz.part-aarw",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aarw",
+   "bytes": 16777216,
+   "sha256": "5a18f06481ec67f9a7749bfba7122f6841c624bf3f74d3c202ba7e7b144948fb",
+   "md5": "d3dc1f6b0687ebc51a8f9b54e23a7eb0"
+  },
+  {
+   "file": "archive.tar.gz.part-aarx",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aarx",
+   "bytes": 16777216,
+   "sha256": "ff39428f0f3c1a076de89f43c3396df7a067d5829498c455e78b19badf708f54",
+   "md5": "12bd787c01aeb4bec9c6f1568a34e922"
+  },
+  {
+   "file": "archive.tar.gz.part-aary",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aary",
+   "bytes": 16777216,
+   "sha256": "c9b795872660d94335bb18b720fde2e6a808f5219e96cf3e4b23c60413407cd7",
+   "md5": "7272255a56738ecc33d8cf1f6af63a84"
+  },
+  {
+   "file": "archive.tar.gz.part-aarz",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aarz",
+   "bytes": 16777216,
+   "sha256": "3ef02c224f52185ec025cdd4129ee016d8dedf4666b1e421fc9dcca196b1385d",
+   "md5": "c6576e02ddae35007cdad4f6ffca00f5"
+  },
+  {
+   "file": "archive.tar.gz.part-aasa",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aasa",
+   "bytes": 16777216,
+   "sha256": "fa52e206b6a0f15b324c11acbc3fbad04d484bb1a94fa40e82943aa7598d06d3",
+   "md5": "788538a97fcce40d87f3cc6efebf25ae"
+  },
+  {
+   "file": "archive.tar.gz.part-aasb",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aasb",
+   "bytes": 16777216,
+   "sha256": "9c5b27c408eb6366895a037d2de6eb0cac2ad4b50f009dc97a2d9fa6e1a95354",
+   "md5": "3f87f6d03111df0b998c18ea210d99e0"
+  },
+  {
+   "file": "archive.tar.gz.part-aasc",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aasc",
+   "bytes": 16777216,
+   "sha256": "72d40ee11a7b339a130a1fc60631abb2ed5834e93b9197455aafe9978660de38",
+   "md5": "ee58f778b719321a59c0af659f205688"
+  },
+  {
+   "file": "archive.tar.gz.part-aasd",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aasd",
+   "bytes": 16777216,
+   "sha256": "83f7924c88d36dbf5d6d63d61b00aaae6fee9359ba5f47439e515b2d51e04a8e",
+   "md5": "55516f2ebfcbc754bc48bbf575d17380"
+  },
+  {
+   "file": "archive.tar.gz.part-aase",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aase",
+   "bytes": 16777216,
+   "sha256": "7c03d7a5173c9fbf84411be038b37516a937e01562416badf6177c488fe0141e",
+   "md5": "00a75e5ddd37818ef9ffdcf40430cb2e"
+  },
+  {
+   "file": "archive.tar.gz.part-aasf",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aasf",
+   "bytes": 16777216,
+   "sha256": "7f52b7bdf7c79ff006cf76c577f164a3204282946f01d956a07fdab49f6d0ea7",
+   "md5": "3c09b9bb362497227abf849dc698a8df"
+  },
+  {
+   "file": "archive.tar.gz.part-aasg",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aasg",
+   "bytes": 16777216,
+   "sha256": "e6d86a88eff01216bcfa5e9cad12a9cdf60620c986ada9493b0d2e03594db064",
+   "md5": "f1e630f5b91f96c84862dafb73566ab1"
+  },
+  {
+   "file": "archive.tar.gz.part-aash",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aash",
+   "bytes": 16777216,
+   "sha256": "a9ca6a4d8156ed77a4a935c23829a9c0784f9561a6bfe198b0e4419d4cdb9c35",
+   "md5": "1fd855d49bd8f61a7afa060ff1032f0a"
+  },
+  {
+   "file": "archive.tar.gz.part-aasi",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aasi",
+   "bytes": 16777216,
+   "sha256": "877be17e6b13666767f3e7ff2b046cbb9c60501246535cc4a2550723f0490cf5",
+   "md5": "71045d2f5a7cc9945c24f24fc2ade164"
+  },
+  {
+   "file": "archive.tar.gz.part-aasj",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aasj",
+   "bytes": 16777216,
+   "sha256": "5d1389545a2854fe3b32d6a6649a6e1c83ae4afa15361a2aaef300680e2d1870",
+   "md5": "062dbe6e8ab9a4e7dbe41666820c4d06"
+  },
+  {
+   "file": "archive.tar.gz.part-aask",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aask",
+   "bytes": 16777216,
+   "sha256": "db7cb01f4c13ad9306f4867fc72218d05651fad8d8106644491650469f1ada00",
+   "md5": "a4669131f50073cd545b661e8e2dcfa2"
+  },
+  {
+   "file": "archive.tar.gz.part-aasl",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aasl",
+   "bytes": 16777216,
+   "sha256": "1c242e34027749ee80f0c53bc4f344eb3cfbad2439f045dd1363636f7a26e056",
+   "md5": "c7fab01dc07f5db4f9062d6967a030f1"
+  },
+  {
+   "file": "archive.tar.gz.part-aasm",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aasm",
+   "bytes": 16777216,
+   "sha256": "44465f8daa041fa3348f5a17d3e2a2ca115ae90e9cdb9912a28e419a896a8f73",
+   "md5": "37426fda28719db5af0f80215f9ce44d"
+  },
+  {
+   "file": "archive.tar.gz.part-aasn",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aasn",
+   "bytes": 16777216,
+   "sha256": "04105328378e52aa1f615416c34a889d20bae5f94201708823052e13dd5f95c3",
+   "md5": "729de8797c2bc384de08d536b949c2c9"
+  },
+  {
+   "file": "archive.tar.gz.part-aaso",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aaso",
+   "bytes": 16777216,
+   "sha256": "253ed6f91e3827499f462b422d0e49003ad0001babb67c2e06a4293593e1dbc7",
+   "md5": "6648508644d5e9d86efd8afce166ff78"
+  },
+  {
+   "file": "archive.tar.gz.part-aasp",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aasp",
+   "bytes": 16777216,
+   "sha256": "3234059f64ed1fdad06f7e7a7efaf605c6f77302dff53b3ef465aa3eae9a602b",
+   "md5": "af0e9474cc975db402367b2c0ceccb2c"
+  },
+  {
+   "file": "archive.tar.gz.part-aasq",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aasq",
+   "bytes": 16777216,
+   "sha256": "61bc53886acb4817eea10e7c3778c5993c9656b9118cdc55a05d9cb9c76b0ab5",
+   "md5": "54fdb30c523cc6d50d28b41d0cf2330f"
+  },
+  {
+   "file": "archive.tar.gz.part-aasr",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aasr",
+   "bytes": 16777216,
+   "sha256": "65650ed893c584748ab19df9cea1cf8fe7355ce056674b05b17b193a4e4d2043",
+   "md5": "74ec08e286aa3cad446a3613476b58d4"
+  },
+  {
+   "file": "archive.tar.gz.part-aass",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aass",
+   "bytes": 16777216,
+   "sha256": "a7430b887034892425f54c2509bec37a6e695a0e68d96cb4fe10cc706a692cfc",
+   "md5": "57aa32974700699c830bbc1a518bc31a"
+  },
+  {
+   "file": "archive.tar.gz.part-aast",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aast",
+   "bytes": 16777216,
+   "sha256": "631d0ec5e694c27afa6880546a542e8826c5028bbd4c0e094d98729dd39aec54",
+   "md5": "8b47d910dc80068742926313f67f2e8a"
+  },
+  {
+   "file": "archive.tar.gz.part-aasu",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aasu",
+   "bytes": 16777216,
+   "sha256": "d2f84a144bd35f074b5f39028ff2f4f6f1bdb8c823e52d00a4e5a14cc829e729",
+   "md5": "93ac7989654fc99f4eccea460a4a5448"
+  },
+  {
+   "file": "archive.tar.gz.part-aasv",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aasv",
+   "bytes": 16777216,
+   "sha256": "34a5a878687012559732956b2af019dd5b58a02e83dc92792db0678fb4e6b64f",
+   "md5": "e17c2a87d838a9e85096bd2459d23b4f"
+  },
+  {
+   "file": "archive.tar.gz.part-aasw",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aasw",
+   "bytes": 16777216,
+   "sha256": "4f5c0804481810d39646923d09aadb078fb59a12fc34cbf8b39088e227a825c3",
+   "md5": "1f078b8103837f460d7a83c3fc8a8f08"
+  },
+  {
+   "file": "archive.tar.gz.part-aasx",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aasx",
+   "bytes": 16777216,
+   "sha256": "efe22151714f42932458f60acfa9b2ebf754efe2335c5c098d568fe0eacce7b9",
+   "md5": "3d994eb7491d83d685e9aec6c91140ce"
+  },
+  {
+   "file": "archive.tar.gz.part-aasy",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aasy",
+   "bytes": 16777216,
+   "sha256": "91a563dda8c1d4e75a398546c2a9c8b41175a4a4d9c93167f95c2ff147f24efa",
+   "md5": "30ece44bdb7a19c7eed6f8a5e1e945c8"
+  },
+  {
+   "file": "archive.tar.gz.part-aasz",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aasz",
+   "bytes": 16777216,
+   "sha256": "558d9271fe74fde9d28ebd97b6757eb3cef6151e8bdad529a0d575520c8109cd",
+   "md5": "0dabc9422c2aef585b4f7cc361fe4bca"
+  },
+  {
+   "file": "archive.tar.gz.part-aata",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aata",
+   "bytes": 16777216,
+   "sha256": "c78e0d61965d34cd102298935a7aedb74be23efe3101ded40ce7e1ee7ba3a9d7",
+   "md5": "b85e01f8b5260813a59149a8c10dcf8a"
+  },
+  {
+   "file": "archive.tar.gz.part-aatb",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aatb",
+   "bytes": 16777216,
+   "sha256": "751e8a42cb43004791d52c6d4098be8cc518c1dfb3b18b43b4e231a07946dda7",
+   "md5": "1aa2706fc42fba437d6ec2b49f405e48"
+  },
+  {
+   "file": "archive.tar.gz.part-aatc",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aatc",
+   "bytes": 16777216,
+   "sha256": "7c8b89bf6427cbf16da9537fd0c0cbef0bffd13cb6dfd6b37e0bd6a2cbd9ee9d",
+   "md5": "6dd6b65b74e57e19125f110b6c5d81c0"
+  },
+  {
+   "file": "archive.tar.gz.part-aatd",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aatd",
+   "bytes": 16777216,
+   "sha256": "22870676d5aa519cba8f02d32310056b677857738173fef60b477c90e41cc8b8",
+   "md5": "24be243ab4a117ad50a330d7db9d807e"
+  },
+  {
+   "file": "archive.tar.gz.part-aate",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aate",
+   "bytes": 16777216,
+   "sha256": "90c2d47eb1bbbcc446f54d9feb07c5e800169db7e85a78423831fcfa948481e7",
+   "md5": "348b988f30c08e05a9fe4e8109521803"
+  },
+  {
+   "file": "archive.tar.gz.part-aatf",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aatf",
+   "bytes": 16777216,
+   "sha256": "c323630c9492259c21326e6ed106fe8a35c112d2c4ecef7a4117f0cc3353ce14",
+   "md5": "cd36c54f3c2d2ac612e4cea5718f2113"
+  },
+  {
+   "file": "archive.tar.gz.part-aatg",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aatg",
+   "bytes": 16777216,
+   "sha256": "dc61cca1937ad70509749cdbde9342f83e3fe68218bca23d98d28111495eac12",
+   "md5": "bd023181682ee91485ae368e724afd7c"
+  },
+  {
+   "file": "archive.tar.gz.part-aath",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aath",
+   "bytes": 16777216,
+   "sha256": "710a0d0eaf9e3b0309e23de133757b631a398c83b70e6b789698b0508320e740",
+   "md5": "85cecc60bfb6936097cd9e9935ec848a"
+  },
+  {
+   "file": "archive.tar.gz.part-aati",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aati",
+   "bytes": 16777216,
+   "sha256": "37ef32989a7016cd46fcf9b97874fd56ddae7721d19480d782f0bd385b9172a1",
+   "md5": "b9917fd3166652acde0283d4105fe619"
+  },
+  {
+   "file": "archive.tar.gz.part-aatj",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aatj",
+   "bytes": 16777216,
+   "sha256": "956184d89fb211c0f6b7b90d04f021cf9e574408080eb9ff9b8c65af5b8d937c",
+   "md5": "c637dfd0a3ba5e704aa03b2e58bc7578"
+  },
+  {
+   "file": "archive.tar.gz.part-aatk",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aatk",
+   "bytes": 16777216,
+   "sha256": "75dfe6064008c2995f7c7d40cb161c8513d1957814f899171ccd19085f15dc8a",
+   "md5": "0a90495f7a7edddec18dab6816a293b2"
+  },
+  {
+   "file": "archive.tar.gz.part-aatl",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aatl",
+   "bytes": 16777216,
+   "sha256": "1cbc110235ae7bbc89554c571d7cb23c5b801ac19fef30b8179fd83fa671728e",
+   "md5": "cb9f5dea81cda2d8f64a42a218deb11e"
+  },
+  {
+   "file": "archive.tar.gz.part-aatm",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aatm",
+   "bytes": 16777216,
+   "sha256": "0791496da6f68f9411eee2b82829306ab3d95e37ecdb60de6029b82c3e27d9f9",
+   "md5": "05ef5783c629084e8a8108160dd7d380"
+  },
+  {
+   "file": "archive.tar.gz.part-aatn",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aatn",
+   "bytes": 16777216,
+   "sha256": "457561d8c5c30b7fe9a6797c37c6ae49f6e7bf6fb3f992af00193ff7addff92b",
+   "md5": "6d7190e142d3d2f5caafe30493408c72"
+  },
+  {
+   "file": "archive.tar.gz.part-aato",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aato",
+   "bytes": 16777216,
+   "sha256": "d7c159bf89a6b0ab83bf59d96abebeb9ae44120ff9b3e5a782a3341b7b3c12bc",
+   "md5": "452c22433c1cf1893b27e408d6eb34c8"
+  },
+  {
+   "file": "archive.tar.gz.part-aatp",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aatp",
+   "bytes": 16777216,
+   "sha256": "52551febcf7427cf0c4ac002390516e2f4aa259aa3cf7c05704bc003c984aa2f",
+   "md5": "ddc1e84fcfdbcb3d2a60cbb7c1aa6492"
+  },
+  {
+   "file": "archive.tar.gz.part-aatq",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aatq",
+   "bytes": 16777216,
+   "sha256": "880634add303a19aff84ac8ccfa2a3b08b7eb44a2227a0cbe12404e1a49f0d6e",
+   "md5": "00c87575d1fb59ced37748051a14e066"
+  },
+  {
+   "file": "archive.tar.gz.part-aatr",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aatr",
+   "bytes": 16777216,
+   "sha256": "80b8b373de07b498fe513f6eb71fe5a2f0b521db46e7085aae17ae1ab3674c9e",
+   "md5": "e81236d295091124874e49331ea4056d"
+  },
+  {
+   "file": "archive.tar.gz.part-aats",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aats",
+   "bytes": 16777216,
+   "sha256": "8c76b99609f5f2fb96de64db5d8dddeb63cb01953b560a8a455267b4b5b7d994",
+   "md5": "59a0c83c65895e118737189832769f0f"
+  },
+  {
+   "file": "archive.tar.gz.part-aatt",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aatt",
+   "bytes": 16777216,
+   "sha256": "cce441267ce23cc4019286d13b4829dbabde75ea36fc0824607dedb2e98276ba",
+   "md5": "9db7b1a3ae76550efeaf05ed6f71e7a6"
+  },
+  {
+   "file": "archive.tar.gz.part-aatu",
+   "key": "2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/archive.tar.gz.part-aatu",
+   "bytes": 12446943,
+   "sha256": "bbab4421541e7488c1958684d36a3ef0336dda333788f91d9eef7f261728304f",
+   "md5": "98b5f887b7e15585f83d12073138e08f"
+  }
+ ],
+ "verification": "Every part's server-reported size and ETag match local bytes and MD5; SHA-256 hashes permit independent restoration checks.",
+ "restore": "Download all listed parts, verify their SHA-256 hashes, concatenate in manifest order, then extract the tar.gz stream."
+}

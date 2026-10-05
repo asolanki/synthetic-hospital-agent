@@ -1,0 +1,152 @@
+{
+ "format": "ordered chunks of one tar.gz stream",
+ "bucket": "synthetic-hospital-rl-artifacts",
+ "prefix": "2026-10-05/rl-sft-paper-v1/essentials-16m/",
+ "verified_at": "2026-10-05T04:57:41.222327+00:00",
+ "archive_sha256": "162d70cad075f00d04620310cd604b1cb6dead3f2d6e7b02aa386f9f3bde23ac",
+ "archive_bytes": 330751169,
+ "parts": [
+  {
+   "file": "archive.tar.gz.part-aaaa",
+   "key": "2026-10-05/rl-sft-paper-v1/essentials-16m/archive.tar.gz.part-aaaa",
+   "bytes": 16777216,
+   "sha256": "466245fb36346d97498de1f818295d12009857aa5ebc7a2cfa78d38ee4e3da1b",
+   "md5": "5d369d7211f4f99d78993fc29831e1c1"
+  },
+  {
+   "file": "archive.tar.gz.part-aaab",
+   "key": "2026-10-05/rl-sft-paper-v1/essentials-16m/archive.tar.gz.part-aaab",
+   "bytes": 16777216,
+   "sha256": "89955bb18553d8513fda15550be344778063ed6ce962b88d7e9a639119100ba6",
+   "md5": "02274bcdf336a2ed240c5f21a4865554"
+  },
+  {
+   "file": "archive.tar.gz.part-aaac",
+   "key": "2026-10-05/rl-sft-paper-v1/essentials-16m/archive.tar.gz.part-aaac",
+   "bytes": 16777216,
+   "sha256": "37727fe5f62865f521331dd5b614995dcba69fb3b9508066161591e8255d96b6",
+   "md5": "03a574f1c53c6c7334587e16ac747574"
+  },
+  {
+   "file": "archive.tar.gz.part-aaad",
+   "key": "2026-10-05/rl-sft-paper-v1/essentials-16m/archive.tar.gz.part-aaad",
+   "bytes": 16777216,
+   "sha256": "b4bb262b94de7e255dd358b57cba5d2e5f220e640a6e4dacc21d5c15592e60eb",
+   "md5": "548a41b37a5346e98c0393dd8856bbd5"
+  },
+  {
+   "file": "archive.tar.gz.part-aaae",
+   "key": "2026-10-05/rl-sft-paper-v1/essentials-16m/archive.tar.gz.part-aaae",
+   "bytes": 16777216,
+   "sha256": "71b499b00a0c4b713ae2631aba527b6bddaf940a1be4841543773a6791006b24",
+   "md5": "b039e10327e47d60c42ebcd68d6bdcac"
+  },
+  {
+   "file": "archive.tar.gz.part-aaaf",
+   "key": "2026-10-05/rl-sft-paper-v1/essentials-16m/archive.tar.gz.part-aaaf",
+   "bytes": 16777216,
+   "sha256": "469f074b5b90db6d264eb8d2455a37d9199cdae3ad7655015a2f67999b34ffb4",
+   "md5": "db08556b4f5320b764adac042f4d8294"
+  },
+  {
+   "file": "archive.tar.gz.part-aaag",
+   "key": "2026-10-05/rl-sft-paper-v1/essentials-16m/archive.tar.gz.part-aaag",
+   "bytes": 16777216,
+   "sha256": "f70f870afac27b2d43ad273b86261aa63a529bc275913853cdc3e7365f8bb869",
+   "md5": "fa614da9f92e557092acdd21fad55c58"
+  },
+  {
+   "file": "archive.tar.gz.part-aaah",
+   "key": "2026-10-05/rl-sft-paper-v1/essentials-16m/archive.tar.gz.part-aaah",
+   "bytes": 16777216,
+   "sha256": "f4f82bf9822b3508857303d4638b4132944e2cc548af428ebc371f27256f4ccf",
+   "md5": "ca2e43ff1606bbd51a221bfa4003f650"
+  },
+  {
+   "file": "archive.tar.gz.part-aaai",
+   "key": "2026-10-05/rl-sft-paper-v1/essentials-16m/archive.tar.gz.part-aaai",
+   "bytes": 16777216,
+   "sha256": "16d0951f3b3ac3f5baf676d9ef7c5d60092bd3e1fb0a174b37088fb7b80418c5",
+   "md5": "84e9977f0937b30ac82cca900b10f0d4"
+  },
+  {
+   "file": "archive.tar.gz.part-aaaj",
+   "key": "2026-10-05/rl-sft-paper-v1/essentials-16m/archive.tar.gz.part-aaaj",
+   "bytes": 16777216,
+   "sha256": "38c06d1abfef21a89e6d7d05d6feeab3da9beaa794e8fcc76fd830af95a9374f",
+   "md5": "1f20e03cb41f7d857a64184843353b94"
+  },
+  {
+   "file": "archive.tar.gz.part-aaak",
+   "key": "2026-10-05/rl-sft-paper-v1/essentials-16m/archive.tar.gz.part-aaak",
+   "bytes": 16777216,
+   "sha256": "d0f1e5a6a6308b5a85217d37c81d027edc940096c8750da7483c3fce5d72f4db",
+   "md5": "43f1338f1001df3fc102812e14b1da3a"
+  },
+  {
+   "file": "archive.tar.gz.part-aaal",
+   "key": "2026-10-05/rl-sft-paper-v1/essentials-16m/archive.tar.gz.part-aaal",
+   "bytes": 16777216,
+   "sha256": "815ac2df24d12f794d600372e76fd1fc4c5851f1067a88fc13cbae6c5cacc636",
+   "md5": "06247ffb0ae29d7b2b9d30978f925da6"
+  },
+  {
+   "file": "archive.tar.gz.part-aaam",
+   "key": "2026-10-05/rl-sft-paper-v1/essentials-16m/archive.tar.gz.part-aaam",
+   "bytes": 16777216,
+   "sha256": "c1058cefbcec338e1bf51d32817d7714d49b64c2531ca9306355fb218621d171",
+   "md5": "94c2a6f9aa3318942727c3bb9dfa9144"
+  },
+  {
+   "file": "archive.tar.gz.part-aaan",
+   "key": "2026-10-05/rl-sft-paper-v1/essentials-16m/archive.tar.gz.part-aaan",
+   "bytes": 16777216,
+   "sha256": "656ea9706351656736f2c93465e67d4a6a994e3d033f5632d9813a49c0f0a2b0",
+   "md5": "d961f27ca51968b91bc5e31abddb94ea"
+  },
+  {
+   "file": "archive.tar.gz.part-aaao",
+   "key": "2026-10-05/rl-sft-paper-v1/essentials-16m/archive.tar.gz.part-aaao",
+   "bytes": 16777216,
+   "sha256": "4312ad96e6860b650663f06d5f7a42875ee1f14dc07d8420f35e5ebe20aacfc7",
+   "md5": "796c384c954a26a3ac67d4ad63e30f62"
+  },
+  {
+   "file": "archive.tar.gz.part-aaap",
+   "key": "2026-10-05/rl-sft-paper-v1/essentials-16m/archive.tar.gz.part-aaap",
+   "bytes": 16777216,
+   "sha256": "d27186ffd8751f4822354df925d42127ce520fb9dcb58a7614ad3fcde18daa48",
+   "md5": "5d66c014beafc94f7223987a6f21a2f7"
+  },
+  {
+   "file": "archive.tar.gz.part-aaaq",
+   "key": "2026-10-05/rl-sft-paper-v1/essentials-16m/archive.tar.gz.part-aaaq",
+   "bytes": 16777216,
+   "sha256": "62ea38f735e87c0c12d03e28b364e9068d095591de9088cf145e96ec15aa434a",
+   "md5": "b2c462bb5a208cb45535e70530fe01fd"
+  },
+  {
+   "file": "archive.tar.gz.part-aaar",
+   "key": "2026-10-05/rl-sft-paper-v1/essentials-16m/archive.tar.gz.part-aaar",
+   "bytes": 16777216,
+   "sha256": "d839336082fc114f1d2a1f463aa80d384ce3f494992ecb0871c76d19a9bbeb40",
+   "md5": "0fc12649d0fdfee6bd86a546478cc933"
+  },
+  {
+   "file": "archive.tar.gz.part-aaas",
+   "key": "2026-10-05/rl-sft-paper-v1/essentials-16m/archive.tar.gz.part-aaas",
+   "bytes": 16777216,
+   "sha256": "a167f17e3f86e2d1fa6717825b0a36bed6156cbcc5e2e0c1c861b0899be1beeb",
+   "md5": "53dc8328f998139f597a0550d2429b13"
+  },
+  {
+   "file": "archive.tar.gz.part-aaat",
+   "key": "2026-10-05/rl-sft-paper-v1/essentials-16m/archive.tar.gz.part-aaat",
+   "bytes": 11984065,
+   "sha256": "d2ab18f32c417d8536af778a2bdbc562d9a4b6582670743949506fcaeef8a90c",
+   "md5": "d11633f18571ab6600e2bfe0cb02e09a"
+  }
+ ],
+ "verification": "Every part's server-reported size and ETag match local bytes and MD5; SHA-256 hashes permit independent restoration checks.",
+ "restore": "Download all listed parts, verify their SHA-256 hashes, concatenate in manifest order, then extract the tar.gz stream."
+}

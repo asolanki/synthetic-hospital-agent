@@ -1,0 +1,14 @@
+diff --git a/src/prime_rl/orchestrator/orchestrator.py b/src/prime_rl/orchestrator/orchestrator.py
+--- a/src/prime_rl/orchestrator/orchestrator.py
++++ b/src/prime_rl/orchestrator/orchestrator.py
+@@ -750,8 +750,8 @@
+ 
+         self.log_train_batch(batch, step=step, step_time=step_time)
+ 
+-        if config.max_steps is not None and step >= config.max_steps:
+-            await self.wait_for_version(step, reason="before shutdown")
++        # Keep consuming results: weight updates can block on queued cancellations.
++        # start() waits for the final broadcast after main_loop drains.
+         # Drain right after shipping the final batch. Waiting for a further
+         # batch to fill would burn inference on data that can never train —
+         # and with a tight ``max_off_policy_steps`` it never fills at all (the

@@ -1,0 +1,249 @@
+{
+ "source": "runs/a100-smoke/smoke/traces.jsonl",
+ "split": "dev",
+ "summary": {
+  "n": 3,
+  "valid_submit_rate": 1.0,
+  "mean_reward": 0.09302325581395347,
+  "official_f1": 0.09302325581395349,
+  "official_f1_strict": 0.09302325581395349,
+  "weighted_recall": 0.0909090909090909,
+  "recall": 0.1111111111111111,
+  "precision_neutral": 0.09523809523809523,
+  "precision_raw": 0.09523809523809523,
+  "acuity_accuracy": 0.5,
+  "mean_predictions": 4.0,
+  "mean_reward_ci95": [
+   0.0,
+   0.18604651162790695
+  ],
+  "official_f1_strict_ci95": [
+   0.0,
+   0.18604651162790697
+  ],
+  "recall_earlier_visits": 0.3333333333333333,
+  "recall_final_visit": null,
+  "n_earlier": 9,
+  "n_final": 0,
+  "mean_actions": 9.0,
+  "mean_total_tokens": 8581,
+  "mean_input_tokens": 4798.333333333333,
+  "mean_output_tokens": 3782.6666666666665,
+  "budget_exhausted_rate": 0.3333333333333333,
+  "malformed_submit_rate": 0,
+  "rollout_error_rate": 0,
+  "mean_nudges": 10.333333333333334,
+  "tool_calls": {
+   "open_chart": 3,
+   "view_problem_list": 3,
+   "search_chart": 7,
+   "view_encounter_detail": 1,
+   "view_results": 6,
+   "view_encounters": 3,
+   "submit_diagnosis": 4,
+   "view_medications": 1
+  }
+ },
+ "records": [
+  {
+   "gt_id": 7025,
+   "n_pred": 3,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 2,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "I13.9",
+      "name": "Hypertensive crisis with evidence of end-organ damage",
+      "acuity": "acute"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "G60.0",
+      "name": "Myasthenia gravis",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "I10",
+      "name": "Essential hypertension",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 1.0,
+    "actions": 7.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 4121,
+   "output_tokens": 1093,
+   "total_tokens": 5214
+  },
+  {
+   "gt_id": 7015,
+   "n_pred": 2,
+   "reward": 0.0,
+   "metrics": {
+    "problem_list_recall": 0.0,
+    "problem_list_precision": 0.0,
+    "problem_list_f1": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "weighted_problem_list_f1": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "problem_list_f1_neutral": 0.0,
+    "weighted_problem_list_f1_neutral": 0.0,
+    "n_neutral_predictions": 1,
+    "icd10_specificity_score": 0.0,
+    "acuity_accuracy": 0.0,
+    "acuity_confusion_matrix": {},
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [],
+    "chronic_conditions": [
+     {
+      "icd10": "D64.0",
+      "name": "Iron deficiency anemia",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "N70.0",
+      "name": "Obesity (BMI 34)",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 0.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 0.0,
+    "nudges": 1.0,
+    "actions": 9.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.0,
+    "weighted_problem_list_recall": 0.0,
+    "problem_list_recall": 0.0,
+    "acuity_accuracy": 0.0,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 3293,
+   "output_tokens": 926,
+   "total_tokens": 4219
+  },
+  {
+   "gt_id": 7011,
+   "n_pred": 7,
+   "reward": 0.2790697674418604,
+   "metrics": {
+    "problem_list_recall": 0.3333333333333333,
+    "problem_list_precision": 0.2857142857142857,
+    "problem_list_f1": 0.30769230769230765,
+    "weighted_problem_list_recall": 0.2727272727272727,
+    "weighted_problem_list_f1": 0.2790697674418604,
+    "problem_list_precision_neutral": 0.2857142857142857,
+    "problem_list_f1_neutral": 0.30769230769230765,
+    "weighted_problem_list_f1_neutral": 0.2790697674418604,
+    "n_neutral_predictions": 0,
+    "icd10_specificity_score": 0.8,
+    "acuity_accuracy": 0.5,
+    "acuity_confusion_matrix": {
+     "chronic:chronic": 1,
+     "acute:chronic": 1
+    },
+    "n_scored": 1,
+    "n_tier_c": 0
+   },
+   "submission": {
+    "active_diagnoses": [
+     {
+      "icd10": "M32.9",
+      "name": "Systemic lupus erythematosus",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "N00",
+      "name": "Lupus nephritis",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "L97.8",
+      "name": "Photosensitivity",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "I93.3",
+      "name": "Suspected antiphospholipid antibody syndrome",
+      "acuity": "acute_on_chronic"
+     }
+    ],
+    "chronic_conditions": [
+     {
+      "icd10": "M32.9",
+      "name": "Systemic lupus erythematosus",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "N00",
+      "name": "Lupus nephritis",
+      "acuity": "chronic"
+     },
+     {
+      "icd10": "L97.8",
+      "name": "Photosensitivity",
+      "acuity": "chronic"
+     }
+    ]
+   },
+   "episode_metrics": {
+    "submitted": 1.0,
+    "forced_submit": 1.0,
+    "malformed_submit": 0.0,
+    "submitted_as_text": 1.0,
+    "nudges": 29.0,
+    "actions": 11.0,
+    "tool_errors": 0.0,
+    "problem_list_precision_neutral": 0.2857142857142857,
+    "weighted_problem_list_recall": 0.2727272727272727,
+    "problem_list_recall": 0.3333333333333333,
+    "acuity_accuracy": 0.5,
+    "n_scored": 1.0
+   },
+   "ok": true,
+   "errors": [],
+   "input_tokens": 6981,
+   "output_tokens": 9329,
+   "total_tokens": 16310
+  }
+ ]
+}

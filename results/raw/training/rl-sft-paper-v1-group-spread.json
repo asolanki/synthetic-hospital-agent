@@ -1,0 +1,47 @@
+{
+ "scope": "Finalized four-rollout RL groups on training patients by generating policy version (temperature 1, top-p 1). Equal rewards means zero advantage (no learning signal). Identical answers compares full submission JSON, including unscored names/acuity. Windows contain different shuffled patients, so changes mix policy and patient mix.",
+ "source": "runs/rl/rl-sft-paper-v1 native trace stream",
+ "script": "runs/services/rl_group_spread.py (rental, one-off)",
+ "windows": [
+  {
+   "policy_versions": "0-19",
+   "groups": 311,
+   "equal_reward_groups": 0.2508038585209003,
+   "identical_answer_groups": 0.006430868167202572,
+   "mean_within_group_std": 0.12842091406095596,
+   "mean_reward": 0.3777079077629244
+  },
+  {
+   "policy_versions": "20-39",
+   "groups": 308,
+   "equal_reward_groups": 0.2694805194805195,
+   "identical_answer_groups": 0.012987012987012988,
+   "mean_within_group_std": 0.11968418069442523,
+   "mean_reward": 0.4237699213375354
+  },
+  {
+   "policy_versions": "40-59",
+   "groups": 309,
+   "equal_reward_groups": 0.27184466019417475,
+   "identical_answer_groups": 0.012944983818770227,
+   "mean_within_group_std": 0.12532580418692704,
+   "mean_reward": 0.43747627568227015
+  },
+  {
+   "policy_versions": "60-79",
+   "groups": 341,
+   "equal_reward_groups": 0.36363636363636365,
+   "identical_answer_groups": 0.026392961876832845,
+   "mean_within_group_std": 0.09202236487255484,
+   "mean_reward": 0.4743495601866715
+  },
+  {
+   "policy_versions": "80-84",
+   "groups": 82,
+   "equal_reward_groups": 0.3780487804878049,
+   "identical_answer_groups": 0.06097560975609756,
+   "mean_within_group_std": 0.09277861569329542,
+   "mean_reward": 0.4822553565128259
+  }
+ ]
+}

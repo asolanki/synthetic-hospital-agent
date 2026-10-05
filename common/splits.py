@@ -24,14 +24,14 @@ SEED = 20260930
 DEV_SIZE = 120
 
 
-def _bucket(n: int) -> str:
+def encounter_bucket(n: int) -> str:
     return "2-3" if n <= 3 else "4-5" if n <= 5 else "6+"
 
 
 def _stratum(inst: benchmark.Instance) -> tuple[str, str]:
     chapters = collections.Counter((d.get("icd10") or "?")[0] for d in inst.gt_diagnoses)
     dominant = sorted(chapters.items(), key=lambda kv: (-kv[1], kv[0]))[0][0] if chapters else "?"
-    return dominant, _bucket(len(inst.encounters))
+    return dominant, encounter_bucket(len(inst.encounters))
 
 
 def build(dev_size: int = DEV_SIZE, seed: int = SEED) -> dict:

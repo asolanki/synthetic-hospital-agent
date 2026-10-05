@@ -1,0 +1,23 @@
+# Used only for RL rollouts. Checkpoint evaluation stays on vLLM 0.19.1.
+output_dir = "/workspace/synthetic-hospital-rl/runs/rl-inference"
+# pydantic-config's documented TOML spelling for a disabled optional component.
+router = "None"
+
+[server]
+host = "127.0.0.1"
+port = 8000
+
+[vllm]
+model = "/workspace/synthetic-hospital-rl/runs/sft-oracle-copy-v1/merged"
+dtype = "bfloat16"
+max_model_len = 65536
+gpu_memory_utilization = 0.40
+max_num_seqs = 8
+max_num_batched_tokens = 8192
+enforce_eager = true
+enable_prefix_caching = true
+enable_lora = true
+max_lora_rank = 16
+tool_call_parser = "hermes"
+generation_config = "vllm"
+seed = 0

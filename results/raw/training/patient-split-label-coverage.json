@@ -1,0 +1,40 @@
+{
+ "split_policy": [
+  "dominant_icd10_chapter",
+  "encounter_count_bucket"
+ ],
+ "split_seed": 20260930,
+ "n_train": 680,
+ "n_dev": 120,
+ "source_pool_patients": 800,
+ "label_definition": "Official match key: 3 ICD characters, 5 for S/T injury/poisoning; frequency counts distinct patients, not repeated mentions. Unseen means absent from fine-tuning patients, not necessarily pretraining.",
+ "distinct_train_keys": 837,
+ "distinct_dev_keys": 298,
+ "distinct_unseen_dev_keys": 52,
+ "unseen_keys_with_only_one_patient_in_entire_800_pool": 47,
+ "unseen_keys_with_at_least_two_patients_in_entire_800_pool": 5,
+ "unseen_dev_patient_label_pairs_from_singletons": 47,
+ "sft_dev_unweighted_recall_by_train_patient_frequency": {
+  "0 train patients": {
+   "targets": 59,
+   "hits": 3,
+   "recall": 0.05084745762711865
+  },
+  "1 train patient": {
+   "targets": 67,
+   "hits": 12,
+   "recall": 0.1791044776119403
+  },
+  "2-4 train patients": {
+   "targets": 139,
+   "hits": 48,
+   "recall": 0.34532374100719426
+  },
+  "5+ train patients": {
+   "targets": 152,
+   "hits": 115,
+   "recall": 0.756578947368421
+  }
+ },
+ "qualification": "Read-only audit of the existing split, not a proposed replacement. No public or heldout records loaded."
+}
