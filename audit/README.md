@@ -10,6 +10,7 @@ Raw outputs: `results/raw/audit/` and `results/raw/other_tasks/`.
 | `uv run python -m audit.strategies --split dev` | How far do hand-written strategies get (copy the problem list, guess common codes, pad the answer)? | `raw/audit/strategies_dev.json` |
 | `uv run python -m audit.coding_ceiling --model <id>` | Given only the copyable names, how well can a model code them? | `raw/audit/coding_ceiling_<model>_dev.json` |
 | `uv run python -m audit.other_tasks <task>` | Same questions for the benchmark's three other tasks | `raw/other_tasks/*.json` |
+| `docker exec … python /tmp/harness_gap.py` (inside the simulator container; usage in its docstring) | Why the paper's agents score far higher: its harness leaks coded reference diagnoses; measured with and without the leak against our `/env` harness | `raw/audit/harness_gap_dev.json` |
 
-`coding_ceiling` and `other_tasks` call OpenRouter (key in `.env`). `other_tasks imaging-agent`
+`coding_ceiling`, `other_tasks` and `harness_gap` call OpenRouter (key in `.env`). `other_tasks imaging-agent`
 reuses the early harness in `baselines/agent.py`.

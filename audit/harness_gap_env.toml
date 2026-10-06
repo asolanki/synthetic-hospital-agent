@@ -1,0 +1,27 @@
+# Harness-gap audit, /env arm (see audit/harness_gap.py): our Verifiers harness with the paper
+# adapter's controls (temperature 0, 16,384 max tokens), Qwen3-30B via OpenRouter, 120 dev patients.
+model = "qwen/qwen3-30b-a3b-instruct-2507"
+num_rollouts = 1
+push = false
+
+[client]
+base_url = "https://openrouter.ai/api/v1"
+api_key_var = "OPENROUTER_API_KEY"
+
+[sampling]
+temperature = 0.0
+max_tokens = 16384
+
+[env.taskset]
+id = "synthetic-hospital-dx"
+split = "dev"
+budget = 40
+
+[env.agent]
+max_turns = 50
+
+[env.agent.harness]
+id = "null"
+
+[env.agent.runtime]
+type = "subprocess"

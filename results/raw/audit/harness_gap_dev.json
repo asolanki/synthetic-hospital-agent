@@ -1,0 +1,8212 @@
+{
+ "question": "Why do the paper's self-retrieving agents score 0.81-0.89 on patient_diagnosis while our /env harness gave Qwen3-30B 0.466?",
+ "patients": "Fixed 120 dev patients (data/splits/patient_diagnosis.json); public split untouched.",
+ "arms": {
+  "paper": "Upstream eval/agents structured harness, unmodified (runner.run_agent_session); open_chart.active_problems and view_problem_list return the reference diagnoses with ICD-10 codes.",
+  "masked": "Identical, except those two tool results pass through env_service.replace_problem_list (after the harness's own outcome-section strip), i.e. exactly what /env returns.",
+  "env": "Our Verifiers /env harness (training/environment), same model and sampling controls."
+ },
+ "controls": "Paper adapter defaults for all arms: temperature 0, max_tokens 16384, 40-action budget; official score_submission per episode; failures stay in the denominator at 0.",
+ "models": {
+  "qwen3-30b": "qwen/qwen3-30b-a3b-instruct-2507 (our reference model; /env gave 0.466 at temperature 0.7)",
+  "mistral-3": "mistralai/mistral-large-2512, the paper's registry entry (paper self-retrieving agent: 0.810 on 100 public patients)",
+  "llama-4": "Not run: OpenRouter has no tool-capable endpoint for meta-llama/llama-4-scout (DeepInfra/Novita lack tools; Google is BYOK-only)."
+ },
+ "summaries": {
+  "qwen3-30b/paper": {
+   "n": 120,
+   "missing": [],
+   "mean_episode_reward": 0.728370313775256,
+   "paper_runner_batch_f1": 0.6513679185492993,
+   "batch_f1_with_neutral_context": 0.7493185158921558,
+   "submitted_rate": 1.0,
+   "error_rate": 0.0,
+   "mean_tool_calls": 19.175,
+   "used_view_problem_list": 1.0,
+   "used_open_chart": 1.0,
+   "gold_keys_seen_in_tools": 0.9826302729528535,
+   "gold_key_recall": 0.6972704714640199,
+   "mean_input_tokens": 100843.59166666666
+  },
+  "qwen3-30b/masked": {
+   "n": 120,
+   "missing": [],
+   "mean_episode_reward": 0.39667392136471435,
+   "paper_runner_batch_f1": 0.33918497893526317,
+   "batch_f1_with_neutral_context": 0.4402604370555445,
+   "submitted_rate": 1.0,
+   "error_rate": 0.0,
+   "mean_tool_calls": 19.158333333333335,
+   "used_view_problem_list": 1.0,
+   "used_open_chart": 1.0,
+   "gold_keys_seen_in_tools": 0.0,
+   "gold_key_recall": 0.36724565756823824,
+   "mean_input_tokens": 96633.00833333333
+  },
+  "qwen3-30b/env": {
+   "n": 120,
+   "mean_reward": 0.4204820835965512,
+   "mean_reward_ci95": [
+    0.3570809842006772,
+    0.4809457133866116
+   ],
+   "official_f1": 0.4576835343906373,
+   "official_f1_strict": 0.446060377978487,
+   "valid_submit_rate": 0.975,
+   "mean_actions": 12.95
+  },
+  "mistral-3/paper": {
+   "n": 120,
+   "missing": [],
+   "mean_episode_reward": 0.47006493122961224,
+   "paper_runner_batch_f1": 0.6766542008668212,
+   "batch_f1_with_neutral_context": 0.7845677347324278,
+   "submitted_rate": 0.6333333333333333,
+   "error_rate": 0.0,
+   "mean_tool_calls": 3.6083333333333334,
+   "used_view_problem_list": 0.16666666666666666,
+   "used_open_chart": 0.8333333333333334,
+   "gold_keys_seen_in_tools": 0.7965260545905707,
+   "gold_key_recall": 0.5285359801488834,
+   "mean_input_tokens": 13587.025
+  },
+  "mistral-3/masked": {
+   "n": 120,
+   "missing": [],
+   "mean_episode_reward": 0.3743143831169574,
+   "paper_runner_batch_f1": 0.5133083245665946,
+   "batch_f1_with_neutral_context": 0.6187425143999251,
+   "submitted_rate": 0.6416666666666667,
+   "error_rate": 0.0,
+   "mean_tool_calls": 3.55,
+   "used_view_problem_list": 0.3416666666666667,
+   "used_open_chart": 0.8166666666666667,
+   "gold_keys_seen_in_tools": 0.0,
+   "gold_key_recall": 0.47642679900744417,
+   "mean_input_tokens": 13075.316666666668
+  }
+ },
+ "paired_contrasts": [
+  {
+   "contrast": "qwen-paper minus qwen-masked",
+   "n": 120,
+   "mean_a": 0.728370313775256,
+   "mean_b": 0.39667392136471435,
+   "difference": 0.3316963924105415,
+   "ci95": [
+    0.2525335520659529,
+    0.40910995195164246
+   ],
+   "wins": 77,
+   "losses": 20,
+   "ties": 23
+  },
+  {
+   "contrast": "qwen-masked minus qwen-env",
+   "n": 120,
+   "mean_a": 0.39667392136471435,
+   "mean_b": 0.4204820835965513,
+   "difference": -0.0238081622318369,
+   "ci95": [
+    -0.07724253905972268,
+    0.03566417426717388
+   ],
+   "wins": 33,
+   "losses": 39,
+   "ties": 48
+  },
+  {
+   "contrast": "qwen-paper minus qwen-env",
+   "n": 120,
+   "mean_a": 0.728370313775256,
+   "mean_b": 0.4204820835965513,
+   "difference": 0.30788823017870465,
+   "ci95": [
+    0.21926842212396377,
+    0.3926625141694222
+   ],
+   "wins": 77,
+   "losses": 23,
+   "ties": 20
+  },
+  {
+   "contrast": "mistral-paper minus mistral-masked",
+   "n": 54,
+   "mean_a": 0.7361012853625117,
+   "mean_b": 0.5865781835770141,
+   "difference": 0.14952310178549766,
+   "ci95": [
+    0.06998236254421034,
+    0.22730760012553364
+   ],
+   "wins": 32,
+   "losses": 15,
+   "ties": 7
+  }
+ ],
+ "mistral_contrast_scope": "Only the 54 patients submitted in both Mistral arms: OpenRouter 429 rate limits aborted many Mistral sessions, so Mistral mean rewards over all 120 are not interpretable.",
+ "failures": {
+  "qwen-paper": {
+   "unsubmitted": 0,
+   "unsubmitted_with_zero_tool_calls": 0
+  },
+  "qwen-masked": {
+   "unsubmitted": 0,
+   "unsubmitted_with_zero_tool_calls": 0
+  },
+  "mistral-paper": {
+   "unsubmitted": 44,
+   "unsubmitted_with_zero_tool_calls": 20
+  },
+  "mistral-masked": {
+   "unsubmitted": 43,
+   "unsubmitted_with_zero_tool_calls": 22
+  }
+ },
+ "qwen_paper_share_of_submitted_codes_present_in_tool_outputs": 0.7221479446479447,
+ "batch_metric_skips_failures": {
+  "finding": "eval.scoring.compute_all_metrics skips predictions with no active/chronic entries (n_tier_c) instead of scoring them 0, although paper section 5.3 says failed sessions are scored as zero.",
+  "evidence": "mistral-3/paper: 44 of 120 sessions unsubmitted; batch F1 over all 120 = batch F1 over the 76 submitted = 0.7846 (n_scored 76, n_tier_c 44)."
+ },
+ "paper_runner_scoring_note": "runner.run_agent_evaluation scores raw ground truth without the chart-neutral context; paper_runner_batch_f1 reproduces that, batch_f1_with_neutral_context attaches it as score_one does.",
+ "cost_usd_openrouter_today": null,
+ "per_patient": {
+  "qwen-paper": [
+   {
+    "gt_id": 7011,
+    "reward": 0.34782608695652173,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 4,
+    "gold_keys_seen_in_tools": 4,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "D59",
+     "M30",
+     "M32",
+     "N03",
+     "N17",
+     "Z87"
+    ]
+   },
+   {
+    "gt_id": 7015,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 11,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "D50",
+     "O71",
+     "Z68"
+    ]
+   },
+   {
+    "gt_id": 7025,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 14,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "G70",
+     "I15",
+     "O14"
+    ]
+   },
+   {
+    "gt_id": 7033,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 8,
+    "gold_keys_predicted": 8,
+    "pred_keys": [
+     "E03",
+     "E05",
+     "E06",
+     "E27",
+     "K90",
+     "L63",
+     "L80",
+     "M05"
+    ]
+   },
+   {
+    "gt_id": 7047,
+    "reward": 0.32,
+    "submitted": true,
+    "tool_calls": 9,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 7,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "I63",
+     "I78",
+     "J45",
+     "K50",
+     "M32",
+     "O00",
+     "Z51"
+    ]
+   },
+   {
+    "gt_id": 7066,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 37,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 6,
+    "gold_keys_predicted": 6,
+    "pred_keys": [
+     "F50",
+     "I27",
+     "K50",
+     "K59",
+     "M81",
+     "M84"
+    ]
+   },
+   {
+    "gt_id": 7070,
+    "reward": 0.37499999999999994,
+    "submitted": true,
+    "tool_calls": 39,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 6,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "C94",
+     "K50",
+     "M32",
+     "Z51"
+    ]
+   },
+   {
+    "gt_id": 7076,
+    "reward": 0.9411764705882353,
+    "submitted": true,
+    "tool_calls": 19,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 8,
+    "gold_keys_predicted": 8,
+    "pred_keys": [
+     "I10",
+     "J80",
+     "O00",
+     "O03",
+     "O23",
+     "O34",
+     "O45",
+     "O72",
+     "T794X",
+     "Z50",
+     "Z72"
+    ]
+   },
+   {
+    "gt_id": 7077,
+    "reward": 0.3076923076923077,
+    "submitted": true,
+    "tool_calls": 29,
+    "gold_keys": 5,
+    "gold_keys_seen_in_tools": 5,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "E06",
+     "F33",
+     "G35",
+     "G50",
+     "J45",
+     "T432X",
+     "Z56"
+    ]
+   },
+   {
+    "gt_id": 7080,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 14,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "O70",
+     "O71",
+     "O98"
+    ]
+   },
+   {
+    "gt_id": 7087,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 31,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "A54",
+     "A60",
+     "B01",
+     "N10",
+     "N94"
+    ]
+   },
+   {
+    "gt_id": 7136,
+    "reward": 0.4000000000000001,
+    "submitted": true,
+    "tool_calls": 12,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 6,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "D25",
+     "D50",
+     "D52",
+     "E16",
+     "F40",
+     "F41",
+     "J30",
+     "J32",
+     "L20"
+    ]
+   },
+   {
+    "gt_id": 7150,
+    "reward": 0.16666666666666666,
+    "submitted": true,
+    "tool_calls": 21,
+    "gold_keys": 4,
+    "gold_keys_seen_in_tools": 4,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "D49",
+     "E26",
+     "F20",
+     "F32",
+     "M32"
+    ]
+   },
+   {
+    "gt_id": 7158,
+    "reward": 0.9090909090909091,
+    "submitted": true,
+    "tool_calls": 26,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 8,
+    "gold_keys_predicted": 7,
+    "pred_keys": [
+     "F41",
+     "F42",
+     "G25",
+     "J30",
+     "J45",
+     "L56",
+     "M32"
+    ]
+   },
+   {
+    "gt_id": 7165,
+    "reward": 0.5217391304347826,
+    "submitted": true,
+    "tool_calls": 13,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "D86",
+     "E21",
+     "K51",
+     "M13"
+    ]
+   },
+   {
+    "gt_id": 7176,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "N30",
+     "R31"
+    ]
+   },
+   {
+    "gt_id": 7182,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 21,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "D70",
+     "E02",
+     "E05",
+     "E89",
+     "I50"
+    ]
+   },
+   {
+    "gt_id": 7183,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "A51",
+     "O23"
+    ]
+   },
+   {
+    "gt_id": 7189,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 6,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E05"
+    ]
+   },
+   {
+    "gt_id": 7206,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 17,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "J45"
+    ]
+   },
+   {
+    "gt_id": 7210,
+    "reward": 0.8,
+    "submitted": true,
+    "tool_calls": 11,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "J10",
+     "J15"
+    ]
+   },
+   {
+    "gt_id": 7236,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 16,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "P22"
+    ]
+   },
+   {
+    "gt_id": 7237,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 13,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "D35"
+    ]
+   },
+   {
+    "gt_id": 7253,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "N75"
+    ]
+   },
+   {
+    "gt_id": 7255,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 6,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "F40"
+    ]
+   },
+   {
+    "gt_id": 7259,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 13,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "L23"
+    ]
+   },
+   {
+    "gt_id": 7266,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 15,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "B86"
+    ]
+   },
+   {
+    "gt_id": 7274,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 16,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "R55"
+    ]
+   },
+   {
+    "gt_id": 7282,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 12,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "A63"
+    ]
+   },
+   {
+    "gt_id": 7302,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 9,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E66",
+     "I10",
+     "K21",
+     "K22"
+    ]
+   },
+   {
+    "gt_id": 7308,
+    "reward": 0.7272727272727272,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 5,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "E11",
+     "I12",
+     "I25",
+     "I50",
+     "I73"
+    ]
+   },
+   {
+    "gt_id": 7344,
+    "reward": 0.15384615384615385,
+    "submitted": true,
+    "tool_calls": 39,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 6,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E11",
+     "E78",
+     "I10",
+     "I25",
+     "I53",
+     "N18"
+    ]
+   },
+   {
+    "gt_id": 7367,
+    "reward": 0.6363636363636364,
+    "submitted": true,
+    "tool_calls": 12,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 8,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "C18",
+     "C92",
+     "G25",
+     "I10",
+     "I25",
+     "I48"
+    ]
+   },
+   {
+    "gt_id": 7397,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 12,
+    "gold_keys": 5,
+    "gold_keys_seen_in_tools": 5,
+    "gold_keys_predicted": 5,
+    "pred_keys": [
+     "D64",
+     "E51",
+     "E83",
+     "F10",
+     "G62",
+     "K86"
+    ]
+   },
+   {
+    "gt_id": 7398,
+    "reward": 0.8333333333333333,
+    "submitted": true,
+    "tool_calls": 38,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 5,
+    "gold_keys_predicted": 5,
+    "pred_keys": [
+     "C44",
+     "E11",
+     "E66",
+     "E78",
+     "I10",
+     "I15",
+     "J44",
+     "K27",
+     "K92",
+     "M17",
+     "N18",
+     "Z72"
+    ]
+   },
+   {
+    "gt_id": 7402,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 32,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 6,
+    "gold_keys_predicted": 6,
+    "pred_keys": [
+     "E11",
+     "E66",
+     "E83",
+     "G83",
+     "I10",
+     "K11",
+     "K12",
+     "K64",
+     "M54"
+    ]
+   },
+   {
+    "gt_id": 7403,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 21,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "B20",
+     "B25"
+    ]
+   },
+   {
+    "gt_id": 7418,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 28,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "B18",
+     "F11",
+     "F17",
+     "I33",
+     "M54",
+     "Z50"
+    ]
+   },
+   {
+    "gt_id": 7422,
+    "reward": 0.9444444444444444,
+    "submitted": true,
+    "tool_calls": 29,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 7,
+    "gold_keys_predicted": 6,
+    "pred_keys": [
+     "A44",
+     "B20",
+     "B45",
+     "C83",
+     "D74",
+     "D89"
+    ]
+   },
+   {
+    "gt_id": 7427,
+    "reward": 0.28571428571428575,
+    "submitted": true,
+    "tool_calls": 26,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "A49",
+     "B20",
+     "D63",
+     "N18",
+     "N30"
+    ]
+   },
+   {
+    "gt_id": 7454,
+    "reward": 0.8571428571428571,
+    "submitted": true,
+    "tool_calls": 20,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "F20",
+     "F33",
+     "G21",
+     "G24",
+     "G25",
+     "I10"
+    ]
+   },
+   {
+    "gt_id": 7457,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 9,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "N20"
+    ]
+   },
+   {
+    "gt_id": 7458,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 12,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "A49",
+     "J30",
+     "T600X"
+    ]
+   },
+   {
+    "gt_id": 7463,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 34,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "T600X"
+    ]
+   },
+   {
+    "gt_id": 7476,
+    "reward": 0.5714285714285715,
+    "submitted": true,
+    "tool_calls": 6,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "B17",
+     "D61",
+     "F53",
+     "Z79"
+    ]
+   },
+   {
+    "gt_id": 7485,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 8,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "E80",
+     "Q61"
+    ]
+   },
+   {
+    "gt_id": 7486,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "C11"
+    ]
+   },
+   {
+    "gt_id": 7493,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 10,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E66",
+     "I31",
+     "J30",
+     "K21"
+    ]
+   },
+   {
+    "gt_id": 7504,
+    "reward": 0.8,
+    "submitted": true,
+    "tool_calls": 13,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "A52",
+     "E78",
+     "G63",
+     "G83",
+     "I10",
+     "I70",
+     "N39"
+    ]
+   },
+   {
+    "gt_id": 7510,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 12,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "A28"
+    ]
+   },
+   {
+    "gt_id": 7512,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 6,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "G51"
+    ]
+   },
+   {
+    "gt_id": 7519,
+    "reward": 0.25,
+    "submitted": true,
+    "tool_calls": 26,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 6,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E78",
+     "I09",
+     "I10",
+     "I25",
+     "I70",
+     "I71",
+     "J44"
+    ]
+   },
+   {
+    "gt_id": 7539,
+    "reward": 0.5714285714285713,
+    "submitted": true,
+    "tool_calls": 39,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 6,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "C61",
+     "E11",
+     "E78",
+     "F01",
+     "I10",
+     "I48",
+     "I63",
+     "I69",
+     "N13"
+    ]
+   },
+   {
+    "gt_id": 7545,
+    "reward": 0.5454545454545454,
+    "submitted": true,
+    "tool_calls": 10,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E87",
+     "I10",
+     "I25",
+     "J44",
+     "Z98"
+    ]
+   },
+   {
+    "gt_id": 7549,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 39,
+    "gold_keys": 5,
+    "gold_keys_seen_in_tools": 5,
+    "gold_keys_predicted": 5,
+    "pred_keys": [
+     "E11",
+     "E87",
+     "F05",
+     "I10",
+     "I95",
+     "N40",
+     "R33"
+    ]
+   },
+   {
+    "gt_id": 7580,
+    "reward": 0.9333333333333333,
+    "submitted": true,
+    "tool_calls": 29,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 7,
+    "gold_keys_predicted": 7,
+    "pred_keys": [
+     "C79",
+     "E03",
+     "E78",
+     "HYP",
+     "I48",
+     "I63",
+     "I65",
+     "I74",
+     "J70",
+     "J85",
+     "K55"
+    ]
+   },
+   {
+    "gt_id": 7583,
+    "reward": 0.888888888888889,
+    "submitted": true,
+    "tool_calls": 20,
+    "gold_keys": 5,
+    "gold_keys_seen_in_tools": 4,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "C34",
+     "E78",
+     "I10",
+     "I31",
+     "I33",
+     "I44",
+     "I71"
+    ]
+   },
+   {
+    "gt_id": 7584,
+    "reward": 0.13333333333333333,
+    "submitted": true,
+    "tool_calls": 37,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E78",
+     "F32",
+     "I10",
+     "I21",
+     "I25",
+     "I44",
+     "I47",
+     "I97",
+     "K92",
+     "M17",
+     "T461X",
+     "T886X"
+    ]
+   },
+   {
+    "gt_id": 7589,
+    "reward": 0.8296296296296296,
+    "submitted": true,
+    "tool_calls": 38,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 6,
+    "gold_keys_predicted": 6,
+    "pred_keys": [
+     "A81",
+     "F03",
+     "G31",
+     "I10",
+     "I23",
+     "K52",
+     "K56",
+     "M00",
+     "M10",
+     "M62",
+     "M85"
+    ]
+   },
+   {
+    "gt_id": 7592,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 35,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 8,
+    "gold_keys_predicted": 8,
+    "pred_keys": [
+     "D45",
+     "G25",
+     "G95",
+     "H34",
+     "I10",
+     "I48",
+     "I61",
+     "I63",
+     "T810X"
+    ]
+   },
+   {
+    "gt_id": 7595,
+    "reward": 0.7368421052631579,
+    "submitted": true,
+    "tool_calls": 22,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 7,
+    "gold_keys_predicted": 7,
+    "pred_keys": [
+     "D69",
+     "E27",
+     "I95",
+     "K43",
+     "N13",
+     "N40",
+     "T461X"
+    ]
+   },
+   {
+    "gt_id": 7604,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 17,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 8,
+    "gold_keys_predicted": 8,
+    "pred_keys": [
+     "C34",
+     "C67",
+     "E78",
+     "G72",
+     "H91",
+     "I10",
+     "I50",
+     "I65",
+     "L57",
+     "M17",
+     "R45"
+    ]
+   },
+   {
+    "gt_id": 7625,
+    "reward": 0.8582375478927203,
+    "submitted": true,
+    "tool_calls": 39,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 8,
+    "gold_keys_predicted": 7,
+    "pred_keys": [
+     "C34",
+     "E22",
+     "F17",
+     "I47",
+     "J44",
+     "J84",
+     "J86",
+     "J90",
+     "Z56"
+    ]
+   },
+   {
+    "gt_id": 7629,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 29,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 6,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "E78",
+     "I10",
+     "J44",
+     "J80",
+     "K81"
+    ]
+   },
+   {
+    "gt_id": 7636,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 22,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "J18",
+     "J44",
+     "T5981",
+     "Z72"
+    ]
+   },
+   {
+    "gt_id": 7647,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 12,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "E11",
+     "E78",
+     "I10",
+     "I25",
+     "I50",
+     "I63",
+     "J90"
+    ]
+   },
+   {
+    "gt_id": 7663,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E78",
+     "G91",
+     "I10",
+     "M17"
+    ]
+   },
+   {
+    "gt_id": 7673,
+    "reward": 0.37499999999999994,
+    "submitted": true,
+    "tool_calls": 26,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 7,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "D80",
+     "Q21",
+     "Q23"
+    ]
+   },
+   {
+    "gt_id": 7675,
+    "reward": 0.7741935483870969,
+    "submitted": true,
+    "tool_calls": 9,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "D80",
+     "E88",
+     "I35",
+     "Q21",
+     "Q23"
+    ]
+   },
+   {
+    "gt_id": 7701,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 27,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "I74",
+     "P77"
+    ]
+   },
+   {
+    "gt_id": 7705,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 26,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 6,
+    "gold_keys_predicted": 6,
+    "pred_keys": [
+     "D14",
+     "P36",
+     "P39",
+     "P53",
+     "Q20",
+     "Q79"
+    ]
+   },
+   {
+    "gt_id": 7710,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 29,
+    "gold_keys": 4,
+    "gold_keys_seen_in_tools": 4,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "G47",
+     "J02",
+     "N00",
+     "N04"
+    ]
+   },
+   {
+    "gt_id": 7725,
+    "reward": 0.923076923076923,
+    "submitted": true,
+    "tool_calls": 30,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 6,
+    "gold_keys_predicted": 5,
+    "pred_keys": [
+     "A02",
+     "D55",
+     "D59",
+     "E10",
+     "K59"
+    ]
+   },
+   {
+    "gt_id": 7736,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "Q21"
+    ]
+   },
+   {
+    "gt_id": 7744,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 26,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "D58",
+     "D84",
+     "J45",
+     "K80"
+    ]
+   },
+   {
+    "gt_id": 7745,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 26,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "D81",
+     "H65"
+    ]
+   },
+   {
+    "gt_id": 7749,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "D81",
+     "H65"
+    ]
+   },
+   {
+    "gt_id": 7757,
+    "reward": 0.5714285714285715,
+    "submitted": true,
+    "tool_calls": 11,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "G40",
+     "H66",
+     "H90",
+     "J39",
+     "Z51"
+    ]
+   },
+   {
+    "gt_id": 7768,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 11,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "D55",
+     "D69",
+     "N02"
+    ]
+   },
+   {
+    "gt_id": 7770,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 12,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "G47",
+     "N39"
+    ]
+   },
+   {
+    "gt_id": 7772,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 10,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "C91"
+    ]
+   },
+   {
+    "gt_id": 7775,
+    "reward": 0.8,
+    "submitted": true,
+    "tool_calls": 16,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "F80",
+     "H65",
+     "H90"
+    ]
+   },
+   {
+    "gt_id": 7785,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 6,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "N44"
+    ]
+   },
+   {
+    "gt_id": 7792,
+    "reward": 0.5714285714285715,
+    "submitted": true,
+    "tool_calls": 22,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "D44",
+     "E03",
+     "E34",
+     "E35",
+     "E83",
+     "Z51"
+    ]
+   },
+   {
+    "gt_id": 7843,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 29,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "B26",
+     "I40"
+    ]
+   },
+   {
+    "gt_id": 7853,
+    "reward": 0.22641509433962265,
+    "submitted": true,
+    "tool_calls": 34,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 8,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "A15",
+     "B24",
+     "E11",
+     "I10",
+     "N04",
+     "N05",
+     "N18",
+     "Z21"
+    ]
+   },
+   {
+    "gt_id": 7868,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 27,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "E79",
+     "F33",
+     "N10",
+     "R65",
+     "T79A1"
+    ]
+   },
+   {
+    "gt_id": 7869,
+    "reward": 0.5,
+    "submitted": true,
+    "tool_calls": 19,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "F10",
+     "F14",
+     "F15",
+     "M62"
+    ]
+   },
+   {
+    "gt_id": 7873,
+    "reward": 0.7058823529411765,
+    "submitted": true,
+    "tool_calls": 35,
+    "gold_keys": 5,
+    "gold_keys_seen_in_tools": 5,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "A51",
+     "A63",
+     "B20",
+     "N45"
+    ]
+   },
+   {
+    "gt_id": 7875,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 14,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "F11",
+     "F33",
+     "M54"
+    ]
+   },
+   {
+    "gt_id": 7882,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 24,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "A00",
+     "E10",
+     "T794X"
+    ]
+   },
+   {
+    "gt_id": 7893,
+    "reward": 0.008221993833504625,
+    "submitted": true,
+    "tool_calls": 8,
+    "gold_keys": 4,
+    "gold_keys_seen_in_tools": 4,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "F11",
+     "R65",
+     "Z51"
+    ]
+   },
+   {
+    "gt_id": 7899,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 34,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "F43",
+     "F60",
+     "I10",
+     "R56"
+    ]
+   },
+   {
+    "gt_id": 7909,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 12,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "A39",
+     "G00"
+    ]
+   },
+   {
+    "gt_id": 7910,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 11,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "F17",
+     "F20",
+     "F33",
+     "G44"
+    ]
+   },
+   {
+    "gt_id": 7934,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 26,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "K22",
+     "S2500",
+     "S274X"
+    ]
+   },
+   {
+    "gt_id": 7956,
+    "reward": 0.4,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "K51",
+     "K76"
+    ]
+   },
+   {
+    "gt_id": 7973,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 6,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "B35"
+    ]
+   },
+   {
+    "gt_id": 7974,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 6,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "G61"
+    ]
+   },
+   {
+    "gt_id": 7985,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 30,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "T7029",
+     "T703X"
+    ]
+   },
+   {
+    "gt_id": 7990,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 19,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "S064X",
+     "S4421"
+    ]
+   },
+   {
+    "gt_id": 7996,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 23,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "M00",
+     "S6145"
+    ]
+   },
+   {
+    "gt_id": 8004,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 11,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "F14",
+     "Z72"
+    ]
+   },
+   {
+    "gt_id": 8038,
+    "reward": 0.8,
+    "submitted": true,
+    "tool_calls": 34,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "C54",
+     "N95"
+    ]
+   },
+   {
+    "gt_id": 8046,
+    "reward": 0.761904761904762,
+    "submitted": true,
+    "tool_calls": 27,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 8,
+    "gold_keys_predicted": 8,
+    "pred_keys": [
+     "C50",
+     "C53",
+     "E11",
+     "E85",
+     "H33",
+     "H81",
+     "J95",
+     "T461X"
+    ]
+   },
+   {
+    "gt_id": 8049,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 39,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 7,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "F20",
+     "H81",
+     "I10",
+     "I60",
+     "K22",
+     "M16",
+     "M33",
+     "M81"
+    ]
+   },
+   {
+    "gt_id": 8078,
+    "reward": 0.888888888888889,
+    "submitted": true,
+    "tool_calls": 11,
+    "gold_keys": 4,
+    "gold_keys_seen_in_tools": 4,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "C88",
+     "J84",
+     "M33",
+     "M34"
+    ]
+   },
+   {
+    "gt_id": 8101,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 9,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "F32",
+     "F41",
+     "G44",
+     "K58",
+     "M79"
+    ]
+   },
+   {
+    "gt_id": 8106,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 9,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "D69",
+     "G51",
+     "H81"
+    ]
+   },
+   {
+    "gt_id": 8119,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 18,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "E88",
+     "M05"
+    ]
+   },
+   {
+    "gt_id": 8126,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 35,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "E05",
+     "H05"
+    ]
+   },
+   {
+    "gt_id": 8160,
+    "reward": 0.5283018867924528,
+    "submitted": true,
+    "tool_calls": 27,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 8,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "E11",
+     "E78",
+     "I10",
+     "I50",
+     "K52",
+     "M17",
+     "M47",
+     "N18",
+     "S1410",
+     "Z68",
+     "Z95"
+    ]
+   },
+   {
+    "gt_id": 8179,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 30,
+    "gold_keys": 5,
+    "gold_keys_seen_in_tools": 4,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "C23",
+     "I10",
+     "I50",
+     "J81"
+    ]
+   },
+   {
+    "gt_id": 8180,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 39,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 7,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "E11",
+     "E78",
+     "F03",
+     "F20",
+     "G25",
+     "G45",
+     "H35",
+     "I10",
+     "I25",
+     "I26",
+     "I50",
+     "I70",
+     "Z98"
+    ]
+   },
+   {
+    "gt_id": 8199,
+    "reward": 0.8571428571428571,
+    "submitted": true,
+    "tool_calls": 8,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "C49",
+     "E34",
+     "K62",
+     "Z51"
+    ]
+   },
+   {
+    "gt_id": 8208,
+    "reward": 0.4,
+    "submitted": true,
+    "tool_calls": 11,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E34",
+     "Q56"
+    ]
+   },
+   {
+    "gt_id": 8222,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "I01",
+     "I02"
+    ]
+   },
+   {
+    "gt_id": 8243,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 26,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "B00",
+     "H10",
+     "J45",
+     "L01"
+    ]
+   },
+   {
+    "gt_id": 8254,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 19,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "Q89"
+    ]
+   },
+   {
+    "gt_id": 8262,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 9,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E25",
+     "Q56"
+    ]
+   }
+  ],
+  "qwen-masked": [
+   {
+    "gt_id": 7011,
+    "reward": 0.3409090909090909,
+    "submitted": true,
+    "tool_calls": 13,
+    "gold_keys": 4,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "D69",
+     "I95",
+     "M32",
+     "N04",
+     "Z51",
+     "Z79",
+     "Z94"
+    ]
+   },
+   {
+    "gt_id": 7015,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 13,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "D50",
+     "E66",
+     "O71"
+    ]
+   },
+   {
+    "gt_id": 7025,
+    "reward": 0.4,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "G70",
+     "O14",
+     "Z3A"
+    ]
+   },
+   {
+    "gt_id": 7033,
+    "reward": 0.380952380952381,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "A00",
+     "E05",
+     "E06",
+     "E10",
+     "E11",
+     "E16",
+     "E27",
+     "I10",
+     "L80",
+     "M06"
+    ]
+   },
+   {
+    "gt_id": 7047,
+    "reward": 0.16,
+    "submitted": true,
+    "tool_calls": 26,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "I63",
+     "J45",
+     "K50",
+     "M32",
+     "O00",
+     "Q85",
+     "Z51"
+    ]
+   },
+   {
+    "gt_id": 7066,
+    "reward": 0.26666666666666666,
+    "submitted": true,
+    "tool_calls": 30,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "D57",
+     "E29",
+     "F50",
+     "I26",
+     "K50",
+     "M34",
+     "M80"
+    ]
+   },
+   {
+    "gt_id": 7070,
+    "reward": 0.39999999999999997,
+    "submitted": true,
+    "tool_calls": 37,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "C94",
+     "I73",
+     "K50",
+     "M32"
+    ]
+   },
+   {
+    "gt_id": 7076,
+    "reward": 0.007198560287942412,
+    "submitted": true,
+    "tool_calls": 8,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "O34",
+     "O42",
+     "O72",
+     "Z50"
+    ]
+   },
+   {
+    "gt_id": 7077,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 34,
+    "gold_keys": 5,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "E06",
+     "E10",
+     "E27",
+     "E88",
+     "K52",
+     "L80"
+    ]
+   },
+   {
+    "gt_id": 7080,
+    "reward": 0.003710575139146568,
+    "submitted": true,
+    "tool_calls": 13,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "O80",
+     "O82",
+     "O83",
+     "O85",
+     "O86",
+     "O87",
+     "O88",
+     "O89",
+     "O90",
+     "O91",
+     "O92",
+     "O93",
+     "O94",
+     "O95",
+     "O96",
+     "O97",
+     "O98",
+     "O99",
+     "Z00",
+     "Z01",
+     "Z02",
+     "Z03",
+     "Z04",
+     "Z05",
+     "Z06",
+     "Z07",
+     "Z08",
+     "Z09",
+     "Z10",
+     "Z11",
+     "Z12",
+     "Z38",
+     "Z39",
+     "Z53",
+     "Z54",
+     "Z55",
+     "Z56",
+     "Z57",
+     "Z58",
+     "Z59",
+     "Z60",
+     "Z61",
+     "Z62",
+     "Z63",
+     "Z64",
+     "Z65",
+     "Z66",
+     "Z67",
+     "Z68",
+     "Z69",
+     "Z70",
+     "Z71",
+     "Z72",
+     "Z73",
+     "Z74",
+     "Z75",
+     "Z76",
+     "Z77",
+     "Z78",
+     "Z79",
+     "Z80",
+     "Z81",
+     "Z82",
+     "Z83",
+     "Z84",
+     "Z85",
+     "Z86",
+     "Z87",
+     "Z88",
+     "Z89",
+     "Z90",
+     "Z91",
+     "Z92",
+     "Z93",
+     "Z94",
+     "Z95",
+     "Z96",
+     "Z97",
+     "Z98",
+     "Z99"
+    ]
+   },
+   {
+    "gt_id": 7087,
+    "reward": 0.4444444444444445,
+    "submitted": true,
+    "tool_calls": 16,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "A60",
+     "F33",
+     "F50"
+    ]
+   },
+   {
+    "gt_id": 7136,
+    "reward": 0.16666666666666666,
+    "submitted": true,
+    "tool_calls": 39,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "D80",
+     "F40",
+     "G43",
+     "G44",
+     "H53",
+     "J30",
+     "J45"
+    ]
+   },
+   {
+    "gt_id": 7150,
+    "reward": 0.2222222222222222,
+    "submitted": true,
+    "tool_calls": 12,
+    "gold_keys": 4,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "D49",
+     "E26",
+     "M32"
+    ]
+   },
+   {
+    "gt_id": 7158,
+    "reward": 0.023333333333333334,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 5,
+    "pred_keys": [
+     "F41",
+     "F42",
+     "J30",
+     "J45",
+     "M32",
+     "Z79"
+    ]
+   },
+   {
+    "gt_id": 7165,
+    "reward": 0.7317073170731706,
+    "submitted": true,
+    "tool_calls": 17,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "D86",
+     "E21",
+     "K51",
+     "M13"
+    ]
+   },
+   {
+    "gt_id": 7176,
+    "reward": 0.5,
+    "submitted": true,
+    "tool_calls": 13,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "N30",
+     "Z87"
+    ]
+   },
+   {
+    "gt_id": 7182,
+    "reward": 0.5,
+    "submitted": true,
+    "tool_calls": 12,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "D68",
+     "E05",
+     "I50"
+    ]
+   },
+   {
+    "gt_id": 7183,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 26,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "A52"
+    ]
+   },
+   {
+    "gt_id": 7189,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 16,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E05"
+    ]
+   },
+   {
+    "gt_id": 7206,
+    "reward": 0.5,
+    "submitted": true,
+    "tool_calls": 13,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "J45",
+     "T8871"
+    ]
+   },
+   {
+    "gt_id": 7210,
+    "reward": 0.4,
+    "submitted": true,
+    "tool_calls": 13,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "A49",
+     "J09"
+    ]
+   },
+   {
+    "gt_id": 7236,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 11,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "P07"
+    ]
+   },
+   {
+    "gt_id": 7237,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 11,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "D35"
+    ]
+   },
+   {
+    "gt_id": 7253,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 13,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "N86"
+    ]
+   },
+   {
+    "gt_id": 7255,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "F40"
+    ]
+   },
+   {
+    "gt_id": 7259,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "L23"
+    ]
+   },
+   {
+    "gt_id": 7266,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 15,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "B86"
+    ]
+   },
+   {
+    "gt_id": 7274,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 30,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "R55"
+    ]
+   },
+   {
+    "gt_id": 7282,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 16,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "A63"
+    ]
+   },
+   {
+    "gt_id": 7302,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 26,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "E66",
+     "I10",
+     "K21"
+    ]
+   },
+   {
+    "gt_id": 7308,
+    "reward": 0.3636363636363636,
+    "submitted": true,
+    "tool_calls": 27,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "E11",
+     "I10",
+     "I25",
+     "I50",
+     "I70",
+     "N18"
+    ]
+   },
+   {
+    "gt_id": 7344,
+    "reward": 0.16666666666666669,
+    "submitted": true,
+    "tool_calls": 26,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E11",
+     "E78",
+     "I10",
+     "I25",
+     "N18"
+    ]
+   },
+   {
+    "gt_id": 7367,
+    "reward": 0.6363636363636364,
+    "submitted": true,
+    "tool_calls": 35,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "C18",
+     "C92",
+     "G25",
+     "I10",
+     "I25",
+     "I48"
+    ]
+   },
+   {
+    "gt_id": 7397,
+    "reward": 0.37499999999999994,
+    "submitted": true,
+    "tool_calls": 14,
+    "gold_keys": 5,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "D56",
+     "E11",
+     "E51",
+     "E53",
+     "E55",
+     "F07",
+     "F10",
+     "G62",
+     "K86"
+    ]
+   },
+   {
+    "gt_id": 7398,
+    "reward": 0.47058823529411764,
+    "submitted": true,
+    "tool_calls": 16,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "C44",
+     "E08",
+     "E78",
+     "I15",
+     "I43",
+     "J44",
+     "K25",
+     "M17"
+    ]
+   },
+   {
+    "gt_id": 7402,
+    "reward": 0.3636363636363636,
+    "submitted": true,
+    "tool_calls": 35,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "E11",
+     "E32",
+     "E66",
+     "I10",
+     "K11",
+     "M19",
+     "M25"
+    ]
+   },
+   {
+    "gt_id": 7403,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 8,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "B20",
+     "B25",
+     "D70",
+     "F00",
+     "F11",
+     "F20",
+     "F33"
+    ]
+   },
+   {
+    "gt_id": 7418,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 27,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "B18",
+     "F11",
+     "I33",
+     "M51",
+     "Z72"
+    ]
+   },
+   {
+    "gt_id": 7422,
+    "reward": 0.16216216216216214,
+    "submitted": true,
+    "tool_calls": 32,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "A15",
+     "B20",
+     "B57",
+     "G40",
+     "Z51",
+     "Z79"
+    ]
+   },
+   {
+    "gt_id": 7427,
+    "reward": 0.28571428571428575,
+    "submitted": true,
+    "tool_calls": 26,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "A49",
+     "B20",
+     "D63",
+     "J15",
+     "N18"
+    ]
+   },
+   {
+    "gt_id": 7454,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 27,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "F20",
+     "F33",
+     "G25",
+     "I10"
+    ]
+   },
+   {
+    "gt_id": 7457,
+    "reward": 0.5,
+    "submitted": true,
+    "tool_calls": 21,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "I10",
+     "N20",
+     "Z80"
+    ]
+   },
+   {
+    "gt_id": 7458,
+    "reward": 0.5,
+    "submitted": true,
+    "tool_calls": 15,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "A41",
+     "J30",
+     "T600X"
+    ]
+   },
+   {
+    "gt_id": 7463,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 25,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E55"
+    ]
+   },
+   {
+    "gt_id": 7476,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "B18"
+    ]
+   },
+   {
+    "gt_id": 7485,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "I10",
+     "J30",
+     "Q61"
+    ]
+   },
+   {
+    "gt_id": 7486,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "C11",
+     "I10"
+    ]
+   },
+   {
+    "gt_id": 7493,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 11,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E66",
+     "I25",
+     "I31",
+     "J30",
+     "K21"
+    ]
+   },
+   {
+    "gt_id": 7504,
+    "reward": 0.4,
+    "submitted": true,
+    "tool_calls": 31,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "A52",
+     "E78",
+     "G63",
+     "I10",
+     "I70",
+     "N39"
+    ]
+   },
+   {
+    "gt_id": 7510,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 18,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "A48"
+    ]
+   },
+   {
+    "gt_id": 7512,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 6,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "G51"
+    ]
+   },
+   {
+    "gt_id": 7519,
+    "reward": 0.33333333333333337,
+    "submitted": true,
+    "tool_calls": 39,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E78",
+     "I10",
+     "I25",
+     "I70",
+     "I71",
+     "J44"
+    ]
+   },
+   {
+    "gt_id": 7539,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 39,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7545,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 19,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7549,
+    "reward": 0.14285714285714288,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 5,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E11",
+     "F06",
+     "I10",
+     "N18",
+     "N40",
+     "Z98"
+    ]
+   },
+   {
+    "gt_id": 7580,
+    "reward": 0.22857142857142856,
+    "submitted": true,
+    "tool_calls": 39,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "C79",
+     "E05",
+     "E78",
+     "I10",
+     "I48",
+     "I70",
+     "J84",
+     "T360X",
+     "Z85"
+    ]
+   },
+   {
+    "gt_id": 7583,
+    "reward": 0.888888888888889,
+    "submitted": true,
+    "tool_calls": 26,
+    "gold_keys": 5,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "C34",
+     "E78",
+     "I10",
+     "I31",
+     "I33",
+     "I44",
+     "I71"
+    ]
+   },
+   {
+    "gt_id": 7584,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 8,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E11",
+     "E78",
+     "I10",
+     "I21",
+     "Z68"
+    ]
+   },
+   {
+    "gt_id": 7589,
+    "reward": 0.16666666666666666,
+    "submitted": true,
+    "tool_calls": 31,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "G31",
+     "G81",
+     "I10",
+     "I21",
+     "I37",
+     "I50",
+     "K52",
+     "K56",
+     "M01",
+     "M10",
+     "M80"
+    ]
+   },
+   {
+    "gt_id": 7592,
+    "reward": 0.3818181818181819,
+    "submitted": true,
+    "tool_calls": 11,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "D45",
+     "I10",
+     "I25",
+     "I48",
+     "I61",
+     "Z95"
+    ]
+   },
+   {
+    "gt_id": 7595,
+    "reward": 0.14285714285714285,
+    "submitted": true,
+    "tool_calls": 12,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "E27",
+     "I10",
+     "N40",
+     "Z98"
+    ]
+   },
+   {
+    "gt_id": 7604,
+    "reward": 0.5853658536585366,
+    "submitted": true,
+    "tool_calls": 29,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "C34",
+     "C67",
+     "E78",
+     "I10",
+     "I50",
+     "I65",
+     "M17"
+    ]
+   },
+   {
+    "gt_id": 7625,
+    "reward": 0.4166666666666667,
+    "submitted": true,
+    "tool_calls": 39,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "C34",
+     "F17",
+     "J44",
+     "J84",
+     "Z85",
+     "Z86"
+    ]
+   },
+   {
+    "gt_id": 7629,
+    "reward": 0.5714285714285714,
+    "submitted": true,
+    "tool_calls": 27,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "A16",
+     "C34",
+     "C61",
+     "C67",
+     "G70",
+     "I25",
+     "I50",
+     "J44",
+     "M54",
+     "R33"
+    ]
+   },
+   {
+    "gt_id": 7636,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 12,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "J43",
+     "J44"
+    ]
+   },
+   {
+    "gt_id": 7647,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 39,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "E11",
+     "E78",
+     "I10",
+     "I25",
+     "I31",
+     "I50"
+    ]
+   },
+   {
+    "gt_id": 7663,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 9,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E78",
+     "G91",
+     "I10",
+     "M17"
+    ]
+   },
+   {
+    "gt_id": 7673,
+    "reward": 0.11764705882352941,
+    "submitted": true,
+    "tool_calls": 28,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "D80",
+     "E25",
+     "E88",
+     "J45",
+     "Q24",
+     "Q87",
+     "Z53"
+    ]
+   },
+   {
+    "gt_id": 7675,
+    "reward": 0.25,
+    "submitted": true,
+    "tool_calls": 27,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "P27",
+     "Q23",
+     "X59"
+    ]
+   },
+   {
+    "gt_id": 7701,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 15,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "D63",
+     "I77",
+     "J80",
+     "K52",
+     "Z56"
+    ]
+   },
+   {
+    "gt_id": 7705,
+    "reward": 0.1818181818181818,
+    "submitted": true,
+    "tool_calls": 35,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "C30",
+     "P54",
+     "Q24",
+     "Q79",
+     "Z79"
+    ]
+   },
+   {
+    "gt_id": 7710,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 30,
+    "gold_keys": 4,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "D52",
+     "E64",
+     "E72",
+     "K80"
+    ]
+   },
+   {
+    "gt_id": 7725,
+    "reward": 0.5,
+    "submitted": true,
+    "tool_calls": 32,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "A04",
+     "D50",
+     "D59",
+     "E10",
+     "K52"
+    ]
+   },
+   {
+    "gt_id": 7736,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 17,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "Q21"
+    ]
+   },
+   {
+    "gt_id": 7744,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 26,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "D58",
+     "D59",
+     "J45",
+     "K80"
+    ]
+   },
+   {
+    "gt_id": 7745,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 10,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "T560X"
+    ]
+   },
+   {
+    "gt_id": 7749,
+    "reward": 0.8,
+    "submitted": true,
+    "tool_calls": 9,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "D81",
+     "F80",
+     "H65"
+    ]
+   },
+   {
+    "gt_id": 7757,
+    "reward": 0.2,
+    "submitted": true,
+    "tool_calls": 11,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "A04",
+     "A20",
+     "G40",
+     "H66",
+     "H90"
+    ]
+   },
+   {
+    "gt_id": 7768,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 12,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "D55",
+     "D69",
+     "N02"
+    ]
+   },
+   {
+    "gt_id": 7770,
+    "reward": 0.5,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "F98",
+     "J30",
+     "N39",
+     "Z98"
+    ]
+   },
+   {
+    "gt_id": 7772,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 13,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "C91",
+     "E11"
+    ]
+   },
+   {
+    "gt_id": 7775,
+    "reward": 0.5,
+    "submitted": true,
+    "tool_calls": 26,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "F80",
+     "H90",
+     "H93",
+     "I42",
+     "M96"
+    ]
+   },
+   {
+    "gt_id": 7785,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 26,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "N45",
+     "Q53",
+     "S3210"
+    ]
+   },
+   {
+    "gt_id": 7792,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 10,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "C70",
+     "E35"
+    ]
+   },
+   {
+    "gt_id": 7843,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 26,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "A37",
+     "Z50"
+    ]
+   },
+   {
+    "gt_id": 7853,
+    "reward": 0.5656565656565656,
+    "submitted": true,
+    "tool_calls": 30,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "A15",
+     "B20",
+     "B37",
+     "B47",
+     "E11",
+     "I10",
+     "N02",
+     "N18"
+    ]
+   },
+   {
+    "gt_id": 7868,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 26,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "E79",
+     "F33",
+     "T242X",
+     "T243X",
+     "T244X",
+     "T245X",
+     "T246X",
+     "T247X",
+     "T248X",
+     "T249X",
+     "T252X",
+     "T253X",
+     "T254X",
+     "T255X",
+     "T256X",
+     "T257X",
+     "T258X",
+     "T259X",
+     "T802X",
+     "T803X",
+     "T804X",
+     "T805X",
+     "T806X",
+     "T807X",
+     "T808X",
+     "T809X",
+     "T811X",
+     "T812X",
+     "T813X",
+     "T814X",
+     "T815X",
+     "T816X",
+     "T817X",
+     "T818X",
+     "T819X",
+     "T822X",
+     "T823X",
+     "T824X",
+     "T825X",
+     "T826X",
+     "T827X",
+     "T828X",
+     "T829X",
+     "T831X",
+     "T832X",
+     "T833X",
+     "T834X",
+     "T835X",
+     "T836X",
+     "T837X",
+     "T838X",
+     "T839X",
+     "T841X",
+     "T842X",
+     "T843X",
+     "T844X",
+     "T845X",
+     "T846X",
+     "T847X",
+     "T848X",
+     "T849X",
+     "T851X",
+     "T852X",
+     "T853X",
+     "T854X",
+     "T855X",
+     "T856X",
+     "T857X",
+     "T858X",
+     "T859X",
+     "T861X",
+     "T862X",
+     "T863X",
+     "T864X",
+     "T865X",
+     "T866X",
+     "T867X",
+     "T868X",
+     "T869X",
+     "T871X",
+     "T872X",
+     "T873X",
+     "T874X",
+     "T875X",
+     "T876X",
+     "T877X",
+     "T878X",
+     "T879X",
+     "T881X",
+     "T882X",
+     "T883X",
+     "T884X",
+     "T885X",
+     "T886X",
+     "T887X",
+     "T888X",
+     "T889X",
+     "T891X",
+     "T892X",
+     "T893X",
+     "T894X",
+     "T895X",
+     "T896X",
+     "T897X",
+     "T898X",
+     "T899X",
+     "T900X",
+     "T901X",
+     "T902X",
+     "T903X",
+     "T904X",
+     "T905X",
+     "T906X",
+     "T907X",
+     "T908X",
+     "T909X",
+     "T910X",
+     "T911X",
+     "T912X",
+     "T913X",
+     "T914X",
+     "T915X",
+     "T916X",
+     "T917X",
+     "T918X",
+     "T919X",
+     "T920X",
+     "T921X",
+     "T922X",
+     "T923X",
+     "T924X",
+     "T925X",
+     "T926X",
+     "T927X",
+     "T928X",
+     "T929X",
+     "T930X",
+     "T931X",
+     "T932X",
+     "T933X",
+     "T934X",
+     "T935X",
+     "T936X",
+     "T937X",
+     "T938X",
+     "T939X",
+     "T940X",
+     "T941X",
+     "T942X",
+     "T943X",
+     "T944X",
+     "T945X",
+     "T946X",
+     "T947X",
+     "T948X",
+     "T949X",
+     "T950X",
+     "T951X",
+     "T952X",
+     "T953X",
+     "T954X",
+     "T955X",
+     "T956X",
+     "T957X",
+     "T958X",
+     "T959X",
+     "T960X",
+     "T961X",
+     "T962X",
+     "T963X",
+     "T964X",
+     "T965X",
+     "T966X",
+     "T967X",
+     "T968X",
+     "T969X",
+     "T970X",
+     "T971X",
+     "T972X",
+     "T973X",
+     "T974X",
+     "T975X",
+     "T976X",
+     "T977X",
+     "T978X",
+     "T979X",
+     "T980X",
+     "T981X",
+     "T982X",
+     "T983X",
+     "T984X",
+     "T985X",
+     "T986X",
+     "T987X",
+     "T988X",
+     "T989X",
+     "T990X",
+     "T991X",
+     "T992X",
+     "T993X",
+     "T994X",
+     "T995X",
+     "T996X",
+     "T997X",
+     "T998X",
+     "T999X"
+    ]
+   },
+   {
+    "gt_id": 7869,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 11,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "F10",
+     "F15",
+     "F17",
+     "T402X",
+     "T7841"
+    ]
+   },
+   {
+    "gt_id": 7873,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 11,
+    "gold_keys": 5,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "A50",
+     "A54"
+    ]
+   },
+   {
+    "gt_id": 7875,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 13,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "F11",
+     "F33",
+     "G89",
+     "M54"
+    ]
+   },
+   {
+    "gt_id": 7882,
+    "reward": 0.4,
+    "submitted": true,
+    "tool_calls": 14,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E10",
+     "Z90"
+    ]
+   },
+   {
+    "gt_id": 7893,
+    "reward": 0.17391304347826086,
+    "submitted": true,
+    "tool_calls": 19,
+    "gold_keys": 4,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "A04",
+     "F11",
+     "T402X",
+     "Z51"
+    ]
+   },
+   {
+    "gt_id": 7899,
+    "reward": 0.5,
+    "submitted": true,
+    "tool_calls": 22,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E87",
+     "T402X"
+    ]
+   },
+   {
+    "gt_id": 7909,
+    "reward": 0.7499999999999999,
+    "submitted": true,
+    "tool_calls": 11,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "A39",
+     "J30",
+     "L70"
+    ]
+   },
+   {
+    "gt_id": 7910,
+    "reward": 0.5,
+    "submitted": true,
+    "tool_calls": 32,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "F20",
+     "F33"
+    ]
+   },
+   {
+    "gt_id": 7934,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 17,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "I10",
+     "K21",
+     "T7941"
+    ]
+   },
+   {
+    "gt_id": 7956,
+    "reward": 0.5,
+    "submitted": true,
+    "tool_calls": 12,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "K51",
+     "K76"
+    ]
+   },
+   {
+    "gt_id": 7973,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 8,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "B35"
+    ]
+   },
+   {
+    "gt_id": 7974,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "G61"
+    ]
+   },
+   {
+    "gt_id": 7985,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 25,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "J65"
+    ]
+   },
+   {
+    "gt_id": 7990,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 39,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "F14",
+     "F17",
+     "I42"
+    ]
+   },
+   {
+    "gt_id": 7996,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 17,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "B35"
+    ]
+   },
+   {
+    "gt_id": 8004,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 10,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "F14",
+     "Z72"
+    ]
+   },
+   {
+    "gt_id": 8038,
+    "reward": 0.4,
+    "submitted": true,
+    "tool_calls": 11,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "I10",
+     "N95",
+     "Z53"
+    ]
+   },
+   {
+    "gt_id": 8046,
+    "reward": 0.47058823529411764,
+    "submitted": true,
+    "tool_calls": 27,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "C50",
+     "C53",
+     "D63",
+     "E11",
+     "E85",
+     "I10",
+     "J80",
+     "K51",
+     "M05",
+     "M80"
+    ]
+   },
+   {
+    "gt_id": 8049,
+    "reward": 0.1904761904761905,
+    "submitted": true,
+    "tool_calls": 30,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "A41",
+     "E11",
+     "E24",
+     "E53",
+     "E66",
+     "I10",
+     "J32",
+     "T8281"
+    ]
+   },
+   {
+    "gt_id": 8078,
+    "reward": 0.888888888888889,
+    "submitted": true,
+    "tool_calls": 20,
+    "gold_keys": 4,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "C88",
+     "E03",
+     "I15",
+     "I73",
+     "J84",
+     "K21",
+     "M33",
+     "M34"
+    ]
+   },
+   {
+    "gt_id": 8101,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 9,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "F33",
+     "F41",
+     "G44",
+     "K58",
+     "M79"
+    ]
+   },
+   {
+    "gt_id": 8106,
+    "reward": 0.3333333333333333,
+    "submitted": true,
+    "tool_calls": 9,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "D69",
+     "G46",
+     "G50"
+    ]
+   },
+   {
+    "gt_id": 8119,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 36,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "E88",
+     "J45",
+     "L30",
+     "M05"
+    ]
+   },
+   {
+    "gt_id": 8126,
+    "reward": 0.28571428571428575,
+    "submitted": true,
+    "tool_calls": 29,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E03",
+     "E11",
+     "E78",
+     "I10",
+     "K43",
+     "K76",
+     "Z68"
+    ]
+   },
+   {
+    "gt_id": 8160,
+    "reward": 0.3333333333333333,
+    "submitted": true,
+    "tool_calls": 14,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "E11",
+     "E78",
+     "G57",
+     "H25",
+     "I10",
+     "I50",
+     "K52",
+     "M17",
+     "M47",
+     "N18",
+     "Z68"
+    ]
+   },
+   {
+    "gt_id": 8179,
+    "reward": 0.888888888888889,
+    "submitted": true,
+    "tool_calls": 11,
+    "gold_keys": 5,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "C23",
+     "E11",
+     "E66",
+     "I10",
+     "I50",
+     "J81",
+     "K80",
+     "N18",
+     "Z51"
+    ]
+   },
+   {
+    "gt_id": 8180,
+    "reward": 0.17391304347826086,
+    "submitted": true,
+    "tool_calls": 27,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "A09",
+     "G04",
+     "G06",
+     "G12",
+     "G70",
+     "I10",
+     "J44",
+     "M17",
+     "M85",
+     "T440X"
+    ]
+   },
+   {
+    "gt_id": 8199,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 26,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "C36",
+     "C78",
+     "C79",
+     "D24",
+     "Z51",
+     "Z85",
+     "Z87",
+     "Z95",
+     "Z96"
+    ]
+   },
+   {
+    "gt_id": 8208,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 10,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "Q56",
+     "Q98"
+    ]
+   },
+   {
+    "gt_id": 8222,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 13,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "I09",
+     "M00"
+    ]
+   },
+   {
+    "gt_id": 8243,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 11,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "C30",
+     "D50",
+     "Q82"
+    ]
+   },
+   {
+    "gt_id": 8254,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 12,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "Q09"
+    ]
+   },
+   {
+    "gt_id": 8262,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E25",
+     "Q56"
+    ]
+   }
+  ],
+  "mistral-paper": [
+   {
+    "gt_id": 7011,
+    "reward": 0.8571428571428571,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 4,
+    "gold_keys_seen_in_tools": 4,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "D59",
+     "D69",
+     "E86",
+     "M31",
+     "M32",
+     "N17"
+    ]
+   },
+   {
+    "gt_id": 7015,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "D50",
+     "E66",
+     "O71",
+     "O77"
+    ]
+   },
+   {
+    "gt_id": 7025,
+    "reward": 0.5,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "G70",
+     "O13",
+     "O14"
+    ]
+   },
+   {
+    "gt_id": 7033,
+    "reward": 0.761904761904762,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 8,
+    "gold_keys_predicted": 8,
+    "pred_keys": [
+     "E03",
+     "E05",
+     "E06",
+     "E16",
+     "E27",
+     "E31",
+     "E87",
+     "I48",
+     "K80",
+     "K90",
+     "L63",
+     "L80",
+     "M05"
+    ]
+   },
+   {
+    "gt_id": 7047,
+    "reward": 0.375,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 7,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "C78",
+     "D39",
+     "I61",
+     "I78",
+     "J45",
+     "K50",
+     "M32",
+     "N82"
+    ]
+   },
+   {
+    "gt_id": 7066,
+    "reward": 0.7070707070707072,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 6,
+    "gold_keys_predicted": 5,
+    "pred_keys": [
+     "D57",
+     "E88",
+     "F50",
+     "I27",
+     "K50",
+     "K59",
+     "M34",
+     "M81",
+     "N91",
+     "R50"
+    ]
+   },
+   {
+    "gt_id": 7070,
+    "reward": 0.8823529411764706,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 6,
+    "gold_keys_predicted": 6,
+    "pred_keys": [
+     "B50",
+     "C92",
+     "I73",
+     "K35",
+     "K50",
+     "M32",
+     "Q24",
+     "Z85"
+    ]
+   },
+   {
+    "gt_id": 7076,
+    "reward": 0.5333333333333333,
+    "submitted": true,
+    "tool_calls": 10,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 8,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "D68",
+     "F17",
+     "I10",
+     "J45",
+     "J80",
+     "N88",
+     "O34",
+     "O45",
+     "O72",
+     "S3692",
+     "Z87"
+    ]
+   },
+   {
+    "gt_id": 7077,
+    "reward": 0.6451612903225806,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 5,
+    "gold_keys_seen_in_tools": 5,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "E06",
+     "F32",
+     "G25",
+     "G35",
+     "G50",
+     "J45",
+     "S328X",
+     "S3611"
+    ]
+   },
+   {
+    "gt_id": 7080,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 4,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7087,
+    "reward": 0.8571428571428571,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "A60",
+     "B00",
+     "E83",
+     "F33",
+     "F50",
+     "N17"
+    ]
+   },
+   {
+    "gt_id": 7136,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7150,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 2,
+    "gold_keys": 4,
+    "gold_keys_seen_in_tools": 4,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7158,
+    "reward": 0.7058823529411765,
+    "submitted": true,
+    "tool_calls": 6,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 8,
+    "gold_keys_predicted": 6,
+    "pred_keys": [
+     "F41",
+     "F42",
+     "F52",
+     "G43",
+     "I10",
+     "J30",
+     "J45",
+     "L56",
+     "L70",
+     "M32"
+    ]
+   },
+   {
+    "gt_id": 7165,
+    "reward": 0.8,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "D86",
+     "E21",
+     "K51",
+     "L52",
+     "L85",
+     "M07"
+    ]
+   },
+   {
+    "gt_id": 7176,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "R31"
+    ]
+   },
+   {
+    "gt_id": 7182,
+    "reward": 0.8,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "D70",
+     "E05",
+     "E89",
+     "I50"
+    ]
+   },
+   {
+    "gt_id": 7183,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "A51",
+     "O23"
+    ]
+   },
+   {
+    "gt_id": 7189,
+    "reward": 0.25,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E05",
+     "G47",
+     "N92",
+     "R00",
+     "R25",
+     "R63"
+    ]
+   },
+   {
+    "gt_id": 7206,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "J45",
+     "L50",
+     "T783X",
+     "T886X"
+    ]
+   },
+   {
+    "gt_id": 7210,
+    "reward": 0.8,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "J10",
+     "J15"
+    ]
+   },
+   {
+    "gt_id": 7236,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7237,
+    "reward": 0.33333333333333337,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "D35",
+     "E22",
+     "H53",
+     "N64",
+     "N91"
+    ]
+   },
+   {
+    "gt_id": 7253,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "N75"
+    ]
+   },
+   {
+    "gt_id": 7255,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "F40"
+    ]
+   },
+   {
+    "gt_id": 7259,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "L23"
+    ]
+   },
+   {
+    "gt_id": 7266,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "B86"
+    ]
+   },
+   {
+    "gt_id": 7274,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "R55"
+    ]
+   },
+   {
+    "gt_id": 7282,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "A63"
+    ]
+   },
+   {
+    "gt_id": 7302,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 1,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "I10",
+     "K21",
+     "K22"
+    ]
+   },
+   {
+    "gt_id": 7308,
+    "reward": 0.923076923076923,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 5,
+    "gold_keys_predicted": 5,
+    "pred_keys": [
+     "E11",
+     "E78",
+     "I10",
+     "I20",
+     "I50",
+     "I51",
+     "I73",
+     "Z72"
+    ]
+   },
+   {
+    "gt_id": 7344,
+    "reward": 0.48979591836734687,
+    "submitted": true,
+    "tool_calls": 10,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 6,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "E11",
+     "E78",
+     "I10",
+     "I20",
+     "N18",
+     "N52",
+     "Z78"
+    ]
+   },
+   {
+    "gt_id": 7367,
+    "reward": 0.8484848484848485,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 8,
+    "gold_keys_predicted": 7,
+    "pred_keys": [
+     "C18",
+     "C92",
+     "D61",
+     "G25",
+     "I10",
+     "I25",
+     "I48",
+     "N52",
+     "R53",
+     "R94",
+     "T462X"
+    ]
+   },
+   {
+    "gt_id": 7397,
+    "reward": 0.7142857142857143,
+    "submitted": true,
+    "tool_calls": 2,
+    "gold_keys": 5,
+    "gold_keys_seen_in_tools": 5,
+    "gold_keys_predicted": 5,
+    "pred_keys": [
+     "D64",
+     "E43",
+     "E51",
+     "E83",
+     "F10",
+     "G62",
+     "I45",
+     "K86",
+     "R56"
+    ]
+   },
+   {
+    "gt_id": 7398,
+    "reward": 0.8750000000000001,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 5,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "C44",
+     "E78",
+     "I10",
+     "I15",
+     "J44",
+     "K27",
+     "K92",
+     "M17",
+     "N18"
+    ]
+   },
+   {
+    "gt_id": 7402,
+    "reward": 0.5673758865248226,
+    "submitted": true,
+    "tool_calls": 8,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 6,
+    "gold_keys_predicted": 5,
+    "pred_keys": [
+     "B20",
+     "E11",
+     "E83",
+     "F11",
+     "F20",
+     "F33",
+     "F41",
+     "G83",
+     "H35",
+     "K11",
+     "K12"
+    ]
+   },
+   {
+    "gt_id": 7403,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7418,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7422,
+    "reward": 0.9444444444444444,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 7,
+    "gold_keys_predicted": 6,
+    "pred_keys": [
+     "A44",
+     "B20",
+     "B45",
+     "C83",
+     "D74",
+     "D89",
+     "G40"
+    ]
+   },
+   {
+    "gt_id": 7427,
+    "reward": 0.35714285714285715,
+    "submitted": true,
+    "tool_calls": 6,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "A43",
+     "B20",
+     "D63",
+     "D73",
+     "D89",
+     "G63",
+     "J15",
+     "M12",
+     "N05",
+     "N18",
+     "R41"
+    ]
+   },
+   {
+    "gt_id": 7454,
+    "reward": 0.7499999999999999,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "F17",
+     "F20",
+     "F33",
+     "G21",
+     "G24",
+     "G25",
+     "I10"
+    ]
+   },
+   {
+    "gt_id": 7457,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "N20"
+    ]
+   },
+   {
+    "gt_id": 7458,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "A49",
+     "J30",
+     "T600X"
+    ]
+   },
+   {
+    "gt_id": 7463,
+    "reward": 0.8,
+    "submitted": true,
+    "tool_calls": 10,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "E21",
+     "E55",
+     "M76"
+    ]
+   },
+   {
+    "gt_id": 7476,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "B18",
+     "D61",
+     "F11",
+     "F43"
+    ]
+   },
+   {
+    "gt_id": 7485,
+    "reward": 0.5,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "I10",
+     "J30",
+     "Q61",
+     "R17"
+    ]
+   },
+   {
+    "gt_id": 7486,
+    "reward": 0.2857142857142857,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "B27",
+     "C11",
+     "G50",
+     "H53",
+     "H90",
+     "R59"
+    ]
+   },
+   {
+    "gt_id": 7493,
+    "reward": 0.2857142857142857,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E66",
+     "I31",
+     "J30",
+     "K21",
+     "R00",
+     "R03",
+     "R07",
+     "R74",
+     "Z90",
+     "Z98"
+    ]
+   },
+   {
+    "gt_id": 7504,
+    "reward": 0.4,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "A52",
+     "E78",
+     "G62",
+     "G63",
+     "I10",
+     "I73",
+     "N31",
+     "R26",
+     "Z95"
+    ]
+   },
+   {
+    "gt_id": 7510,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "A28"
+    ]
+   },
+   {
+    "gt_id": 7512,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "G51"
+    ]
+   },
+   {
+    "gt_id": 7519,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7539,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 7,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 6,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7545,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 6,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "E07",
+     "E78",
+     "E87",
+     "I10",
+     "I25",
+     "J18",
+     "J44",
+     "J93",
+     "J96"
+    ]
+   },
+   {
+    "gt_id": 7549,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 3,
+    "gold_keys": 5,
+    "gold_keys_seen_in_tools": 5,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7580,
+    "reward": 0.8750000000000001,
+    "submitted": true,
+    "tool_calls": 8,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 7,
+    "gold_keys_predicted": 7,
+    "pred_keys": [
+     "C61",
+     "C79",
+     "I48",
+     "I65",
+     "I74",
+     "J70",
+     "J85",
+     "K55",
+     "K57"
+    ]
+   },
+   {
+    "gt_id": 7583,
+    "reward": 0.7272727272727273,
+    "submitted": true,
+    "tool_calls": 6,
+    "gold_keys": 5,
+    "gold_keys_seen_in_tools": 4,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "C18",
+     "C34",
+     "E78",
+     "I10",
+     "I31",
+     "I33",
+     "I44",
+     "I71",
+     "J91"
+    ]
+   },
+   {
+    "gt_id": 7584,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7589,
+    "reward": 0.8818897637795274,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 6,
+    "gold_keys_predicted": 6,
+    "pred_keys": [
+     "A81",
+     "G31",
+     "I10",
+     "I23",
+     "I50",
+     "K56",
+     "K59",
+     "M00",
+     "M1A",
+     "M62",
+     "M85"
+    ]
+   },
+   {
+    "gt_id": 7592,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 1,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 8,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7595,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 7,
+    "gold_keys_predicted": 7,
+    "pred_keys": [
+     "D69",
+     "E27",
+     "F20",
+     "I10",
+     "I95",
+     "K43",
+     "M19",
+     "N13",
+     "N40",
+     "T461X"
+    ]
+   },
+   {
+    "gt_id": 7604,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7625,
+    "reward": 0.9142857142857143,
+    "submitted": true,
+    "tool_calls": 2,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 8,
+    "gold_keys_predicted": 7,
+    "pred_keys": [
+     "C34",
+     "E22",
+     "F17",
+     "I47",
+     "I63",
+     "J44",
+     "J84",
+     "J86",
+     "J95"
+    ]
+   },
+   {
+    "gt_id": 7629,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 22,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 6,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7636,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 4,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7647,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "E11",
+     "E78",
+     "I10",
+     "I25",
+     "I50",
+     "I63",
+     "J90"
+    ]
+   },
+   {
+    "gt_id": 7663,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 3,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7673,
+    "reward": 0.7000000000000001,
+    "submitted": true,
+    "tool_calls": 2,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 7,
+    "gold_keys_predicted": 7,
+    "pred_keys": [
+     "D80",
+     "D82",
+     "E55",
+     "E83",
+     "N25",
+     "P27",
+     "Q20",
+     "Q21",
+     "R09",
+     "R23",
+     "R63",
+     "R68"
+    ]
+   },
+   {
+    "gt_id": 7675,
+    "reward": 0.7272727272727273,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "D80",
+     "J18",
+     "Q21",
+     "Q23",
+     "Q24",
+     "R06",
+     "R50",
+     "R62"
+    ]
+   },
+   {
+    "gt_id": 7701,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7705,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7710,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 4,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7725,
+    "reward": 0.8198757763975155,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 6,
+    "gold_keys_predicted": 5,
+    "pred_keys": [
+     "A09",
+     "D55",
+     "D59",
+     "E10",
+     "E86",
+     "K59"
+    ]
+   },
+   {
+    "gt_id": 7736,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 4,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7744,
+    "reward": 0.5,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "I25",
+     "M30"
+    ]
+   },
+   {
+    "gt_id": 7745,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 2,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7749,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7757,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 1,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7768,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 3,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7770,
+    "reward": 0.5714285714285715,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "F90",
+     "G47",
+     "J30",
+     "J35",
+     "N39",
+     "Z68"
+    ]
+   },
+   {
+    "gt_id": 7772,
+    "reward": 0.4,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "C91",
+     "D63",
+     "D69",
+     "R16"
+    ]
+   },
+   {
+    "gt_id": 7775,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "F80",
+     "H65",
+     "H90"
+    ]
+   },
+   {
+    "gt_id": 7785,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 5,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7792,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7843,
+    "reward": 0.8,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "A37",
+     "B26",
+     "I40",
+     "Z28"
+    ]
+   },
+   {
+    "gt_id": 7853,
+    "reward": 0.896551724137931,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 8,
+    "gold_keys_predicted": 7,
+    "pred_keys": [
+     "A15",
+     "B20",
+     "B37",
+     "B45",
+     "B58",
+     "E11",
+     "I10",
+     "N02",
+     "N04",
+     "N18"
+    ]
+   },
+   {
+    "gt_id": 7868,
+    "reward": 0.5128205128205129,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "E79",
+     "F33",
+     "N17",
+     "N18",
+     "R65",
+     "T3140",
+     "T79A1"
+    ]
+   },
+   {
+    "gt_id": 7869,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 2,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7873,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 2,
+    "gold_keys": 5,
+    "gold_keys_seen_in_tools": 5,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7875,
+    "reward": 0.5,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "F11",
+     "F17",
+     "F33",
+     "F41",
+     "I10",
+     "M54"
+    ]
+   },
+   {
+    "gt_id": 7882,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7893,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 1,
+    "gold_keys": 4,
+    "gold_keys_seen_in_tools": 4,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7899,
+    "reward": 0.8,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "E87",
+     "T400X",
+     "T6702"
+    ]
+   },
+   {
+    "gt_id": 7909,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7910,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7934,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 3,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7956,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 5,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7973,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 5,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7974,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7985,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 1,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7990,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "S064X",
+     "S4421"
+    ]
+   },
+   {
+    "gt_id": 7996,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "M00",
+     "S6145"
+    ]
+   },
+   {
+    "gt_id": 8004,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 5,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 8038,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 7,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 8046,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 8049,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 8078,
+    "reward": 0.7272727272727273,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 4,
+    "gold_keys_seen_in_tools": 4,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "C88",
+     "E03",
+     "I16",
+     "I73",
+     "J84",
+     "K21",
+     "M33",
+     "M34",
+     "N17",
+     "N18"
+    ]
+   },
+   {
+    "gt_id": 8101,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 1,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "F45",
+     "M79"
+    ]
+   },
+   {
+    "gt_id": 8106,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 3,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "D69",
+     "G51",
+     "H81"
+    ]
+   },
+   {
+    "gt_id": 8119,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 11,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "E88",
+     "I73",
+     "J43",
+     "J45",
+     "L20",
+     "M05"
+    ]
+   },
+   {
+    "gt_id": 8126,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "E03",
+     "E11",
+     "E66",
+     "E78",
+     "I10",
+     "K43",
+     "K80"
+    ]
+   },
+   {
+    "gt_id": 8160,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 4,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 8,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 8179,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 2,
+    "gold_keys": 5,
+    "gold_keys_seen_in_tools": 4,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 8180,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 8199,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 8208,
+    "reward": 0.8,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "E34",
+     "Q51"
+    ]
+   },
+   {
+    "gt_id": 8222,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "I01",
+     "I02",
+     "I09"
+    ]
+   },
+   {
+    "gt_id": 8243,
+    "reward": 0.5714285714285715,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 2,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "D33",
+     "D50",
+     "F82",
+     "K29",
+     "K55",
+     "L81",
+     "Q85"
+    ]
+   },
+   {
+    "gt_id": 8254,
+    "reward": 0.4,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E03",
+     "Q89"
+    ]
+   },
+   {
+    "gt_id": 8262,
+    "reward": 0.4,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 1,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E25",
+     "E27",
+     "E87",
+     "Q56"
+    ]
+   }
+  ],
+  "mistral-masked": [
+   {
+    "gt_id": 7011,
+    "reward": 0.56,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 4,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "D68",
+     "E86",
+     "I30",
+     "L81",
+     "M31",
+     "M32",
+     "N17",
+     "R04"
+    ]
+   },
+   {
+    "gt_id": 7015,
+    "reward": 0.4,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "D50",
+     "E66",
+     "N93",
+     "O71",
+     "O77",
+     "R10",
+     "Z98"
+    ]
+   },
+   {
+    "gt_id": 7025,
+    "reward": 0.5,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "G70",
+     "O13",
+     "O14"
+    ]
+   },
+   {
+    "gt_id": 7033,
+    "reward": 0.7875,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 7,
+    "pred_keys": [
+     "D50",
+     "E03",
+     "E05",
+     "E06",
+     "E27",
+     "E31",
+     "K80",
+     "K90",
+     "L63",
+     "L80",
+     "M06",
+     "R11",
+     "R50"
+    ]
+   },
+   {
+    "gt_id": 7047,
+    "reward": 0.5925925925925926,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "C58",
+     "I61",
+     "I63",
+     "I78",
+     "J45",
+     "K50",
+     "M32",
+     "N82"
+    ]
+   },
+   {
+    "gt_id": 7066,
+    "reward": 0.6603773584905661,
+    "submitted": true,
+    "tool_calls": 2,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 5,
+    "pred_keys": [
+     "D57",
+     "D72",
+     "E88",
+     "F50",
+     "I27",
+     "K50",
+     "K59",
+     "M34",
+     "M81",
+     "N91",
+     "R50"
+    ]
+   },
+   {
+    "gt_id": 7070,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7076,
+    "reward": 0.2876712328767123,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "D62",
+     "D68",
+     "E87",
+     "F17",
+     "I10",
+     "J45",
+     "J80",
+     "N88",
+     "O45",
+     "O46",
+     "O72",
+     "O77",
+     "R09",
+     "R57",
+     "S273",
+     "S3991"
+    ]
+   },
+   {
+    "gt_id": 7077,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 5,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7080,
+    "reward": 0.5,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "A60",
+     "B00",
+     "O34",
+     "O62",
+     "O70",
+     "O71",
+     "O77"
+    ]
+   },
+   {
+    "gt_id": 7087,
+    "reward": 0.588235294117647,
+    "submitted": true,
+    "tool_calls": 6,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "A60",
+     "E63",
+     "E87",
+     "F33",
+     "F50",
+     "N17"
+    ]
+   },
+   {
+    "gt_id": 7136,
+    "reward": 0.7499999999999999,
+    "submitted": true,
+    "tool_calls": 10,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 6,
+    "pred_keys": [
+     "D25",
+     "D50",
+     "D80",
+     "F41",
+     "F60",
+     "J01",
+     "J30",
+     "J45",
+     "K90",
+     "L20",
+     "T8059",
+     "Z28",
+     "Z33"
+    ]
+   },
+   {
+    "gt_id": 7150,
+    "reward": 0.7272727272727273,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 4,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "C92",
+     "D64",
+     "D69",
+     "D70",
+     "E28",
+     "F06",
+     "M32"
+    ]
+   },
+   {
+    "gt_id": 7158,
+    "reward": 0.5714285714285715,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 6,
+    "pred_keys": [
+     "F41",
+     "F42",
+     "F52",
+     "G43",
+     "I10",
+     "I16",
+     "J30",
+     "J45",
+     "L56",
+     "L70",
+     "M32",
+     "R00",
+     "R50",
+     "T4322"
+    ]
+   },
+   {
+    "gt_id": 7165,
+    "reward": 0.6521739130434783,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "D86",
+     "E21",
+     "K51",
+     "L52",
+     "M14"
+    ]
+   },
+   {
+    "gt_id": 7176,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7182,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 6,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "D70",
+     "E03",
+     "E05",
+     "I50"
+    ]
+   },
+   {
+    "gt_id": 7183,
+    "reward": 0.5454545454545454,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "A51",
+     "N39"
+    ]
+   },
+   {
+    "gt_id": 7189,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 6,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E05"
+    ]
+   },
+   {
+    "gt_id": 7206,
+    "reward": 0.4,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "J45",
+     "L50",
+     "T782"
+    ]
+   },
+   {
+    "gt_id": 7210,
+    "reward": 0.8,
+    "submitted": true,
+    "tool_calls": 2,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "J10",
+     "J15"
+    ]
+   },
+   {
+    "gt_id": 7236,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "O60"
+    ]
+   },
+   {
+    "gt_id": 7237,
+    "reward": 0.4,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "D35",
+     "E22",
+     "H53"
+    ]
+   },
+   {
+    "gt_id": 7253,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "N75"
+    ]
+   },
+   {
+    "gt_id": 7255,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "F40"
+    ]
+   },
+   {
+    "gt_id": 7259,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "L23"
+    ]
+   },
+   {
+    "gt_id": 7266,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "B86"
+    ]
+   },
+   {
+    "gt_id": 7274,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "R55"
+    ]
+   },
+   {
+    "gt_id": 7282,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "A63",
+     "B97"
+    ]
+   },
+   {
+    "gt_id": 7302,
+    "reward": 0.33333333333333337,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "D72",
+     "E66",
+     "F10",
+     "I10",
+     "J90",
+     "J98",
+     "K21",
+     "K22",
+     "T797"
+    ]
+   },
+   {
+    "gt_id": 7308,
+    "reward": 0.923076923076923,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 5,
+    "pred_keys": [
+     "E11",
+     "E78",
+     "I10",
+     "I20",
+     "I50",
+     "I73"
+    ]
+   },
+   {
+    "gt_id": 7344,
+    "reward": 0.5333333333333333,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "E11",
+     "E78",
+     "I10",
+     "I20",
+     "N18",
+     "N52"
+    ]
+   },
+   {
+    "gt_id": 7367,
+    "reward": 0.9285714285714286,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 6,
+    "pred_keys": [
+     "C18",
+     "C92",
+     "D61",
+     "G25",
+     "I10",
+     "I25",
+     "I48",
+     "T462X"
+    ]
+   },
+   {
+    "gt_id": 7397,
+    "reward": 0.45454545454545453,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 5,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 5,
+    "pred_keys": [
+     "D64",
+     "E43",
+     "E51",
+     "E53",
+     "E56",
+     "E61",
+     "E83",
+     "F10",
+     "G40",
+     "G62",
+     "H55",
+     "I45",
+     "K86",
+     "R26"
+    ]
+   },
+   {
+    "gt_id": 7398,
+    "reward": 0.7887323943661971,
+    "submitted": true,
+    "tool_calls": 8,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "C44",
+     "E78",
+     "I12",
+     "I15",
+     "J44",
+     "K25",
+     "K27",
+     "K92",
+     "M17",
+     "N18"
+    ]
+   },
+   {
+    "gt_id": 7402,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7403,
+    "reward": 0.28571428571428575,
+    "submitted": true,
+    "tool_calls": 6,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "B20",
+     "D70",
+     "D89",
+     "J02",
+     "K92",
+     "R50"
+    ]
+   },
+   {
+    "gt_id": 7418,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 6,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "B18",
+     "F11",
+     "F17",
+     "I33",
+     "M51",
+     "N17"
+    ]
+   },
+   {
+    "gt_id": 7422,
+    "reward": 0.7253886010362695,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 5,
+    "pred_keys": [
+     "A28",
+     "B20",
+     "B45",
+     "B59",
+     "C83",
+     "D74",
+     "G40",
+     "J96"
+    ]
+   },
+   {
+    "gt_id": 7427,
+    "reward": 0.16666666666666666,
+    "submitted": true,
+    "tool_calls": 2,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "B20",
+     "B99",
+     "D63",
+     "J18",
+     "N18",
+     "R05",
+     "R06",
+     "R41",
+     "R50",
+     "R51"
+    ]
+   },
+   {
+    "gt_id": 7454,
+    "reward": 0.5,
+    "submitted": true,
+    "tool_calls": 8,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "F17",
+     "F20",
+     "F33",
+     "G21",
+     "G24",
+     "G25",
+     "I10"
+    ]
+   },
+   {
+    "gt_id": 7457,
+    "reward": 0.4,
+    "submitted": true,
+    "tool_calls": 2,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "N20",
+     "R10",
+     "R11"
+    ]
+   },
+   {
+    "gt_id": 7458,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "J30",
+     "T600X"
+    ]
+   },
+   {
+    "gt_id": 7463,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 3,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7476,
+    "reward": 0.5,
+    "submitted": true,
+    "tool_calls": 6,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "B18",
+     "D61",
+     "D69",
+     "F11",
+     "F43"
+    ]
+   },
+   {
+    "gt_id": 7485,
+    "reward": 0.5714285714285715,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "E80",
+     "G44",
+     "I15",
+     "J30",
+     "N18",
+     "Q61",
+     "R80",
+     "Z90"
+    ]
+   },
+   {
+    "gt_id": 7486,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 2,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7493,
+    "reward": 0.4,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E66",
+     "I31",
+     "I95",
+     "J30",
+     "K21",
+     "S299X"
+    ]
+   },
+   {
+    "gt_id": 7504,
+    "reward": 0.28571428571428575,
+    "submitted": true,
+    "tool_calls": 6,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "A52",
+     "E78",
+     "G62",
+     "I10",
+     "I73",
+     "M62",
+     "N31",
+     "R32",
+     "Z95"
+    ]
+   },
+   {
+    "gt_id": 7510,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 8,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "B96",
+     "L03"
+    ]
+   },
+   {
+    "gt_id": 7512,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7519,
+    "reward": 0.5,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "E78",
+     "I10",
+     "I11",
+     "I25",
+     "I70",
+     "I71",
+     "J20",
+     "J44"
+    ]
+   },
+   {
+    "gt_id": 7539,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 15,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7545,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 1,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7549,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 5,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "E11",
+     "E87",
+     "I10",
+     "I95",
+     "N18",
+     "N39",
+     "N40",
+     "R33",
+     "R41"
+    ]
+   },
+   {
+    "gt_id": 7580,
+    "reward": 0.9333333333333333,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 7,
+    "pred_keys": [
+     "C79",
+     "E03",
+     "E78",
+     "I10",
+     "I48",
+     "I65",
+     "I69",
+     "I71",
+     "I74",
+     "J70",
+     "J85",
+     "K55"
+    ]
+   },
+   {
+    "gt_id": 7583,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 5,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "C34",
+     "E78",
+     "I10",
+     "I31",
+     "I33",
+     "I44",
+     "I48",
+     "I71",
+     "J91",
+     "R19"
+    ]
+   },
+   {
+    "gt_id": 7584,
+    "reward": 0.7499999999999999,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "E11",
+     "E66",
+     "E78",
+     "I10",
+     "I16",
+     "I21",
+     "I25",
+     "I50",
+     "I63"
+    ]
+   },
+   {
+    "gt_id": 7589,
+    "reward": 0.5,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "A81",
+     "G20",
+     "G31",
+     "G83",
+     "I10",
+     "I21",
+     "I50",
+     "I51",
+     "K56",
+     "K59",
+     "M00",
+     "M1A",
+     "M85",
+     "Q21"
+    ]
+   },
+   {
+    "gt_id": 7592,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7595,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 4,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7604,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 2,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7625,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 3,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7629,
+    "reward": 0.6666666666666665,
+    "submitted": true,
+    "tool_calls": 2,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 6,
+    "pred_keys": [
+     "B44",
+     "B90",
+     "C34",
+     "C61",
+     "C67",
+     "C79",
+     "G70",
+     "G83",
+     "I25",
+     "I50",
+     "J44",
+     "N39",
+     "R52"
+    ]
+   },
+   {
+    "gt_id": 7636,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 6,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7647,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7663,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7673,
+    "reward": 0.7368421052631579,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 7,
+    "pred_keys": [
+     "D80",
+     "D82",
+     "E20",
+     "E55",
+     "I27",
+     "I50",
+     "J98",
+     "N25",
+     "P27",
+     "P29",
+     "Q20",
+     "Q21",
+     "R06",
+     "R62"
+    ]
+   },
+   {
+    "gt_id": 7675,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 4,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7701,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 5,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7705,
+    "reward": 0.4615384615384615,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "B97",
+     "D68",
+     "J38",
+     "K91",
+     "P53",
+     "Q20",
+     "Q79",
+     "Z20",
+     "Z21"
+    ]
+   },
+   {
+    "gt_id": 7710,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 4,
+    "gold_keys": 4,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7725,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 6,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7736,
+    "reward": 0.33333333333333337,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "I51",
+     "J96",
+     "Q21",
+     "Q24",
+     "R06",
+     "R68"
+    ]
+   },
+   {
+    "gt_id": 7744,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "I25",
+     "M30"
+    ]
+   },
+   {
+    "gt_id": 7745,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 4,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7749,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "D81",
+     "F80",
+     "F84",
+     "H65",
+     "H90"
+    ]
+   },
+   {
+    "gt_id": 7757,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7768,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 4,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7770,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 4,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7772,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "C91"
+    ]
+   },
+   {
+    "gt_id": 7775,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 2,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7785,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7792,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 4,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7843,
+    "reward": 0.0,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": [
+     "A37",
+     "N45",
+     "Z28"
+    ]
+   },
+   {
+    "gt_id": 7853,
+    "reward": 0.49557522123893805,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "B20",
+     "B45",
+     "E11",
+     "I10",
+     "N02",
+     "N04",
+     "N18",
+     "R29",
+     "R50",
+     "Z86"
+    ]
+   },
+   {
+    "gt_id": 7868,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7869,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7873,
+    "reward": 0.46511627906976744,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 5,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "A51",
+     "A56",
+     "A60",
+     "B20",
+     "D69"
+    ]
+   },
+   {
+    "gt_id": 7875,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 2,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7882,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7893,
+    "reward": 0.7058823529411765,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 4,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "D73",
+     "F11",
+     "F17",
+     "G89",
+     "R65",
+     "S142X",
+     "T401X",
+     "Z87"
+    ]
+   },
+   {
+    "gt_id": 7899,
+    "reward": 0.1818181818181818,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E87",
+     "F11",
+     "F32",
+     "I95",
+     "M62",
+     "N17",
+     "R09",
+     "T402X",
+     "T670"
+    ]
+   },
+   {
+    "gt_id": 7909,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7910,
+    "reward": 0.2222222222222222,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "F17",
+     "F20",
+     "F33",
+     "I16",
+     "R00",
+     "R50",
+     "T4322",
+     "Z91"
+    ]
+   },
+   {
+    "gt_id": 7934,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7956,
+    "reward": 0.8,
+    "submitted": true,
+    "tool_calls": 2,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "K51",
+     "K83"
+    ]
+   },
+   {
+    "gt_id": 7973,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 2,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7974,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 1,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7985,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7990,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 3,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 7996,
+    "reward": 0.42857142857142855,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "B95",
+     "L08",
+     "S6145"
+    ]
+   },
+   {
+    "gt_id": 8004,
+    "reward": 0.5,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "F14",
+     "F17",
+     "F41",
+     "J34",
+     "R00",
+     "R04"
+    ]
+   },
+   {
+    "gt_id": 8038,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 8046,
+    "reward": 0.6973180076628352,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 7,
+    "pred_keys": [
+     "C50",
+     "C53",
+     "D50",
+     "E11",
+     "E85",
+     "H33",
+     "H81",
+     "I10",
+     "I97",
+     "J95",
+     "J96",
+     "K57",
+     "K92",
+     "M06",
+     "M85",
+     "N18"
+    ]
+   },
+   {
+    "gt_id": 8049,
+    "reward": 0.3582089552238806,
+    "submitted": true,
+    "tool_calls": 7,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "D51",
+     "E11",
+     "E24",
+     "E66",
+     "G03",
+     "H05",
+     "I10",
+     "I67",
+     "J32",
+     "M81"
+    ]
+   },
+   {
+    "gt_id": 8078,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 4,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 8101,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 8106,
+    "reward": 0.8571428571428571,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "D69",
+     "G51",
+     "H81"
+    ]
+   },
+   {
+    "gt_id": 8119,
+    "reward": 0.28571428571428575,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E88",
+     "I73",
+     "J43",
+     "J45",
+     "L20",
+     "M06",
+     "M25"
+    ]
+   },
+   {
+    "gt_id": 8126,
+    "reward": 0.3333333333333333,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E03",
+     "E11",
+     "E66",
+     "E78",
+     "I10",
+     "K43",
+     "K91",
+     "R17"
+    ]
+   },
+   {
+    "gt_id": 8160,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 1,
+    "gold_keys": 8,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 8179,
+    "reward": 1.0,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 5,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 4,
+    "pred_keys": [
+     "C23",
+     "E11",
+     "E66",
+     "I10",
+     "I50",
+     "J81",
+     "K80",
+     "N18"
+    ]
+   },
+   {
+    "gt_id": 8180,
+    "reward": 0.7692307692307693,
+    "submitted": true,
+    "tool_calls": 3,
+    "gold_keys": 7,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 6,
+    "pred_keys": [
+     "A81",
+     "C56",
+     "E21",
+     "G35",
+     "G70",
+     "I10",
+     "J44",
+     "M17",
+     "M81",
+     "N39"
+    ]
+   },
+   {
+    "gt_id": 8199,
+    "reward": 0.7499999999999999,
+    "submitted": true,
+    "tool_calls": 5,
+    "gold_keys": 3,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 3,
+    "pred_keys": [
+     "C49",
+     "E34",
+     "I89",
+     "K62",
+     "M85",
+     "N85"
+    ]
+   },
+   {
+    "gt_id": 8208,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 8222,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 2,
+    "pred_keys": [
+     "I01",
+     "I02",
+     "I05",
+     "I09"
+    ]
+   },
+   {
+    "gt_id": 8243,
+    "reward": 0.0,
+    "submitted": false,
+    "tool_calls": 0,
+    "gold_keys": 2,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 0,
+    "pred_keys": []
+   },
+   {
+    "gt_id": 8254,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 6,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E03",
+     "Q89"
+    ]
+   },
+   {
+    "gt_id": 8262,
+    "reward": 0.6666666666666666,
+    "submitted": true,
+    "tool_calls": 4,
+    "gold_keys": 1,
+    "gold_keys_seen_in_tools": 0,
+    "gold_keys_predicted": 1,
+    "pred_keys": [
+     "E25",
+     "E27",
+     "Q56"
+    ]
+   }
+  ],
+  "qwen-env": [
+   {
+    "gt_id": 7015,
+    "reward": 1.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7025,
+    "reward": 0.5,
+    "ok": true
+   },
+   {
+    "gt_id": 7033,
+    "reward": 0.4444444444444445,
+    "ok": true
+   },
+   {
+    "gt_id": 7047,
+    "reward": 0.19047619047619044,
+    "ok": true
+   },
+   {
+    "gt_id": 7070,
+    "reward": 0.25000000000000006,
+    "ok": true
+   },
+   {
+    "gt_id": 7076,
+    "reward": 0.3225806451612903,
+    "ok": true
+   },
+   {
+    "gt_id": 7011,
+    "reward": 0.2912621359223301,
+    "ok": true
+   },
+   {
+    "gt_id": 7087,
+    "reward": 0.8333333333333333,
+    "ok": true
+   },
+   {
+    "gt_id": 7080,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7066,
+    "reward": 0.26666666666666666,
+    "ok": true
+   },
+   {
+    "gt_id": 7150,
+    "reward": 0.2222222222222222,
+    "ok": true
+   },
+   {
+    "gt_id": 7176,
+    "reward": 0.5,
+    "ok": true
+   },
+   {
+    "gt_id": 7077,
+    "reward": 0.3333333333333333,
+    "ok": true
+   },
+   {
+    "gt_id": 7158,
+    "reward": 0.6862745098039216,
+    "ok": true
+   },
+   {
+    "gt_id": 7136,
+    "reward": 0.7466666666666666,
+    "ok": true
+   },
+   {
+    "gt_id": 7182,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7183,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7236,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7189,
+    "reward": 1.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7165,
+    "reward": 0.22222222222222224,
+    "ok": true
+   },
+   {
+    "gt_id": 7210,
+    "reward": 0.4,
+    "ok": true
+   },
+   {
+    "gt_id": 7237,
+    "reward": 1.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7206,
+    "reward": 0.4,
+    "ok": true
+   },
+   {
+    "gt_id": 7255,
+    "reward": 1.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7253,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7282,
+    "reward": 1.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7344,
+    "reward": 0.15384615384615385,
+    "ok": true
+   },
+   {
+    "gt_id": 7259,
+    "reward": 1.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7266,
+    "reward": 1.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7308,
+    "reward": 0.2857142857142857,
+    "ok": true
+   },
+   {
+    "gt_id": 7302,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7274,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7397,
+    "reward": 0.26086956521739135,
+    "ok": true
+   },
+   {
+    "gt_id": 7418,
+    "reward": 0.6666666666666666,
+    "ok": true
+   },
+   {
+    "gt_id": 7402,
+    "reward": 0.25,
+    "ok": true
+   },
+   {
+    "gt_id": 7422,
+    "reward": 0.16216216216216214,
+    "ok": true
+   },
+   {
+    "gt_id": 7403,
+    "reward": 0.4,
+    "ok": true
+   },
+   {
+    "gt_id": 7457,
+    "reward": 1.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7454,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7458,
+    "reward": 0.5,
+    "ok": true
+   },
+   {
+    "gt_id": 7398,
+    "reward": 0.5333333333333333,
+    "ok": true
+   },
+   {
+    "gt_id": 7463,
+    "reward": 0.6666666666666666,
+    "ok": true
+   },
+   {
+    "gt_id": 7486,
+    "reward": 0.6666666666666666,
+    "ok": true
+   },
+   {
+    "gt_id": 7485,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7427,
+    "reward": 0.4,
+    "ok": true
+   },
+   {
+    "gt_id": 7510,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7493,
+    "reward": 1.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7512,
+    "reward": 1.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7476,
+    "reward": 0.6666666666666666,
+    "ok": true
+   },
+   {
+    "gt_id": 7545,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7519,
+    "reward": 0.28571428571428575,
+    "ok": true
+   },
+   {
+    "gt_id": 7549,
+    "reward": 0.4444444444444445,
+    "ok": true
+   },
+   {
+    "gt_id": 7583,
+    "reward": 0.888888888888889,
+    "ok": true
+   },
+   {
+    "gt_id": 7580,
+    "reward": 0.22471910112359553,
+    "ok": true
+   },
+   {
+    "gt_id": 7539,
+    "reward": 0.631578947368421,
+    "ok": true
+   },
+   {
+    "gt_id": 7584,
+    "reward": 0.6666666666666666,
+    "ok": true
+   },
+   {
+    "gt_id": 7589,
+    "reward": 0.07142857142857142,
+    "ok": true
+   },
+   {
+    "gt_id": 7504,
+    "reward": 0.4,
+    "ok": true
+   },
+   {
+    "gt_id": 7592,
+    "reward": 0.6666666666666667,
+    "ok": true
+   },
+   {
+    "gt_id": 7663,
+    "reward": 1.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7636,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7647,
+    "reward": 1.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7604,
+    "reward": 0.7499999999999999,
+    "ok": true
+   },
+   {
+    "gt_id": 7625,
+    "reward": 0.49411764705882344,
+    "ok": true
+   },
+   {
+    "gt_id": 7675,
+    "reward": 0.3636363636363636,
+    "ok": true
+   },
+   {
+    "gt_id": 7629,
+    "reward": 0.5,
+    "ok": true
+   },
+   {
+    "gt_id": 7705,
+    "reward": 0.1818181818181818,
+    "ok": true
+   },
+   {
+    "gt_id": 7673,
+    "reward": 0.2926829268292683,
+    "ok": true
+   },
+   {
+    "gt_id": 7725,
+    "reward": 0.5,
+    "ok": true
+   },
+   {
+    "gt_id": 7744,
+    "reward": 1.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7736,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7595,
+    "reward": 0.4528301886792453,
+    "ok": true
+   },
+   {
+    "gt_id": 7710,
+    "reward": 0.5714285714285715,
+    "ok": true
+   },
+   {
+    "gt_id": 7745,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7701,
+    "reward": 0.19047619047619047,
+    "ok": true
+   },
+   {
+    "gt_id": 7772,
+    "reward": 1.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7757,
+    "reward": 0.2222222222222222,
+    "ok": true
+   },
+   {
+    "gt_id": 7367,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7843,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7792,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7785,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7775,
+    "reward": 0.8,
+    "ok": true
+   },
+   {
+    "gt_id": 7868,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7869,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7853,
+    "reward": 0.5283018867924528,
+    "ok": true
+   },
+   {
+    "gt_id": 7770,
+    "reward": 0.4,
+    "ok": true
+   },
+   {
+    "gt_id": 7899,
+    "reward": 0.6666666666666666,
+    "ok": true
+   },
+   {
+    "gt_id": 7893,
+    "reward": 0.3636363636363636,
+    "ok": true
+   },
+   {
+    "gt_id": 7909,
+    "reward": 0.5454545454545454,
+    "ok": true
+   },
+   {
+    "gt_id": 7749,
+    "reward": 1.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7910,
+    "reward": 0.5,
+    "ok": true
+   },
+   {
+    "gt_id": 7768,
+    "reward": 0.631578947368421,
+    "ok": true
+   },
+   {
+    "gt_id": 7873,
+    "reward": 0.10526315789473685,
+    "ok": true
+   },
+   {
+    "gt_id": 7882,
+    "reward": 0.3333333333333333,
+    "ok": true
+   },
+   {
+    "gt_id": 7973,
+    "reward": 1.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7985,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7934,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7974,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7956,
+    "reward": 0.5,
+    "ok": true
+   },
+   {
+    "gt_id": 8004,
+    "reward": 0.6666666666666666,
+    "ok": true
+   },
+   {
+    "gt_id": 7996,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 7990,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 8038,
+    "reward": 0.3333333333333333,
+    "ok": true
+   },
+   {
+    "gt_id": 8078,
+    "reward": 0.7317073170731706,
+    "ok": true
+   },
+   {
+    "gt_id": 8101,
+    "reward": 0.8,
+    "ok": true
+   },
+   {
+    "gt_id": 7875,
+    "reward": 1.0,
+    "ok": true
+   },
+   {
+    "gt_id": 8160,
+    "reward": 0.3333333333333333,
+    "ok": true
+   },
+   {
+    "gt_id": 8126,
+    "reward": 0.3333333333333333,
+    "ok": true
+   },
+   {
+    "gt_id": 8106,
+    "reward": 0.6666666666666666,
+    "ok": true
+   },
+   {
+    "gt_id": 8046,
+    "reward": 0.45528455284552843,
+    "ok": true
+   },
+   {
+    "gt_id": 8119,
+    "reward": 0.5,
+    "ok": true
+   },
+   {
+    "gt_id": 8180,
+    "reward": 0.4411764705882353,
+    "ok": true
+   },
+   {
+    "gt_id": 8222,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 8208,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 8254,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 8243,
+    "reward": 0.0,
+    "ok": true
+   },
+   {
+    "gt_id": 8179,
+    "reward": 0.7272727272727273,
+    "ok": true
+   },
+   {
+    "gt_id": 8049,
+    "reward": 0.4067796610169492,
+    "ok": true
+   },
+   {
+    "gt_id": 8262,
+    "reward": 0.6666666666666666,
+    "ok": true
+   },
+   {
+    "gt_id": 8199,
+    "reward": 0.0,
+    "ok": true
+   }
+  ]
+ },
+ "cost_note": "OpenRouter key daily usage at completion: $4.45; includes small pilots by two interrupted sessions the same evening."
+}
