@@ -40,6 +40,8 @@ def main() -> None:
                         help="Fixed split to evaluate; heldout stays sealed")
     parser.add_argument("--temperature", type=float,
                         help="Decoding diagnostic only: override the paper's temperature 0.7 (0 = greedy, top-p 1)")
+    parser.add_argument("--top-p", type=float,
+                        help="Decoding diagnostic only: override top-p (e.g. 1.0 with temperature 1 = RL rollout sampling)")
     args = parser.parse_args()
     base = tomllib.loads(args.config.read_text())
     taskset = base["env"]["taskset"]
@@ -51,9 +53,10 @@ def main() -> None:
     if args.seed is not None:
         base["sampling"]["seed"] = args.seed
     override = None
-    if args.temperature is not None:
-        override = {"temperature": args.temperature,
-                    "top_p": 1.0 if args.temperature == 0 else base["sampling"]["top_p"]}
+    if args.temperature is not None or args.top_p is not None:
+        temperature = base["sampling"]["temperature"] if args.temperature is None else args.temperature
+        top_p = args.top_p if args.top_p is not None else (1.0 if temperature == 0 else base["sampling"]["top_p"])
+        override = {"temperature": temperature, "top_p": top_p}
         base["sampling"].update(override)
     allowed = ([i.gt_id for i in benchmark.load_instances(("public",))] if args.split == "public"
                else json.loads(config.SPLIT_FILE.read_text())[args.split])
