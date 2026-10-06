@@ -137,7 +137,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("traces", type=Path)
     parser.add_argument("--name", required=True)
-    parser.add_argument("--split", choices=("train", "dev"), default="dev")
+    parser.add_argument("--split", choices=("train", "dev", "public"), default="dev")
     args = parser.parse_args()
     result = asyncio.run(report(args.traces, args.split))
     result["summary"]["name"] = args.name
