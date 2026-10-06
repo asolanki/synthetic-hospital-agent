@@ -51,6 +51,7 @@ by calling `submit_diagnosis`. The server scores the submission; that number is 
 Write-ups: [milestone 1](results/milestone1.md) (benchmark audit and baselines),
 [milestone 2](results/milestone2_other_tasks.md) (the other three tasks),
 [milestone 3](results/milestone3_training.md) (SFT vs RL vs continued SFT; where the error is),
+[milestone 4](results/milestone4_sft_and_codebook.md) (SFT epoch sweep; a public ICD-10-CM code-book tool),
 [a worked case](results/cases/patient_2123.md).
 
 ## Setup

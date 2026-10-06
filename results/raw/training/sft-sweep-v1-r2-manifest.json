@@ -1,0 +1,593 @@
+{
+  "format": "ordered chunks of one tar.gz stream",
+  "bucket": "synthetic-hospital-rl-artifacts",
+  "prefix": "2026-10-06/sft-sweep-v1/chunks-16m/",
+  "verified_at": "2026-10-06T22:34:36.462152+00:00",
+  "archive_sha256": "a2d4464c6484d9a1bcc4178b85ff3aed51363f82278bded97e9a70378a3e5968",
+  "archive_bytes": 1389471077,
+  "parts": [
+    {
+      "file": "archive.tar.gz.part-aaaa",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaaa",
+      "bytes": 16777216,
+      "sha256": "97140eee24e39383ebc35b5ac95494b29845eb4157c39b3ca08915c938d04fc9",
+      "md5": "5e911ed26308fb001a4d181f60e80d37"
+    },
+    {
+      "file": "archive.tar.gz.part-aaab",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaab",
+      "bytes": 16777216,
+      "sha256": "b90a1220075bd4dfbec1777df2012b81ca432c62d48dda77dc42ca1d08e9cf9b",
+      "md5": "edd0094e5a8396fedf2e5bfb5285d037"
+    },
+    {
+      "file": "archive.tar.gz.part-aaac",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaac",
+      "bytes": 16777216,
+      "sha256": "dcd19816925ddfafd120de15858b522488ba87a00e1e917c940307faddd5b67b",
+      "md5": "e8e3e2a63418ddc98e70d65f73913e03"
+    },
+    {
+      "file": "archive.tar.gz.part-aaad",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaad",
+      "bytes": 16777216,
+      "sha256": "ff04e2eb6a0e64f6506493019c3a8733890c1a4ac521893652a7dcbc6d637b89",
+      "md5": "bafa378ffff9e02b049f3ca6fd6298c8"
+    },
+    {
+      "file": "archive.tar.gz.part-aaae",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaae",
+      "bytes": 16777216,
+      "sha256": "3041e6be2e8e96c1b49794119001d41ae6158aec162c0a9804e2883bf46421d0",
+      "md5": "970e3b20a40ff2d0805189050ce3fb4b"
+    },
+    {
+      "file": "archive.tar.gz.part-aaaf",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaaf",
+      "bytes": 16777216,
+      "sha256": "fb41c14f879307490ba0f377765e45b9ca6e487296449150be1835903a03dc72",
+      "md5": "995d52b2ea014caee4f13ddf1f0dbb25"
+    },
+    {
+      "file": "archive.tar.gz.part-aaag",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaag",
+      "bytes": 16777216,
+      "sha256": "9bfc7ff93e53c6750d6232b2d008090627571ed735a7ec0495c623291beae9c8",
+      "md5": "7a8dea987a7dead7cb43143672e87899"
+    },
+    {
+      "file": "archive.tar.gz.part-aaah",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaah",
+      "bytes": 16777216,
+      "sha256": "9621437fb73f625098e2b87684fbadb633525a78d2e105c9bc3f242d578c5af1",
+      "md5": "cc2a5da6597778c620a28bdad607e729"
+    },
+    {
+      "file": "archive.tar.gz.part-aaai",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaai",
+      "bytes": 16777216,
+      "sha256": "a5492835368d67ae571e2a7c1ce5054c4f0b13d454ee65f719ae210d0e40d6df",
+      "md5": "36449c441f520fb53989e6b0771f9584"
+    },
+    {
+      "file": "archive.tar.gz.part-aaaj",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaaj",
+      "bytes": 16777216,
+      "sha256": "17b59ff5ea0988b4d800784f65bd141857ec7e8e3c1efc9052b21e7755e6dcf4",
+      "md5": "95ca79ebf58b609f93a32ddf4b424e18"
+    },
+    {
+      "file": "archive.tar.gz.part-aaak",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaak",
+      "bytes": 16777216,
+      "sha256": "317a2ba90590ccd0b9da862d8ae3c8ed02a6cbcf7eab0bdf738d656d38a9099e",
+      "md5": "0349a816e51343e5597d20a7b12b8e16"
+    },
+    {
+      "file": "archive.tar.gz.part-aaal",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaal",
+      "bytes": 16777216,
+      "sha256": "fb9ef39cf139be29c134a605f07888fee1a6c4ba5e035b009e12299936cb72f9",
+      "md5": "3aba141ac0c19e7e832bdae4e0d5ec90"
+    },
+    {
+      "file": "archive.tar.gz.part-aaam",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaam",
+      "bytes": 16777216,
+      "sha256": "b2b7f3229ee38af6b2d2bb5f5499c6ba5186d4e880bc60f35c67522ecef5e7c7",
+      "md5": "d90ae12c16801efcaa339c130517733b"
+    },
+    {
+      "file": "archive.tar.gz.part-aaan",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaan",
+      "bytes": 16777216,
+      "sha256": "84282ce7828d216a1825887848b72dbe0512767e093154f26d2c57e2ec0d30d6",
+      "md5": "69e972d7c3c9bb69b45fe5dcfae8a53f"
+    },
+    {
+      "file": "archive.tar.gz.part-aaao",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaao",
+      "bytes": 16777216,
+      "sha256": "b9c84cba00d2317fa5a41ef4c21555f9fd0fb425ab4d03b27de42668fb3e26c1",
+      "md5": "14ef1f5fc003c35b86c3bf90b1cb4cd5"
+    },
+    {
+      "file": "archive.tar.gz.part-aaap",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaap",
+      "bytes": 16777216,
+      "sha256": "a7cf3c117a1c3ac378afba169d352f9c1be274821e32d4d0c9f176b6fb099ea5",
+      "md5": "aad4b6e83e0310e3e3c9c8138abe8cd8"
+    },
+    {
+      "file": "archive.tar.gz.part-aaaq",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaaq",
+      "bytes": 16777216,
+      "sha256": "cb71a24d44f975922acd4b599bd908dd251fb5962d45ab6577708b953a108d57",
+      "md5": "5867c2f24348bcdfff34cba1a2e39327"
+    },
+    {
+      "file": "archive.tar.gz.part-aaar",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaar",
+      "bytes": 16777216,
+      "sha256": "358197a510ab1b89f33e03765c9374400aae842db8d8dbdb2da8609641c00587",
+      "md5": "be3a617586c5d9bde16650a06975ffdc"
+    },
+    {
+      "file": "archive.tar.gz.part-aaas",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaas",
+      "bytes": 16777216,
+      "sha256": "35f5535988de89e7b1dd28bdcf3eaeaac8c86edc794462fd22336ed7adaff941",
+      "md5": "98bce0eedea8c0c63e25ba096f63b0f4"
+    },
+    {
+      "file": "archive.tar.gz.part-aaat",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaat",
+      "bytes": 16777216,
+      "sha256": "c1efc6d1ac38547f43661556e2d30d1c536f23f054d0baaff60ef055b4412252",
+      "md5": "97019886e9ca3b9b455cb89518c34e0a"
+    },
+    {
+      "file": "archive.tar.gz.part-aaau",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaau",
+      "bytes": 16777216,
+      "sha256": "c2b0194d89358f7f04c36eaea280e0175ac7f811a87cbb1232174b0672c37455",
+      "md5": "07ac07f2d80d78f36368105773e79c90"
+    },
+    {
+      "file": "archive.tar.gz.part-aaav",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaav",
+      "bytes": 16777216,
+      "sha256": "be9360eb9dd563b26da77a5d45e05d165dbed6747ebd899a46eabf02a8b18946",
+      "md5": "ec4e5f76b2f6cec65c39896490147120"
+    },
+    {
+      "file": "archive.tar.gz.part-aaaw",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaaw",
+      "bytes": 16777216,
+      "sha256": "c31f55cbf56377e782179b9bbef802968094a9deef8ebc01e6859c94946677be",
+      "md5": "c12af3db710d232f35716e5207a1338a"
+    },
+    {
+      "file": "archive.tar.gz.part-aaax",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaax",
+      "bytes": 16777216,
+      "sha256": "c3f6a1fa1b24948cb07481ded5c9eb1255941bf45ec55e23e1c701af49f44d0c",
+      "md5": "77f762c74c7573758495859e03e2abe5"
+    },
+    {
+      "file": "archive.tar.gz.part-aaay",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaay",
+      "bytes": 16777216,
+      "sha256": "2cfb1566f200a1aa79d672b94f167663d73645c4197c27152ec1441242f283ed",
+      "md5": "64fd52ea8394d3a0ce0f2f600ddb3a5a"
+    },
+    {
+      "file": "archive.tar.gz.part-aaaz",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaaz",
+      "bytes": 16777216,
+      "sha256": "4b6cfde8d5260112f70e84e355266e446120bbbe8ba102bc640e42be9c63f177",
+      "md5": "84ab035d2fc78755c4610c9faae2430c"
+    },
+    {
+      "file": "archive.tar.gz.part-aaba",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaba",
+      "bytes": 16777216,
+      "sha256": "6aadf14539d9012879f8b653f4acb510f747293c0deda21e856b587a44ff3247",
+      "md5": "93ae111faf57e314c1b3bc1c6580b862"
+    },
+    {
+      "file": "archive.tar.gz.part-aabb",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aabb",
+      "bytes": 16777216,
+      "sha256": "a19193e60d25c14e975208f033100ff96714fffb70f80cd9417a6f774529744f",
+      "md5": "2bb641bb3acf59fc486e295a4e0946b6"
+    },
+    {
+      "file": "archive.tar.gz.part-aabc",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aabc",
+      "bytes": 16777216,
+      "sha256": "d3bd22cf462c675e9278d736f78f58b40a76bd73642c95aa52dcad0dd1192e28",
+      "md5": "7fdfe28027fd1795068b0286cd7d2ced"
+    },
+    {
+      "file": "archive.tar.gz.part-aabd",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aabd",
+      "bytes": 16777216,
+      "sha256": "60d2f02720fdba1ea589524c9d13a443d1f232fb98654ad5e15a0889b3d4d55e",
+      "md5": "86993133bd8c013b68ef00bc2504db35"
+    },
+    {
+      "file": "archive.tar.gz.part-aabe",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aabe",
+      "bytes": 16777216,
+      "sha256": "728a5cb20a1598d348978cc48f134b30e830cc771ca5dc8381b20d1e8ea7af7e",
+      "md5": "1f267310335a020ec96bfe139a58f557"
+    },
+    {
+      "file": "archive.tar.gz.part-aabf",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aabf",
+      "bytes": 16777216,
+      "sha256": "0ae73f2eca5e56ced04b7aae10ee81379b6619a9c6dc3f4ce7e64bd566cab4e5",
+      "md5": "d18fc81efd167faea2d6db4a0e779391"
+    },
+    {
+      "file": "archive.tar.gz.part-aabg",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aabg",
+      "bytes": 16777216,
+      "sha256": "e8791beb6ebf0b1b99143b4d029ae6f2cccc6b4717263d5d559a8332031f2d8f",
+      "md5": "ab8daa52ec4c0a124ea82801f53e9aef"
+    },
+    {
+      "file": "archive.tar.gz.part-aabh",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aabh",
+      "bytes": 16777216,
+      "sha256": "0f9fd150de524f95f1dd00a48edcac398cc4eba6520e2c936781aa9ff1b1419d",
+      "md5": "5061b7cb3fc7ef132d3b4e8bcfa27c35"
+    },
+    {
+      "file": "archive.tar.gz.part-aabi",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aabi",
+      "bytes": 16777216,
+      "sha256": "c2181212eaebfe0d2c9593999e1342a6ff508a589a633a24cd48983c30d67924",
+      "md5": "f155daf89ef6499aeb5f0b62bce89166"
+    },
+    {
+      "file": "archive.tar.gz.part-aabj",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aabj",
+      "bytes": 16777216,
+      "sha256": "49ab138365059748fd675faac1d7bd0677dd34e361cfdcfb3c09a81753c420c7",
+      "md5": "a7199c7eea15dfdc722c729e33065e9e"
+    },
+    {
+      "file": "archive.tar.gz.part-aabk",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aabk",
+      "bytes": 16777216,
+      "sha256": "52aa26fbe65562158778e0a96b58fbefc4a938df5d4d48dcfe381a69ad2ddcc2",
+      "md5": "4c9675d12cb223aaf86d8aeb25e2a67a"
+    },
+    {
+      "file": "archive.tar.gz.part-aabl",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aabl",
+      "bytes": 16777216,
+      "sha256": "7ea127a4597861bbb731d1cc22ac908677091226295e0aca71ea4c2c0f4991b3",
+      "md5": "431acb86dab186640ea408e06590c2d7"
+    },
+    {
+      "file": "archive.tar.gz.part-aabm",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aabm",
+      "bytes": 16777216,
+      "sha256": "bf1d6618f757a2cdc1f350b3ed4b74a5b23a0596f5174e4f4e1cfd4826590285",
+      "md5": "9c950f70f8b2c862a8b731acfa1dbe71"
+    },
+    {
+      "file": "archive.tar.gz.part-aabn",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aabn",
+      "bytes": 16777216,
+      "sha256": "a3ce336f67525aa848a50abbd6d6d82b7a83bfb0458edcc53f21a4f9bf3d2b33",
+      "md5": "d04af29726ae30d59c5be74e82a873d0"
+    },
+    {
+      "file": "archive.tar.gz.part-aabo",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aabo",
+      "bytes": 16777216,
+      "sha256": "bf2c6b6e98c2ba285877c07682bc4eb3ae3b2fb625a776ea4624fd3ef7120624",
+      "md5": "d24c86a58a37c30413925f2e78b79d44"
+    },
+    {
+      "file": "archive.tar.gz.part-aabp",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aabp",
+      "bytes": 16777216,
+      "sha256": "d171790fbf91bd8742e58b034f4fe03fea62f6d5c59c05a1e21ddf9dccc6330a",
+      "md5": "3f36420f12b0df52fd4539524c56cb9b"
+    },
+    {
+      "file": "archive.tar.gz.part-aabq",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aabq",
+      "bytes": 16777216,
+      "sha256": "a1bb4573b0462dcbe6963bf080d561dc81c9cacac05a75d1d803fa0cd94c7719",
+      "md5": "d582a9bdcb998e4f895984e68484271e"
+    },
+    {
+      "file": "archive.tar.gz.part-aabr",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aabr",
+      "bytes": 16777216,
+      "sha256": "2147bb0e0c9cc5b11a57947144b6ecf9933a86b40371e6786d41b99267c4de18",
+      "md5": "b0fff2ef622dcbe46aed3d598b4ed512"
+    },
+    {
+      "file": "archive.tar.gz.part-aabs",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aabs",
+      "bytes": 16777216,
+      "sha256": "2fa3996bf9e2193d63d9d72c54e0846676470935fc40405fa1459aa5dac8be90",
+      "md5": "bdccf5c450363c21a8c4dd6a4419a4d4"
+    },
+    {
+      "file": "archive.tar.gz.part-aabt",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aabt",
+      "bytes": 16777216,
+      "sha256": "6392044aadbb654ec5209b1b1b8c88f160f6aff955a895045925731b765b2ea7",
+      "md5": "97a24258349eeb6e183336262ae76793"
+    },
+    {
+      "file": "archive.tar.gz.part-aabu",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aabu",
+      "bytes": 16777216,
+      "sha256": "1edcedda0ea49ea1b4cdc858f4ae4055ae666e5af6f41ee97c0b71cf810ad0ab",
+      "md5": "6deceb27a249dfa70676633e55940a58"
+    },
+    {
+      "file": "archive.tar.gz.part-aabv",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aabv",
+      "bytes": 16777216,
+      "sha256": "47804f23ee1f5464ec3663661ab8868159e707ed448b76599f1d441fcb15572c",
+      "md5": "2a25f10da496c02bdf65cb13a42a4c3f"
+    },
+    {
+      "file": "archive.tar.gz.part-aabw",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aabw",
+      "bytes": 16777216,
+      "sha256": "48f35a4865c6a156665134788f36fd9d3b3e47ccbd11215afa6a16504b1d99a0",
+      "md5": "d2bac6b69eac70a6e992f38ab2c39b66"
+    },
+    {
+      "file": "archive.tar.gz.part-aabx",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aabx",
+      "bytes": 16777216,
+      "sha256": "72f7f11761863a050071000b9b20ae027740e98c282cf987f615457c55b4ae94",
+      "md5": "d351628ce77c3921e7f3d4bc706c3227"
+    },
+    {
+      "file": "archive.tar.gz.part-aaby",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaby",
+      "bytes": 16777216,
+      "sha256": "9a3822b0c51b7d771b355b6b5df63bcbc95028e0e3bb43ad2ce24f44acb1a5fa",
+      "md5": "cfbba7c455a0ffe151773bd9b276f72b"
+    },
+    {
+      "file": "archive.tar.gz.part-aabz",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aabz",
+      "bytes": 16777216,
+      "sha256": "ec47f705bc7e4563174f1acbcaa5ed3a0eb16bb8015ea8db85ecea9515a2da61",
+      "md5": "eb3a55ad5bc72331a5da434d1784121a"
+    },
+    {
+      "file": "archive.tar.gz.part-aaca",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaca",
+      "bytes": 16777216,
+      "sha256": "b311cbd41be03b94ecabf7bc79f25315e92e0d6bf8119f46a128a61b2063a573",
+      "md5": "20839c6f71617ba781003747884d5aa5"
+    },
+    {
+      "file": "archive.tar.gz.part-aacb",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aacb",
+      "bytes": 16777216,
+      "sha256": "bde14b2e65099633cb4279eb1290e131c59347b82cf54c2937d91064cdbb2232",
+      "md5": "ab409808de8639465aae93f481f252c5"
+    },
+    {
+      "file": "archive.tar.gz.part-aacc",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aacc",
+      "bytes": 16777216,
+      "sha256": "f8fb76f34fb855aa04c5adee6e96d3a120608c037089c5710359238bbd6b3afa",
+      "md5": "b91e278513d128cdefe5c19bbcb8bbf6"
+    },
+    {
+      "file": "archive.tar.gz.part-aacd",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aacd",
+      "bytes": 16777216,
+      "sha256": "e0e7f4fdf17cb3d05f65fdc1230513dbee48ce8f05ce7dd2317c09847f7d4431",
+      "md5": "1147323f44eec4b044da31857575bfbb"
+    },
+    {
+      "file": "archive.tar.gz.part-aace",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aace",
+      "bytes": 16777216,
+      "sha256": "fdb937698df43f56b51e3ad5d5602368815fd020df7049c487ded79a2bf5ace5",
+      "md5": "bee71305b4155ec057a00151abf5b8f4"
+    },
+    {
+      "file": "archive.tar.gz.part-aacf",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aacf",
+      "bytes": 16777216,
+      "sha256": "07ee6bb6e741b16bd22dbfca45954a73af91e678581f89e96755304f87a10aad",
+      "md5": "5b3a97163d63c0517efaa526a0c104b0"
+    },
+    {
+      "file": "archive.tar.gz.part-aacg",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aacg",
+      "bytes": 16777216,
+      "sha256": "f10904e5aae552c1ac834aca6d78b252e253cafc0d4539977d2c856c0f4865dc",
+      "md5": "f187972f9afe53e1056ca2f2cf21e0f1"
+    },
+    {
+      "file": "archive.tar.gz.part-aach",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aach",
+      "bytes": 16777216,
+      "sha256": "cb0305f32f11fc81b0343ed72afe2e7c516d0d5211b28c7a6364a7d72522a06a",
+      "md5": "484f073ae4f67feb5c8f70b0c04039bd"
+    },
+    {
+      "file": "archive.tar.gz.part-aaci",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaci",
+      "bytes": 16777216,
+      "sha256": "e0e0b15836f63a787fb9f08fa47dfeede237e2c8c49cfe8f90e187e4dfff51f0",
+      "md5": "d19efae377b7da199dcb870d64e5a9f2"
+    },
+    {
+      "file": "archive.tar.gz.part-aacj",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aacj",
+      "bytes": 16777216,
+      "sha256": "55c7b821cdd683959b6be711ec08573edfb3c17dcb8be33209e11363ce64b97c",
+      "md5": "be963dcc7f41efee8def901fb3630e62"
+    },
+    {
+      "file": "archive.tar.gz.part-aack",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aack",
+      "bytes": 16777216,
+      "sha256": "2d4b5268fdc11380ad7ef28c3f6ca80914899ded773ca05d0db2e962e93c8897",
+      "md5": "650d0507738e7c7b49679c495f2213cb"
+    },
+    {
+      "file": "archive.tar.gz.part-aacl",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aacl",
+      "bytes": 16777216,
+      "sha256": "75334548f40944ddcf3ed9243f8de656eee48ac2a7c6a022dca58658bfe3b0f8",
+      "md5": "a483bb6f5cf17d8ab59bbb62af38c738"
+    },
+    {
+      "file": "archive.tar.gz.part-aacm",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aacm",
+      "bytes": 16777216,
+      "sha256": "14a29d08b58fd5d63d3a1a7c6d57c21442eb1474a2ba0d133611029ae02f4d9a",
+      "md5": "119b8a4f02b2385561df90e5d323f894"
+    },
+    {
+      "file": "archive.tar.gz.part-aacn",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aacn",
+      "bytes": 16777216,
+      "sha256": "f03747cdbdbceae762a572e4f398bded857f2262254e82963cfa0c0e94fa1461",
+      "md5": "49d52848dfb2046cd042418481dc2cee"
+    },
+    {
+      "file": "archive.tar.gz.part-aaco",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaco",
+      "bytes": 16777216,
+      "sha256": "7e8bce64d36cb6389b3c4979830cda992988fbf4f6c4081e100ba151a9c6755e",
+      "md5": "61bcd2064f2d1b3b1f70cfa748cbf927"
+    },
+    {
+      "file": "archive.tar.gz.part-aacp",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aacp",
+      "bytes": 16777216,
+      "sha256": "d057721e5cd41a32c6cf2dda1b7d9e207a53760ddea19ae28d0426b3144394eb",
+      "md5": "ec3f8a7a931c1219647e2f1a486adf3f"
+    },
+    {
+      "file": "archive.tar.gz.part-aacq",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aacq",
+      "bytes": 16777216,
+      "sha256": "98abef92eb8bfd57da91ed8939ecaa9172d052c1680c836fe10d3a1b60fb7770",
+      "md5": "37d1a1440f61034c92851813b8c080ab"
+    },
+    {
+      "file": "archive.tar.gz.part-aacr",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aacr",
+      "bytes": 16777216,
+      "sha256": "02e2c8c2aa7286c7a88ee07514c821a4a4da27293ec2598016a424ab76e05d69",
+      "md5": "1a129d128abe8ee9e043ba20500374bf"
+    },
+    {
+      "file": "archive.tar.gz.part-aacs",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aacs",
+      "bytes": 16777216,
+      "sha256": "e56cfc99e07de4cd1ba5fe51bc2251ceab310b93c90ca24d7ce195cb56e7c031",
+      "md5": "0d3ad316cb3b24ee2e227b0cdf4b7d69"
+    },
+    {
+      "file": "archive.tar.gz.part-aact",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aact",
+      "bytes": 16777216,
+      "sha256": "9f154363e2589863fea88fdfeb2cc2bacd800c7fa490b9fb535c92d6d426e864",
+      "md5": "b3e9bbc089c732996260349f196ec8d6"
+    },
+    {
+      "file": "archive.tar.gz.part-aacu",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aacu",
+      "bytes": 16777216,
+      "sha256": "b5243bb28ec7011a695f211f2404b6abdd1376f827f4771611006c8f52380d55",
+      "md5": "7c1aa1d6a86c304d74c00446246c3434"
+    },
+    {
+      "file": "archive.tar.gz.part-aacv",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aacv",
+      "bytes": 16777216,
+      "sha256": "9333558ce44ad00de4f14f3cd822fd5019646a489101da0ad2669927ae1ee925",
+      "md5": "64606d728ea85d9010460e071ff260a9"
+    },
+    {
+      "file": "archive.tar.gz.part-aacw",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aacw",
+      "bytes": 16777216,
+      "sha256": "f8a40ba0a5643e79b4bd0bff3c4990f0b9000a01162e3a5dda9fbde339d0e679",
+      "md5": "2cf4222e0f044c33d121c3cfa6a9635a"
+    },
+    {
+      "file": "archive.tar.gz.part-aacx",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aacx",
+      "bytes": 16777216,
+      "sha256": "4f09bb748a1ba5f3543fdfe5824a0fcdd1e8e4c5d731f53683604b4d3dcc12c1",
+      "md5": "94f89b904cdd910a1d8721b83466e27f"
+    },
+    {
+      "file": "archive.tar.gz.part-aacy",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aacy",
+      "bytes": 16777216,
+      "sha256": "ae8a401ce7fc21c4bfa413d35d299030ff2486a22162b4f01ceb53d37ddf7fa0",
+      "md5": "8bc9ba738388d2523364cc598e4cc438"
+    },
+    {
+      "file": "archive.tar.gz.part-aacz",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aacz",
+      "bytes": 16777216,
+      "sha256": "5c8751e273722e2e74b08a048732f438b241c492b1a7e9fa57175a483ae59bb6",
+      "md5": "6c1471f25f42f1a259970f6e0dd0de8a"
+    },
+    {
+      "file": "archive.tar.gz.part-aada",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aada",
+      "bytes": 16777216,
+      "sha256": "6a43f59f3521e42523d29d5970d863ac0acf84f841d3e0a5360a9417a1cb1bef",
+      "md5": "5fb81ee1fbee37d59d0055a022f01ace"
+    },
+    {
+      "file": "archive.tar.gz.part-aadb",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aadb",
+      "bytes": 16777216,
+      "sha256": "53615b1db368c5c836b1914e802b159976b891c0da4b55357bb84e0747313c2c",
+      "md5": "c58fbbefd3cbc99a9ae348935907995b"
+    },
+    {
+      "file": "archive.tar.gz.part-aadc",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aadc",
+      "bytes": 16777216,
+      "sha256": "e7d2e41efe62409a1ba1c53a31bd34834180c5b42202d913a7b27ee8ab170624",
+      "md5": "7c80200ed49a31d0224ae7f26e441e71"
+    },
+    {
+      "file": "archive.tar.gz.part-aadd",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aadd",
+      "bytes": 16777216,
+      "sha256": "f5e9ea9002a66ff7c31f05cf8b112d942edc2972f37776ed7704ffb38b28ddf5",
+      "md5": "3b2896f0e7f493f0e8d025fa8d47aae7"
+    },
+    {
+      "file": "archive.tar.gz.part-aade",
+      "key": "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aade",
+      "bytes": 13739365,
+      "sha256": "f89af835b7dafd5d9fcabd8be457e9cdc03063f093d9bc6c19d4e7e4df564d2f",
+      "md5": "12257f480fb67500a513da7712f16b97"
+    }
+  ],
+  "verification": "Every part's server-reported size and ETag match local bytes and MD5; SHA-256 hashes permit independent restoration checks.",
+  "restore": "Download all listed parts, verify their SHA-256 hashes, concatenate in manifest order, then extract the tar.gz stream."
+}

@@ -265,11 +265,13 @@ The write-up should emphasize **what the model learned and what the benchmark ac
 ## Current implementation milestone
 
 Benchmark audit, prompting baselines, SFT, the SFT→RL pilot, the continued-SFT
-control and the public final test are complete; see `LOG.md`,
-`results/milestone3_training.md` and `results/raw/training/`. Heldout remains sealed.
+control, the public final test, the SFT epoch sweep and the ICD-10-CM code-book
+tool are complete; see `LOG.md`, `results/milestone3_training.md`,
+`results/milestone4_sft_and_codebook.md` and `results/raw/training/`. Heldout remains sealed.
 
-Next, if continued: write-up and release (code, adapters, cached outputs, a
-heads-up to the benchmark authors and upstream bug reports). Further training is
-only worth it for questions this phase opened: how far longer single-run SFT
-schedules go, and whether any method improves coding of unseen diagnoses or
-final-visit inference, the two parts SFT and RL leave untouched.
+Best result: 8-epoch SFT on demonstrations that look codes up in the public code
+book, public mean reward 0.726, versus 0.520 for 8-epoch SFT without it. Next, if
+continued: write-up and release, the authors heads-up and upstream bug reports.
+The open training question is final-visit inference: 57% of those diagnoses are
+still never named. An RL arm should start from tool-SFT and target that,
+not coding.

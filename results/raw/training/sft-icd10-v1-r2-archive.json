@@ -1,0 +1,18 @@
+{
+ "archive": "r2://synthetic-hospital-rl-artifacts/2026-10-06/sft-icd10-v1/chunks-16m/",
+ "manifest_key": "2026-10-06/sft-icd10-v1/chunks-16m/manifest.json",
+ "manifest_sha256": "04f60523db6238b26fd44f01a4725f0d68d044e87c60e1c99dc4c1f00cdf0378",
+ "archive_sha256": "2da414c10434ed0230f6e90fbd4dd5d8327a2962eb948ca709f7c239768022b6",
+ "archive_bytes": 275413018,
+ "parts": 17,
+ "verified_at": "2026-10-06T22:34:54.611779+00:00",
+ "verification": "Every source file hashed on the rental; every tar member of the local parts matched those bytes and SHA-256; every part matched remote size and ETag; the downloaded manifest matches byte-for-byte; first and last downloaded parts match SHA-256.",
+ "downloaded_part_keys": [
+  "2026-10-06/sft-icd10-v1/chunks-16m/archive.tar.gz.part-aaaa",
+  "2026-10-06/sft-icd10-v1/chunks-16m/archive.tar.gz.part-aaaq"
+ ],
+ "source_files": 36,
+ "source_bytes": 331629454,
+ "source_file_manifest": "results/raw/training/sft-icd10-v1-files.json",
+ "privacy": "r2.dev disabled; no custom domains"
+}

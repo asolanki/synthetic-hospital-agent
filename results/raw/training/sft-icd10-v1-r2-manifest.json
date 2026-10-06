@@ -1,0 +1,131 @@
+{
+  "format": "ordered chunks of one tar.gz stream",
+  "bucket": "synthetic-hospital-rl-artifacts",
+  "prefix": "2026-10-06/sft-icd10-v1/chunks-16m/",
+  "verified_at": "2026-10-06T22:32:47.333652+00:00",
+  "archive_sha256": "2da414c10434ed0230f6e90fbd4dd5d8327a2962eb948ca709f7c239768022b6",
+  "archive_bytes": 275413018,
+  "parts": [
+    {
+      "file": "archive.tar.gz.part-aaaa",
+      "key": "2026-10-06/sft-icd10-v1/chunks-16m/archive.tar.gz.part-aaaa",
+      "bytes": 16777216,
+      "sha256": "4827f46a73ace05c05a0395f2ca8e064e182788c1e0f7ac78699aabb9416c0b0",
+      "md5": "7ac174557da9f0e8999ddcbf875a3893"
+    },
+    {
+      "file": "archive.tar.gz.part-aaab",
+      "key": "2026-10-06/sft-icd10-v1/chunks-16m/archive.tar.gz.part-aaab",
+      "bytes": 16777216,
+      "sha256": "c678379e8643688f0f7d546e89033f7e6583a60b4c32589bfb8522effb2ec0b6",
+      "md5": "25b0e1a8a5ced5a616a51d34c93f3874"
+    },
+    {
+      "file": "archive.tar.gz.part-aaac",
+      "key": "2026-10-06/sft-icd10-v1/chunks-16m/archive.tar.gz.part-aaac",
+      "bytes": 16777216,
+      "sha256": "34673cc6c762b4aa99dd69de16b60eb2ba854945c38b62f57d884f78f931c81f",
+      "md5": "28735b896e8505b541611838333858c2"
+    },
+    {
+      "file": "archive.tar.gz.part-aaad",
+      "key": "2026-10-06/sft-icd10-v1/chunks-16m/archive.tar.gz.part-aaad",
+      "bytes": 16777216,
+      "sha256": "29dcc83eb7e93ba84290955b03e10e0a8be8bbe49a69257d5599df36c4ed122d",
+      "md5": "2b75f0ca6df8988057e3b743c85ca7d2"
+    },
+    {
+      "file": "archive.tar.gz.part-aaae",
+      "key": "2026-10-06/sft-icd10-v1/chunks-16m/archive.tar.gz.part-aaae",
+      "bytes": 16777216,
+      "sha256": "29c168571c5b2a75c2a0fca21f550e0c55de8ce074e4645be92506785ace2451",
+      "md5": "c22601e1189337ece4fc831a648ea413"
+    },
+    {
+      "file": "archive.tar.gz.part-aaaf",
+      "key": "2026-10-06/sft-icd10-v1/chunks-16m/archive.tar.gz.part-aaaf",
+      "bytes": 16777216,
+      "sha256": "9c3b5b389dd4f83ee8b1a931a408146cc307becbd51651d0c62d93de5524ee56",
+      "md5": "05d80baa9e0ae587cfd07e95661d4358"
+    },
+    {
+      "file": "archive.tar.gz.part-aaag",
+      "key": "2026-10-06/sft-icd10-v1/chunks-16m/archive.tar.gz.part-aaag",
+      "bytes": 16777216,
+      "sha256": "4a1072406b64bfb30047a59bcc2419a40fced0a261f450c46880cfb54e742d76",
+      "md5": "feed546675a1104dd37305a0ad96a07e"
+    },
+    {
+      "file": "archive.tar.gz.part-aaah",
+      "key": "2026-10-06/sft-icd10-v1/chunks-16m/archive.tar.gz.part-aaah",
+      "bytes": 16777216,
+      "sha256": "35eccedd687daa7101a38c8fed423b4c29b4e1a7ee434eecb17157c6d8618f05",
+      "md5": "a3437f69df21fc14fd4624f4589564bc"
+    },
+    {
+      "file": "archive.tar.gz.part-aaai",
+      "key": "2026-10-06/sft-icd10-v1/chunks-16m/archive.tar.gz.part-aaai",
+      "bytes": 16777216,
+      "sha256": "c27b51d123502bed25d9cd204c46d48ebdcd8ac0dfd84dec003167f17929d110",
+      "md5": "d221ffbae8a0f77cca35fc15594b64cf"
+    },
+    {
+      "file": "archive.tar.gz.part-aaaj",
+      "key": "2026-10-06/sft-icd10-v1/chunks-16m/archive.tar.gz.part-aaaj",
+      "bytes": 16777216,
+      "sha256": "b8d1b2b6429dfd3970ddcd319cecf93929234dcadafbd193f696a6e00bcc50d7",
+      "md5": "8f21280dd702b243061f68dc7c2e415a"
+    },
+    {
+      "file": "archive.tar.gz.part-aaak",
+      "key": "2026-10-06/sft-icd10-v1/chunks-16m/archive.tar.gz.part-aaak",
+      "bytes": 16777216,
+      "sha256": "0dc7d8673277d4fbed21c59b0216aa68e9edb69bb150df3123a1ee55a7dadd34",
+      "md5": "b6e2ea2f93c47426ef0f2cf8bf9941d2"
+    },
+    {
+      "file": "archive.tar.gz.part-aaal",
+      "key": "2026-10-06/sft-icd10-v1/chunks-16m/archive.tar.gz.part-aaal",
+      "bytes": 16777216,
+      "sha256": "f1cea3cd908cf9a178ce1e5f1a2ea7d16e1bef0c390cc633064528d04815cb53",
+      "md5": "5f98b75550334204db76426650d32758"
+    },
+    {
+      "file": "archive.tar.gz.part-aaam",
+      "key": "2026-10-06/sft-icd10-v1/chunks-16m/archive.tar.gz.part-aaam",
+      "bytes": 16777216,
+      "sha256": "67b4e764def9f5427f5a76bfdf3fae01d453adba9d9f395968a03e8135b11788",
+      "md5": "e8f5bd80d9aa57f31ea7c2eead67857d"
+    },
+    {
+      "file": "archive.tar.gz.part-aaan",
+      "key": "2026-10-06/sft-icd10-v1/chunks-16m/archive.tar.gz.part-aaan",
+      "bytes": 16777216,
+      "sha256": "0695bf8990c270b676bcac6956f538e717f61ec05eae88865ac15da068b8f191",
+      "md5": "c13e7ea180934d524bc8a9c17347fa2a"
+    },
+    {
+      "file": "archive.tar.gz.part-aaao",
+      "key": "2026-10-06/sft-icd10-v1/chunks-16m/archive.tar.gz.part-aaao",
+      "bytes": 16777216,
+      "sha256": "db9a3f27138c9bd47929fb20ba5c20367bcbe36b7ce430ad836cf3306d7507a5",
+      "md5": "12d5142d22056d2a5de268f288c0861a"
+    },
+    {
+      "file": "archive.tar.gz.part-aaap",
+      "key": "2026-10-06/sft-icd10-v1/chunks-16m/archive.tar.gz.part-aaap",
+      "bytes": 16777216,
+      "sha256": "1d7479fd2c93efd4cf42327d3720aaca61fb6ce65ae7cfd2819f1c618c532304",
+      "md5": "87ac7429c63986659df482814a7003bb"
+    },
+    {
+      "file": "archive.tar.gz.part-aaaq",
+      "key": "2026-10-06/sft-icd10-v1/chunks-16m/archive.tar.gz.part-aaaq",
+      "bytes": 6977562,
+      "sha256": "7e0eb3181d3f167b91f160fdd05c935e1884c3e301126a7d1f8e281d77c26814",
+      "md5": "23d1b3c18787c5b7240cdd588cedcf43"
+    }
+  ],
+  "verification": "Every part's server-reported size and ETag match local bytes and MD5; SHA-256 hashes permit independent restoration checks.",
+  "restore": "Download all listed parts, verify their SHA-256 hashes, concatenate in manifest order, then extract the tar.gz stream."
+}

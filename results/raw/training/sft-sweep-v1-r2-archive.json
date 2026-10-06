@@ -1,0 +1,18 @@
+{
+ "archive": "r2://synthetic-hospital-rl-artifacts/2026-10-06/sft-sweep-v1/chunks-16m/",
+ "manifest_key": "2026-10-06/sft-sweep-v1/chunks-16m/manifest.json",
+ "manifest_sha256": "58d360d69a3bfdf36290bc2a0fc0cc1cd74df00867bff91f454737f1f8c1a887",
+ "archive_sha256": "a2d4464c6484d9a1bcc4178b85ff3aed51363f82278bded97e9a70378a3e5968",
+ "archive_bytes": 1389471077,
+ "parts": 83,
+ "verified_at": "2026-10-06T22:35:06.588457+00:00",
+ "verification": "Every source file hashed on the rental; every tar member of the local parts matched those bytes and SHA-256; every part matched remote size and ETag; the downloaded manifest matches byte-for-byte; first and last downloaded parts match SHA-256.",
+ "downloaded_part_keys": [
+  "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aaaa",
+  "2026-10-06/sft-sweep-v1/chunks-16m/archive.tar.gz.part-aade"
+ ],
+ "source_files": 139,
+ "source_bytes": 1629970596,
+ "source_file_manifest": "results/raw/training/sft-sweep-v1-files.json",
+ "privacy": "r2.dev disabled; no custom domains"
+}

@@ -1,0 +1,18 @@
+{
+ "archive": "r2://synthetic-hospital-rl-artifacts/2026-10-06/sweep-icd10-evaluations/chunks-16m/",
+ "manifest_key": "2026-10-06/sweep-icd10-evaluations/chunks-16m/manifest.json",
+ "manifest_sha256": "3fb2be2d53268dfd94dc79fbe88f8fb497e4a99ec66356753b377b57754bff13",
+ "archive_sha256": "192cea7562070302ff8463f431757213cb2b83390d00c503eb6c5e78f2691ce3",
+ "archive_bytes": 58117474,
+ "parts": 4,
+ "verified_at": "2026-10-06T22:34:59.708766+00:00",
+ "verification": "Every source file hashed on the rental; every tar member of the local parts matched those bytes and SHA-256; every part matched remote size and ETag; the downloaded manifest matches byte-for-byte; first and last downloaded parts match SHA-256.",
+ "downloaded_part_keys": [
+  "2026-10-06/sweep-icd10-evaluations/chunks-16m/archive.tar.gz.part-aaaa",
+  "2026-10-06/sweep-icd10-evaluations/chunks-16m/archive.tar.gz.part-aaad"
+ ],
+ "source_files": 2165,
+ "source_bytes": 581129290,
+ "source_file_manifest": "results/raw/training/sweep-icd10-evaluations-files.json",
+ "privacy": "r2.dev disabled; no custom domains"
+}

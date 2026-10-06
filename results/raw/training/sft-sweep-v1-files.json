@@ -1,0 +1,721 @@
+{
+ "verified_at": "2026-10-06T22:26:45.877709+00:00",
+ "remote_root": "/workspace/synthetic-hospital-rl",
+ "paths": [
+  "runs/sft-sweep-v1",
+  "training/configs/sft_sweep.toml",
+  "training/sft.py",
+  "training/run_sft.sh",
+  "training/sft-requirements.txt",
+  "runs/sft-sweep-v1.log"
+ ],
+ "excluded": {
+  "directories": [
+   "wandb"
+  ],
+  "files": [
+   "optimizer.pt",
+   "scheduler.pt",
+   "rng_state.pth"
+  ]
+ },
+ "file_count": 139,
+ "bytes": 1629970596,
+ "files": [
+  {
+   "path": "runs/sft-sweep-v1.log",
+   "bytes": 104162,
+   "sha256": "d4055565ceda008a4d193cff7aaac691bd5e74c74f0b90190918d443b4ae3d87"
+  },
+  {
+   "path": "runs/sft-sweep-v1/adapter/README.md",
+   "bytes": 5208,
+   "sha256": "0565b8046c1656c1818cff338e6e61b6f3d9aad19d0bae4f14fe422ea98a024b"
+  },
+  {
+   "path": "runs/sft-sweep-v1/adapter/adapter_config.json",
+   "bytes": 977,
+   "sha256": "5c60c0bca10d98e1a0fd86d9bbad23bd64764afef39757c9fc6f1a292f36f25c"
+  },
+  {
+   "path": "runs/sft-sweep-v1/adapter/adapter_model.safetensors",
+   "bytes": 132187888,
+   "sha256": "6d72a392457ee2eab83d3ef4d436a81802be69e59cb4bd6c39ea1a707945e7bc"
+  },
+  {
+   "path": "runs/sft-sweep-v1/adapter/added_tokens.json",
+   "bytes": 707,
+   "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680"
+  },
+  {
+   "path": "runs/sft-sweep-v1/adapter/chat_template.jinja",
+   "bytes": 2630,
+   "sha256": "64f85b198065d0fba2a81f37e10ed68161ce2c19a754c7100e67e0ca2ee9c326"
+  },
+  {
+   "path": "runs/sft-sweep-v1/adapter/merges.txt",
+   "bytes": 1671853,
+   "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+  },
+  {
+   "path": "runs/sft-sweep-v1/adapter/special_tokens_map.json",
+   "bytes": 613,
+   "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd"
+  },
+  {
+   "path": "runs/sft-sweep-v1/adapter/tokenizer.json",
+   "bytes": 11422654,
+   "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+  },
+  {
+   "path": "runs/sft-sweep-v1/adapter/tokenizer_config.json",
+   "bytes": 5405,
+   "sha256": "4b5f2f80f84faefe8420e1616671adb1dd3d7e632038d34b1f0e3a1363a51059"
+  },
+  {
+   "path": "runs/sft-sweep-v1/adapter/training_args.bin",
+   "bytes": 5969,
+   "sha256": "414c51389379b4d25ea81ce560281864d7ed2130902e53e109e3b5534705a5f5"
+  },
+  {
+   "path": "runs/sft-sweep-v1/adapter/vocab.json",
+   "bytes": 2776833,
+   "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-170/README.md",
+   "bytes": 5208,
+   "sha256": "0565b8046c1656c1818cff338e6e61b6f3d9aad19d0bae4f14fe422ea98a024b"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-170/adapter_config.json",
+   "bytes": 977,
+   "sha256": "5c60c0bca10d98e1a0fd86d9bbad23bd64764afef39757c9fc6f1a292f36f25c"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-170/adapter_model.safetensors",
+   "bytes": 132187888,
+   "sha256": "6a9c201d07963bc91f8e695235d1fc37debb24e7864f4e9e779bdbb7913a8d28"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-170/added_tokens.json",
+   "bytes": 707,
+   "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-170/chat_template.jinja",
+   "bytes": 2630,
+   "sha256": "64f85b198065d0fba2a81f37e10ed68161ce2c19a754c7100e67e0ca2ee9c326"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-170/merges.txt",
+   "bytes": 1671853,
+   "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-170/special_tokens_map.json",
+   "bytes": 613,
+   "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-170/tokenizer.json",
+   "bytes": 11422654,
+   "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-170/tokenizer_config.json",
+   "bytes": 5405,
+   "sha256": "4b5f2f80f84faefe8420e1616671adb1dd3d7e632038d34b1f0e3a1363a51059"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-170/trainer_state.json",
+   "bytes": 29907,
+   "sha256": "6400823703c668578bcde287be2aeffaa753e3df490ae80016c1a8c40a2b7df4"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-170/training_args.bin",
+   "bytes": 5969,
+   "sha256": "414c51389379b4d25ea81ce560281864d7ed2130902e53e109e3b5534705a5f5"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-170/vocab.json",
+   "bytes": 2776833,
+   "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-255/README.md",
+   "bytes": 5208,
+   "sha256": "0565b8046c1656c1818cff338e6e61b6f3d9aad19d0bae4f14fe422ea98a024b"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-255/adapter_config.json",
+   "bytes": 977,
+   "sha256": "5c60c0bca10d98e1a0fd86d9bbad23bd64764afef39757c9fc6f1a292f36f25c"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-255/adapter_model.safetensors",
+   "bytes": 132187888,
+   "sha256": "054480548b565b9dcd2a36bd49e9b05108fca714a40f377276b3e62ef3305ec3"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-255/added_tokens.json",
+   "bytes": 707,
+   "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-255/chat_template.jinja",
+   "bytes": 2630,
+   "sha256": "64f85b198065d0fba2a81f37e10ed68161ce2c19a754c7100e67e0ca2ee9c326"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-255/merges.txt",
+   "bytes": 1671853,
+   "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-255/special_tokens_map.json",
+   "bytes": 613,
+   "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-255/tokenizer.json",
+   "bytes": 11422654,
+   "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-255/tokenizer_config.json",
+   "bytes": 5405,
+   "sha256": "4b5f2f80f84faefe8420e1616671adb1dd3d7e632038d34b1f0e3a1363a51059"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-255/trainer_state.json",
+   "bytes": 44518,
+   "sha256": "c00be8ea58ec666c8bd7c4c2b6ee47c1bfbc7202b4f0c13b8ca16ac9422ccb24"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-255/training_args.bin",
+   "bytes": 5969,
+   "sha256": "414c51389379b4d25ea81ce560281864d7ed2130902e53e109e3b5534705a5f5"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-255/vocab.json",
+   "bytes": 2776833,
+   "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-340/README.md",
+   "bytes": 5208,
+   "sha256": "0565b8046c1656c1818cff338e6e61b6f3d9aad19d0bae4f14fe422ea98a024b"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-340/adapter_config.json",
+   "bytes": 977,
+   "sha256": "5c60c0bca10d98e1a0fd86d9bbad23bd64764afef39757c9fc6f1a292f36f25c"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-340/adapter_model.safetensors",
+   "bytes": 132187888,
+   "sha256": "34a1e3e0e4a3626acd67638b93cab3b70fcee43607e380aa9b9066197da4e083"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-340/added_tokens.json",
+   "bytes": 707,
+   "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-340/chat_template.jinja",
+   "bytes": 2630,
+   "sha256": "64f85b198065d0fba2a81f37e10ed68161ce2c19a754c7100e67e0ca2ee9c326"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-340/merges.txt",
+   "bytes": 1671853,
+   "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-340/special_tokens_map.json",
+   "bytes": 613,
+   "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-340/tokenizer.json",
+   "bytes": 11422654,
+   "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-340/tokenizer_config.json",
+   "bytes": 5405,
+   "sha256": "4b5f2f80f84faefe8420e1616671adb1dd3d7e632038d34b1f0e3a1363a51059"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-340/trainer_state.json",
+   "bytes": 59109,
+   "sha256": "c5b918165145f9c2751ebd8d52014274b07ba12f7ccf4f89c908b94fa718b639"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-340/training_args.bin",
+   "bytes": 5969,
+   "sha256": "414c51389379b4d25ea81ce560281864d7ed2130902e53e109e3b5534705a5f5"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-340/vocab.json",
+   "bytes": 2776833,
+   "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-425/README.md",
+   "bytes": 5208,
+   "sha256": "0565b8046c1656c1818cff338e6e61b6f3d9aad19d0bae4f14fe422ea98a024b"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-425/adapter_config.json",
+   "bytes": 977,
+   "sha256": "5c60c0bca10d98e1a0fd86d9bbad23bd64764afef39757c9fc6f1a292f36f25c"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-425/adapter_model.safetensors",
+   "bytes": 132187888,
+   "sha256": "63fc340974c5961d229f778f1b1b3171561373d62da4205242428d80ef74a078"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-425/added_tokens.json",
+   "bytes": 707,
+   "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-425/chat_template.jinja",
+   "bytes": 2630,
+   "sha256": "64f85b198065d0fba2a81f37e10ed68161ce2c19a754c7100e67e0ca2ee9c326"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-425/merges.txt",
+   "bytes": 1671853,
+   "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-425/special_tokens_map.json",
+   "bytes": 613,
+   "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-425/tokenizer.json",
+   "bytes": 11422654,
+   "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-425/tokenizer_config.json",
+   "bytes": 5405,
+   "sha256": "4b5f2f80f84faefe8420e1616671adb1dd3d7e632038d34b1f0e3a1363a51059"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-425/trainer_state.json",
+   "bytes": 73662,
+   "sha256": "c34ea7226222f1b9abcf11198950779446f069d95e1143ef75d17256dcd65f19"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-425/training_args.bin",
+   "bytes": 5969,
+   "sha256": "414c51389379b4d25ea81ce560281864d7ed2130902e53e109e3b5534705a5f5"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-425/vocab.json",
+   "bytes": 2776833,
+   "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-510/README.md",
+   "bytes": 5208,
+   "sha256": "0565b8046c1656c1818cff338e6e61b6f3d9aad19d0bae4f14fe422ea98a024b"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-510/adapter_config.json",
+   "bytes": 977,
+   "sha256": "5c60c0bca10d98e1a0fd86d9bbad23bd64764afef39757c9fc6f1a292f36f25c"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-510/adapter_model.safetensors",
+   "bytes": 132187888,
+   "sha256": "2bedba839219f374b70ff8ec32cc87d87ead27534a3714b46883d07f8c3e57f9"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-510/added_tokens.json",
+   "bytes": 707,
+   "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-510/chat_template.jinja",
+   "bytes": 2630,
+   "sha256": "64f85b198065d0fba2a81f37e10ed68161ce2c19a754c7100e67e0ca2ee9c326"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-510/merges.txt",
+   "bytes": 1671853,
+   "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-510/special_tokens_map.json",
+   "bytes": 613,
+   "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-510/tokenizer.json",
+   "bytes": 11422654,
+   "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-510/tokenizer_config.json",
+   "bytes": 5405,
+   "sha256": "4b5f2f80f84faefe8420e1616671adb1dd3d7e632038d34b1f0e3a1363a51059"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-510/trainer_state.json",
+   "bytes": 88210,
+   "sha256": "05b70be411774bf93796d7003974f85833be66eb11a6a2d15e0c88797f2981da"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-510/training_args.bin",
+   "bytes": 5969,
+   "sha256": "414c51389379b4d25ea81ce560281864d7ed2130902e53e109e3b5534705a5f5"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-510/vocab.json",
+   "bytes": 2776833,
+   "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-595/README.md",
+   "bytes": 5208,
+   "sha256": "0565b8046c1656c1818cff338e6e61b6f3d9aad19d0bae4f14fe422ea98a024b"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-595/adapter_config.json",
+   "bytes": 977,
+   "sha256": "5c60c0bca10d98e1a0fd86d9bbad23bd64764afef39757c9fc6f1a292f36f25c"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-595/adapter_model.safetensors",
+   "bytes": 132187888,
+   "sha256": "36fb30ff506a593d2edf46de3a12883dd3dd068859b01256bd8c2fd3deb2169f"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-595/added_tokens.json",
+   "bytes": 707,
+   "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-595/chat_template.jinja",
+   "bytes": 2630,
+   "sha256": "64f85b198065d0fba2a81f37e10ed68161ce2c19a754c7100e67e0ca2ee9c326"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-595/merges.txt",
+   "bytes": 1671853,
+   "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-595/special_tokens_map.json",
+   "bytes": 613,
+   "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-595/tokenizer.json",
+   "bytes": 11422654,
+   "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-595/tokenizer_config.json",
+   "bytes": 5405,
+   "sha256": "4b5f2f80f84faefe8420e1616671adb1dd3d7e632038d34b1f0e3a1363a51059"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-595/trainer_state.json",
+   "bytes": 102800,
+   "sha256": "865d50e9cb26641b481f4a4dccecea84f564cfb0952133a3bced15a219297884"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-595/training_args.bin",
+   "bytes": 5969,
+   "sha256": "414c51389379b4d25ea81ce560281864d7ed2130902e53e109e3b5534705a5f5"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-595/vocab.json",
+   "bytes": 2776833,
+   "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-680/README.md",
+   "bytes": 5208,
+   "sha256": "0565b8046c1656c1818cff338e6e61b6f3d9aad19d0bae4f14fe422ea98a024b"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-680/adapter_config.json",
+   "bytes": 977,
+   "sha256": "5c60c0bca10d98e1a0fd86d9bbad23bd64764afef39757c9fc6f1a292f36f25c"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-680/adapter_model.safetensors",
+   "bytes": 132187888,
+   "sha256": "c791e49d901914af65ed644dbdd4764ec55f3ff6d6c644d93c4f095a367e9089"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-680/added_tokens.json",
+   "bytes": 707,
+   "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-680/chat_template.jinja",
+   "bytes": 2630,
+   "sha256": "64f85b198065d0fba2a81f37e10ed68161ce2c19a754c7100e67e0ca2ee9c326"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-680/merges.txt",
+   "bytes": 1671853,
+   "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-680/special_tokens_map.json",
+   "bytes": 613,
+   "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-680/tokenizer.json",
+   "bytes": 11422654,
+   "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-680/tokenizer_config.json",
+   "bytes": 5405,
+   "sha256": "4b5f2f80f84faefe8420e1616671adb1dd3d7e632038d34b1f0e3a1363a51059"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-680/trainer_state.json",
+   "bytes": 117436,
+   "sha256": "eaaab2f636fef136451dfeff82ae30d5972f41add9afd72f950571e57588a3c3"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-680/training_args.bin",
+   "bytes": 5969,
+   "sha256": "414c51389379b4d25ea81ce560281864d7ed2130902e53e109e3b5534705a5f5"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-680/vocab.json",
+   "bytes": 2776833,
+   "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-765/README.md",
+   "bytes": 5208,
+   "sha256": "0565b8046c1656c1818cff338e6e61b6f3d9aad19d0bae4f14fe422ea98a024b"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-765/adapter_config.json",
+   "bytes": 977,
+   "sha256": "5c60c0bca10d98e1a0fd86d9bbad23bd64764afef39757c9fc6f1a292f36f25c"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-765/adapter_model.safetensors",
+   "bytes": 132187888,
+   "sha256": "ab1cb063474a07f34efa581ca7e9a8ba6555e7d95d2c63948183bf9f8efa79f3"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-765/added_tokens.json",
+   "bytes": 707,
+   "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-765/chat_template.jinja",
+   "bytes": 2630,
+   "sha256": "64f85b198065d0fba2a81f37e10ed68161ce2c19a754c7100e67e0ca2ee9c326"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-765/merges.txt",
+   "bytes": 1671853,
+   "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-765/special_tokens_map.json",
+   "bytes": 613,
+   "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-765/tokenizer.json",
+   "bytes": 11422654,
+   "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-765/tokenizer_config.json",
+   "bytes": 5405,
+   "sha256": "4b5f2f80f84faefe8420e1616671adb1dd3d7e632038d34b1f0e3a1363a51059"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-765/trainer_state.json",
+   "bytes": 132017,
+   "sha256": "f715d8f02fa32a4e0a052e3e233a987c57e8145d67c63ed7fb2b681b3717f897"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-765/training_args.bin",
+   "bytes": 5969,
+   "sha256": "414c51389379b4d25ea81ce560281864d7ed2130902e53e109e3b5534705a5f5"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-765/vocab.json",
+   "bytes": 2776833,
+   "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-85/README.md",
+   "bytes": 5208,
+   "sha256": "0565b8046c1656c1818cff338e6e61b6f3d9aad19d0bae4f14fe422ea98a024b"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-85/adapter_config.json",
+   "bytes": 977,
+   "sha256": "5c60c0bca10d98e1a0fd86d9bbad23bd64764afef39757c9fc6f1a292f36f25c"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-85/adapter_model.safetensors",
+   "bytes": 132187888,
+   "sha256": "9ae366b0fbfbf4b931d121ddd556dce1b4212e4f020bf34a1e620a8842c10cf8"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-85/added_tokens.json",
+   "bytes": 707,
+   "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-85/chat_template.jinja",
+   "bytes": 2630,
+   "sha256": "64f85b198065d0fba2a81f37e10ed68161ce2c19a754c7100e67e0ca2ee9c326"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-85/merges.txt",
+   "bytes": 1671853,
+   "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-85/special_tokens_map.json",
+   "bytes": 613,
+   "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-85/tokenizer.json",
+   "bytes": 11422654,
+   "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-85/tokenizer_config.json",
+   "bytes": 5405,
+   "sha256": "4b5f2f80f84faefe8420e1616671adb1dd3d7e632038d34b1f0e3a1363a51059"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-85/trainer_state.json",
+   "bytes": 15292,
+   "sha256": "33a2e3ae29bdbfae0a78a7b9b96af1fb454ac7c071b9e8abbadcb9ad5aaa63d0"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-85/training_args.bin",
+   "bytes": 5969,
+   "sha256": "414c51389379b4d25ea81ce560281864d7ed2130902e53e109e3b5534705a5f5"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-85/vocab.json",
+   "bytes": 2776833,
+   "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-850/README.md",
+   "bytes": 5208,
+   "sha256": "0565b8046c1656c1818cff338e6e61b6f3d9aad19d0bae4f14fe422ea98a024b"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-850/adapter_config.json",
+   "bytes": 977,
+   "sha256": "5c60c0bca10d98e1a0fd86d9bbad23bd64764afef39757c9fc6f1a292f36f25c"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-850/adapter_model.safetensors",
+   "bytes": 132187888,
+   "sha256": "6d72a392457ee2eab83d3ef4d436a81802be69e59cb4bd6c39ea1a707945e7bc"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-850/added_tokens.json",
+   "bytes": 707,
+   "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-850/chat_template.jinja",
+   "bytes": 2630,
+   "sha256": "64f85b198065d0fba2a81f37e10ed68161ce2c19a754c7100e67e0ca2ee9c326"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-850/merges.txt",
+   "bytes": 1671853,
+   "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-850/special_tokens_map.json",
+   "bytes": 613,
+   "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-850/tokenizer.json",
+   "bytes": 11422654,
+   "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-850/tokenizer_config.json",
+   "bytes": 5405,
+   "sha256": "4b5f2f80f84faefe8420e1616671adb1dd3d7e632038d34b1f0e3a1363a51059"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-850/trainer_state.json",
+   "bytes": 146652,
+   "sha256": "d20110b75418ee1fc2a05c354c4b9a1a3319a4395529646bf0d0ac8c3ed25623"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-850/training_args.bin",
+   "bytes": 5969,
+   "sha256": "414c51389379b4d25ea81ce560281864d7ed2130902e53e109e3b5534705a5f5"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/checkpoint-850/vocab.json",
+   "bytes": 2776833,
+   "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  {
+   "path": "runs/sft-sweep-v1/checkpoints/trainer_state.json",
+   "bytes": 146900,
+   "sha256": "5a0680a603b6827a7bab8d3556613e10acda316607c19d9c067085a59987036d"
+  },
+  {
+   "path": "runs/sft-sweep-v1/manifest.json",
+   "bytes": 8484,
+   "sha256": "dc35b0b4203c54c3db5ba7446c6a63d063bc3cc7b4cf33465cad58332b33d4f9"
+  },
+  {
+   "path": "runs/sft-sweep-v1/result.json",
+   "bytes": 466,
+   "sha256": "6087cb1da27106917ce650e9726f2982baa44fb68a79c081d0cc3c485181e1d0"
+  },
+  {
+   "path": "training/configs/sft_sweep.toml",
+   "bytes": 771,
+   "sha256": "cd62d1b79c96ffa746fd594154d345ab20d112a67c08dd1af3a6dbedd076fa35"
+  },
+  {
+   "path": "training/run_sft.sh",
+   "bytes": 253,
+   "sha256": "6c11bb764733b44a7629b3e25376c80ecc3b026511813cd4bfdf0946238cf61c"
+  },
+  {
+   "path": "training/sft-requirements.txt",
+   "bytes": 1525,
+   "sha256": "53aec11380c265189f5c98024d6df400e92086a4dba0851921cea7dc3dbf3f0c"
+  },
+  {
+   "path": "training/sft.py",
+   "bytes": 10325,
+   "sha256": "6daa523c17f0bba9ccd58cd7a616f6969142196fb2fbb09e0fe691a39b606aa9"
+  }
+ ]
+}
