@@ -1,0 +1,22 @@
+# Tool-use SFT: the unchanged oracle-copy recipe on demonstrations that look each diagnosis up in
+# the public ICD-10-CM code book before submitting (data/sft/oracle-copy-icd10-v1). Fresh adapter
+# from the base model; the epoch count is the one selected by the plain-SFT sweep (LOG.md,
+# 2026-10-06), not tuned separately. Launch with --no-merge; served as an unmerged LoRA adapter.
+model = "Qwen/Qwen3-4B-Instruct-2507"
+revision = "cdbee75f17c01a7cc42f958dc650907174af0554"
+data = "data/sft/oracle-copy-icd10-v1/train.jsonl"
+output_dir = "runs/sft-icd10-v1"
+wandb_project = "synthetic-hospital-rl"
+wandb_entity = "grid-labs-llc"
+max_length = 8192
+seed = 0
+epochs = 1
+learning_rate = 0.0001
+micro_batch_size = 1
+gradient_accumulation_steps = 8
+warmup_ratio = 0.03
+weight_decay = 0.0
+max_grad_norm = 1.0
+lora_rank = 16
+lora_alpha = 32
+lora_dropout = 0.05

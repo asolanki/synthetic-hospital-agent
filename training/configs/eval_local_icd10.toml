@@ -1,0 +1,26 @@
+# Augmented harness: eval_local.toml plus the optional `icd10_search` public code-book tool.
+# Same model server, sampling controls, budget and split handling; only the tool is added.
+model = "Qwen/Qwen3-4B-Instruct-2507"
+num_rollouts = 1
+max_concurrent = 32
+push = false
+[client]
+base_url = "http://127.0.0.1:8000/v1"
+api_key_var = "OPENAI_API_KEY"
+[sampling]
+temperature = 0.7
+top_p = 0.8
+max_tokens = 2048
+seed = 0
+[env.taskset]
+id = "synthetic-hospital-dx"
+split = "dev"
+budget = 40
+[env.taskset.task]
+icd10_tool = true
+[env.agent]
+max_turns = 50
+[env.agent.harness]
+id = "null"
+[env.agent.runtime]
+type = "subprocess"

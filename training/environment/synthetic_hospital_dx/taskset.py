@@ -22,6 +22,7 @@ import verifiers.v1 as vf
 
 from synthetic_hospital_dx import simulator
 from synthetic_hospital_dx.state import EpisodeState
+from synthetic_hospital_dx.icd10_tool import ICD10Toolset
 from synthetic_hospital_dx.tools import EHRToolset
 
 TASK = "patient_diagnosis"
@@ -37,6 +38,8 @@ class DxData(vf.TaskData):
 
 class DxTaskConfig(vf.TaskConfig):
     tools: vf.ToolsetConfig = vf.ToolsetConfig()
+    icd10_tool: bool = False
+    """Add `icd10_search` over the public ICD-10-CM code book (an augmented harness, not the paper's)."""
 
 
 class DxTask(vf.Task[DxData, EpisodeState, DxTaskConfig]):
@@ -46,7 +49,8 @@ class DxTask(vf.Task[DxData, EpisodeState, DxTaskConfig]):
 
     @classmethod
     def toolsets(cls, config: DxTaskConfig) -> list[vf.Toolset]:
-        return [EHRToolset(config.tools)]
+        extra = [ICD10Toolset(vf.ToolsetConfig())] if config.icd10_tool else []
+        return [EHRToolset(config.tools), *extra]
 
     async def setup(self, trace: vf.Trace, runtime: vf.Runtime) -> None:
         episode = await simulator.post("/env/reset", {"gt_id": self.data.gt_id, "budget": self.data.budget})

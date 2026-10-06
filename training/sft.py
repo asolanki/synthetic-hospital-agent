@@ -146,7 +146,9 @@ def main() -> None:
                 gradient_checkpointing=True, gradient_checkpointing_kwargs={"use_reentrant": False},
                 seed=settings["seed"], data_seed=settings["seed"],
                 logging_steps=1, logging_nan_inf_filter=False, disable_tqdm=True,
-                save_strategy="epoch", save_total_limit=1, report_to=["wandb"],
+                # A sweep keeps every epoch's checkpoint so each can be evaluated; default keeps one.
+                save_strategy="epoch", report_to=["wandb"],
+                save_total_limit=None if settings.get("keep_epoch_checkpoints") else 1,
                 run_name=output.name, label_names=["labels"],
             ),
         )

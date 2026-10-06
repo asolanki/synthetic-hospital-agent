@@ -1,0 +1,22 @@
+# Epoch sweep: the unchanged oracle-copy recipe from the base model, 10 epochs on one cosine
+# schedule, with every epoch's adapter kept for dev selection (rule preregistered in LOG.md,
+# 2026-10-06). Launch with --no-merge; checkpoints are served as unmerged LoRA adapters.
+model = "Qwen/Qwen3-4B-Instruct-2507"
+revision = "cdbee75f17c01a7cc42f958dc650907174af0554"
+data = "data/sft/oracle-copy-v1/train.jsonl"
+output_dir = "runs/sft-sweep-v1"
+wandb_project = "synthetic-hospital-rl"
+wandb_entity = "grid-labs-llc"
+max_length = 8192
+seed = 0
+epochs = 10
+learning_rate = 0.0001
+micro_batch_size = 1
+gradient_accumulation_steps = 8
+warmup_ratio = 0.03
+weight_decay = 0.0
+max_grad_norm = 1.0
+lora_rank = 16
+lora_alpha = 32
+lora_dropout = 0.05
+keep_epoch_checkpoints = true

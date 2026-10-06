@@ -1,0 +1,15 @@
+{
+ "name": "oracle-copy-icd10-v1",
+ "source": "oracle-copy-v1",
+ "split": "train",
+ "n": 680,
+ "policy": "view_encounters -> view_encounter_detail(latest) -> icd10_search(each name) -> submit(reference)",
+ "searches": 2449,
+ "reference_key_in_results": 0.8305430788076766,
+ "codebook": {
+  "url": "https://www.cms.gov/files/zip/2025-code-tables-tabular-and-index.zip",
+  "sha256": "ecad76ac02b0ee74fda1f526f205f067795204fbb34bb4051c74410b1722fd18",
+  "index": "search-index-2025-v3.json"
+ },
+ "tools_from": "data/sft/oracle-copy-icd10-v1/tools_source_trace.jsonl"
+}
