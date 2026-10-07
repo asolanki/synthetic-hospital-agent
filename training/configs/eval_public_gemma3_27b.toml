@@ -1,0 +1,32 @@
+# No-tool comparator (LOG.md 2026-10-07 Gemma preregistration, amendment and plan A): Gemma 3 27B,
+# the paper's smallest model, as an agent in our clean /env harness on the 200 public patients.
+# Same provider as the paper's registry entry (DeepInfra, fp8), called with our own key, through
+# training/gemma_toolcall_proxy.py: it turns Gemma's native pythonic tool calls, which DeepInfra
+# returns as text, into structured tool calls (as vLLM's Gemma parser does). Start the proxy first:
+#   uv run python training/gemma_toolcall_proxy.py --port 58100
+# Temperature 0 and 16,384 max tokens as in the paper's entry.
+model = "google/gemma-3-27b-it"
+num_rollouts = 1
+push = false
+
+[client]
+base_url = "http://127.0.0.1:58100/v1"
+api_key_var = "DEEPINFRA_API_KEY"
+
+[sampling]
+temperature = 0.0
+max_tokens = 16384
+
+[env.taskset]
+id = "synthetic-hospital-dx"
+split = "public"
+budget = 40
+
+[env.agent]
+max_turns = 50
+
+[env.agent.harness]
+id = "null"
+
+[env.agent.runtime]
+type = "subprocess"
