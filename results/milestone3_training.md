@@ -46,17 +46,17 @@ preregistered primary; five-seed means (seeds 0–4) were a preregistered second
 | Continued SFT − RL | +0.038 | +0.010 to +0.068 | 51 / 36 |
 
 Paper reference points on the public split (its own harnesses, not ours): the best single-turn
-model scores severity-weighted F1 0.73 (arXiv v1 Table 2), level with the mean of seven physicians
+model scores severity-weighted F1 0.73 (arXiv v1 Table 3), level with the mean of seven physicians
 on a 13-patient subset (best physician 0.89). Its self-retrieving agents score **0.81–0.89** on 100
-public patients (Table 3: GPT 5.3 0.84, Mistral Large 0.81, Llama 4 Scout 0.89). **Those agent
+public patients (Table 4: GPT 5.3 0.84, Mistral Large 0.81, Llama 4 Scout 0.89). **Those agent
 scores come through a harness that leaks the answer key:** in upstream `eval/agents`,
 `open_chart` and `view_problem_list` return the reference diagnoses with ICD-10 codes (upstream
 README, "Known issues"). On our 120 dev patients at the paper's controls, Qwen3-30B scores **0.728**
 in that harness, **0.397** with only the leak masked as `/env` masks it, and **0.420** in our `/env`
 harness. The leak is worth **+0.33** (95% CI +0.25 to +0.41). Without it, the two harnesses agree
 (−0.02, CI −0.08 to +0.04). Mistral Large shows the same direction (+0.15, CI +0.07 to +0.23, 54
-patients unaffected by rate limits). The paper's batch metric also drops failed sessions instead of
-scoring them zero. The paper's agent numbers therefore do not contradict the coding-bottleneck
+patients unaffected by rate limits). The released batch metric (`compute_all_metrics`) also skips
+empty submissions, although the paper says failed sessions score zero. The paper's agent numbers therefore do not contradict the coding-bottleneck
 result below. Evidence: `results/raw/audit/harness_gap_dev.json`. The paper reports no fine-tuning
 or RL results. Every public conclusion here matches dev.
 
