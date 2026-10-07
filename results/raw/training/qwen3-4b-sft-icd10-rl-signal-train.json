@@ -1,0 +1,291 @@
+{
+ "scope": "k sampled reports of one policy on one fixed split. For each reference diagnosis: 0/k samples submitted its scorer match key (no group signal toward it), mixed (learnable), or k/k (solved). Equal-reward patient groups have zero GRPO advantage. Exposure counts other training patients carrying the same key.",
+ "split": "train",
+ "k": 4,
+ "reports": [
+  {
+   "path": "results/raw/training/qwen3-4b-sft-icd10-train-t1-seed0.json",
+   "sha256": "3d1f2230a9e404d8226a054282cfae91f62554b987d8c47656e23c211a84cb29",
+   "summary": {
+    "n": 680,
+    "valid_submit_rate": 0.9882352941176471,
+    "mean_reward": 0.9644520666742604,
+    "official_f1": 0.977767780591405,
+    "official_f1_strict": 0.966264630231506,
+    "weighted_recall": 0.9713711448673854,
+    "recall": 0.9723533163265307,
+    "precision_neutral": 0.984249220521542,
+    "precision_raw": 0.9827256944444445,
+    "acuity_accuracy": 0.9893208030756088,
+    "mean_predictions": 3.514705882352941,
+    "mean_reward_ci95": [
+     0.9533470422429822,
+     0.9753239271132469
+    ],
+    "official_f1_strict_ci95": [
+     0.9553472338220187,
+     0.9766939776824515
+    ],
+    "visit_split": {
+     "recall_earlier_visits": 0.9686075949367089,
+     "recall_final_visit": 0.9156118143459916,
+     "n_earlier": 1975,
+     "n_final": 474
+    },
+    "split": "train",
+    "mean_actions": 3.0,
+    "actions_observed_n": 672,
+    "episode_metrics_observed_n": 672,
+    "mean_total_tokens": 12655.833823529412,
+    "mean_input_tokens": 12350.55,
+    "mean_output_tokens": 305.2838235294118,
+    "mean_unique_input_tokens": 4379.320588235294,
+    "mean_unique_total_tokens": 4684.604411764706,
+    "budget_exhausted_rate": 0,
+    "malformed_submit_rate": 0,
+    "rollout_error_rate": 0.011764705882352941,
+    "model_call_error_episode_rate": 0.011764705882352941,
+    "model_call_error_types": {
+     "ProviderError": 8
+    },
+    "mean_nudges": 0.0,
+    "tool_calls": {
+     "view_encounters": 680,
+     "view_encounter_detail": 680,
+     "icd10_search": 2429,
+     "submit_diagnosis": 674
+    },
+    "name": "qwen3-4b-sft-icd10-train-t1-seed0"
+   }
+  },
+  {
+   "path": "results/raw/training/qwen3-4b-sft-icd10-train-t1-seed1.json",
+   "sha256": "26784c561295bc31a71180cb96e04ba0003021cfad4744dfe07aa4214217ce47",
+   "summary": {
+    "n": 680,
+    "valid_submit_rate": 0.9985294117647059,
+    "mean_reward": 0.9757266468009901,
+    "official_f1": 0.9780823890089256,
+    "official_f1_strict": 0.9766440325545008,
+    "weighted_recall": 0.9772918965005077,
+    "recall": 0.9787853285644155,
+    "precision_neutral": 0.9788741613483881,
+    "precision_raw": 0.9751414311429039,
+    "acuity_accuracy": 0.9912280701754386,
+    "mean_predictions": 3.614705882352941,
+    "mean_reward_ci95": [
+     0.9672113010069848,
+     0.9830665896022505
+    ],
+    "official_f1_strict_ci95": [
+     0.96838386835077,
+     0.9837850936201111
+    ],
+    "visit_split": {
+     "recall_earlier_visits": 0.9878481012658228,
+     "recall_final_visit": 0.9430379746835443,
+     "n_earlier": 1975,
+     "n_final": 474
+    },
+    "split": "train",
+    "mean_actions": 3.0,
+    "actions_observed_n": 679,
+    "episode_metrics_observed_n": 679,
+    "mean_total_tokens": 12687.75294117647,
+    "mean_input_tokens": 12378.814705882352,
+    "mean_output_tokens": 308.93823529411765,
+    "mean_unique_input_tokens": 4403.488235294118,
+    "mean_unique_total_tokens": 4712.426470588235,
+    "budget_exhausted_rate": 0,
+    "malformed_submit_rate": 0,
+    "rollout_error_rate": 0.0014705882352941176,
+    "model_call_error_episode_rate": 0,
+    "model_call_error_types": {},
+    "mean_nudges": 0.0,
+    "tool_calls": {
+     "view_encounters": 680,
+     "view_encounter_detail": 680,
+     "icd10_search": 2461,
+     "submit_diagnosis": 679
+    },
+    "name": "qwen3-4b-sft-icd10-train-t1-seed1"
+   }
+  },
+  {
+   "path": "results/raw/training/qwen3-4b-sft-icd10-train-t1-seed2.json",
+   "sha256": "ddb20b7a84663aaf8f85aca2ea9d861ac07f4347cc383a6450a912cf2d2671ab",
+   "summary": {
+    "n": 680,
+    "valid_submit_rate": 0.9970588235294118,
+    "mean_reward": 0.9810946619106866,
+    "official_f1": 0.9848986695958274,
+    "official_f1_strict": 0.9820019088028985,
+    "weighted_recall": 0.9830697142090947,
+    "recall": 0.9848486444725383,
+    "precision_neutral": 0.9867344430397528,
+    "precision_raw": 0.9842586739710634,
+    "acuity_accuracy": 0.9924874791318865,
+    "mean_predictions": 3.585294117647059,
+    "mean_reward_ci95": [
+     0.9731686632523456,
+     0.9874817582791916
+    ],
+    "official_f1_strict_ci95": [
+     0.9741306492912811,
+     0.9882369897164524
+    ],
+    "visit_split": {
+     "recall_earlier_visits": 0.9873417721518988,
+     "recall_final_visit": 0.9493670886075949,
+     "n_earlier": 1975,
+     "n_final": 474
+    },
+    "split": "train",
+    "mean_actions": 3.0,
+    "actions_observed_n": 678,
+    "episode_metrics_observed_n": 678,
+    "mean_total_tokens": 12673.894117647058,
+    "mean_input_tokens": 12366.945588235294,
+    "mean_output_tokens": 306.9485294117647,
+    "mean_unique_input_tokens": 4395.420588235294,
+    "mean_unique_total_tokens": 4702.369117647058,
+    "budget_exhausted_rate": 0,
+    "malformed_submit_rate": 0,
+    "rollout_error_rate": 0.0029411764705882353,
+    "model_call_error_episode_rate": 0,
+    "model_call_error_types": {},
+    "mean_nudges": 0.0,
+    "tool_calls": {
+     "view_encounters": 680,
+     "view_encounter_detail": 679,
+     "icd10_search": 2438,
+     "submit_diagnosis": 678
+    },
+    "name": "qwen3-4b-sft-icd10-train-t1-seed2"
+   }
+  },
+  {
+   "path": "results/raw/training/qwen3-4b-sft-icd10-train-t1-seed3.json",
+   "sha256": "1d6bfb807e0af3a374ecb1b1249d972f118b89e11379c390681319cfab829d90",
+   "summary": {
+    "n": 680,
+    "valid_submit_rate": 0.9985294117647059,
+    "mean_reward": 0.983556108566957,
+    "official_f1": 0.9854565075033109,
+    "official_f1_strict": 0.9840073067569824,
+    "weighted_recall": 0.983524936939401,
+    "recall": 0.9843765341188021,
+    "precision_neutral": 0.9873956799214532,
+    "precision_raw": 0.9859842906234659,
+    "acuity_accuracy": 0.9958281184814352,
+    "mean_predictions": 3.5897058823529413,
+    "mean_reward_ci95": [
+     0.9782152434277083,
+     0.989311392812439
+    ],
+    "official_f1_strict_ci95": [
+     0.9788284951521423,
+     0.9896248229878875
+    ],
+    "visit_split": {
+     "recall_earlier_visits": 0.9883544303797468,
+     "recall_final_visit": 0.9514767932489452,
+     "n_earlier": 1975,
+     "n_final": 474
+    },
+    "split": "train",
+    "mean_actions": 3.0,
+    "actions_observed_n": 679,
+    "episode_metrics_observed_n": 679,
+    "mean_total_tokens": 12691.527941176471,
+    "mean_input_tokens": 12384.238235294117,
+    "mean_output_tokens": 307.28970588235296,
+    "mean_unique_input_tokens": 4397.783823529412,
+    "mean_unique_total_tokens": 4705.073529411765,
+    "budget_exhausted_rate": 0,
+    "malformed_submit_rate": 0,
+    "rollout_error_rate": 0.0014705882352941176,
+    "model_call_error_episode_rate": 0,
+    "model_call_error_types": {},
+    "mean_nudges": 0.0,
+    "tool_calls": {
+     "view_encounters": 680,
+     "view_encounter_detail": 679,
+     "icd10_search": 2442,
+     "submit_diagnosis": 679
+    },
+    "name": "qwen3-4b-sft-icd10-train-t1-seed3"
+   }
+  }
+ ],
+ "patients": 680,
+ "mean_reward": 0.9762073709882235,
+ "equal_reward_groups": 0.7852941176470588,
+ "mean_within_group_std": 0.03313104897751376,
+ "composition": [
+  {
+   "visit": "earlier",
+   "training_exposure": "0 others",
+   "diagnoses": 270,
+   "0/k": 0.003703703703703704,
+   "mixed": 0.10740740740740741,
+   "k/k": 0.8888888888888888
+  },
+  {
+   "visit": "earlier",
+   "training_exposure": "1-4 others",
+   "diagnoses": 981,
+   "0/k": 0.0,
+   "mixed": 0.0581039755351682,
+   "k/k": 0.9418960244648318
+  },
+  {
+   "visit": "earlier",
+   "training_exposure": "5+ others",
+   "diagnoses": 724,
+   "0/k": 0.0,
+   "mixed": 0.04005524861878453,
+   "k/k": 0.9599447513812155
+  },
+  {
+   "visit": "earlier",
+   "training_exposure": "all",
+   "diagnoses": 1975,
+   "0/k": 0.0005063291139240507,
+   "mixed": 0.05822784810126582,
+   "k/k": 0.9412658227848101
+  },
+  {
+   "visit": "final",
+   "training_exposure": "0 others",
+   "diagnoses": 83,
+   "0/k": 0.0,
+   "mixed": 0.3253012048192771,
+   "k/k": 0.6746987951807228
+  },
+  {
+   "visit": "final",
+   "training_exposure": "1-4 others",
+   "diagnoses": 235,
+   "0/k": 0.0,
+   "mixed": 0.16170212765957448,
+   "k/k": 0.8382978723404255
+  },
+  {
+   "visit": "final",
+   "training_exposure": "5+ others",
+   "diagnoses": 156,
+   "0/k": 0.00641025641025641,
+   "mixed": 0.15384615384615385,
+   "k/k": 0.8397435897435898
+  },
+  {
+   "visit": "final",
+   "training_exposure": "all",
+   "diagnoses": 474,
+   "0/k": 0.002109704641350211,
+   "mixed": 0.1877637130801688,
+   "k/k": 0.810126582278481
+  }
+ ]
+}

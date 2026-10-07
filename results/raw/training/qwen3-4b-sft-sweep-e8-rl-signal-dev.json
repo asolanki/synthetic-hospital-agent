@@ -1,0 +1,285 @@
+{
+ "scope": "k sampled reports of one policy on one fixed split. For each reference diagnosis: 0/k samples submitted its scorer match key (no group signal toward it), mixed (learnable), or k/k (solved). Equal-reward patient groups have zero GRPO advantage. Exposure counts other training patients carrying the same key.",
+ "split": "dev",
+ "k": 4,
+ "reports": [
+  {
+   "path": "results/raw/training/qwen3-4b-sft-sweep-e8-dev-t1-seed0.json",
+   "sha256": "93fc6ad8d8437303442fcdafc78c9549f2e866a388bca02068eb75f81604c48f",
+   "summary": {
+    "n": 120,
+    "valid_submit_rate": 1.0,
+    "mean_reward": 0.5666732164742841,
+    "official_f1": 0.5767144500497127,
+    "official_f1_strict": 0.5767144500497127,
+    "weighted_recall": 0.5682858578398439,
+    "recall": 0.5771726190476191,
+    "precision_neutral": 0.5853968253968255,
+    "precision_raw": 0.571140873015873,
+    "acuity_accuracy": 0.9267241379310345,
+    "mean_predictions": 3.4833333333333334,
+    "mean_reward_ci95": [
+     0.5141498222094929,
+     0.6265509167696838
+    ],
+    "official_f1_strict_ci95": [
+     0.523436861214715,
+     0.6367388097296174
+    ],
+    "visit_split": {
+     "recall_earlier_visits": 0.6570605187319885,
+     "recall_final_visit": 0.18571428571428572,
+     "n_earlier": 347,
+     "n_final": 70
+    },
+    "split": "dev",
+    "mean_actions": 3.0,
+    "actions_observed_n": 120,
+    "episode_metrics_observed_n": 120,
+    "mean_total_tokens": 7581.183333333333,
+    "mean_input_tokens": 7384.583333333333,
+    "mean_output_tokens": 196.6,
+    "mean_unique_input_tokens": 3303.5666666666666,
+    "mean_unique_total_tokens": 3500.1666666666665,
+    "budget_exhausted_rate": 0,
+    "malformed_submit_rate": 0,
+    "rollout_error_rate": 0,
+    "model_call_error_episode_rate": 0,
+    "model_call_error_types": {},
+    "mean_nudges": 0.0,
+    "tool_calls": {
+     "view_encounters": 120,
+     "view_encounter_detail": 120,
+     "submit_diagnosis": 120
+    },
+    "name": "qwen3-4b-sft-sweep-e8-dev-t1-seed0"
+   }
+  },
+  {
+   "path": "results/raw/training/qwen3-4b-sft-sweep-e8-dev-t1-seed1.json",
+   "sha256": "d8ef35fd7f5b0ceb6cb2e52da60559292d75dfee067c0df4fc97011e48a85e77",
+   "summary": {
+    "n": 120,
+    "valid_submit_rate": 1.0,
+    "mean_reward": 0.5702938100128984,
+    "official_f1": 0.5770509481051899,
+    "official_f1_strict": 0.5770509481051899,
+    "weighted_recall": 0.5744236589863525,
+    "recall": 0.584593253968254,
+    "precision_neutral": 0.579702380952381,
+    "precision_raw": 0.5682738095238095,
+    "acuity_accuracy": 0.927038626609442,
+    "mean_predictions": 3.5,
+    "mean_reward_ci95": [
+     0.5105439251373919,
+     0.630099228831454
+    ],
+    "official_f1_strict_ci95": [
+     0.5161009579667639,
+     0.635832014211089
+    ],
+    "visit_split": {
+     "recall_earlier_visits": 0.6685878962536023,
+     "recall_final_visit": 0.14285714285714285,
+     "n_earlier": 347,
+     "n_final": 70
+    },
+    "split": "dev",
+    "mean_actions": 3.0,
+    "actions_observed_n": 120,
+    "episode_metrics_observed_n": 120,
+    "mean_total_tokens": 7580.983333333334,
+    "mean_input_tokens": 7384.116666666667,
+    "mean_output_tokens": 196.86666666666667,
+    "mean_unique_input_tokens": 3303.1,
+    "mean_unique_total_tokens": 3499.9666666666667,
+    "budget_exhausted_rate": 0,
+    "malformed_submit_rate": 0,
+    "rollout_error_rate": 0,
+    "model_call_error_episode_rate": 0,
+    "model_call_error_types": {},
+    "mean_nudges": 0.0,
+    "tool_calls": {
+     "view_encounters": 120,
+     "view_encounter_detail": 120,
+     "submit_diagnosis": 120
+    },
+    "name": "qwen3-4b-sft-sweep-e8-dev-t1-seed1"
+   }
+  },
+  {
+   "path": "results/raw/training/qwen3-4b-sft-sweep-e8-dev-t1-seed2.json",
+   "sha256": "55b4062d16d0916389585b4a0fa543922b2f0de9a180ea1a0f7c4ea0d3f72d3f",
+   "summary": {
+    "n": 120,
+    "valid_submit_rate": 1.0,
+    "mean_reward": 0.5540043902626393,
+    "official_f1": 0.5596442656929562,
+    "official_f1_strict": 0.5596442656929562,
+    "weighted_recall": 0.5547174411057925,
+    "recall": 0.5654166666666666,
+    "precision_neutral": 0.5646593915343915,
+    "precision_raw": 0.5472685185185184,
+    "acuity_accuracy": 0.9254385964912281,
+    "mean_predictions": 3.55,
+    "mean_reward_ci95": [
+     0.49400429206311214,
+     0.6067413813762638
+    ],
+    "official_f1_strict_ci95": [
+     0.4997531021865924,
+     0.6123010718754522
+    ],
+    "visit_split": {
+     "recall_earlier_visits": 0.6512968299711815,
+     "recall_final_visit": 0.15714285714285714,
+     "n_earlier": 347,
+     "n_final": 70
+    },
+    "split": "dev",
+    "mean_actions": 3.0,
+    "actions_observed_n": 120,
+    "episode_metrics_observed_n": 120,
+    "mean_total_tokens": 7582.683333333333,
+    "mean_input_tokens": 7384.116666666667,
+    "mean_output_tokens": 198.56666666666666,
+    "mean_unique_input_tokens": 3303.1,
+    "mean_unique_total_tokens": 3501.6666666666665,
+    "budget_exhausted_rate": 0,
+    "malformed_submit_rate": 0,
+    "rollout_error_rate": 0,
+    "model_call_error_episode_rate": 0,
+    "model_call_error_types": {},
+    "mean_nudges": 0.0,
+    "tool_calls": {
+     "view_encounters": 120,
+     "view_encounter_detail": 120,
+     "submit_diagnosis": 120
+    },
+    "name": "qwen3-4b-sft-sweep-e8-dev-t1-seed2"
+   }
+  },
+  {
+   "path": "results/raw/training/qwen3-4b-sft-sweep-e8-dev-t1-seed3.json",
+   "sha256": "498fc8f03a2cc11828cbff915cdf1033cffd5b829a0adce310ea7298604485d4",
+   "summary": {
+    "n": 120,
+    "valid_submit_rate": 1.0,
+    "mean_reward": 0.5544840443083399,
+    "official_f1": 0.5623378799997927,
+    "official_f1_strict": 0.5623378799997927,
+    "weighted_recall": 0.5544089118082927,
+    "recall": 0.5682242063492063,
+    "precision_neutral": 0.5704969336219337,
+    "precision_raw": 0.5558342352092353,
+    "acuity_accuracy": 0.9170305676855895,
+    "mean_predictions": 3.5416666666666665,
+    "mean_reward_ci95": [
+     0.4960836066435833,
+     0.6122363555551639
+    ],
+    "official_f1_strict_ci95": [
+     0.502877601046254,
+     0.6193936450164452
+    ],
+    "visit_split": {
+     "recall_earlier_visits": 0.6484149855907781,
+     "recall_final_visit": 0.15714285714285714,
+     "n_earlier": 347,
+     "n_final": 70
+    },
+    "split": "dev",
+    "mean_actions": 3.0,
+    "actions_observed_n": 120,
+    "episode_metrics_observed_n": 120,
+    "mean_total_tokens": 7583.116666666667,
+    "mean_input_tokens": 7384.583333333333,
+    "mean_output_tokens": 198.53333333333333,
+    "mean_unique_input_tokens": 3303.5666666666666,
+    "mean_unique_total_tokens": 3502.1,
+    "budget_exhausted_rate": 0,
+    "malformed_submit_rate": 0,
+    "rollout_error_rate": 0,
+    "model_call_error_episode_rate": 0,
+    "model_call_error_types": {},
+    "mean_nudges": 0.0,
+    "tool_calls": {
+     "view_encounters": 120,
+     "view_encounter_detail": 120,
+     "submit_diagnosis": 120
+    },
+    "name": "qwen3-4b-sft-sweep-e8-dev-t1-seed3"
+   }
+  }
+ ],
+ "patients": 120,
+ "mean_reward": 0.5613638652645404,
+ "equal_reward_groups": 0.4666666666666667,
+ "mean_within_group_std": 0.06551192948408442,
+ "composition": [
+  {
+   "visit": "earlier",
+   "training_exposure": "0 others",
+   "diagnoses": 37,
+   "0/k": 0.8918918918918919,
+   "mixed": 0.08108108108108109,
+   "k/k": 0.02702702702702703
+  },
+  {
+   "visit": "earlier",
+   "training_exposure": "1-4 others",
+   "diagnoses": 175,
+   "0/k": 0.29714285714285715,
+   "mixed": 0.22857142857142856,
+   "k/k": 0.4742857142857143
+  },
+  {
+   "visit": "earlier",
+   "training_exposure": "5+ others",
+   "diagnoses": 135,
+   "0/k": 0.08148148148148149,
+   "mixed": 0.08888888888888889,
+   "k/k": 0.8296296296296296
+  },
+  {
+   "visit": "earlier",
+   "training_exposure": "all",
+   "diagnoses": 347,
+   "0/k": 0.276657060518732,
+   "mixed": 0.1585014409221902,
+   "k/k": 0.5648414985590778
+  },
+  {
+   "visit": "final",
+   "training_exposure": "0 others",
+   "diagnoses": 22,
+   "0/k": 0.9545454545454546,
+   "mixed": 0.045454545454545456,
+   "k/k": 0.0
+  },
+  {
+   "visit": "final",
+   "training_exposure": "1-4 others",
+   "diagnoses": 31,
+   "0/k": 0.6129032258064516,
+   "mixed": 0.3225806451612903,
+   "k/k": 0.06451612903225806
+  },
+  {
+   "visit": "final",
+   "training_exposure": "5+ others",
+   "diagnoses": 17,
+   "0/k": 0.5882352941176471,
+   "mixed": 0.23529411764705882,
+   "k/k": 0.17647058823529413
+  },
+  {
+   "visit": "final",
+   "training_exposure": "all",
+   "diagnoses": 70,
+   "0/k": 0.7142857142857143,
+   "mixed": 0.21428571428571427,
+   "k/k": 0.07142857142857142
+  }
+ ]
+}

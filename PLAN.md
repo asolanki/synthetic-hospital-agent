@@ -273,5 +273,8 @@ Best result: 8-epoch SFT on demonstrations that look codes up in the public code
 book, public mean reward 0.726, versus 0.520 for 8-epoch SFT without it. Next, if
 continued: write-up and release, the authors heads-up and upstream bug reports.
 The open training question is final-visit inference: 57% of those diagnoses are
-still never named. An RL arm should start from tool-SFT and target that,
-not coding.
+still never named. A preregistered sampling test (LOG.md, 2026-10-07) found that
+RL from tool-SFT on its own 680 training patients has almost no signal (78.5% of
+four-sample groups score identically). An RL arm needs patients the SFT never
+saw, such as a split of the 680, and on dev its learnable signal is mostly
+final-visit and weaker than the first RL run's. Not planned unless requested.
