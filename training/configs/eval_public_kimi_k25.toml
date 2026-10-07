@@ -1,0 +1,37 @@
+# No-tool comparator (LOG.md 2026-10-07 preregistration): Kimi K2.5, the paper's best single-turn
+# model, as an agent in our clean /env harness on the 200 public patients. Thinking on, as the
+# paper's kimi-2.5-thinking entry; no temperature sent (the paper's adapter omits it for Kimi
+# thinking); 32,768 max tokens as the paper's OpenRouter Kimi entry. Pinned to SiliconFlow int4,
+# the official native-int4 weights, with no provider fallbacks.
+model = "moonshotai/kimi-k2.5"
+num_rollouts = 1
+push = false
+
+[client]
+base_url = "https://openrouter.ai/api/v1"
+api_key_var = "OPENROUTER_API_KEY"
+
+[sampling]
+max_tokens = 32768
+
+[sampling.reasoning]
+enabled = true
+
+[sampling.provider]
+order = ["siliconflow"]
+quantizations = ["int4"]
+allow_fallbacks = false
+
+[env.taskset]
+id = "synthetic-hospital-dx"
+split = "public"
+budget = 40
+
+[env.agent]
+max_turns = 50
+
+[env.agent.harness]
+id = "null"
+
+[env.agent.runtime]
+type = "subprocess"

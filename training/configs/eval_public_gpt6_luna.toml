@@ -1,0 +1,35 @@
+# No-tool comparator (LOG.md 2026-10-07 preregistration): GPT-6 Luna, a current budget frontier
+# model, as an agent in our clean /env harness on the 200 public patients. Reasoning effort medium;
+# no temperature sent (the model does not accept one); 32,768 max tokens, matching the Kimi arm.
+# Pinned to OpenAI's standard endpoint (not the flex tier), with no provider fallbacks.
+model = "openai/gpt-6-luna"
+num_rollouts = 1
+push = false
+
+[client]
+base_url = "https://openrouter.ai/api/v1"
+api_key_var = "OPENROUTER_API_KEY"
+
+[sampling]
+max_tokens = 32768
+
+[sampling.reasoning]
+effort = "medium"
+
+[sampling.provider]
+order = ["openai"]
+allow_fallbacks = false
+
+[env.taskset]
+id = "synthetic-hospital-dx"
+split = "public"
+budget = 40
+
+[env.agent]
+max_turns = 50
+
+[env.agent.harness]
+id = "null"
+
+[env.agent.runtime]
+type = "subprocess"
