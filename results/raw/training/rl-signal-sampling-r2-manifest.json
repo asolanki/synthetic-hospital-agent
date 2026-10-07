@@ -1,0 +1,40 @@
+{
+  "format": "ordered chunks of one tar.gz stream",
+  "bucket": "synthetic-hospital-rl-artifacts",
+  "prefix": "2026-10-06/rl-signal-sampling/chunks-16m/",
+  "verified_at": "2026-10-07T00:22:44.500664+00:00",
+  "archive_sha256": "2763b98b1dc0b673ebefb4bcb4af503ed0d7ef9e4702886f783850c7e8992f1c",
+  "archive_bytes": 59076145,
+  "parts": [
+    {
+      "file": "archive.tar.gz.part-aaaa",
+      "key": "2026-10-06/rl-signal-sampling/chunks-16m/archive.tar.gz.part-aaaa",
+      "bytes": 16777216,
+      "sha256": "8102bbc77b049d018749ba696c596654cf9110325aae70841c6e9b2965e439e9",
+      "md5": "0d5018a98a84d84619afdb2f52167402"
+    },
+    {
+      "file": "archive.tar.gz.part-aaab",
+      "key": "2026-10-06/rl-signal-sampling/chunks-16m/archive.tar.gz.part-aaab",
+      "bytes": 16777216,
+      "sha256": "06c2e8650fba3cbb861511245b1b155f8511e336692599be9c9d9e737fbdab2f",
+      "md5": "34a18f338ea6a0317ed4f0e07a446bfb"
+    },
+    {
+      "file": "archive.tar.gz.part-aaac",
+      "key": "2026-10-06/rl-signal-sampling/chunks-16m/archive.tar.gz.part-aaac",
+      "bytes": 16777216,
+      "sha256": "fdba15e83cdafee73c73a835749dc8f8044414e6bac0d6b82fb551c0cb16ea91",
+      "md5": "73add84ee3ef481d05cbd26dc2da6d0a"
+    },
+    {
+      "file": "archive.tar.gz.part-aaad",
+      "key": "2026-10-06/rl-signal-sampling/chunks-16m/archive.tar.gz.part-aaad",
+      "bytes": 8744497,
+      "sha256": "95af036a212c4597e3b168483c47055fa37d6de520f5d555285ae9a44b06749b",
+      "md5": "16dab00c6b7db6cc4879c4992f8aada9"
+    }
+  ],
+  "verification": "Every part's server-reported size and ETag match local bytes and MD5; SHA-256 hashes permit independent restoration checks.",
+  "restore": "Download all listed parts, verify their SHA-256 hashes, concatenate in manifest order, then extract the tar.gz stream."
+}

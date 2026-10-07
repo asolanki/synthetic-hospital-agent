@@ -1,0 +1,18 @@
+{
+ "archive": "r2://synthetic-hospital-rl-artifacts/2026-10-06/rl-signal-sampling/chunks-16m/",
+ "manifest_key": "2026-10-06/rl-signal-sampling/chunks-16m/manifest.json",
+ "manifest_sha256": "af6474209ac59d37e2e9c0c78cdbd54c1fc77ae8233a2686db30c74d97d3a53e",
+ "archive_sha256": "2763b98b1dc0b673ebefb4bcb4af503ed0d7ef9e4702886f783850c7e8992f1c",
+ "archive_bytes": 59076145,
+ "parts": 4,
+ "verified_at": "2026-10-07T00:22:51.412852+00:00",
+ "verification": "Every source file hashed on the rental; every tar member of the local parts matched those bytes and SHA-256; every part matched remote size and ETag; the downloaded manifest matches byte-for-byte; first and last downloaded parts match SHA-256.",
+ "downloaded_part_keys": [
+  "2026-10-06/rl-signal-sampling/chunks-16m/archive.tar.gz.part-aaaa",
+  "2026-10-06/rl-signal-sampling/chunks-16m/archive.tar.gz.part-aaad"
+ ],
+ "source_files": 1895,
+ "source_bytes": 510441227,
+ "source_file_manifest": "results/raw/training/rl-signal-sampling-files.json",
+ "privacy": "r2.dev disabled; no custom domains"
+}
