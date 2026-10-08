@@ -1,0 +1,67 @@
+{
+ "split": "public",
+ "traces": "runs/eval-public-luna-icd10/synthetic-hospital-dx--openai--gpt-6-luna--null--2e889d80/traces.jsonl",
+ "report": "results/raw/training/gpt-6-luna-icd10-env-public.json",
+ "episodes": 200,
+ "scope": "Each reference diagnosis is classified by two facts: whether its scorer match key was submitted (hit) and whether that key appeared among the codes the episode's own `icd10_search` results listed (shown). Hit and shown, hit from memory, missed though shown (a selection error), missed and never shown (a retrieval or naming error). Diagnoses split by visit (earlier encounters vs the final encounter) and, for \"unseen\", by whether no training patient carries the key. Submissions come from the report built from the same traces (`training.report`). Never reads heldout. ",
+ "lookups_per_patient": {
+  "mean": 9.675,
+  "median": 9.0,
+  "max": 31,
+  "patients_with_none": 0
+ },
+ "repeated_queries": {
+  "episodes_with_a_query_repeated_5_plus": 0,
+  "max_repeats": 1
+ },
+ "stop_conditions": {
+  "submitted": 200
+ },
+ "submitted_codes": {
+  "n": 1158,
+  "exact_code_in_own_results": 0.9550949913644214,
+  "match_key_in_own_results": 0.9922279792746114
+ },
+ "error_budget": [
+  {
+   "visit": "earlier",
+   "training_patients_with_key": "all",
+   "diagnoses": 569,
+   "hit_shown": 0.718804920913884,
+   "hit_memory": 0.005272407732864675,
+   "miss_shown": 0.1616871704745167,
+   "miss_not_shown": 0.11423550087873462
+  },
+  {
+   "visit": "earlier",
+   "training_patients_with_key": "unseen",
+   "diagnoses": 82,
+   "hit_shown": 0.524390243902439,
+   "hit_memory": 0.024390243902439025,
+   "miss_shown": 0.2073170731707317,
+   "miss_not_shown": 0.24390243902439024
+  },
+  {
+   "visit": "final",
+   "training_patients_with_key": "all",
+   "diagnoses": 136,
+   "hit_shown": 0.6102941176470589,
+   "hit_memory": 0.022058823529411766,
+   "miss_shown": 0.13970588235294118,
+   "miss_not_shown": 0.22794117647058823
+  },
+  {
+   "visit": "final",
+   "training_patients_with_key": "unseen",
+   "diagnoses": 21,
+   "hit_shown": 0.47619047619047616,
+   "hit_memory": 0.047619047619047616,
+   "miss_shown": 0.14285714285714285,
+   "miss_not_shown": 0.3333333333333333
+  }
+ ],
+ "tokens": {
+  "input": 1927236,
+  "output": 444315
+ }
+}

@@ -26,6 +26,7 @@ sessions counted as zero. Details and confidence intervals are in the write-ups 
 | Qwen3-30B-A3B, untrained + code-book tool (temperature 0) | 0.644 | [4](results/milestone4_sft_and_codebook.md) |
 | Kimi K2.5, no tool | 0.726 | [5](results/milestone5_head_to_head.md) |
 | GPT-6 Luna, no tool | 0.689 | [5](results/milestone5_head_to_head.md) |
+| GPT-6 Luna + code-book tool (zero-shot; the book adds nothing for Luna) | 0.679 | [5](results/milestone5_head_to_head.md) |
 | Gemma 3 27B, no tool, agent (lower bound: its provider returned 46% of replies empty) | 0.262 | [5](results/milestone5_head_to_head.md) |
 | Gemma 3 27B, single-turn: paper 0.287; our run of the paper's code 0.283 | 0.283 | [5](results/milestone5_head_to_head.md) |
 

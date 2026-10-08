@@ -145,6 +145,46 @@ rule gives **0.283**. Upstream's README describes the reported metric as chart-n
 scorer, so every number here and in earlier milestones is chart-neutral. Evidence:
 `results/raw/audit/paper_singleturn_gemma3_public.json`.
 
+## Does the code book shrink the scale gap? GPT-6 Luna with the book
+
+Added 2026-10-08, preregistered with predictions in `LOG.md`. Luna's arm above, plus only the
+`icd10_search` tool (`eval_public_gpt6_luna_icd10.toml`, frozen index `search-index-2025-v3`), on the
+same 200 public patients. This completes the 2×2 below. A first attempt was abandoned without being
+interpreted after the host slept mid-run; this is a fresh full run: 200/200 submitted, no errors.
+
+| Public, mean score (strict F1) | No code book | Code book | Book effect (95% CI) |
+|---|--:|--:|--:|
+| Qwen3-4B, 8 epochs of SFT (tool-SFT taught to use the book) | 0.520 (0.532) | **0.726 (0.738)** | **+0.206** (+0.160 to +0.252) |
+| GPT-6 Luna, zero-shot | 0.654 (0.689) | 0.646 (0.679) | −0.009 (−0.031 to +0.014) |
+| Gap, Luna − 4B | +0.134 (+0.082 to +0.182) | **−0.081** (−0.120 to −0.040) | |
+
+- **Interaction** (per-patient difference in differences, same bootstrap as `training.compare`):
+  **I = +0.215** (CI +0.163 to +0.268; 121 patients positive, 33 negative). The book is worth far more
+  to the 4B, and the gap reverses: tool-SFT beats Luna + book by +0.081 (115 wins / 44 losses).
+- **Caveat:** the 4B's book effect includes being taught to use it; Luna's is zero-shot. Untaught, the
+  book is still worth +0.262 to the untrained 4B and +0.187 to Qwen3-30B-A3B (milestone 4), so its value
+  falls with model size even without teaching.
+- **Luna did use the book.** 9.7 lookups per patient (the 4B makes 3.5), no loops, and 99% of its
+  submitted codes' categories appeared in its own results.
+- **Why it didn't help:** Luna already codes well. Its earlier-visit misses are mostly selection: in
+  16.2% of earlier-visit diagnoses the right category was in its own results but not submitted (4B:
+  4.7%). The book changed hit rates by +2.1 points on earlier visits (72.4%), +4.9 on never-seen codes
+  (54.9%) and −2.2 on the final visit (63.2%).
+
+| Earlier-visit diagnoses, by training patients carrying the code | 4B tool-SFT | Luna + book | Luna |
+|---|--:|--:|--:|
+| None (82) | 57.3% | 54.9% | 50.0% |
+| One or more (487) | **90.1%** | 75.4% | 73.7% |
+
+Against a frontier model that has the same book, the 4B is level on codes neither has seen. Its lead
+sits in codes its training patients carried: the benchmark's own coding conventions, learned from
+label-informed SFT. The coding-ceiling audit points the same way: given the exact names, Qwen3-235B
+agreed with the reference category on only 77%. So most of the 4B's remaining edge is learned labelling
+conventions, not the book (exploratory split, not preregistered). Most predictions missed: I expected
+the book to fix Luna's coding. Only "I > 0" and "final visit unchanged" held. Evidence:
+`gpt-6-luna-icd10-env-public{,-lookups}.json`, `interaction-codebook-4b-vs-gpt-6-luna-public.json`,
+the `-vs-` compare and breakdown files. Cost about $0.42.
+
 ## Caveats
 
 - **Specialist against generalists, by design.** The 4B was fine-tuned on 680 of the benchmark's
