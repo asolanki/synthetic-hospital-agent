@@ -97,7 +97,8 @@ are slightly worse (0.88 versus 0.94; acuity does not enter the official reward)
 
 - **Augmented harness.** The paper's agents do not have this tool; compare tool arms with each
   other, and with the paper's numbers only as context. The paper's own agent scores (0.81–0.89)
-  come from a harness that leaks the reference codes (`results/raw/audit/harness_gap_dev.json`).
+  come from a harness that leaks the reference codes. That is a known issue listed in upstream's
+  README since its first public commit; we measured its size (`results/raw/audit/harness_gap_dev.json`).
 - **Label-informed demonstrations.** As in milestone 3, SFT clones the benchmark's reference
   answers on training patients, including its naming and coding conventions.
 - **Untrained models loop.** Without training, Qwen3-30B sometimes searches until the turn cap:

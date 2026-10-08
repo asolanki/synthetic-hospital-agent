@@ -5,8 +5,8 @@ model (Qwen3-4B-Instruct-2507) has to diagnose patients by operating a longitudi
 The plan is in [PLAN.md](PLAN.md), every finding and decision in [LOG.md](LOG.md).
 
 Task: `patient_diagnosis` in [Synthetic Hospital](https://github.com/sparkcpark/synthetic_hospital)
-v1.3, played through the simulator's corrected `/env` route (never the original `eval/agents`
-harness, which leaks the labels through the problem list).
+v1.3, played through the simulator's corrected `/env` route. We never use the original `eval/agents`
+harness: upstream's README lists it as a known issue that it leaks the labels through the problem list.
 
 ## How the pieces fit
 

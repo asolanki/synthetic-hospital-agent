@@ -215,3 +215,10 @@ Entries before 2026-10-01 22:53 were reconstructed from the session and file tim
   - **Cross-check:** the agent result (0.262) is close to Gemma's single-turn score with the paper's code (0.283, plan B) and to the paper's 0.287. So Gemma's low score is mostly the model, not the serving.
   - **Cost:** ~27.1M input + 0.42M output tokens, so ~$2.2 on DeepInfra (inflated by re-sending context after empty turns).
   - Artifacts: `gemma-3-27b-env-public.json`, `qwen3-4b-sft-icd10-vs-gemma-3-27b-env-public{,-breakdown}.json`, proxy audit `runs/gemma-proxy.jsonl` (gitignored runs/).
+- **Leak attribution check** (user: "did we correct the conflation of the leak to a known/reported leak?").
+  - **Upstream history is complete** (not a shallow clone). The "Known issues" note on the problem-list leak is already in the first public commit, `77cc57e` (2026-09-25, a day after the paper), and upstream `main` is still `911f34c`.
+  - **The paper's text** (Appendix C.3) mentions only hiding assessment and plan "to prevent information leakage", not the problem-list tools.
+  - **Our contribution is the size:** +0.33 for Qwen3-30B, +0.15 for Mistral Large. It is not the discovery.
+  - **Fixed where the leak was stated without attribution:** repo `README.md`, `audit/README.md`, `results/milestone4_sft_and_codebook.md`.
+  - **Tightened:** the blog (TL;DR now says "not my finding"; the section credits the README since its first commit, notes the paper's C.3 wording, and uses the README's own recommendation for rerunning Table 4) and tweet 13 ("the authors' README already flags that harness").
+  - `results/milestone3_training.md` and the reply to the authors were already attributed. Earlier LOG entries are history and stay as written; the 22:30 (10-05) entry already cites the README.
