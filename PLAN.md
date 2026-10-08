@@ -265,13 +265,22 @@ The write-up should emphasize **what the model learned and what the benchmark ac
 ## Current implementation milestone
 
 Benchmark audit, prompting baselines, SFT, the SFT→RL pilot, the continued-SFT
-control, the public final test, the SFT epoch sweep and the ICD-10-CM code-book
-tool are complete; see `LOG.md`, `results/milestone3_training.md`,
-`results/milestone4_sft_and_codebook.md` and `results/raw/training/`. Heldout remains sealed.
+control, the public final test, the SFT epoch sweep, the ICD-10-CM code-book
+tool, the head-to-head against no-tool comparators (Kimi K2.5, GPT-6 Luna,
+Gemma 3 27B) in the same `/env` harness, and the reproduction of the paper's
+single-turn Gemma 3 27B number are complete; see `LOG.md`,
+`results/milestone3_training.md`, `results/milestone4_sft_and_codebook.md`,
+`results/milestone5_head_to_head.md` and `results/raw/`. Heldout remains sealed.
 
 Best result: 8-epoch SFT on demonstrations that look codes up in the public code
-book, public mean reward 0.726, versus 0.520 for 8-epoch SFT without it. Next, if
-continued: write-up and release, the authors heads-up and upstream bug reports.
+book, public mean reward 0.726, versus 0.520 for 8-epoch SFT without it. On the
+200 public patients, strict F1 0.74, it beats GPT-6 Luna (0.69) and Gemma 3 27B
+(0.26, a lower bound) and is level with Kimi K2.5 (0.73); verdicts are paired on
+mean score (vs Kimi +0.034, CI −0.013 to +0.080). The tool closes the
+knowledge gap (earlier-visit diagnoses 85% versus about 70%), not the
+final-visit reasoning gap (41% versus 58–65%). The paper's own single-turn code
+gives Gemma 0.283 against the paper's 0.287. Next, if continued: write-up and
+release, the authors heads-up and upstream bug reports.
 The open training question is final-visit inference: 57% of those diagnoses are
 still never named. A preregistered sampling test (LOG.md, 2026-10-07) found that
 RL from tool-SFT on its own 680 training patients has almost no signal (78.5% of

@@ -1,0 +1,39 @@
+# Luna + code book (LOG.md 2026-10-07 preregistration): eval_public_gpt6_luna.toml with only the
+# optional icd10_search code-book tool added (frozen index search-index-2025-v3). Completes the 2x2
+# {4B 8-epoch SFT, 4B tool-SFT} x {Luna, Luna + book} on the 200 public patients.
+# Reasoning effort medium; no temperature sent (the model does not accept one); 32,768 max tokens.
+# Pinned to OpenAI's standard endpoint (not the flex tier), with no provider fallbacks.
+model = "openai/gpt-6-luna"
+num_rollouts = 1
+push = false
+
+[client]
+base_url = "https://openrouter.ai/api/v1"
+api_key_var = "OPENROUTER_API_KEY"
+
+[sampling]
+max_tokens = 32768
+
+[sampling.reasoning]
+effort = "medium"
+
+[sampling.provider]
+order = ["openai"]
+allow_fallbacks = false
+
+[env.taskset]
+id = "synthetic-hospital-dx"
+split = "public"
+budget = 40
+
+[env.taskset.task]
+icd10_tool = true
+
+[env.agent]
+max_turns = 50
+
+[env.agent.harness]
+id = "null"
+
+[env.agent.runtime]
+type = "subprocess"

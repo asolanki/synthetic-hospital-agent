@@ -18,11 +18,24 @@ it does not query the scorer during gradient updates.
 | `report.py` | Recover saved submissions, verify their official scores, and build evaluation summaries |
 | `evaluate.py`, `tracking.py` | Full-dev (or train-fit) evaluation with hosted W&B curves, patient tables, transcript media and raw artifacts |
 | `compare.py`, `breakdown.py` | Patient-paired checkpoint comparisons and where-did-it-change slices |
+| `interaction.py` | Patient-paired difference in differences of four reports (e.g. is the code book worth more to the 4B than to a frontier model?), on the same bootstrap as `compare.py` |
+| `lookups.py` | Code-book use in saved traces: lookups per patient, repeated queries, and an error budget (hit and shown, hit from memory, missed though shown, never shown) |
 | `recode.py` | Coding counterfactual: rescore a report with the benchmark's codes for the names the model chose |
 | `setup_rl.sh`, `serve_rl.sh`, `run_rl.sh` | Isolated Prime-RL/CUDA 13 stack, colocated inference and training |
 | `prime-rl-shutdown.patch` | Pinned fix for the final-broadcast queue-drain deadlock |
 | `track_rl.py` | Publish native RL episode chunks into the same hosted W&B run |
 | `rental_guard.py` | Stop the current Vast instance at an absolute deadline using its instance-scoped key |
+| `icd10_codebook.py` | `fetch`: download and checksum the public CMS ICD-10-CM 2025 release and build the search index; `check`: name-search recall on dev and a top-result recode of saved reports |
+| `sft_data_icd10.py` | Tool-SFT demonstrations: one inserted `icd10_search` turn per oracle-copy demonstration, submission unchanged |
+| `sampling_signal.py` | RL-signal test: how often k sampled answers per patient agree (would GRPO have anything to learn?) |
+| `gemma_toolcall_proxy.py` | Local OpenAI-compatible proxy in front of DeepInfra that turns Gemma 3's text-format tool calls into structured ones |
+| `configs/sft_sweep.toml` | Epoch sweep: the unchanged recipe for 10 epochs, every epoch's adapter kept |
+| `configs/sft_icd10.toml` | Tool-SFT: the unchanged recipe, 8 epochs, on `oracle-copy-icd10-v1` |
+| `configs/eval_local_icd10.toml` | `eval_local.toml` plus the code-book tool |
+| `configs/eval_openrouter_icd10_t0.toml` | Qwen3-30B with the code-book tool at temperature 0; pairs with `audit/harness_gap_env.toml`, which is the same run without it |
+| `configs/eval_public_kimi_k25.toml`, `eval_public_gpt6_luna.toml`, `eval_public_gemma3_27b.toml` | No-tool comparators on the 200 public patients |
+| `configs/eval_public_gpt6_luna_icd10.toml` | GPT-6 Luna plus only the code-book tool; completes the 2×2 {4B SFT, 4B tool-SFT} × {Luna, Luna + book} |
+| `configs/rl_inference.toml` | Prime-RL rollout inference server (RL only; checkpoint evaluation stays on vLLM 0.19.1) |
 
 ## The environment package
 
@@ -33,6 +46,8 @@ it does not query the scorer during gradient updates.
 | `env.py` | The paper's control flow: nudge after a reply with no tool call, then one forced-submission turn |
 | `state.py` | Per-episode bookkeeping (episode id, actions, submitted, reward) |
 | `simulator.py` | Small HTTP helper (its own copy of the server address and token) |
+| `icd10.py` | BM25 search over the public CMS ICD-10-CM 2025 release: tabular titles, inclusion terms, alphabetic index, Neoplasm Table, Table of Drugs and Chemicals. Never the benchmark's diagnosis table |
+| `icd10_tool.py` | The optional `icd10_search` tool. Off by default; `[env.taskset.task] icd10_tool = true` enables it. Lookups run locally and spend model turns, not EHR actions |
 
 ## Commands
 
@@ -321,6 +336,113 @@ cancellation/error/admission metrics are retained, not forced into a disjoint
 partition of all saved episodes. On the completed setup run, the reconstructed
 64 shipped episodes' per-update reward means match the native effective curves.
 
+## Epoch sweep
+
+One fresh run of the unchanged oracle-copy recipe from the base model for 10 epochs on one cosine
+schedule, keeping every epoch's adapter (`keep_epoch_checkpoints = true`; default off). Each epoch is
+scored on dev at sampling seeds 0–2; the rule (highest three-seed mean, earliest epoch within 0.005)
+was logged beforehand and picked epoch 8 (`results/raw/training/sft-sweep-selection.json`).
+
+```bash
+bash training/run_sft.sh --config training/configs/sft_sweep.toml --no-merge
+# 680 demonstrations / effective batch 8 = 85 optimizer steps per epoch; epoch 8 = checkpoint-680.
+bash training/serve.sh Qwen/Qwen3-4B-Instruct-2507 shrl-sft-sweep-e8 \
+    "$PWD/runs/sft-sweep-v1/checkpoints/checkpoint-680"
+for s in 0 1 2; do
+  uv run --group verifiers --group tracking python -m training.evaluate \
+      --model shrl-sft-sweep-e8 --seed $s --mode offline \
+      --name qwen3-4b-sft-sweep-e8-paper-dev-seed$s --output-dir runs/sft-sweep-dev/e8-seed$s
+done
+```
+
+Adapters are served unmerged on the base checkpoint. Pass all three seed reports per arm to
+`training.compare` to average each patient before pairing. Results: `results/milestone4_sft_and_codebook.md`.
+
+## ICD-10-CM code-book tool and tool-SFT
+
+`icd10_search(query)` searches the public CMS ICD-10-CM 2025 release only (zip SHA-256 pinned in
+`icd10.py`). The benchmark's own diagnosis table is never indexed, so the tool cannot reveal a
+patient's reference codes. The frozen index is `runs/icd10cm/search-index-2025-v3.json`
+(gitignored; `SHRL_ICD10_DIR` overrides the directory). It is an augmented harness, off by default,
+so official-harness results are unchanged.
+
+```bash
+uv run python -m training.icd10_codebook fetch          # download + verify the zip, build the index
+uv run python -m training.icd10_codebook check --name icd10-codebook-v3-check-dev \
+    results/raw/training/qwen3-4b-{paper,sft-paper,rl-paper,sft-continued-paper}-dev.json
+
+# Tool-SFT demonstrations, training, serving and evaluation.
+uv run python -m training.sft_data_icd10 --source oracle-copy-v1 --name oracle-copy-icd10-v1 \
+    --tools-from data/sft/oracle-copy-icd10-v1/tools_source_trace.jsonl
+bash training/run_sft.sh --config training/configs/sft_icd10.toml --no-merge
+bash training/serve.sh Qwen/Qwen3-4B-Instruct-2507 shrl-sft-icd10-v1 "$PWD/runs/sft-icd10-v1/adapter"
+uv run --group verifiers --group tracking python -m training.evaluate \
+    --config training/configs/eval_local_icd10.toml --model shrl-sft-icd10-v1 \
+    --split public --name qwen3-4b-sft-icd10-public --output-dir runs/icd10-public/tool-sft
+
+# Untrained Qwen3-30B with the tool (OpenRouter), 120 dev patients.
+uv run vf-eval @ training/configs/eval_openrouter_icd10_t0.toml -n 120 -c 8 --no-rich \
+    --output-dir runs/icd10-dev-qwen30b-t0 --run.dir eval
+uv run python -m training.report runs/icd10-dev-qwen30b-t0/eval/traces.jsonl --name qwen3-30b-icd10-dev-t0
+```
+
+Each tool-SFT demonstration keeps its recorded chart observations and reference submission and
+inserts one turn that searches every submitted name, followed by the tool's real output. When a
+search misses the reference category, the demonstration still submits the reference code
+(label-informed, like the source data). Train patients only.
+
+## RL-signal sampling test
+
+Would GRPO from a policy have anything to learn? Draw k = 4 samples per patient at the RL rollout
+controls (temperature 1, top-p 1, seeds 0–3), then count, per reference diagnosis, groups that are
+0/4, mixed or 4/4, plus equal-reward patient groups. Reads saved reports only.
+
+```bash
+for s in 0 1 2 3; do
+  uv run --group verifiers --group tracking python -m training.evaluate \
+      --config training/configs/eval_local_icd10.toml --model shrl-sft-icd10-v1 \
+      --split train --temperature 1 --top-p 1 --seed $s --mode offline \
+      --name qwen3-4b-sft-icd10-train-t1-seed$s --output-dir runs/rl-signal/qwen3-4b-sft-icd10-train-seed$s
+done
+uv run python -m training.sampling_signal --split train --name qwen3-4b-sft-icd10-rl-signal-train \
+    results/raw/training/qwen3-4b-sft-icd10-train-t1-seed{0,1,2,3}.json
+```
+
+Use the default config (no tool) for the no-tool SFT policies. The rule and result are in `LOG.md`
+(2026-10-06 and 2026-10-07): on its own training patients tool-SFT has almost no signal.
+
+## No-tool comparators (head-to-head)
+
+Large models as agents in the same clean `/env` harness, without the code-book tool, on all 200
+public patients, one sample each. Settings are in each config's header; the question and decision
+rule were logged first (`LOG.md`, 2026-10-07). Kimi and Luna use `OPENROUTER_API_KEY`; Gemma uses
+`DEEPINFRA_API_KEY` through the tool-call translator, which must be running first.
+
+```bash
+set -a; source .env; set +a
+uv run vf-eval @ training/configs/eval_public_kimi_k25.toml -n 200 -c 24 --output-dir runs/eval-public-kimi
+uv run vf-eval @ training/configs/eval_public_gpt6_luna.toml -n 200 -c 16 --output-dir runs/eval-public-luna
+
+uv run python training/gemma_toolcall_proxy.py --port 58100 --log runs/gemma-proxy.jsonl   # separate shell
+uv run vf-eval @ training/configs/eval_public_gemma3_27b.toml -n 200 -c 8 --output-dir runs/eval-public-gemma
+
+# vf-eval writes runs/<dir>/<run-id>/traces.jsonl.
+uv run python -m training.report runs/eval-public-kimi/<run-id>/traces.jsonl \
+    --split public --name kimi-k2.5-env-public
+uv run python -m training.compare --split public \
+    --reference results/raw/training/kimi-k2.5-env-public.json \
+    --candidate results/raw/training/qwen3-4b-sft-icd10-public.json \
+    --name qwen3-4b-sft-icd10-vs-kimi-k2.5-env-public
+uv run python -m training.breakdown --split public \
+    --reference results/raw/training/kimi-k2.5-env-public.json \
+    --candidate results/raw/training/qwen3-4b-sft-icd10-public.json \
+    --name qwen3-4b-sft-icd10-vs-kimi-k2.5-env-public-breakdown
+```
+
+The proxy only rewrites responses; requests pass through unchanged, and every message it inspects
+is appended to its JSONL audit log. `training/configs/eval_public_gpt6_luna_icd10.toml` is the same
+Luna arm plus only the code-book tool. Results: `results/milestone5_head_to_head.md`.
+
 ## Private checkpoint archives
 
 Useful checkpoints and reproduction bundles are stored in the private R2 bucket
@@ -356,7 +478,7 @@ Its durable restoration manifest and upload/download evidence are
 All parts passed size/ETag checks; downloaded manifest/first/last parts were
 verified separately. Local restoration reproduced all 41 source-file hashes.
 
-Archives from 2026-10-05 (same format; per-file source hashes in
+Archives from 2026-10-05 onward (same format; per-file source hashes in
 `results/raw/training/NAME-files.json`, evidence in `NAME-r2-manifest.json` and
 `NAME-r2-archive.json`). Each tar member was decompressed and checked against
 hashes taken on the rental before upload.
@@ -367,6 +489,10 @@ hashes taken on the rental before upload.
 | `2026-10-05/rl-sft-paper-v1/checkpoint-step85-16m/` | `rl-sft-paper-v1-checkpoint` | Terminal trainer + optimizer checkpoint, enough to resume RL | 515 |
 | `2026-10-05/sft-continued-v1/chunks-16m/` | `sft-continued-v1` | Continued-SFT adapter, trainer checkpoint, manifest, config and code | 30 |
 | `2026-10-05/post-rl-evaluations/chunks-16m/` | `post-rl-evaluations` | Every dev/train/public evaluation trace from the RL phase, reports, service logs and chain scripts | 2 |
+| `2026-10-06/sft-sweep-v1/chunks-16m/` | `sft-sweep-v1` | All 10 epoch adapters and the final adapter of the sweep | 83 |
+| `2026-10-06/sft-icd10-v1/chunks-16m/` | `sft-icd10-v1` | Tool-SFT adapter, tool demonstrations, code-book zip and search code | 17 |
+| `2026-10-06/sweep-icd10-evaluations/chunks-16m/` | `sweep-icd10-evaluations` | Every sweep and tool-arm evaluation directory, rental `results/raw`, chain scripts and logs | 4 |
+| `2026-10-06/rl-signal-sampling/chunks-16m/` | `rl-signal-sampling` | RL-signal sampling runs, chain script and log, evaluator and analysis code | 4 |
 
 
 ## Watching experiments
