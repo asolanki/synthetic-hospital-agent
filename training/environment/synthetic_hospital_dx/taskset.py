@@ -22,7 +22,7 @@ import verifiers.v1 as vf
 
 from synthetic_hospital_dx import simulator
 from synthetic_hospital_dx.state import EpisodeState
-from synthetic_hospital_dx.icd10_tool import ICD10Toolset
+from synthetic_hospital_dx.icd10_tool import ICD10ToolConfig, ICD10Toolset
 from synthetic_hospital_dx.tools import EHRToolset
 
 TASK = "patient_diagnosis"
@@ -40,6 +40,10 @@ class DxTaskConfig(vf.TaskConfig):
     tools: vf.ToolsetConfig = vf.ToolsetConfig()
     icd10_tool: bool = False
     """Add `icd10_search` over the public ICD-10-CM code book (an augmented harness, not the paper's)."""
+    intro_suffix: str = ""
+    """Instruction appended to the paper's patient intro on a new line (augmented harness; empty = paper's)."""
+    icd10_description_suffix: str = ""
+    """Instruction appended to the `icd10_search` tool description (needs `icd10_tool`)."""
 
 
 class DxTask(vf.Task[DxData, EpisodeState, DxTaskConfig]):
@@ -49,7 +53,8 @@ class DxTask(vf.Task[DxData, EpisodeState, DxTaskConfig]):
 
     @classmethod
     def toolsets(cls, config: DxTaskConfig) -> list[vf.Toolset]:
-        extra = [ICD10Toolset(vf.ToolsetConfig())] if config.icd10_tool else []
+        extra = ([ICD10Toolset(ICD10ToolConfig(description_suffix=config.icd10_description_suffix))]
+                 if config.icd10_tool else [])
         return [EHRToolset(config.tools), *extra]
 
     async def setup(self, trace: vf.Trace, runtime: vf.Runtime) -> None:
@@ -122,13 +127,19 @@ class SyntheticHospitalDxTaskset(vf.Taskset[DxTask, DxConfig]):
                     id=str(gt_id), name=f"patient-{patient_of[gt_id]}",
                     gt_id=gt_id, patient_id=patient_of[gt_id], budget=self.config.budget,
                     system_prompt=system_prompt,
-                    # Verbatim from eval/agents/prompts.py build_patient_intro.
-                    prompt=f"Your assigned patient is patient_id = {patient_of[gt_id]}.\nBegin your investigation now.",
+                    # Verbatim from eval/agents/prompts.py build_patient_intro, plus the optional
+                    # augmented-harness instruction.
+                    prompt=intro(patient_of[gt_id], self.config.task.intro_suffix),
                 ),
                 self.config.task,
             )
             for gt_id in gt_ids
         ]
+
+
+def intro(patient_id: int, suffix: str = "") -> str:
+    text = f"Your assigned patient is patient_id = {patient_id}.\nBegin your investigation now."
+    return f"{text}\n{suffix.strip()}" if suffix.strip() else text
 
 
 def simulator_sync():

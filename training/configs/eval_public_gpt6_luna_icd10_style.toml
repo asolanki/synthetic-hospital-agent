@@ -1,0 +1,39 @@
+# Told vs taught, arm 2 (LOG.md 2026-10-08 preregistration): eval_public_gpt6_luna_icd10.toml plus
+# only a house-style instruction appended to the patient intro. Augmented harness. The instruction is
+# written from facts about the 680 training patients only (one reference diagnosis per encounter at
+# most; "history of" and symptom codes rare; profile chronic conditions mostly not reference).
+model = "openai/gpt-6-luna"
+num_rollouts = 1
+push = false
+
+[client]
+base_url = "https://openrouter.ai/api/v1"
+api_key_var = "OPENROUTER_API_KEY"
+
+[sampling]
+max_tokens = 32768
+
+[sampling.reasoning]
+effort = "medium"
+
+[sampling.provider]
+order = ["openai"]
+allow_fallbacks = false
+
+[env.taskset]
+id = "synthetic-hospital-dx"
+split = "public"
+budget = 40
+
+[env.taskset.task]
+icd10_tool = true
+intro_suffix = "The problem list should contain the diagnosis established at each encounter, about one per visit. Don't list symptoms, findings or 'history of' entries, and don't repeat chronic conditions unless a visit diagnosed them."
+
+[env.agent]
+max_turns = 50
+
+[env.agent.harness]
+id = "null"
+
+[env.agent.runtime]
+type = "subprocess"

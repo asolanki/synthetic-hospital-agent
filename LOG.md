@@ -253,3 +253,43 @@ Entries before 2026-10-01 22:53 were reconstructed from the session and file tim
     - **Code-book use (`gpt-6-luna-icd10-env-public-lookups.json`):** 9.7 lookups per patient (median 9, max 31; the 4B makes 3.5); no loops (no query repeated, the maximum repeat count is 1); every episode submitted. 99.2% of submitted codes' categories, and 95.5% of exact codes, appeared in Luna's own results, so it looked up nearly everything it submitted. **Error budget, earlier visit:** hit and shown 71.9%; hit from memory 0.5%; **missed though shown 16.2%**; missed and not shown 11.4%. For tool-SFT: 79.3 / 6.2 / **4.7** / 9.8. Luna's extra misses are selection, not retrieval: the right category was in its results, but it submitted a different one or omitted the diagnosis.
     - **Predictions:** earlier visit ~85%: **wrong** (72.4%). Final visit unchanged: **right** (63.2%). Never-seen codes ~65%: **wrong** (54.9%). F1 0.75–0.80: **wrong** (0.679). Luna + book − tool-SFT 0 to +0.10: **wrong** (−0.081). Luna's tool effect ~+0.10: **wrong** (−0.009). I > 0: **right**, and larger than implied (+0.215 vs ~+0.10). The miss: I assumed Luna's earlier-visit losses were coding errors that the book would fix. They are mostly selection and convention.
     - **Cost:** ~$0.42 at list prices for the counted run (1.93M input, 0.44M output tokens). OpenRouter spend for the arm including smoke and the interrupted run: **$0.64**, under the $5 cap.
+
+## 2026-10-08
+
+- **Told vs taught, preregistration** (user-specified; written before any model call for either arm). Both are augmented harnesses, labelled as such. The paper's system prompt is unchanged in both. Instructions are appended through two new optional task fields. Both default to empty, so every earlier config renders byte-identically (checked: intro and tool description unchanged; 22 tests pass).
+  - `[env.taskset.task] intro_suffix` adds a new line after the paper intro.
+  - `icd10_description_suffix` is appended to the `icd10_search` description.
+  - **Train-split basis for the instruction text** (680 training patients only, no dev/public):
+    - 3,002 encounters introduce **2,449** reference diagnoses: exactly one in 2,449 encounters, none in 553, never two (0.82 per visit).
+    - Reference names containing "history of": 13 of 2,449 (0.5%). Symptom/finding chapter R: 2.0%.
+    - Profile chronic conditions whose exact name is a reference diagnosis: 318 of 2,169 (14.7%).
+    - 52.5% of reference entries are chronic-list diagnoses that some visit established.
+  - **Arm 1: told, the 4B (needs the rental).**
+    - **Weights:** 8-epoch SFT (sweep checkpoint at epoch 8, the same weights as the "8-epoch + book, untold" arm, never trained on the tool) + code book + one instruction, appended both to the intro and to the `icd10_search` description: "Before submitting, search icd10_search for every diagnosis you will submit and use a code from its results." Config `eval_local_icd10_told.toml` (= `eval_local_icd10.toml` + the two suffixes; temperature 0.7, top-p 0.8, 2,048 tokens).
+    - **Runs:** dev 120, seeds 0–2; public once (seed 0). Optional: untrained 4B, same config, dev seed 0.
+    - **Comparisons** (paired, 1,000 resamples, seed 0; replicates averaged per patient; failures 0): told − untold (`qwen3-4b-sft-sweep-e8-icd10-{dev-seed0,1,2,public}`; dev 0.567 / public 0.517) and tool-SFT − told (dev 0.776 three-seed, public 0.726). **Share of the taught effect** = (told − untold) / (tool-SFT − untold), on public (primary) and dev. Optional arm vs untrained + book (dev seed 0, 0.482).
+    - **Recorded:** lookups per patient, share of episodes with any lookup, selection errors (`training.lookups` error budget), EHR actions.
+    - **Prediction:** the SFT model still makes no or few lookups; less than a third of tool-SFT's +0.21.
+  - **Arm 2: told, Luna (API only, cap $1).**
+    - **Setup:** GPT-6 Luna + code book + house-style instruction appended to the intro: "The problem list should contain the diagnosis established at each encounter, about one per visit. Don't list symptoms, findings or 'history of' entries, and don't repeat chronic conditions unless a visit diagnosed them." Config `eval_public_gpt6_luna_icd10_style.toml` (= `eval_public_gpt6_luna_icd10.toml` + `intro_suffix`). Public 200, one sample, otherwise identical to the Luna + book run.
+    - **Comparisons:** style − Luna + book (0.646); tool-SFT − style (0.726), with the existing verdict rule.
+    - **Recorded:** predictions per patient, chart-neutral precision, recall (weighted and unweighted), per-visit hit rates (earlier 569 / final 136 / never-seen 82), lookups and error budget.
+    - **Prediction:** predictions per patient fall from 5.8 toward 4, precision rises, F1 lands around 0.70–0.73, still below tool-SFT.
+  - **Shared:** smoke test of 3 patients first, not counted. It checks that the instruction text appears in the trace's prompt (and, for arm 1, in the tool description) and that answers are valid. More than 10 non-model errors in a run: not interpreted, ask before a rerun. Runs under `caffeinate`.
+  - **23:11 Arm 2 result: one house-style paragraph lifts Luna + book from 0.646 to 0.777, past the 4B.**
+    - **Smoke test** (3 public patients, not counted): instruction present in every intro, 3/3 valid, lookups in each, 0 provider errors.
+    - **Full run:** 200/200 submitted, 0 TaskErrors, 0 provider errors.
+    - **Luna + book + style:** mean **0.777** (CI 0.744–0.811), **strict F1 0.797**. Chart-neutral precision **0.801** (from 0.657), weighted recall 0.792 (from 0.703), unweighted recall 0.802 (from 0.722). Predictions per patient **5.14** (from 5.79). 12.9 EHR actions; 13.0k tokens per patient.
+    - **Contrasts** (paired, 1,000 resamples, seed 0):
+      - Style − Luna + book: **+0.131** (CI +0.099 to +0.164; 123/21/56).
+      - 4B tool-SFT − style: **−0.051** (CI **−0.090 to −0.012**; 53/70/77) → **trails** under the rule. The style arm beats tool-SFT.
+    - **Hit rates (Luna + book → + style; tool-SFT):** earlier visit 72.4 → **85.4%** (85.4%); final visit 63.2 → **66.2%** (41.2%); never-seen earlier codes 54.9 → **65.9%** (57.3%).
+    - **Answer changes vs Luna + book:** 261 wrong keys removed and 66 added; 95 correct keys gained and 21 lost.
+    - **Code-book use:** 7.9 lookups per patient (from 9.7), no loops (maximum repeat 2), 98.8% of submitted code categories in its own results. **Earlier-visit error budget:** hit and shown 84.7%; from memory 0.7%; **missed though shown 8.8%** (from 16.2%); missed and not shown 5.8% (from 11.4%). Tool-SFT: 79.3 / 6.2 / 4.7 / 9.8.
+    - **Predictions:**
+      - Predictions per patient fall toward 4: **partly** (5.79 → 5.14).
+      - Precision rises: **right** (0.657 → 0.801).
+      - F1 0.70–0.73: **wrong**, much higher (0.797).
+      - Still below tool-SFT: **wrong**; it is above (+0.051).
+    - **Reading:** Luna's remaining gap to the 4B was the benchmark's labelling convention, not knowledge. Stating the convention in one paragraph, from training-split facts only, fixed most of its selection errors. It also raised earlier-visit hits to the 4B's level, while keeping its large final-visit lead. Fine-tuning taught the 4B the same convention implicitly; a frontier model only had to be told.
+    - **Cost:** ~$0.42 at list prices (1.78M input, 0.49M output tokens); OpenRouter spend including smoke $0.57, under the $1 cap.

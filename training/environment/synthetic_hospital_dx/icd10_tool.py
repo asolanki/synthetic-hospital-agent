@@ -10,12 +10,26 @@ from typing import Annotated
 
 import verifiers.v1 as vf
 from pydantic import Field
+from verifiers.v1.utils.decorators import discover_decorated
 
 from synthetic_hospital_dx import icd10
 
 
-class ICD10Toolset(vf.Toolset[vf.ToolsetConfig]):
+class ICD10ToolConfig(vf.ToolsetConfig):
+    description_suffix: str = ""
+    """Appended to the tool description (augmented-harness instruction); empty keeps the default."""
+
+
+class ICD10Toolset(vf.Toolset[ICD10ToolConfig]):
     TOOL_PREFIX = "icd10"
+
+    def register(self, mcp) -> None:
+        # As vf.Toolset.register, with the configured suffix appended to each description.
+        suffix = self.config.description_suffix.strip()
+        for fn in discover_decorated(self, "tool"):
+            description = (fn.__doc__ or "").strip()
+            mcp.add_tool(self._with_state(fn), name=getattr(fn, "tool_name", None) or fn.__name__,
+                         description=f"{description} {suffix}".strip() or None)
 
     @vf.tool
     def search(self, query: Annotated[str, Field(

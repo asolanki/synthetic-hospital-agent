@@ -1,0 +1,30 @@
+# Told vs taught, arm 1 (LOG.md 2026-10-08 preregistration): eval_local_icd10.toml plus one
+# instruction, appended both to the patient intro and to the icd10_search description. Used with the
+# 8-epoch SFT adapter (never trained on the tool) and, optionally, the untrained base. Augmented
+# harness; the paper's system prompt is unchanged.
+model = "Qwen/Qwen3-4B-Instruct-2507"
+num_rollouts = 1
+max_concurrent = 32
+push = false
+[client]
+base_url = "http://127.0.0.1:8000/v1"
+api_key_var = "OPENAI_API_KEY"
+[sampling]
+temperature = 0.7
+top_p = 0.8
+max_tokens = 2048
+seed = 0
+[env.taskset]
+id = "synthetic-hospital-dx"
+split = "dev"
+budget = 40
+[env.taskset.task]
+icd10_tool = true
+intro_suffix = "Before submitting, search icd10_search for every diagnosis you will submit and use a code from its results."
+icd10_description_suffix = "Before submitting, search icd10_search for every diagnosis you will submit and use a code from its results."
+[env.agent]
+max_turns = 50
+[env.agent.harness]
+id = "null"
+[env.agent.runtime]
+type = "subprocess"
