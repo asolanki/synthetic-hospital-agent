@@ -35,8 +35,13 @@ def _episode(trace: dict) -> dict:
             fn = call.get("function") or {}
             if (fn.get("name") or call.get("name")) == "icd10_search":
                 args = fn.get("arguments") if "arguments" in fn else call.get("arguments")
-                args = json.loads(args) if isinstance(args, str) else (args or {})
-                queries.append(" ".join(str(args.get("query", "")).lower().split()))
+                if isinstance(args, str):
+                    try:
+                        args = json.loads(args)
+                    except json.JSONDecodeError:  # a malformed call still counts as a lookup attempt
+                        args = {}
+                query = args.get("query", "") if isinstance(args, dict) else ""
+                queries.append(" ".join(str(query).lower().split()))
         content = msg.get("content")
         if msg.get("role") == "tool" and isinstance(content, str) and content.startswith(RESULTS_HEADER):
             for code in RESULT_CODE.findall(content):

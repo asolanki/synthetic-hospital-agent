@@ -185,6 +185,52 @@ the book to fix Luna's coding. Only "I > 0" and "final visit unchanged" held. Ev
 `gpt-6-luna-icd10-env-public{,-lookups}.json`, `interaction-codebook-4b-vs-gpt-6-luna-public.json`,
 the `-vs-` compare and breakdown files. Cost about $0.42.
 
+## Told vs taught
+
+Added 2026-10-09, preregistered with predictions in `LOG.md` (2026-10-08). Two instruction-only arms, both
+augmented harnesses. The paper's system prompt is unchanged; the text is appended to the patient intro
+(new optional field `intro_suffix`) and, for the 4B, also to the `icd10_search` description. Defaults
+are empty, so every earlier config renders exactly as before.
+
+**Arm 1, the 4B told rather than taught.** The 8-epoch SFT weights (never trained on the tool) with the
+book and the instruction "Before submitting, search icd10_search for every diagnosis you will submit
+and use a code from its results." (`eval_local_icd10_told.toml`).
+
+| Mean score | Dev (3 seeds) | Public |
+|---|--:|--:|
+| 8-epoch SFT + book, untold | 0.569 | 0.517 |
+| 8-epoch SFT + book, **told** | 0.567 | 0.514 |
+| Tool-SFT + book (taught) | 0.776 | 0.726 |
+| Told − untold (95% CI) | −0.002 (−0.016 to +0.012) | −0.003 (−0.015 to +0.007) |
+
+The told model made **no lookups in any of 560 episodes**, and the 3-call routine was unchanged. It
+captured about 0% of the taught effect (+0.21). Untrained 4B + book + the same instruction (dev,
+seed 0): 0.470 against 0.482 untold. Lookups rose slightly (3.8 → 4.2 per patient) but did not help.
+After SFT, the demonstrations fix the behaviour, and an instruction does not substitute for them.
+
+**Arm 2, Luna told the benchmark's house style.** Luna + book plus one paragraph, written from
+training-split facts only: each encounter introduces at most one reference diagnosis; "history of" and
+symptom codes are rare; profile chronic conditions are mostly not reference diagnoses. The paragraph:
+"The problem list should contain the diagnosis established at each encounter, about one per visit.
+Don't list symptoms, findings or 'history of' entries, and don't repeat chronic conditions unless a
+visit diagnosed them." (`eval_public_gpt6_luna_icd10_style.toml`).
+
+| Public | Luna + book | **+ house style** | 4B tool-SFT |
+|---|--:|--:|--:|
+| Mean score (95% CI) | 0.646 | **0.777** (0.744–0.811) | 0.726 |
+| Strict F1 | 0.679 | **0.797** | 0.738 |
+| Chart-neutral precision | 0.657 | 0.801 | 0.759 |
+| Predictions per patient | 5.79 | 5.14 | 3.48 |
+| Earlier visit hit (569) | 72.4% | **85.4%** | 85.4% |
+| Final visit hit (136) | 63.2% | **66.2%** | 41.2% |
+| Never-seen earlier codes (82) | 54.9% | **65.9%** | 57.3% |
+
+- **The paragraph is worth +0.131** (CI +0.099 to +0.164) to Luna.
+- **With it, Luna beats the 4B:** tool-SFT − Luna + book + style = **−0.051** (CI −0.090 to −0.012), so the 4B trails under the rule.
+- **Why:** selection errors on earlier visits fell from 16.2% to 8.8%. Luna kept looking codes up (7.9 per patient).
+- **Reading:** the 4B's edge over Luna + book was the benchmark's convention, which fine-tuning taught it implicitly. A frontier model only had to be told it. Among the setups here, the best score now belongs to a frontier model with the book and one paragraph of house style. The 4B's remaining case is running locally.
+- **Predictions** (`LOG.md`): F1 0.70–0.73 and "still below tool-SFT" were both wrong.
+
 ## Caveats
 
 - **Specialist against generalists, by design.** The 4B was fine-tuned on 680 of the benchmark's

@@ -293,3 +293,17 @@ Entries before 2026-10-01 22:53 were reconstructed from the session and file tim
       - Still below tool-SFT: **wrong**; it is above (+0.051).
     - **Reading:** Luna's remaining gap to the 4B was the benchmark's labelling convention, not knowledge. Stating the convention in one paragraph, from training-split facts only, fixed most of its selection errors. It also raised earlier-visit hits to the 4B's level, while keeping its large final-visit lead. Fine-tuning taught the 4B the same convention implicitly; a frontier model only had to be told.
     - **Cost:** ~$0.42 at list prices (1.78M input, 0.49M output tokens); OpenRouter spend including smoke $0.57, under the $1 cap.
+  - **23:43 Arm 1 result: telling the SFT model to use the book does nothing; it never makes a lookup.**
+    - **Rental:** restarted 03:00 UTC (10-09), after the user reloaded the SSH key. The on-instance guard was re-armed for 06:30 UTC, with a local API timer as backup. Code synced and hash-checked; frozen index SHA matches.
+    - **Smoke test** (3 dev patients, not counted): the instruction is present in both the intro and the `icd10_search` description; 3/3 valid; 0 lookups.
+    - **Counted chain** `runs/services/told_chain.sh`, 03:10–03:31 UTC, offline W&B: told 8-epoch on dev seeds 0–2 and public, then base served alone for the optional arm. Stopped at 03:43 UTC, guard disabled again. Rental cost ~$0.76.
+    - **Errors:** 1 harness error each in dev seed 0, dev seed 2 and the base run, all scored 0. Two are the known OpenAI-SDK streaming assertion (`new_tool.type == "function"`) and one a vLLM 500. All runs are well under the 10-error threshold.
+    - **Told 8-epoch:** dev seeds 0–2: **0.566 / 0.575 / 0.559** (mean 0.567; untold 0.569); public **0.514** (strict F1 0.526; untold 0.517 / 0.529). 3.0 EHR actions in every episode.
+    - **Contrasts** (paired, 1,000 resamples, seed 0):
+      - Told − untold, dev (3-seed): **−0.002** (−0.016 to +0.012; 15/14/91). Public: **−0.003** (−0.015 to +0.007; 14/15/171).
+      - Tool-SFT − told, dev: **+0.209** (+0.159 to +0.262). Public: **+0.213** (+0.169 to +0.257).
+      - **Share of the taught effect:** public −0.003 / +0.206 ≈ **−2%**; dev −0.002 / +0.207 ≈ **−1%**. Effectively zero.
+    - **Code-book use** (`told-vs-taught-4b-lookups.json`): told 8-epoch made **0 lookups in all 560 episodes** (0% with any lookup), as did untold. Every earlier-visit hit came from memory (public 60.5% hit, 39.5% missed and never shown), so there are no selection errors to count.
+    - **Optional, untrained 4B + book + instruction, dev seed 0:** **0.470** vs untold 0.482 (−0.012, CI −0.055 to +0.039). Lookups 3.76 → 4.16 per patient; episodes with any lookup 99.2% → 100%. Turn-cap stops (`user_closed`) 35 → 41; earlier-visit selection errors 5.2 → 6.9%. The instruction slightly increased lookups but did not help.
+    - **Prediction:** "the SFT model still makes no or few lookups; less than a third of tool-SFT's +0.21": **right** (0 lookups; ~0% of the effect).
+    - **Reading:** after SFT, behaviour is fixed by the demonstrations, not the prompt. The 8-epoch model emits the same three calls whatever the instructions say. Teaching the tool through demonstrations is necessary for this 4B; instructions do not substitute. Arm 2 shows the reverse for a frontier model: telling it the convention was enough.

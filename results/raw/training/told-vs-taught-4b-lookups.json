@@ -1,0 +1,262 @@
+{
+ "scope": "Code-book use per arm for the told-vs-taught 4B arms (LOG.md 2026-10-08): lookups per patient, share of episodes with any icd10_search call, stop conditions, and the earlier-visit error budget from training.lookups. Untold traces come from the verified local archive sweep-icd10-evaluations-16m.",
+ "arms": {
+  "told e8 public": [
+   {
+    "report": "qwen3-4b-sft-sweep-e8-icd10-told-public.json",
+    "episodes": 200,
+    "lookups_per_patient": 0.0,
+    "share_with_any_lookup": 0.0,
+    "stop_conditions": {
+     "submitted": 200
+    },
+    "repeated_queries": {
+     "episodes_with_a_query_repeated_5_plus": 0,
+     "max_repeats": 0
+    },
+    "submitted_codes": {
+     "n": 702,
+     "exact_code_in_own_results": 0.0,
+     "match_key_in_own_results": 0.0
+    },
+    "earlier_visit_error_budget": {
+     "hit_shown": 0.0,
+     "hit_memory": 0.6045694200351494,
+     "miss_shown": 0.0,
+     "miss_not_shown": 0.3954305799648506
+    }
+   }
+  ],
+  "untold e8 public": [
+   {
+    "report": "qwen3-4b-sft-sweep-e8-icd10-public.json",
+    "episodes": 200,
+    "lookups_per_patient": 0.0,
+    "share_with_any_lookup": 0.0,
+    "stop_conditions": {
+     "submitted": 200
+    },
+    "repeated_queries": {
+     "episodes_with_a_query_repeated_5_plus": 0,
+     "max_repeats": 0
+    },
+    "submitted_codes": {
+     "n": 703,
+     "exact_code_in_own_results": 0.0,
+     "match_key_in_own_results": 0.0
+    },
+    "earlier_visit_error_budget": {
+     "hit_shown": 0.0,
+     "hit_memory": 0.6080843585237259,
+     "miss_shown": 0.0,
+     "miss_not_shown": 0.39191564147627417
+    }
+   }
+  ],
+  "told e8 dev seeds 0-2": [
+   {
+    "report": "qwen3-4b-sft-sweep-e8-icd10-told-dev-seed0.json",
+    "episodes": 120,
+    "lookups_per_patient": 0.0,
+    "share_with_any_lookup": 0.0,
+    "stop_conditions": {
+     "submitted": 119,
+     "harness_error": 1
+    },
+    "repeated_queries": {
+     "episodes_with_a_query_repeated_5_plus": 0,
+     "max_repeats": 0
+    },
+    "submitted_codes": {
+     "n": 414,
+     "exact_code_in_own_results": 0.0,
+     "match_key_in_own_results": 0.0
+    },
+    "earlier_visit_error_budget": {
+     "hit_shown": 0.0,
+     "hit_memory": 0.6772334293948127,
+     "miss_shown": 0.0,
+     "miss_not_shown": 0.3227665706051873
+    }
+   },
+   {
+    "report": "qwen3-4b-sft-sweep-e8-icd10-told-dev-seed1.json",
+    "episodes": 120,
+    "lookups_per_patient": 0.0,
+    "share_with_any_lookup": 0.0,
+    "stop_conditions": {
+     "submitted": 120
+    },
+    "repeated_queries": {
+     "episodes_with_a_query_repeated_5_plus": 0,
+     "max_repeats": 0
+    },
+    "submitted_codes": {
+     "n": 423,
+     "exact_code_in_own_results": 0.0,
+     "match_key_in_own_results": 0.0
+    },
+    "earlier_visit_error_budget": {
+     "hit_shown": 0.0,
+     "hit_memory": 0.6772334293948127,
+     "miss_shown": 0.0,
+     "miss_not_shown": 0.3227665706051873
+    }
+   },
+   {
+    "report": "qwen3-4b-sft-sweep-e8-icd10-told-dev-seed2.json",
+    "episodes": 120,
+    "lookups_per_patient": 0.0,
+    "share_with_any_lookup": 0.0,
+    "stop_conditions": {
+     "submitted": 119,
+     "harness_error": 1
+    },
+    "repeated_queries": {
+     "episodes_with_a_query_repeated_5_plus": 0,
+     "max_repeats": 0
+    },
+    "submitted_codes": {
+     "n": 410,
+     "exact_code_in_own_results": 0.0,
+     "match_key_in_own_results": 0.0
+    },
+    "earlier_visit_error_budget": {
+     "hit_shown": 0.0,
+     "hit_memory": 0.6570605187319885,
+     "miss_shown": 0.0,
+     "miss_not_shown": 0.34293948126801155
+    }
+   }
+  ],
+  "untold e8 dev seeds 0-2": [
+   {
+    "report": "qwen3-4b-sft-sweep-e8-icd10-dev-seed0.json",
+    "episodes": 120,
+    "lookups_per_patient": 0.0,
+    "share_with_any_lookup": 0.0,
+    "stop_conditions": {
+     "submitted": 120
+    },
+    "repeated_queries": {
+     "episodes_with_a_query_repeated_5_plus": 0,
+     "max_repeats": 0
+    },
+    "submitted_codes": {
+     "n": 421,
+     "exact_code_in_own_results": 0.0,
+     "match_key_in_own_results": 0.0
+    },
+    "earlier_visit_error_budget": {
+     "hit_shown": 0.0,
+     "hit_memory": 0.6743515850144092,
+     "miss_shown": 0.0,
+     "miss_not_shown": 0.3256484149855908
+    }
+   },
+   {
+    "report": "qwen3-4b-sft-sweep-e8-icd10-dev-seed1.json",
+    "episodes": 120,
+    "lookups_per_patient": 0.0,
+    "share_with_any_lookup": 0.0,
+    "stop_conditions": {
+     "submitted": 120
+    },
+    "repeated_queries": {
+     "episodes_with_a_query_repeated_5_plus": 0,
+     "max_repeats": 0
+    },
+    "submitted_codes": {
+     "n": 417,
+     "exact_code_in_own_results": 0.0,
+     "match_key_in_own_results": 0.0
+    },
+    "earlier_visit_error_budget": {
+     "hit_shown": 0.0,
+     "hit_memory": 0.6743515850144092,
+     "miss_shown": 0.0,
+     "miss_not_shown": 0.3256484149855908
+    }
+   },
+   {
+    "report": "qwen3-4b-sft-sweep-e8-icd10-dev-seed2.json",
+    "episodes": 120,
+    "lookups_per_patient": 0.0,
+    "share_with_any_lookup": 0.0,
+    "stop_conditions": {
+     "submitted": 120
+    },
+    "repeated_queries": {
+     "episodes_with_a_query_repeated_5_plus": 0,
+     "max_repeats": 0
+    },
+    "submitted_codes": {
+     "n": 415,
+     "exact_code_in_own_results": 0.0,
+     "match_key_in_own_results": 0.0
+    },
+    "earlier_visit_error_budget": {
+     "hit_shown": 0.0,
+     "hit_memory": 0.6714697406340058,
+     "miss_shown": 0.0,
+     "miss_not_shown": 0.3285302593659942
+    }
+   }
+  ],
+  "told base dev seed 0": [
+   {
+    "report": "qwen3-4b-icd10-told-dev.json",
+    "episodes": 120,
+    "lookups_per_patient": 4.158333333333333,
+    "share_with_any_lookup": 1.0,
+    "stop_conditions": {
+     "harness_error": 1,
+     "submitted": 78,
+     "user_closed": 41
+    },
+    "repeated_queries": {
+     "episodes_with_a_query_repeated_5_plus": 0,
+     "max_repeats": 3
+    },
+    "submitted_codes": {
+     "n": 538,
+     "exact_code_in_own_results": 0.9089219330855018,
+     "match_key_in_own_results": 0.9219330855018587
+    },
+    "earlier_visit_error_budget": {
+     "hit_shown": 0.5273775216138329,
+     "hit_memory": 0.002881844380403458,
+     "miss_shown": 0.069164265129683,
+     "miss_not_shown": 0.40057636887608067
+    }
+   }
+  ],
+  "untold base dev seed 0": [
+   {
+    "report": "qwen3-4b-icd10-dev.json",
+    "episodes": 120,
+    "lookups_per_patient": 3.7583333333333333,
+    "share_with_any_lookup": 0.9916666666666667,
+    "stop_conditions": {
+     "submitted": 85,
+     "user_closed": 35
+    },
+    "repeated_queries": {
+     "episodes_with_a_query_repeated_5_plus": 0,
+     "max_repeats": 1
+    },
+    "submitted_codes": {
+     "n": 531,
+     "exact_code_in_own_results": 0.8738229755178908,
+     "match_key_in_own_results": 0.8832391713747646
+    },
+    "earlier_visit_error_budget": {
+     "hit_shown": 0.515850144092219,
+     "hit_memory": 0.011527377521613832,
+     "miss_shown": 0.05187319884726225,
+     "miss_not_shown": 0.4207492795389049
+    }
+   }
+  ]
+ }
+}
