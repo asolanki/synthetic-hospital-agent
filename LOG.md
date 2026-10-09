@@ -327,3 +327,18 @@ Entries before 2026-10-01 22:53 were reconstructed from the session and file tim
   - **Recorded:** hit rates by visit (earlier 569 / final 136) and on never-seen earlier codes (82), predictions per patient, chart-neutral precision.
   - **Prediction:** mean 0.74–0.77, so the book adds 0 to +0.03 once the conventions are known.
   - **Shared rules:** 3-patient smoke test first, not counted; it checks that the instruction is in the intro, that no `icd10_search` tool is offered, and that answers are valid. More than 10 non-model errors: not interpreted, ask before a rerun. Runs under `caffeinate`.
+  - **Result: the paragraph alone does it; the book adds nothing once Luna knows the convention.**
+    - **Smoke test** (3 public patients, not counted): instruction in every intro; no `icd10_search` offered or called; 3/3 submitted and scored; 0 errors.
+    - **Full run:** 200/200 submitted, 0 rollout or provider errors, 0 budget exhaustions, 0 malformed submissions. Runs `runs/eval-public-luna-style/`, report `gpt-6-luna-style-env-public.json`.
+    - **Luna + style:** mean **0.789** (CI 0.756–0.820), **strict F1 0.809**. Chart-neutral precision **0.813**, weighted recall 0.804, recall 0.814. Predictions per patient **5.04**; 13.8 EHR actions; 9.7k tokens per patient.
+    - **Contrasts** (paired, 1,000 resamples, seed 0):
+      - (a) Luna + style − Luna: **+0.135** (CI +0.103 to +0.166; 111/22/67) → beats.
+      - (b) Luna + book + style − Luna + style: **−0.012** (CI −0.036 to +0.009; 33/46/121) → **matches** (whole CI within ±0.05). The book's value once the convention is known is nil.
+      - (c) 4B tool-SFT − Luna + style: **−0.063** (CI −0.099 to −0.026; 48/76/76) → trails.
+    - **Hit rates** (Luna → + style; + book + style): earlier visit 70.3 → **86.5%** (85.4%); final visit 65.4 → **64.0%** (66.2%); never-seen earlier codes 50.0 → **68.3%** (65.9%).
+    - **Answer changes:** vs Luna, 256 wrong keys removed and 60 added; 104 correct keys gained and 19 lost. Adding the book to style: 20 correct keys gained, 22 lost, 96 wrong added, 64 wrong removed.
+    - **Predictions:**
+      - Mean 0.74–0.77: **wrong**, higher (0.789).
+      - Book adds 0 to +0.03: **wrong in sign** (−0.012), but right that it adds no meaningful value.
+    - **Reading:** the hint that the book matters with the paragraph was the paragraph's effect. Never-seen codes rise to 68% and earlier-visit hits to 86% without any lookup. Luna's 2×2 is additive: paragraph +0.135 without the book and +0.131 with it, book −0.009 without the paragraph and −0.012 with it. The code book is worth +0.21 to the 4B and nothing to Luna in either condition. The best setup measured is Luna + one paragraph with no tool.
+    - **Cost:** OpenRouter key usage $28.31 → $28.72 (+$0.42, smoke included).

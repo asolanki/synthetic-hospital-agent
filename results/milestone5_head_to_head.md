@@ -187,7 +187,7 @@ the `-vs-` compare and breakdown files. Cost about $0.42.
 
 ## Told vs taught
 
-Added 2026-10-09, preregistered with predictions in `LOG.md` (2026-10-08). Two instruction-only arms, both
+Added 2026-10-09, preregistered with predictions in `LOG.md` (2026-10-08 and 2026-10-09). Instruction-only arms, all
 augmented harnesses. The paper's system prompt is unchanged; the text is appended to the patient intro
 (new optional field `intro_suffix`) and, for the 4B, also to the `icd10_search` description. Defaults
 are empty, so every earlier config renders exactly as before.
@@ -207,28 +207,30 @@ already ignored the offered tool (milestone 4), so its outcome was foregone. As 
 lookups in 560 episodes and did not change: told − untold −0.003 on public (CI −0.015 to +0.007), −0.002
 on dev. Numbers are in `LOG.md` (2026-10-08).
 
-**Arm 2, Luna told the benchmark's house style.** Luna + book plus one paragraph, written from
-training-split facts only: each encounter introduces at most one reference diagnosis; "history of" and
-symptom codes are rare; profile chronic conditions are mostly not reference diagnoses. The paragraph:
-"The problem list should contain the diagnosis established at each encounter, about one per visit.
-Don't list symptoms, findings or 'history of' entries, and don't repeat chronic conditions unless a
-visit diagnosed them." (`eval_public_gpt6_luna_icd10_style.toml`).
+**Arm 2, Luna told the benchmark's house style.** One paragraph, written from training-split facts
+only: each encounter introduces at most one reference diagnosis; "history of" and symptom codes are
+rare; profile chronic conditions are mostly not reference diagnoses. The paragraph: "The problem list
+should contain the diagnosis established at each encounter, about one per visit. Don't list symptoms,
+findings or 'history of' entries, and don't repeat chronic conditions unless a visit diagnosed them."
+It was run with the book (`eval_public_gpt6_luna_icd10_style.toml`) and, separately preregistered,
+without it (`eval_public_gpt6_luna_style.toml`), completing Luna's {book} × {style} 2×2.
 
-| Public | Luna + book | **+ house style** | 4B tool-SFT |
-|---|--:|--:|--:|
-| Mean score (95% CI) | 0.646 | **0.777** (0.744–0.811) | 0.726 |
-| Strict F1 | 0.679 | **0.797** | 0.738 |
-| Chart-neutral precision | 0.657 | 0.801 | 0.759 |
-| Predictions per patient | 5.79 | 5.14 | 3.48 |
-| Earlier visit hit (569) | 72.4% | **85.4%** | 85.4% |
-| Final visit hit (136) | 63.2% | **66.2%** | 41.2% |
-| Never-seen earlier codes (82) | 54.9% | **65.9%** | 57.3% |
+| Public | Luna | Luna + book | Luna + style | Luna + book + style | 4B tool-SFT |
+|---|--:|--:|--:|--:|--:|
+| Mean score (95% CI) | 0.654 | 0.646 | **0.789** (0.756–0.820) | 0.777 (0.744–0.811) | 0.726 |
+| Strict F1 | 0.689 | 0.679 | **0.809** | 0.797 | 0.738 |
+| Chart-neutral precision | 0.683 | 0.657 | **0.813** | 0.801 | 0.759 |
+| Predictions per patient | 5.55 | 5.79 | 5.04 | 5.14 | 3.48 |
+| Earlier visit hit (569) | 70.3% | 72.4% | **86.5%** | 85.4% | 85.4% |
+| Final visit hit (136) | 65.4% | 63.2% | 64.0% | **66.2%** | 41.2% |
+| Never-seen earlier codes (82) | 50.0% | 54.9% | **68.3%** | 65.9% | 57.3% |
 
-- **The paragraph is worth +0.131** (CI +0.099 to +0.164) to Luna.
-- **With it, Luna beats the 4B:** tool-SFT − Luna + book + style = **−0.051** (CI −0.090 to −0.012), so the 4B trails under the rule.
-- **Why:** selection errors on earlier visits fell from 16.2% to 8.8%. Luna kept looking codes up (7.9 per patient).
-- **Reading:** the 4B's edge over Luna + book was the benchmark's convention, which fine-tuning taught it implicitly. A frontier model only had to be told it. Among the setups here, the best score now belongs to a frontier model with the book and one paragraph of house style. The 4B's remaining case is running locally.
-- **Predictions** (`LOG.md`): F1 0.70–0.73 and "still below tool-SFT" were both wrong.
+- **The paragraph is worth +0.135** (CI +0.103 to +0.166) without the book and +0.131 (+0.099 to +0.164) with it.
+- **The book adds nothing once Luna knows the convention:** Luna + book + style − Luna + style = **−0.012** (CI −0.036 to +0.009; 33/46/121), which **matches** under the ±0.05 rule. It added nothing without the paragraph either (−0.009).
+- **Luna + style beats the 4B without any tool:** tool-SFT − Luna + style = **−0.063** (CI −0.099 to −0.026; 48/76/76).
+- **The gains on never-seen codes come from the paragraph, not the book.** Never-seen earlier codes reach 68.3% without the book. With the book, earlier-visit selection errors fell from 16.2% to 8.8% (7.9 lookups per patient), but the no-book arm hits as many earlier-visit codes from memory.
+- **Reading:** the 4B's edge over Luna was the benchmark's convention, which fine-tuning taught it implicitly; a frontier model only had to be told it. The code book is worth +0.21 to the 4B and nothing to Luna, with or without the convention. Among the setups here, the best score belongs to a frontier model with one paragraph and no tool. The 4B's remaining case is running locally.
+- **Predictions** (`LOG.md`): with the book, F1 0.70–0.73 and "still below tool-SFT" were both wrong. Without it, 0.74–0.77 was wrong (0.789). "The book adds 0 to +0.03" was wrong in sign but right in substance: it adds nothing.
 - **Label noise doesn't explain it** (`audit/label_audit_results.md`). About 6% of reference codes are wrong. Correcting the 101 identified pairs raises Luna + book + style to 0.795 and widens its lead over the 4B to −0.064 (CI −0.102 to −0.023). On the 27 mislabeled public references, it submitted the correct category 81% of the time; tool-SFT did so 56% of the time.
 
 ## Caveats

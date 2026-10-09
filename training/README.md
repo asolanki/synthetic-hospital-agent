@@ -35,19 +35,21 @@ it does not query the scorer during gradient updates.
 | `configs/eval_openrouter_icd10_t0.toml` | Qwen3-30B with the code-book tool at temperature 0; pairs with `audit/harness_gap_env.toml`, which is the same run without it |
 | `configs/eval_public_kimi_k25.toml`, `eval_public_gpt6_luna.toml`, `eval_public_gemma3_27b.toml` | No-tool comparators on the 200 public patients |
 | `configs/eval_public_gpt6_luna_icd10.toml` | GPT-6 Luna plus only the code-book tool; completes the 2×2 {4B SFT, 4B tool-SFT} × {Luna, Luna + book} |
+| `configs/eval_local_icd10_told.toml` | `eval_local_icd10.toml` plus an instruction to look up every submitted code, in the intro and the tool description (told vs taught; the 8-epoch SFT arm is confounded, see `LOG.md` 2026-10-09) |
+| `configs/eval_public_gpt6_luna_icd10_style.toml`, `eval_public_gpt6_luna_style.toml` | GPT-6 Luna plus one house-style paragraph in the intro, with and without the code book; with `eval_public_gpt6_luna{,_icd10}.toml`, Luna's {book} × {style} 2×2. Augmented harnesses |
 | `configs/rl_inference.toml` | Prime-RL rollout inference server (RL only; checkpoint evaluation stays on vLLM 0.19.1) |
 
 ## The environment package
 
 | File | Role in an episode |
 |---|---|
-| `taskset.py` | One task per patient. `setup` opens a simulator episode; `finalize` closes it; the reward is the official per-episode score |
+| `taskset.py` | One task per patient. `setup` opens a simulator episode; `finalize` closes it; the reward is the official per-episode score. Optional `[env.taskset.task] intro_suffix` appends a line to the paper's intro (augmented harness); empty by default |
 | `tools.py` | The paper's 10 EHR tools, served over MCP; each call is forwarded to `/env/step` |
 | `env.py` | The paper's control flow: nudge after a reply with no tool call, then one forced-submission turn |
 | `state.py` | Per-episode bookkeeping (episode id, actions, submitted, reward) |
 | `simulator.py` | Small HTTP helper (its own copy of the server address and token) |
 | `icd10.py` | BM25 search over the public CMS ICD-10-CM 2025 release: tabular titles, inclusion terms, alphabetic index, Neoplasm Table, Table of Drugs and Chemicals. Never the benchmark's diagnosis table |
-| `icd10_tool.py` | The optional `icd10_search` tool. Off by default; `[env.taskset.task] icd10_tool = true` enables it. Lookups run locally and spend model turns, not EHR actions |
+| `icd10_tool.py` | The optional `icd10_search` tool. Off by default; `[env.taskset.task] icd10_tool = true` enables it, and `icd10_description_suffix` appends to its description. Lookups run locally and spend model turns, not EHR actions |
 
 ## Commands
 
