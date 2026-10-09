@@ -1,0 +1,38 @@
+# Luna + house style, no code book (LOG.md 2026-10-09 preregistration): eval_public_gpt6_luna.toml plus
+# only the house-style instruction from eval_public_gpt6_luna_icd10_style.toml (identical intro_suffix),
+# with the code-book tool off. Completes Luna's {book, no book} x {style, no style} 2x2. Augmented harness.
+model = "openai/gpt-6-luna"
+num_rollouts = 1
+push = false
+
+[client]
+base_url = "https://openrouter.ai/api/v1"
+api_key_var = "OPENROUTER_API_KEY"
+
+[sampling]
+max_tokens = 32768
+
+[sampling.reasoning]
+effort = "medium"
+
+[sampling.provider]
+order = ["openai"]
+allow_fallbacks = false
+
+[env.taskset]
+id = "synthetic-hospital-dx"
+split = "public"
+budget = 40
+
+[env.taskset.task]
+icd10_tool = false
+intro_suffix = "The problem list should contain the diagnosis established at each encounter, about one per visit. Don't list symptoms, findings or 'history of' entries, and don't repeat chronic conditions unless a visit diagnosed them."
+
+[env.agent]
+max_turns = 50
+
+[env.agent.harness]
+id = "null"
+
+[env.agent.runtime]
+type = "subprocess"
