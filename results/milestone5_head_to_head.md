@@ -192,21 +192,20 @@ augmented harnesses. The paper's system prompt is unchanged; the text is appende
 (new optional field `intro_suffix`) and, for the 4B, also to the `icd10_search` description. Defaults
 are empty, so every earlier config renders exactly as before.
 
-**Arm 1, the 4B told rather than taught.** The 8-epoch SFT weights (never trained on the tool) with the
-book and the instruction "Before submitting, search icd10_search for every diagnosis you will submit
-and use a code from its results." (`eval_local_icd10_told.toml`).
+**Arm 1, can the 4B be told instead of taught?** The instruction "Before submitting, search icd10_search
+for every diagnosis you will submit and use a code from its results." was appended to the intro and the
+tool description (`eval_local_icd10_told.toml`).
 
-| Mean score | Dev (3 seeds) | Public |
-|---|--:|--:|
-| 8-epoch SFT + book, untold | 0.569 | 0.517 |
-| 8-epoch SFT + book, **told** | 0.567 | 0.514 |
-| Tool-SFT + book (taught) | 0.776 | 0.726 |
-| Told − untold (95% CI) | −0.002 (−0.016 to +0.012) | −0.003 (−0.015 to +0.007) |
+The fair test is the **untrained 4B**, which has no SFT routine to override. With the book, dev seed 0:
+told **0.470** against untold 0.482 (−0.012, CI −0.055 to +0.039). It read the instruction (lookups
+3.8 → 4.2 per patient) but scored no better. Taught through tool-SFT, the same base reaches 0.776 on
+dev. Telling does not substitute for teaching at this size. That is one seed on dev only.
 
-The told model made **no lookups in any of 560 episodes**, and the 3-call routine was unchanged. It
-captured about 0% of the taught effect (+0.21). Untrained 4B + book + the same instruction (dev,
-seed 0): 0.470 against 0.482 untold. Lookups rose slightly (3.8 → 4.2 per patient) but did not help.
-After SFT, the demonstrations fix the behaviour, and an instruction does not substitute for them.
+The preregistered main arm, the 8-epoch SFT weights told the same thing, is **confounded and not a
+finding**. That SFT trained only on the paper prompt with a fixed 3-call routine. The model had
+already ignored the offered tool (milestone 4), so its outcome was foregone. As expected, it made no
+lookups in 560 episodes and did not change: told − untold −0.003 on public (CI −0.015 to +0.007), −0.002
+on dev. Numbers are in `LOG.md` (2026-10-08).
 
 **Arm 2, Luna told the benchmark's house style.** Luna + book plus one paragraph, written from
 training-split facts only: each encounter introduces at most one reference diagnosis; "history of" and
