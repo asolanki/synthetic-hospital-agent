@@ -1,0 +1,162 @@
+{
+ "rates": {
+  "flagged": {
+   "pairs_wrong": 24,
+   "pairs": 58,
+   "pairs_wrong_strict": 16,
+   "references_wrong": 39,
+   "references": 85
+  },
+  "unclear": {
+   "pairs_wrong": 73,
+   "pairs": 353,
+   "pairs_wrong_strict": 60,
+   "references_wrong": 93,
+   "references": 539
+  },
+  "control": {
+   "pairs_wrong": 4,
+   "pairs": 100,
+   "pairs_wrong_strict": 4,
+   "references_wrong": 4,
+   "references": 166
+  },
+  "overall_estimate_point": 0.056850195517437994,
+  "overall_estimate_lo": 0.041425295359767494,
+  "overall_estimate_hi": 0.07901585132891106
+ },
+ "rescore": {
+  "untrained 4B": {
+   "original": 0.1576054947182817,
+   "corrected": 0.1571728024105894
+  },
+  "untrained 4B + book": {
+   "original": 0.419999569207849,
+   "corrected": 0.4190975729756409
+  },
+  "SFT 3 ep": {
+   "original": 0.3789476508250267,
+   "corrected": 0.38212953902802355
+  },
+  "SFT 3 ep + RL": {
+   "original": 0.3871611798680107,
+   "corrected": 0.39680584491783083
+  },
+  "continued SFT": {
+   "original": 0.425469830571771,
+   "corrected": 0.4266713924384865
+  },
+  "SFT 8 ep": {
+   "original": 0.5199575423839143,
+   "corrected": 0.5176737335501134
+  },
+  "tool-SFT": {
+   "original": 0.7263080477350383,
+   "corrected": 0.7316440072684175
+  },
+  "Qwen3-30B": {
+   "original": 0.4271229171214187,
+   "corrected": 0.4283666319694402
+  },
+  "Qwen3-30B + book": {
+   "original": 0.6144026037822701,
+   "corrected": 0.6221013521347775
+  },
+  "Kimi K2.5": {
+   "original": 0.692725528027306,
+   "corrected": 0.6866271675984408
+  },
+  "GPT-6 Luna": {
+   "original": 0.6544434627947397,
+   "corrected": 0.6598551987755853
+  },
+  "Luna + book": {
+   "original": 0.6457234115239158,
+   "corrected": 0.6518434234695275
+  },
+  "Gemma 3 27B": {
+   "original": 0.23534514825742175,
+   "corrected": 0.22727275348174122
+  }
+ },
+ "contrasts": {
+  "tool-SFT - GPT-6 Luna [orig]": [
+   0.07186458494029864,
+   0.032875917565706105,
+   0.11069189725067867
+  ],
+  "tool-SFT - GPT-6 Luna [corr]": [
+   0.0717888084928321,
+   0.033271097495327015,
+   0.11250476130281126
+  ],
+  "tool-SFT - Luna + book [orig]": [
+   0.08058463621112257,
+   0.03963848542946958,
+   0.12039673163003627
+  ],
+  "tool-SFT - Luna + book [corr]": [
+   0.07980058379888992,
+   0.038016610999898975,
+   0.12141391140688217
+  ],
+  "tool-SFT - Kimi K2.5 [orig]": [
+   0.03358251970773238,
+   -0.014316543875747606,
+   0.07897680504641903
+  ],
+  "tool-SFT - Kimi K2.5 [corr]": [
+   0.04501683966997661,
+   -0.0022517313585857096,
+   0.09272081626066765
+  ],
+  "tool-SFT - SFT 8 ep [orig]": [
+   0.20635050535112398,
+   0.15953779839707363,
+   0.25103135106238306
+  ],
+  "tool-SFT - SFT 8 ep [corr]": [
+   0.21397027371830404,
+   0.16892210605620606,
+   0.2583944774275899
+  ],
+  "SFT 3 ep + RL - SFT 3 ep [orig]": [
+   0.008213529042983978,
+   -0.014038604946495559,
+   0.03220587195239948
+  ],
+  "SFT 3 ep + RL - SFT 3 ep [corr]": [
+   0.014676305889807274,
+   -0.010330242284601623,
+   0.04225539291308227
+  ]
+ },
+ "reproduce_key_mistakes": {
+  "SFT 8 ep": {
+   "n": 27,
+   "submitted_wrong_reference_category": 8,
+   "submitted_corrected_category": 6
+  },
+  "tool-SFT": {
+   "n": 27,
+   "submitted_wrong_reference_category": 7,
+   "submitted_corrected_category": 15
+  },
+  "Kimi K2.5": {
+   "n": 27,
+   "submitted_wrong_reference_category": 9,
+   "submitted_corrected_category": 8
+  },
+  "GPT-6 Luna": {
+   "n": 27,
+   "submitted_wrong_reference_category": 5,
+   "submitted_corrected_category": 12
+  },
+  "Luna + book": {
+   "n": 27,
+   "submitted_wrong_reference_category": 3,
+   "submitted_corrected_category": 14
+  }
+ },
+ "method": "Primary: wrong if both Sonnet judges say wrong (cross-category), or one does and Opus agrees on adjudication. Strict: all three. Overall estimate: judged strata counted exactly; ok strata (1,561 pairs, 2,947 references) estimated from a 100-pair control sample, reference-weighted, 1,000 bootstrap resamples. Rescoring replaces only identified wrong labels (judged strata + control sample), so it undercorrects by the unjudged ok-stratum errors. Scorer: upstream eval.scoring.compute_all_metrics with scripts/chart_neutral_sets.py; reproduces every recorded public reward exactly before correction."
+}

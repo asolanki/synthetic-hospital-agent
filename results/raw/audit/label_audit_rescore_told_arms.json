@@ -1,0 +1,101 @@
+{
+ "scope": "Label-audit corrections (label_audit_wrong_labels.csv, 101 pairs with a corrected code) applied to the 2026-10-08 told-vs-taught public arms, with the audit rescorer; paired patient bootstrap 1000, seed 0 (common.metrics.bootstrap_ci).",
+ "arms": {
+  "qwen3-4b-sft-icd10-public": {
+   "original": 0.7263080477350384,
+   "corrected": 0.7316440072684175
+  },
+  "gpt-6-luna-icd10-env-public": {
+   "original": 0.6457234115239158,
+   "corrected": 0.6518434234695275
+  },
+  "gpt-6-luna-env-public": {
+   "original": 0.6544434627947397,
+   "corrected": 0.6598551987755853
+  },
+  "kimi-k2.5-env-public": {
+   "original": 0.692725528027306,
+   "corrected": 0.6866271675984409
+  },
+  "gpt-6-luna-icd10-style-env-public": {
+   "original": 0.7768760156114312,
+   "corrected": 0.7952992119864267
+  },
+  "qwen3-4b-sft-sweep-e8-icd10-told-public": {
+   "original": 0.5135039431744698,
+   "corrected": 0.5134788407245632
+  }
+ },
+ "reproduce_key_mistakes": {
+  "tool-SFT": {
+   "n": 27,
+   "submitted_wrong_reference_category": 7,
+   "submitted_corrected_category": 15
+  },
+  "Luna + book": {
+   "n": 27,
+   "submitted_wrong_reference_category": 3,
+   "submitted_corrected_category": 14
+  },
+  "Luna + book + style": {
+   "n": 27,
+   "submitted_wrong_reference_category": 3,
+   "submitted_corrected_category": 22
+  },
+  "SFT 8 ep + book, told": {
+   "n": 27,
+   "submitted_wrong_reference_category": 8,
+   "submitted_corrected_category": 7
+  }
+ },
+ "contrasts": {
+  "tool-SFT - Luna + book + style": {
+   "original": [
+    -0.051,
+    -0.09,
+    -0.012
+   ],
+   "corrected": [
+    -0.064,
+    -0.102,
+    -0.023
+   ]
+  },
+  "Luna + book + style - Luna + book": {
+   "original": [
+    0.131,
+    0.098,
+    0.164
+   ],
+   "corrected": [
+    0.143,
+    0.11,
+    0.177
+   ]
+  },
+  "tool-SFT - Luna + book": {
+   "original": [
+    0.081,
+    0.04,
+    0.121
+   ],
+   "corrected": [
+    0.08,
+    0.038,
+    0.122
+   ]
+  },
+  "tool-SFT - Kimi K2.5": {
+   "original": [
+    0.034,
+    -0.013,
+    0.08
+   ],
+   "corrected": [
+    0.045,
+    -0.002,
+    0.093
+   ]
+  }
+ }
+}

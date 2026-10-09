@@ -229,6 +229,7 @@ visit diagnosed them." (`eval_public_gpt6_luna_icd10_style.toml`).
 - **Why:** selection errors on earlier visits fell from 16.2% to 8.8%. Luna kept looking codes up (7.9 per patient).
 - **Reading:** the 4B's edge over Luna + book was the benchmark's convention, which fine-tuning taught it implicitly. A frontier model only had to be told it. Among the setups here, the best score now belongs to a frontier model with the book and one paragraph of house style. The 4B's remaining case is running locally.
 - **Predictions** (`LOG.md`): F1 0.70–0.73 and "still below tool-SFT" were both wrong.
+- **Label noise doesn't explain it** (`audit/label_audit_results.md`). About 6% of reference codes are wrong. Correcting the 101 identified pairs raises Luna + book + style to 0.795 and widens its lead over the 4B to −0.064 (CI −0.102 to −0.023). On the 27 mislabeled public references, it submitted the correct category 81% of the time; tool-SFT did so 56% of the time.
 
 ## Caveats
 
