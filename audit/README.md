@@ -25,4 +25,4 @@ How it worked:
 3. Two Claude Sonnet judges and a Claude Opus tiebreaker reviewed them, following [`label_audit_judge_instructions.md`](label_audit_judge_instructions.md).
 4. `label_audit_finalize.py` combines the verdicts and rescores every run with the corrected labels (using `label_audit_rescore.py`, which runs the paper's own scorer).
 
-The judging ran once, in a separate workspace, so the verdicts are saved in `results/raw/audit/` rather than regenerated here. [`label_audit_spotcheck.md`](label_audit_spotcheck.md) is 30 random verdicts for a human to check.
+The judging ran once, in a separate workspace, so the verdicts are saved in `results/raw/audit/` rather than regenerated here.

@@ -14,7 +14,7 @@ Written 2026-10-08 22:00 EDT by the cloud Claude session, before any judge call.
 
 **Stage 2, judged.** Candidates: all A, B and unclear pairs, plus a control of 100 ok/ok-ish pairs (random, seed 0). Each judge sees, for up to two patient instances of a pair: age, sex, chief complaint, history of present illness and assessment of the encounter where the diagnosis was first made (truncated), the reference code with its official title, and the book's top 8 results for the name. Judges never see any model's output.
 - Verdict per pair, at the scoring category: `correct`, `defensible` (a qualified coder could choose the reference category, e.g. combination codes, pregnancy or newborn precedence, acute vs chronic variants), `wrong` (the category describes a different condition or contradicts the name and chart; give the right code), or `unsure`.
-- Two independent Sonnet judges with different batch orders. A pair is `wrong` only if both say so, or if a third, stronger judge (Opus) says so on a disagreement. The user spot-checks 30 `wrong` verdicts.
+- Two independent Sonnet judges with different batch orders. A pair is `wrong` only if both say so, or if a third, stronger judge (Opus) says so on a disagreement.
 
 **Outputs.** `results/raw/audit/label_audit_{candidates,verdicts,summary}.json`.
 - Error rate per stratum, and an estimate for all references (the control sample stands in for the ok strata).

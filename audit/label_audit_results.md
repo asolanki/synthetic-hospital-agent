@@ -72,7 +72,7 @@ The rescorer uses upstream's own `eval.scoring.compute_all_metrics` and `scripts
 
 ## Caveats
 
-- The judges are LLMs, not certified coders. Some verdicts are borderline: for example, "venous air embolism" coded T79.0 (traumatic air embolism) in a patient after a car crash, and intent characters on poisoning codes (T61.04 vs T61.01), which the scorer's 5-character rule for T codes counts as different. The user spot-check (`audit/label_audit_spotcheck.md`) is pending.
+- The judges are LLMs, not certified coders. Some verdicts are borderline: for example, "venous air embolism" coded T79.0 (traumatic air embolism) in a patient after a car crash, and intent characters on poisoning codes (T61.04 vs T61.01), which the scorer's 5-character rule for T codes counts as different. Not hand-checked beyond a couple of rows, so treat the 6% as an estimate.
 - The judges see only excerpts of each chart (chief complaint, history of present illness, a short assessment) and up to two patients per pair.
 - The control sample is small (100 pairs), so the overall estimate's interval is wide.
 

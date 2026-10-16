@@ -34,3 +34,7 @@ verifiers = [
 [tool.uv.sources]
 verifiers = { git = "https://github.com/PrimeIntellect-ai/verifiers", rev = "4fd5921071da239e75c23798bbe87f463d3cf0fb" }
 synthetic-hospital-dx = { path = "training/environment", editable = true }
+
+# external/ (cloned dependencies) and _archive/ are gitignored and carry their own suites.
+[tool.pytest.ini_options]
+testpaths = ["tests"]
