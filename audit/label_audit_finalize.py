@@ -1,7 +1,15 @@
-import json, glob, collections, re, random, statistics, sys
-sys.argv = sys.argv[:1] + ["/home/claude/sparkcpark/synthetic_hospital", "/home/claude/sparkcpark/synthetic_hospital/benchmark_v1.3.db",
-    "/mnt/user-data/uploads/synthetic-hospital-rl/runs/icd10cm/icd10cm_tabular_2025.xml", "/mnt/user-data/uploads/synthetic-hospital-rl/results/raw/training"]
-import rescore as R
+"""Combine the three judges' verdicts, estimate the error rate, and rescore every run with corrected labels.
+
+Run from audit/ (it imports label_audit_rescore as `rescore`), next to candidates.json and verdicts/*.jsonl:
+    python label_audit_finalize.py UPSTREAM_REPO BENCHMARK_DB ICD10CM_TABULAR_XML RESULTS_DIR
+
+Example, from the repo root:
+    cd audit && python label_audit_finalize.py ../external/synthetic_hospital \
+        ../external/synthetic_hospital/benchmark_v1.3.db ../runs/icd10cm/icd10cm_tabular_2025.xml ../results/raw/training
+"""
+import json, glob, collections, re, random, statistics, sys, importlib.util
+spec = importlib.util.spec_from_file_location("rescore", __file__.replace("label_audit_finalize.py", "label_audit_rescore.py"))
+R = importlib.util.module_from_spec(spec); sys.modules["rescore"] = R; spec.loader.exec_module(R)
 SUMMARY = {"rates": {}, "rescore": {}, "contrasts": {}, "reproduce_key_mistakes": {}}
 key = lambda c: (lambda n: n[:5] if n[:1] in "ST" else n[:3])(re.sub(r"[^A-Z0-9]", "", (c or "").upper()))
 cand = {x["id"]: x for x in json.load(open("candidates.json"))}

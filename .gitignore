@@ -8,3 +8,7 @@ runs/
 outputs/
 .pytest_cache/
 .cloudflare/
+
+# personal / scratch
+_archive/
+.vscode/

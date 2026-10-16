@@ -1,22 +1,28 @@
-# audit/ — Phases 1–2: is the benchmark sound, and what does it measure?
+# audit/
 
-Done. Findings: [results/milestone1.md](../results/milestone1.md) and
-[results/milestone2_other_tasks.md](../results/milestone2_other_tasks.md); the single-turn Gemma
-reproduction and the released scorer's chart-neutral gap are in
-[results/milestone5_head_to_head.md](../results/milestone5_head_to_head.md).
-Raw outputs: `results/raw/audit/` and `results/raw/other_tasks/`.
+Before training anything, I wanted to know what this benchmark actually measures and whether it could be gamed. This folder is all of that poking around. The findings are in [milestone 1](../results/milestone1.md) and [milestone 2](../results/milestone2_other_tasks.md), and the raw outputs are in `results/raw/audit/` and `results/raw/other_tasks/`.
 
-| Command | What it answers | Output |
-|---|---|---|
-| `uv run python -m audit.verify` | Does the oracle score 1.0, do malformed answers score 0, does any tool leak the answer key? | `raw/audit/verify.json` |
-| `uv run python -m audit.strategies --split dev` | How far do hand-written strategies get (copy the problem list, guess common codes, pad the answer)? | `raw/audit/strategies_dev.json` |
-| `uv run python -m audit.coding_ceiling --model <id>` | Given only the copyable names, how well can a model code them? | `raw/audit/coding_ceiling_<model>_dev.json` |
-| `uv run python -m audit.other_tasks <task>` | Same questions for the benchmark's three other tasks | `raw/other_tasks/*.json` |
-| `docker exec … python /tmp/harness_gap.py` (inside the simulator container; usage in its docstring) | Why the paper's agents score far higher. Its harness leaks coded reference diagnoses, a known issue in upstream's README; this measures how much, with and without the leak, against our `/env` harness | `raw/audit/harness_gap_dev.json` |
-| `uv run vf-eval @ audit/harness_gap_env.toml -n 120 -c 8 --no-rich --output-dir runs/harness-check/env-qwen30b-t0 --run.dir eval`, then `uv run python -m training.report runs/harness-check/env-qwen30b-t0/eval/traces.jsonl --name qwen3-30b-env-dev-t0` | The `/env` arm of the harness-gap audit: Qwen3-30B in our Verifiers harness at the paper adapter's controls (temperature 0, 16,384 max tokens), 120 dev patients | `raw/training/qwen3-30b-env-dev-t0.json` |
-| `docker exec … python /tmp/paper_singleturn.py` (inside the simulator container; usage in its docstring) | Does the paper's own single-turn pipeline (locked CoT prompt, its parser and scorer) reproduce Table 3's Gemma 3 27B patient-diagnosis F1 of 0.287? Reports the paper's batch F1 and a strict F1 that scores failures as zero | `raw/audit/paper_singleturn_gemma3_public.json` |
-| Label audit (protocol `label_audit_protocol.md`; results `label_audit_results.md`; spot-check form `label_audit_spotcheck.md`, pending): `label_scan.py` (deterministic scan against the public code book), `label_audit_build_candidates.py`, LLM judges per `label_audit_judge_instructions.md`, then `label_audit_finalize.py` | How many reference codes are wrong at the scoring category, and does correcting them change any result? About 5.7% (CI 4.1–7.9%); no verdict changes. Run in a cloud workspace and saved as run: `finalize.py` has that workspace's paths and imports the rescorer as `rescore` | `raw/audit/label_audit_{candidates,verdicts,summary}.json`, `label_audit_wrong_labels.csv` (the list for the authors) |
-| `uv run python audit/label_audit_rescore.py external/synthetic_hospital external/synthetic_hospital/benchmark_v1.3.db runs/icd10cm/icd10cm_tabular_2025.xml results/raw/training <report names…>` | Rescore saved public submissions with upstream's own scorer and chart-neutral sets (it reproduces recorded rewards exactly), optionally with corrected labels | printed; told-vs-taught arms in `raw/audit/label_audit_rescore_told_arms.json` |
+The benchmark server needs to be running for most of these (see [`hospital/`](../hospital/README.md)). The ones that call hosted models need `OPENROUTER_API_KEY` in `.env`.
 
-`coding_ceiling`, `other_tasks` and `harness_gap` call OpenRouter (key in `.env`). `other_tasks imaging-agent`
-reuses the early harness in `baselines/agent.py`. `paper_singleturn` calls DeepInfra directly (`DEEPINFRA_API_KEY`).
+| Command | What it answers |
+|---|---|
+| `uv run python -m audit.explore_data` | What's in the data? Chart sizes, how many diagnoses per patient, how rare the codes are. The numbers in the blog's "Looking at the data" section |
+| `uv run python -m audit.verify` | Does the scorer work? A perfect answer should score 1.0 and an empty one 0. Also checks no tool leaks the answer key |
+| `uv run python -m audit.strategies --split dev` | How far do dumb strategies get? Copying the problem list, guessing common codes, padding the answer |
+| `uv run python -m audit.coding_ceiling --model <id>` | Given only the diagnosis names from the problem list, how well can a model code them? |
+| `uv run python -m audit.other_tasks <task>` | The same questions for the benchmark's other three tasks |
+| `python audit/harness_gap.py` (inside the server's container, usage in the file) | How much does the paper's agent harness leak? It hands the agent the coded answers. This measures it with and without the leak |
+| `python audit/paper_singleturn.py` (inside the server's container) | Can I reproduce the paper's single-turn Gemma 3 27B score? (0.283 vs the paper's 0.287) |
+
+## The label audit
+
+About 6% of the answer key's codes look wrong. The full write-up is [`label_audit_results.md`](label_audit_results.md) and the list of wrong labels is `results/raw/audit/label_audit_wrong_labels.csv`.
+
+How it worked:
+
+1. `label_scan.py` flags (name, code) pairs where the code doesn't match the name in the official ICD-10-CM list.
+2. `label_audit_build_candidates.py` builds the batches for review.
+3. Two Claude Sonnet judges and a Claude Opus tiebreaker reviewed them, following [`label_audit_judge_instructions.md`](label_audit_judge_instructions.md).
+4. `label_audit_finalize.py` combines the verdicts and rescores every run with the corrected labels (using `label_audit_rescore.py`, which runs the paper's own scorer).
+
+The judging ran once, in a separate workspace, so the verdicts are saved in `results/raw/audit/` rather than regenerated here. [`label_audit_spotcheck.md`](label_audit_spotcheck.md) is 30 random verdicts for a human to check.

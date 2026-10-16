@@ -1,130 +1,91 @@
 # Synthetic Hospital RL
 
-What does RL add over strong prompting and supervised fine-tuning when a small open-weight
-model (Qwen3-4B-Instruct-2507) has to diagnose patients by operating a longitudinal EHR?
-The plan is in [PLAN.md](PLAN.md), every finding and decision in [LOG.md](LOG.md).
+This is the code behind my blog post, [A 4B model in a synthetic hospital: the agent is more than the weights]([TBD: blog link]).
 
-Task: `patient_diagnosis` in [Synthetic Hospital](https://github.com/sparkcpark/synthetic_hospital)
-v1.3, played through the simulator's corrected `/env` route. We never use the original `eval/agents`
-harness: upstream's README lists it as a known issue that it leaks the labels through the problem list.
+I took a small open model (Qwen3-4B-Instruct) and tried to train it on the patient diagnosis task from [Synthetic Hospital](https://github.com/sparkcpark/synthetic_hospital), a new benchmark of synthetic patients served through an EHR-style environment. The agent opens a patient's chart with tools and has to submit every diagnosis with its ICD-10 code.
 
-## Results at a glance
+The short version: RL barely helped (+0.01). What actually worked was fine-tuning plus a small ICD-10 search tool, which took the 4B from 0.17 to 0.74. GPT-6 Luna didn't need the tool, but two sentences in its prompt about what the answer key counts took it to 0.81.
 
-Public split (the paper's 200 patients), strict official F1: the paper's batch F1 with failed
-sessions counted as zero. Details and confidence intervals are in the write-ups below.
+The blog has the full story. This repo has the code, the data splits, the training examples, and every result.
 
-| Setup | Public strict F1 | Write-up |
-|---|--:|---|
-| Copy dated problem-list entries, coded with the benchmark's own table (a ceiling, not an agent) | 0.824 | [3](results/milestone3_training.md) |
-| Qwen3-4B, untrained | 0.172 | [3](results/milestone3_training.md) |
-| Qwen3-4B, SFT 3 epochs | 0.388 | [3](results/milestone3_training.md) |
-| Qwen3-4B, SFT 3 epochs → RL | 0.398 | [3](results/milestone3_training.md) |
-| Qwen3-4B, SFT 8 epochs | 0.532 | [4](results/milestone4_sft_and_codebook.md) |
-| Qwen3-4B, untrained + code-book tool | 0.486 | [4](results/milestone4_sft_and_codebook.md) |
-| **Qwen3-4B, tool-SFT + code-book tool** | **0.738** | [4](results/milestone4_sft_and_codebook.md) |
-| Qwen3-30B-A3B, untrained (temperature 0) | 0.457 | [4](results/milestone4_sft_and_codebook.md) |
-| Qwen3-30B-A3B, untrained + code-book tool (temperature 0) | 0.644 | [4](results/milestone4_sft_and_codebook.md) |
-| Kimi K2.5, no tool | 0.726 | [5](results/milestone5_head_to_head.md) |
-| GPT-6 Luna, no tool | 0.689 | [5](results/milestone5_head_to_head.md) |
-| GPT-6 Luna + code-book tool (zero-shot; the book adds nothing for Luna) | 0.679 | [5](results/milestone5_head_to_head.md) |
-| GPT-6 Luna + code-book tool + one house-style paragraph | **0.797** | [5](results/milestone5_head_to_head.md) |
-| GPT-6 Luna + one house-style paragraph, no tool (the book adds nothing once it knows the convention) | **0.809** | [5](results/milestone5_head_to_head.md) |
-| Gemma 3 27B, no tool, agent (lower bound: its provider returned 46% of replies empty) | 0.262 | [5](results/milestone5_head_to_head.md) |
-| Gemma 3 27B, single-turn: paper 0.287; our run of the paper's code 0.283 | 0.283 | [5](results/milestone5_head_to_head.md) |
+## Results
 
-All agent rows use the same clean `/env` harness. The code-book tool (`icd10_search` over the public
-CMS ICD-10-CM 2025 release) is an augmented harness; the paper's models do not have it. The
-milestone 3 and 4 tables report the non-strict official F1, which skips failed sessions, so a few
-rows read slightly higher there (copy heuristic 0.828, Qwen3-30B + tool 0.678).
+F1 on the paper's 200 test patients (failed sessions count as zero).
 
-## How the pieces fit
+| Setup | F1 |
+|---|--:|
+| Qwen3-4B, untrained | 0.17 |
+| Qwen3-4B, SFT 3 epochs | 0.39 |
+| Qwen3-4B, SFT 3 epochs + RL (GRPO) | 0.40 |
+| Qwen3-4B, SFT 8 epochs | 0.53 |
+| Qwen3-4B, untrained + search tool | 0.49 |
+| **Qwen3-4B, tool-SFT + search tool** | **0.74** |
+| Qwen3-30B-A3B, untrained | 0.46 |
+| Qwen3-30B-A3B, untrained + search tool | 0.64 |
+| Kimi K2.5 | 0.73 |
+| GPT-6 Luna | 0.69 |
+| GPT-6 Luna + search tool | 0.68 |
+| **GPT-6 Luna + two sentences about the answer key** | **0.81** |
+| Gemma 3 27B (lower bound, its API provider dropped a lot of replies) | 0.26 |
+| Copy the chart's problem list and code it perfectly (a ceiling, not an agent) | 0.82 |
 
-```
-┌──────────────────────────────────────────────────────────────────────────────────────┐
-│ hospital/  the benchmark server (HTTP): patients, answer keys, scorer                │
-│ http://localhost:58000                                                               │
-└─────────────┬─────────────────────────────┬─────────────────────────────┬────────────┘
-              │ HTTP                        │ HTTP                        │ HTTP
-┌─────────────┴────────────┐  ┌─────────────┴────────────┐  ┌─────────────┴────────────┐
-│ audit/      Phases 1–2   │  │ baselines/  Phase 3a     │  │ training/   Phases 3b–4  │
-│ is the benchmark sound,  │  │ first agent harness,     │  │ Verifiers environment    │
-│ what does it measure?    │  │ OpenRouter models        │  │ prime-rl evals/trains on │
-│ DONE                     │  │ DONE                     │  │ DONE                     │
-└──────────────────────────┘  └──────────────────────────┘  └──────────────────────────┘
-```
+Every agent row uses the same clean harness (the benchmark's `/env` endpoints). The search tool and the prompt sentences are my additions, so treat comparisons with the paper's numbers as context, not a leaderboard.
 
-Shared code lives in `common/` (simulator client, benchmark database reader, split, metrics).
-`training/environment/` is the exception: prime-rl loads it by name as a standalone package,
-so it imports nothing from `common/`.
+## What's in here
 
-One episode: the model gets the paper's instructions and 10 EHR tools, calls tools (each
-forwarded to the server, which hides the answer key and counts the 40-action budget), and ends
-by calling `submit_diagnosis`. The server scores the submission; that number is the reward.
+| Folder | What it is |
+|---|---|
+| [`hospital/`](hospital/README.md) | Starts the benchmark server |
+| [`audit/`](audit/README.md) | Poking at the benchmark before training: scorer checks, shortcuts, the harness leak, the label audit |
+| [`baselines/`](baselines/README.md) | My first agent harness, kept so the earliest numbers reproduce |
+| [`training/`](training/README.md) | The environment, the search tool, SFT, RL, and evaluation |
+| `common/` | Small shared helpers: server client, database reader, splits, metrics |
+| `data/splits/` | My train/validation split |
+| `data/sft/` | The SFT training examples (with and without the search tool) |
+| `results/` | Write-ups for each stage, and the raw JSON behind every number |
+| `tests/` | Unit tests for the metrics, comparisons, and a few tricky bits |
+| `LOG.md` | My lab log: every decision and prediction, timestamped, including the wrong ones |
 
-## Repo map
+## Getting started
 
-| Path | What it is | Status |
-|---|---|---|
-| [`hospital/`](hospital/README.md) | Start the benchmark server | — |
-| [`common/`](common/) | Small shared library: simulator client, benchmark DB reader, fixed split, metrics | — |
-| [`audit/`](audit/README.md) | Phase 1–2 checks: scorer sanity, label leaks, hand-written strategies, other tasks, the leaky-harness gap, the paper's single-turn Gemma reproduction | done |
-| [`baselines/`](baselines/README.md) | First agent harness and the milestone-1 baseline table | done |
-| [`training/`](training/README.md) | Verifiers environment, ICD-10-CM code-book tool, self-hosted 4B inference/eval, LoRA SFT, Prime-RL GRPO, comparator configs, paired comparisons and breakdowns | done |
-| `data/splits/` | Fixed train/dev split (680 / 120 patients) | committed |
-| `data/sft/` | SFT demonstrations | committed |
-| `results/` | Write-ups (below), `tables.md`, `cases/`, raw JSON in `raw/<phase>/` | committed |
-| `tests/` | Metrics, model-call error reporting, SFT loss boundaries, rental shutdown, paired comparisons, the coding counterfactual and the Gemma tool-call translator | — |
-| `external/` | Upstream Synthetic Hospital, cloned by `hospital/setup.sh` | gitignored |
-| `runs/` | Full trajectories of every run | gitignored |
-
-Write-ups: [milestone 1](results/milestone1.md) (benchmark audit and baselines),
-[milestone 2](results/milestone2_other_tasks.md) (the other three tasks),
-[milestone 3](results/milestone3_training.md) (SFT vs RL vs continued SFT; where the error is),
-[milestone 4](results/milestone4_sft_and_codebook.md) (SFT epoch sweep; a public ICD-10-CM code-book tool),
-[milestone 5](results/milestone5_head_to_head.md) (the 4B against Kimi K2.5, GPT-6 Luna and Gemma 3 27B in the same harness),
-[a worked case](results/cases/patient_2123.md).
-
-## Setup
+You'll need Docker (for the benchmark server) and [uv](https://docs.astral.sh/uv/).
 
 ```bash
-hospital/setup.sh                 # clone upstream at the pinned commit, start the server on :58000
-uv sync --group verifiers         # our code + the Verifiers environment
-uv run python -m training.icd10_codebook fetch   # only for the code-book tool: download + verify the CMS release
+hospital/setup.sh                                 # clone the benchmark and start its server on :58000
+uv sync --group verifiers                         # install this repo and the environment
+uv run python -m training.icd10_codebook fetch    # download the ICD-10-CM code list and build the search index
 ```
 
-Keys go in `.env` (gitignored):
+Put API keys in a `.env` file (it's gitignored):
 
-- `OPENROUTER_API_KEY`: every OpenRouter model (baselines, audits, Kimi, Luna, Qwen3-30B).
-- `DEEPINFRA_API_KEY`: only for the Gemma 3 27B comparator and the single-turn Gemma reproduction.
-- `VAST_API_KEY`: only for starting or stopping the Vast rental from your own machine. The
-  in-instance `training/rental_guard.py` uses Vast's injected instance key instead.
-- W&B: optional; `uvx --from wandb==0.26.1 wandb login --verify` (credentials in the CLI prompt only).
+- `OPENROUTER_API_KEY` for the hosted models (Kimi, Luna, Qwen3-30B).
+- `DEEPINFRA_API_KEY` only for Gemma 3 27B.
 
-Every command runs from the repo root as `uv run python -m <folder>.<module>`; each folder's README
-lists its commands. The code book lands in `runs/icd10cm/` (override with `SHRL_ICD10_DIR`).
-
-On a GPU container without nested Docker, use `bash hospital/setup_native.sh`
-and `bash training/setup_inference.sh` instead. This creates host-local secrets
-and serves the exact BF16 checkpoint privately; no OpenRouter key is needed.
-See [`training/README.md`](training/README.md) for evaluation and rental shutdown.
+Everything runs from the repo root as `uv run python -m <folder>.<module>`. Each folder's README has its commands. Training needs a GPU. I used one rented A100 80GB, and [`training/README.md`](training/README.md) covers that setup.
 
 ## Data splits
 
-| Split | Patients | Use |
+| Split | Patients | What I used it for |
 |---|--:|---|
-| `train` | 680 | training (RL, SFT demonstrations, prompt optimization) |
-| `dev` | 120 | checkpoint and model selection, audits |
-| `public` | 200 | the paper's reported benchmark; final test for the milestone 3 and 4 arms and for the comparators (milestone 5); never used to choose anything |
-| `heldout` | 268 | sealed final evaluation; not reachable from our code |
+| train | 680 | Training examples and RL |
+| validation (`dev` in the code) | 120 | Every decision: picking checkpoints, comparing setups |
+| test (`public` in the code) | 200 | The paper's public patients. Run once per model at the end |
+| held-out | 268 | The paper's private test set. Never touched |
 
-`train` and `dev` partition the upstream 800-patient `train` split, stratified by dominant
-ICD-10 chapter and encounter count (seed 20260930; `uv run python -m common.splits` rebuilds it).
+Train and validation are my split of the paper's 800 training patients (`uv run python -m common.splits` rebuilds it).
 
-## Metrics
+## Write-ups
 
-`mean reward` is the mean per-episode `weighted_problem_list_f1_neutral`: what the environment
-returns and what RL optimizes. `official F1` is the paper's batch aggregation (harmonic mean of
-mean severity-weighted recall and mean chart-neutral precision), which silently excludes empty
-submissions; `official F1 (strict)` counts them as zero. `recall, earlier / final visit` splits
-recall by whether the diagnosis is written in a later note (copyable) or must be inferred.
-See `common/metrics.py`.
+The `results/` folder has a write-up for each stage, with the confidence intervals and details the blog skips:
+
+1. [Auditing the benchmark](results/milestone1.md)
+2. [The other three tasks](results/milestone2_other_tasks.md)
+3. [SFT vs RL](results/milestone3_training.md)
+4. [Training longer, and the search tool](results/milestone4_sft_and_codebook.md)
+5. [Against frontier models](results/milestone5_head_to_head.md)
+
+Heads up: these were written as I went, so they use some older names. "Code book" means the search tool, "house style" means the answer key's conventions, "dev" is validation, and "public" is test.
+
+## How I built this
+
+I chose the questions and made the calls, and coding agents did most of the engineering. Everything is in [`LOG.md`](LOG.md).

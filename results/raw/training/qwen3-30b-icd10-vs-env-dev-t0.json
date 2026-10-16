@@ -3,7 +3,7 @@
  "method": "Paired patient bootstrap, 1000 resamples, seed 0; all fixed dev patients, failures retained; replicate reports within an arm are averaged per patient before pairing",
  "reference": [
   {
-   "path": "/Users/adarsh/code/synthetic-hospital-rl/results/raw/training/qwen3-30b-env-dev-t0.json",
+   "path": "results/raw/training/qwen3-30b-env-dev-t0.json",
    "sha256": "9ba55b8a2b130c5a45f0ba642be091fe8310eeaf1f1e7c355a2b58849ceb668a",
    "summary": {
     "n": 120,

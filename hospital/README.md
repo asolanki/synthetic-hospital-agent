@@ -1,4 +1,4 @@
-# hospital/ — the benchmark server
+# hospital/
 
 [Synthetic Hospital](https://github.com/sparkcpark/synthetic_hospital) v1.3 is a web server
 holding 1,268 synthetic patients, their answer keys, and the official scorer. Every other
