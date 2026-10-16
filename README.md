@@ -1,6 +1,6 @@
 # Synthetic Hospital RL
 
-This is the code behind my blog post, [A 4B model in a synthetic hospital: the agent is more than the weights]([TBD: blog link]).
+This is the code behind my blog post, [A 4B model in a synthetic hospital: the agent is more than the weights](https://adarshsolanki.com/posts/synthetic-hospital/).
 
 I took a small open model (Qwen3-4B-Instruct) and tried to train it on the patient diagnosis task from [Synthetic Hospital](https://github.com/sparkcpark/synthetic_hospital), a new benchmark of synthetic patients served through an EHR-style environment. The agent opens a patient's chart with tools and has to submit every diagnosis with its ICD-10 code.
 
@@ -30,6 +30,10 @@ F1 on the paper's 200 test patients (failed sessions count as zero).
 | Copy the chart's problem list and code it perfectly (a ceiling, not an agent) | 0.82 |
 
 Every agent row uses the same clean harness (the benchmark's `/env` endpoints). The search tool and the prompt sentences are my additions, so treat comparisons with the paper's numbers as context, not a leaderboard.
+
+## Trained adapter
+
+The tool-SFT LoRA adapter (the bold 0.74 row; rank 16 on [Qwen3-4B-Instruct-2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507) at revision `cdbee75f`) is a 126 MB download: [qwen3-4b-sft-icd10-v1-adapter.tar.gz](https://files.adarshsolanki.com/sft-icd10-v1/qwen3-4b-sft-icd10-v1-adapter.tar.gz) (SHA-256 `40694f8be937b9ce5569af52ea3eb81267f02a271a5bb44510baeb0b23479059`). Extract it into `runs/` and serve it with the commands in [`training/README.md`](training/README.md#the-main-runs). It needs the search tool to reach that score.
 
 ## What's in here
 

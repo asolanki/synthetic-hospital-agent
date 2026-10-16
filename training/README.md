@@ -62,6 +62,8 @@ bash training/run_sft.sh --config training/configs/sft_icd10.toml --no-merge
 **Evaluating a model:**
 
 ```bash
+# or download the trained adapter instead of training it (126 MB, see the top-level README for the SHA-256)
+curl -fL https://files.adarshsolanki.com/sft-icd10-v1/qwen3-4b-sft-icd10-v1-adapter.tar.gz | tar -xz -C runs
 bash training/serve.sh Qwen/Qwen3-4B-Instruct-2507 shrl-sft-icd10-v1 "$PWD/runs/sft-icd10-v1/adapter"
 uv run --group verifiers --group tracking python -m training.evaluate \
     --config training/configs/eval_local_icd10.toml --model shrl-sft-icd10-v1 \
