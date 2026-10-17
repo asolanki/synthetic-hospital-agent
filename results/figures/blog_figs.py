@@ -90,7 +90,7 @@ for (vals, left, c, tc, lab) in segs:
 ax.set_yticks(yy); ax.set_yticklabels(W)
 ax.set_xlim(0, 100); ax.set_xticks([])
 clean(ax, grid=None); ax.spines["bottom"].set_visible(False)
-title(fig, "RL turned \"sometimes\" into \"always\". \"Never\" never moved.",
+title(fig, "RL turned \"sometimes\" into \"always.\" \"Never\" never moved.",
       "How many of 4 attempts got each diagnosis right, across the RL run")
 save(fig, "rl-signal.png")
 
