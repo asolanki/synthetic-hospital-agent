@@ -60,7 +60,7 @@ uv sync --group verifiers                         # install this repo and the en
 uv run python -m training.icd10_codebook fetch    # download the ICD-10-CM code list and build the search index
 ```
 
-Put API keys in a `.env` file (it's gitignored):
+Put API keys in a `.env` file:
 
 - `OPENROUTER_API_KEY` for the hosted models (Kimi, Luna, Qwen3-30B).
 - `DEEPINFRA_API_KEY` only for Gemma 3 27B.
@@ -87,8 +87,6 @@ The `results/` folder has a write-up for each stage, with the confidence interva
 3. [SFT vs RL](results/milestone3_training.md)
 4. [Training longer, and the search tool](results/milestone4_sft_and_codebook.md)
 5. [Against frontier models](results/milestone5_head_to_head.md)
-
-Heads up: these were written as I went, so they use some older names. "Code book" means the search tool, "house style" means the answer key's conventions, "dev" is validation, and "public" is test.
 
 ## How I built this
 
